@@ -44,59 +44,24 @@ export default function Nav() {
   return (
     <header className="bg-brand-navy sticky top-0 z-40 shadow-md">
 
-      {/* ── TOP ROW — logo / phone / shop now ── */}
-      <div className="max-w-site mx-auto px-5 xl:px-16 flex items-center justify-between h-16">
+      {/* ── SINGLE BAR — logo left, nav right ── */}
+      <div className="max-w-site mx-auto px-5 xl:px-16 flex items-center justify-between" style={{minHeight:'80px'}}>
 
-        {/* Logo */}
+        {/* Logo — bigger now with full bar space */}
         <Link href="/" className="flex-shrink-0">
           <Image
             src="/img/doormate-logo.jpg"
             alt="DoorMate Sliding Door Systems"
-            width={130}
-            height={44}
-            className="object-contain h-11 w-auto"
+            width={260}
+            height={88}
+            className="object-contain w-auto"
+            style={{height:'72px'}}
             priority
           />
         </Link>
 
-        {/* Desktop: phone + CTA */}
-        <div className="hidden lg:flex items-center gap-6">
-          <a
-            href="tel:02921660393"
-            className="text-white/80 hover:text-brand-gold transition-colors text-sm font-bold tracking-wide"
-          >
-            029 2166 0393
-          </a>
-          <Link
-            href="/shop"
-            className="bg-brand-gold text-brand-navy text-[11px] font-bold tracking-widest px-5 py-2.5 hover:bg-white transition-colors"
-          >
-            SHOP NOW
-          </Link>
-        </div>
-
-        {/* Mobile: hamburger */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-          className="lg:hidden text-white p-2"
-        >
-          {mobileOpen ? (
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="square" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="square" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
-      </div>
-
-      {/* ── BOTTOM ROW — desktop nav links ── */}
-      <nav className="hidden lg:block border-t border-white/10">
-        <div className="max-w-site mx-auto px-5 xl:px-16 flex items-center gap-0">
-
+        {/* Desktop nav links */}
+        <nav className="hidden lg:flex items-center gap-0">
           {/* HOME with dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button
@@ -108,7 +73,6 @@ export default function Nav() {
                 <path strokeLinecap="square" d="M19 9l-7 7-7-7" />
               </svg>
             </button>
-
             {homeOpen && (
               <div className="absolute top-full left-0 bg-brand-gold shadow-xl min-w-[200px] py-1 z-50">
                 {HOME_DROPDOWN.map((item) => (
@@ -135,8 +99,25 @@ export default function Nav() {
               {link.label}
             </Link>
           ))}
-        </div>
-      </nav>
+        </nav>
+
+        {/* Mobile: hamburger */}
+        <button
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
+          className="lg:hidden text-white p-2"
+        >
+          {mobileOpen ? (
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="square" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="square" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
+        </button>
+      </div>
 
       {/* ── MOBILE MENU ── */}
       {mobileOpen && (

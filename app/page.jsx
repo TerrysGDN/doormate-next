@@ -16,15 +16,6 @@ export default function HomePage() {
   return (
     <main style={{width:'100%', margin:0, padding:0, fontFamily:'sans-serif', background:'#ffffff'}}>
 
-      {/* REVIEWS SCORE LINE — visible immediately below nav, above hero */}
-      <div style={{width:'100%', background:'#fffbe6', borderBottom:'1px solid #e8d98a', padding:'8px 40px', boxSizing:'border-box', textAlign:'center'}}>
-        <span style={{color:'#efb627', fontSize:'16px', letterSpacing:'2px'}}>★★★★★</span>
-        <span style={{color:'#272446', fontSize:'13px', fontWeight:'700', margin:'0 10px'}}>Excellent — rated 5 stars by our customers</span>
-        <a href="https://www.houzz.co.uk/browseReviews/terryburnett98" target="_blank" rel="noopener noreferrer" style={{color:'#363557', fontSize:'13px', fontWeight:'700', textDecoration:'none', borderBottom:'1px solid #363557'}}>Read our Houzz reviews →</a>
-        <span style={{color:'#aaa', margin:'0 12px'}}>|</span>
-        <a href="https://uk.trustpilot.com/review/doormate.co.uk" target="_blank" rel="noopener noreferrer" style={{color:'#363557', fontSize:'13px', fontWeight:'700', textDecoration:'none', borderBottom:'1px solid #363557'}}>View on Trustpilot →</a>
-      </div>
-
       {/* HERO — compact, not full screen */}
       <section style={{position:'relative', width:'100%', height:'360px', overflow:'hidden'}}>
         <Image
@@ -45,14 +36,6 @@ export default function HomePage() {
           <p style={{color:'rgba(255,255,255,0.92)', fontSize:'clamp(14px, 1.6vw, 18px)', margin:'0 0 24px 0', maxWidth:'440px', lineHeight:'1.5'}}>
             Built for real doors, real walls and real homes since 2009.
           </p>
-          <div style={{display:'flex', gap:'12px', flexWrap:'wrap'}}>
-            <Link href="/pocket-door-kits" style={{background:'#efb627', color:'#0f0d24', padding:'13px 36px', fontWeight:'900', fontSize:'15px', letterSpacing:'2px', textDecoration:'none', display:'inline-block', textTransform:'uppercase'}}>
-              SHOP NOW
-            </Link>
-            <a href="tel:02921660393" style={{background:'transparent', border:'2px solid rgba(255,255,255,0.8)', color:'#ffffff', padding:'13px 36px', fontWeight:'700', fontSize:'15px', textDecoration:'none', display:'inline-block'}}>
-              029 2166 0393
-            </a>
-          </div>
         </div>
       </section>
 
