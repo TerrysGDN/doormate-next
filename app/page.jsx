@@ -90,56 +90,28 @@ export default function HomePage() {
               View us on Trustpilot →
             </a>
           </div>
-          <div style={{paddingTop:'8px'}}>
-            <p style={{color:'#efb627', fontSize:'11px', fontWeight:'700', letterSpacing:'4px', textTransform:'uppercase', margin:'0 0 10px 0'}}>CUSTOMER REVIEWS</p>
-            <h2 style={{color:'#272446', fontSize:'clamp(20px, 2.5vw, 32px)', fontWeight:'900', margin:'0 0 18px 0'}}>What Our Customers Say</h2>
-            <p style={{color:'#444', fontSize:'16px', lineHeight:'1.85', margin:'0 0 14px 0'}}>
-              We've been on Houzz since 2015 and built our reputation on one thing — doing the job properly. Real products, real advice, real installations.
-            </p>
-            <p style={{color:'#444', fontSize:'16px', lineHeight:'1.85', margin:'0 0 14px 0'}}>
-              Every review is from a real customer who bought a real system and had it fitted in their home. We don't chase reviews — we earn them.
-            </p>
-            <p style={{color:'#444', fontSize:'16px', lineHeight:'1.85', margin:'0 0 28px 0'}}>
-              Got a question? Call <strong style={{color:'#272446'}}>029 2166 0393</strong> or email <a href="mailto:info@doormate.co.uk" style={{color:'#363557', fontWeight:'700'}}>info@doormate.co.uk</a>.
-            </p>
-            <a href="https://www.houzz.co.uk/browseReviews/terryburnett98" target="_blank" rel="noopener noreferrer" style={{background:'#272446', color:'#ffffff', padding:'12px 28px', fontWeight:'700', fontSize:'14px', textDecoration:'none', display:'inline-block', letterSpacing:'1px', textTransform:'uppercase'}}>
-              READ ALL REVIEWS ON HOUZZ →
-            </a>
+          <div>
+            <div style={{display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:'2px'}}>
+              {[
+                {name:'Doors', img:'/img/door-v-brace.jpg', href:'/doors', alt:'Handmade barn doors'},
+                {name:'Pocket Door Kits', img:'/img/mirror-pocket-single.jpg', href:'/pocket-door-kits', alt:'Pocket door kits'},
+                {name:'Barn Door Hardware', img:'/img/gainesville-system.jpg', href:'/barn-door-hardware', alt:'Barn door hardware'},
+                {name:'Internal Sliding Door Kits', img:'/img/dm-150.jpg', href:'/internal-sliding-kits', alt:'Internal sliding door kits'},
+                {name:'External Sliding Door Kits', img:'/img/external-kit.jpg', href:'/external-sliding-kits', alt:'External sliding door kits'},
+                {name:'Shop', img:'/img/covington-system.jpg', href:'/shop', alt:'Door accessories and hardware'},
+              ].map((cat) => (
+                <Link key={cat.name} href={cat.href} style={{textDecoration:'none', display:'block', background:'#fff', border:'1px solid #e8e8e8'}}>
+                  <div style={{position:'relative', width:'100%', paddingBottom:'70%', overflow:'hidden', background:'#eee'}}>
+                    <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="20vw" />
+                  </div>
+                  <p style={{color:'#272446', fontSize:'13px', fontWeight:'900', margin:0, padding:'8px 10px', textAlign:'center', borderTop:'2px solid #efb627'}}>{cat.name}</p>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CATEGORY TILES — white, image on top, info below, no dark overlays */}
-      <section style={{width:'100%', background:'#f7f7f7', padding:'40px 0 0', boxSizing:'border-box'}}>
-        <div style={{padding:'0 40px 24px', maxWidth:'1400px', margin:'0 auto'}}>
-          <h2 style={{color:'#272446', fontSize:'clamp(20px, 2.5vw, 32px)', fontWeight:'900', margin:0}}>
-            <span style={{color:'#efb627'}}>Sliding Door Systems</span> — Shop By Category
-          </h2>
-        </div>
-        <div style={{display:'grid', gridTemplateColumns:'repeat(3, 1fr)', width:'100%', borderTop:'1px solid #e0e0e0'}}>
-          {[
-            {name:'Pocket Door Kits', price:'From £117.60', img:'/img/mirror-pocket-single.jpg', href:'/pocket-door-kits', alt:'Pocket door kit'},
-            {name:'Barn Door Hardware', price:'From £150.00', img:'/img/gainesville-system.jpg', href:'/barn-door-hardware', alt:'Barn door hardware'},
-            {name:'External Sliding Door Kits', price:'From £104.00', img:'/img/external-kit.jpg', href:'/external-sliding-kits', alt:'External sliding door kit'},
-            {name:'Handmade Barn Doors', price:'From £527.00', img:'/img/door-v-brace.jpg', href:'/doors', alt:'Handmade barn door'},
-            {name:'Internal Sliding Door Kits', price:'From £104.00', img:'/img/dm-150.jpg', href:'/internal-sliding-kits', alt:'Internal sliding door kit'},
-            {name:'Shop — Accessories', price:'Handles, locks & more', img:'/img/covington-system.jpg', href:'/shop', alt:'Door accessories and hardware'},
-          ].map((cat) => (
-            <div key={cat.name} style={{background:'#ffffff', borderRight:'1px solid #e0e0e0', borderBottom:'1px solid #e0e0e0'}}>
-              <Link href={cat.href} style={{textDecoration:'none', display:'block'}}>
-                <div style={{position:'relative', width:'100%', paddingBottom:'65%', overflow:'hidden', background:'#eeeeee'}}>
-                  <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="33vw" />
-                </div>
-                <div style={{padding:'16px 20px 20px'}}>
-                  <h3 style={{color:'#272446', fontSize:'16px', fontWeight:'900', margin:'0 0 4px 0'}}>{cat.name}</h3>
-                  <p style={{color:'#efb627', fontSize:'15px', fontWeight:'700', margin:'0 0 12px 0'}}>{cat.price}</p>
-                  <span style={{background:'#efb627', color:'#0f0d24', padding:'8px 20px', fontSize:'12px', fontWeight:'900', letterSpacing:'2px', textTransform:'uppercase', display:'inline-block'}}>SHOP NOW →</span>
-                </div>
-              </Link>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* ABOUT — white, two columns, real copy */}
       <section style={{width:'100%', background:'#ffffff', padding:'56px 40px', boxSizing:'border-box', borderTop:'1px solid #e8e8e8'}}>
