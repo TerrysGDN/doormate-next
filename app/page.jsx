@@ -25,11 +25,7 @@ export default function HomePage() {
           style={{objectFit:'cover', objectPosition:'center'}}
           priority
         />
-        <div style={{position:'absolute', inset:0, background:'linear-gradient(to right, rgba(39,36,70,0.90) 0%, rgba(39,36,70,0.60) 55%, rgba(39,36,70,0.10) 100%)'}} />
         <div style={{position:'absolute', inset:0, display:'flex', flexDirection:'column', justifyContent:'center', padding:'0 60px'}}>
-          <p style={{color:'#efb627', fontSize:'11px', fontWeight:'700', letterSpacing:'4px', textTransform:'uppercase', margin:'0 0 12px 0'}}>
-            AS SEEN ON GEORGE CLARKE'S OLD HOUSE NEW HOME — CHANNEL 4
-          </p>
           <h1 style={{color:'#ffffff', fontSize:'clamp(28px, 4vw, 52px)', fontWeight:'900', lineHeight:'1.1', margin:'0 0 14px 0', maxWidth:'600px'}}>
             The UK's Leading<br/>Sliding Door Specialists
           </h1>
