@@ -42,81 +42,87 @@ export default function Nav() {
   }, [])
 
   return (
-    <header className="bg-brand-navy sticky top-0 z-40 shadow-md">
+    <header className="sticky top-0 z-40 shadow-md">
 
-      {/* ── SINGLE BAR — logo left, nav right ── */}
-      <div className="max-w-site mx-auto px-5 xl:px-16 flex items-center justify-between" style={{minHeight:'80px'}}>
+      {/* ── WHITE LOGO BAR ── */}
+      <div className="bg-white">
+        <div className="max-w-site mx-auto px-5 xl:px-16 flex items-center justify-between py-4">
 
-        {/* Logo — bigger now with full bar space */}
-        <Link href="/" className="flex-shrink-0">
-          <Image
-            src="/img/UJ Logo Final.png"
-            alt="DoorMate Sliding Door Systems"
-            width={260}
-            height={88}
-            className="object-contain w-auto"
-            style={{height:'72px'}}
-            priority
-          />
-        </Link>
+          <Link href="/" className="flex-shrink-0">
+            <Image
+              src="/img/UJ%20Logo%20Final.png"
+              alt="DoorMate Sliding Door Systems"
+              width={280}
+              height={80}
+              className="object-contain w-auto"
+              style={{height:'80px'}}
+              priority
+            />
+          </Link>
 
-        {/* Desktop nav links */}
-        <nav className="hidden lg:flex items-center gap-0">
-          {/* HOME with dropdown */}
-          <div className="relative" ref={dropdownRef}>
-            <button
-              onClick={() => setHomeOpen(!homeOpen)}
-              className="flex items-center gap-1 text-[11px] font-bold tracking-widest text-white hover:text-brand-gold transition-colors px-4 py-3"
-            >
-              HOME
-              <svg xmlns="http://www.w3.org/2000/svg" className={`w-3 h-3 transition-transform ${homeOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="square" d="M19 9l-7 7-7-7" />
+          {/* Mobile: hamburger */}
+          <button
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+            className="lg:hidden text-brand-navy p-2"
+          >
+            {mobileOpen ? (
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="square" d="M6 18L18 6M6 6l12 12" />
               </svg>
-            </button>
-            {homeOpen && (
-              <div className="absolute top-full left-0 bg-brand-gold shadow-xl min-w-[200px] py-1 z-50">
-                {HOME_DROPDOWN.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setHomeOpen(false)}
-                    className="block px-5 py-2.5 text-[11px] font-bold tracking-widest text-brand-navy hover:bg-brand-navy hover:text-brand-gold transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                ))}
-              </div>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="square" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
             )}
-          </div>
+          </button>
+        </div>
+      </div>
 
-          {/* Flat links */}
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-[11px] font-bold tracking-widest text-white/80 hover:text-brand-gold transition-colors px-4 py-3 whitespace-nowrap"
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
+      {/* ── NAVY NAV BAR (desktop) ── */}
+      <div className="bg-brand-navy hidden lg:block">
+        <div className="max-w-site mx-auto px-5 xl:px-16">
+          <nav className="flex items-center">
 
-        {/* Mobile: hamburger */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-          className="lg:hidden text-white p-2"
-        >
-          {mobileOpen ? (
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="square" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="square" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
+            {/* HOME with dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setHomeOpen(!homeOpen)}
+                className="flex items-center gap-1 text-[11px] font-bold tracking-widest text-brand-gold hover:text-white transition-colors px-4 py-3"
+              >
+                HOME
+                <svg xmlns="http://www.w3.org/2000/svg" className={`w-3 h-3 transition-transform ${homeOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="square" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {homeOpen && (
+                <div className="absolute top-full left-0 bg-brand-gold shadow-xl min-w-[200px] py-1 z-50">
+                  {HOME_DROPDOWN.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setHomeOpen(false)}
+                      className="block px-5 py-2.5 text-[11px] font-bold tracking-widest text-brand-navy hover:bg-brand-navy hover:text-brand-gold transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Flat links */}
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-[11px] font-bold tracking-widest text-brand-gold hover:text-white transition-colors px-4 py-3 whitespace-nowrap"
+              >
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
 
       {/* ── MOBILE MENU ── */}
