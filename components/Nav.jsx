@@ -50,7 +50,7 @@ export default function Nav() {
         {/* Logo — bigger now with full bar space */}
         <Link href="/" className="flex-shrink-0">
           <Image
-            src="/img/doormate-logo.jpg"
+            src="/img/UJ Logo Final.png"
             alt="DoorMate Sliding Door Systems"
             width={260}
             height={88}
