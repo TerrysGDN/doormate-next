@@ -44,28 +44,29 @@ export default function Nav() {
     <header className="bg-white sticky top-0 z-40 shadow-md">
 
       {/* ── SINGLE WHITE BAR ── */}
-      <div className="max-w-site mx-auto px-6 xl:px-16 flex items-center justify-between" style={{ height: '96px' }}>
+      <div className="max-w-site mx-auto px-6 xl:px-16 flex items-center justify-between" style={{ height: '120px' }}>
 
         {/* Logo — fills bar height */}
-        <Link href="/" className="flex-shrink-0 flex items-center h-full py-3">
+        <Link href="/" className="flex-shrink-0 flex items-center h-full py-2">
           <Image
             src="/img/UJ%20Logo%20Final.png"
             alt="DoorMate Sliding Door Systems"
-            width={320}
-            height={70}
-            className="object-contain w-auto h-full"
+            width={400}
+            height={100}
+            className="object-contain w-auto"
+            style={{ height: '100%', width: 'auto' }}
             priority
           />
         </Link>
 
         {/* Desktop nav links */}
-        <nav className="hidden lg:flex items-center gap-7">
+        <nav className="hidden lg:flex items-center gap-9">
 
           {/* HOME with dropdown */}
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setHomeOpen(!homeOpen)}
-              className="flex items-center gap-1 text-[13px] font-bold tracking-wide transition-colors"
+              className="flex items-center gap-1 text-[15px] font-bold tracking-wide transition-colors"
               style={{ color: '#272446' }}
             >
               HOME
@@ -94,7 +95,7 @@ export default function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[13px] font-bold tracking-wide whitespace-nowrap transition-opacity hover:opacity-60"
+              className="text-[15px] font-bold tracking-wide whitespace-nowrap transition-opacity hover:opacity-60"
               style={{ color: '#272446' }}
             >
               {link.label}
