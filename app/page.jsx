@@ -30,42 +30,45 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* HOUZZ REVIEWS — immediately after trust strip, above the fold */}
-      <section style={{width:'100%', background:'#ffffff', padding:'40px 40px', boxSizing:'border-box', borderBottom:'1px solid #e8e8e8'}}>
-        <div style={{display:'grid', gridTemplateColumns:'320px 1fr', gap:'48px', maxWidth:'1400px', margin:'0 auto', alignItems:'start'}}>
-          <div>
-            <iframe
-              scrolling="no"
-              frameBorder="0"
-              width="300"
-              height="435"
-              src="https://www.houzz.com/reviewWidget/terryburnett98/"
-              style={{border:'none', display:'block'}}
-              title="DoorMate customer reviews on Houzz"
-            />
-            <a href="https://uk.trustpilot.com/review/doormate.co.uk" target="_blank" rel="noopener noreferrer" style={{display:'block', marginTop:'12px', color:'#363557', fontSize:'13px', fontWeight:'700', textDecoration:'none', borderBottom:'1px solid #efb627', paddingBottom:'2px', width:'fit-content'}}>
+      {/* HOUZZ REVIEWS + CATEGORY CARDS — 7-card single row */}
+      <section style={{width:'100%', background:'#ffffff', padding:'20px 40px', boxSizing:'border-box'}}>
+        <div style={{display:'grid', gridTemplateColumns:'repeat(7, 1fr)', gap:'12px', maxWidth:'1400px', margin:'0 auto'}}>
+
+          {/* Card 1 — Houzz reviews widget */}
+          <div style={{display:'flex', flexDirection:'column', gap:'8px'}}>
+            <div style={{height:'280px', background:'#272446', borderBottom:'3px solid #efb627', overflow:'hidden', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', padding:'8px', boxSizing:'border-box'}}>
+              <iframe
+                scrolling="no"
+                frameBorder="0"
+                width="100%"
+                height="260"
+                src="https://www.houzz.com/reviewWidget/terryburnett98/"
+                style={{border:'none', display:'block'}}
+                title="DoorMate customer reviews on Houzz"
+              />
+            </div>
+            <a href="https://uk.trustpilot.com/review/doormate.co.uk" target="_blank" rel="noopener noreferrer" style={{display:'block', color:'#363557', fontSize:'12px', fontWeight:'700', textDecoration:'none', borderBottom:'1px solid #efb627', paddingBottom:'2px', width:'fit-content'}}>
               View us on Trustpilot →
             </a>
           </div>
-          <div>
-            <div style={{display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:'2px'}}>
-              {[
-                {name:'Doors', img:'/img/door-v-brace.jpg', href:'/doors', alt:'Handmade barn doors'},
-                {name:'Pocket Door Kits', img:'/img/mirror-pocket-single.jpg', href:'/pocket-door-kits', alt:'Pocket door kits'},
-                {name:'Barn Door Hardware', img:'/img/gainesville-system.jpg', href:'/barn-door-hardware', alt:'Barn door hardware'},
-                {name:'Internal Sliding Door Kits', img:'/img/dm-150.jpg', href:'/internal-sliding-kits', alt:'Internal sliding door kits'},
-                {name:'External Sliding Door Kits', img:'/img/external-kit.jpg', href:'/external-sliding-kits', alt:'External sliding door kits'},
-                {name:'Shop', img:'/img/covington-system.jpg', href:'/shop', alt:'Door accessories and hardware'},
-              ].map((cat) => (
-                <Link key={cat.name} href={cat.href} style={{textDecoration:'none', display:'block', background:'#fff', border:'1px solid #e8e8e8'}}>
-                  <div style={{position:'relative', width:'100%', paddingBottom:'70%', overflow:'hidden', background:'#eee'}}>
-                    <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="20vw" />
-                  </div>
-                  <p style={{color:'#272446', fontSize:'13px', fontWeight:'900', margin:0, padding:'8px 10px', textAlign:'center', borderTop:'2px solid #efb627'}}>{cat.name}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
+
+          {/* Cards 2–7 — product categories */}
+          {[
+            {name:'Doors',                      img:'/img/door-v-brace.jpg',          href:'/doors',                alt:'Handmade barn doors'},
+            {name:'Pocket Door Kits',           img:'/img/mirror-pocket-single.jpg',  href:'/pocket-door-kits',     alt:'Pocket door kits'},
+            {name:'Barn Door Hardware',         img:'/img/gainesville-system.jpg',    href:'/barn-door-hardware',   alt:'Barn door hardware'},
+            {name:'Internal Sliding Door Kits', img:'/img/dm-150.jpg',               href:'/internal-sliding-kits',alt:'Internal sliding door kits'},
+            {name:'External Sliding Door Kits', img:'/img/external-kit.jpg',          href:'/external-sliding-kits',alt:'External sliding door kits'},
+            {name:'Shop',                       img:'/img/covington-system.jpg',      href:'/shop',                 alt:'Door accessories and hardware'},
+          ].map((cat) => (
+            <Link key={cat.name} href={cat.href} style={{textDecoration:'none', display:'flex', flexDirection:'column', height:'280px', background:'#272446', borderBottom:'3px solid #efb627', overflow:'hidden'}}>
+              <p style={{color:'#ffffff', fontSize:'14px', fontWeight:'bold', margin:0, padding:'10px', flexShrink:0}}>{cat.name}</p>
+              <div style={{position:'relative', flex:1, overflow:'hidden'}}>
+                <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="15vw" />
+              </div>
+            </Link>
+          ))}
+
         </div>
       </section>
 
