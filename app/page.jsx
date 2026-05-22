@@ -56,7 +56,7 @@ export default function HomePage() {
           {[
             {name:'Doors',                      img:'/img/door-v-brace.jpg',          href:'/doors',                alt:'Handmade barn doors'},
             {name:'Pocket Door Kits',           img:'/img/mirror-pocket-single.jpg',  href:'/pocket-door-kits',     alt:'Pocket door kits'},
-            {name:'Barn Door Hardware',         img:'/img/gainesville-system.jpg',    href:'/barn-door-hardware',   alt:'Barn door hardware'},
+            {name:'Barn Door Kits',             img:'/img/gainesville-system.jpg',    href:'/barn-door-hardware',   alt:'Barn door hardware'},
             {name:'Internal Kits',              img:'/img/dm-150.jpg',               href:'/internal-sliding-kits',alt:'Internal sliding door kits'},
             {name:'External Kits',              img:'/img/external-kit.jpg',          href:'/external-sliding-kits',alt:'External sliding door kits'},
             {name:'Shop',                       img:'/img/covington-system.jpg',      href:'/shop',                 alt:'Door accessories and hardware'},
