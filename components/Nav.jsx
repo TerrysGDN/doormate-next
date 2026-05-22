@@ -91,7 +91,7 @@ export default function Nav() {
           </div>
 
           {/* Separator after HOME */}
-          <span style={{ color: '#c0c0c0', fontWeight: 300, fontSize: '14px', userSelect: 'none', lineHeight: 1 }}>|</span>
+          <span style={{ color: '#efb627', fontWeight: 300, fontSize: '14px', userSelect: 'none', lineHeight: 1 }}>|</span>
 
           {/* Flat links with separators between */}
           {NAV_LINKS.flatMap((link, i) => [
@@ -104,7 +104,7 @@ export default function Nav() {
               {link.label}
             </Link>,
             i < NAV_LINKS.length - 1 && (
-              <span key={`sep-${i}`} style={{ color: '#c0c0c0', fontWeight: 300, fontSize: '14px', userSelect: 'none', lineHeight: 1 }}>|</span>
+              <span key={`sep-${i}`} style={{ color: '#efb627', fontWeight: 300, fontSize: '14px', userSelect: 'none', lineHeight: 1 }}>|</span>
             ),
           ])}
         </nav>

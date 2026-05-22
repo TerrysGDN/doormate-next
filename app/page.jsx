@@ -31,7 +31,7 @@ export default function HomePage() {
           ].map((item, i, arr) => (
             <span key={item} style={{display:'inline-flex', alignItems:'center', gap:'8px'}}>
               <span style={{color:'#efb627', fontWeight:'700', fontSize:'13px'}}>{item}</span>
-              {i < arr.length - 1 && <span style={{color:'rgba(255,255,255,0.3)', fontSize:'13px'}}>|</span>}
+              {i < arr.length - 1 && <span style={{color:'#efb627', fontSize:'13px'}}>|</span>}
             </span>
           ))}
         </div>
