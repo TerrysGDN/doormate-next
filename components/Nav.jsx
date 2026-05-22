@@ -44,7 +44,7 @@ export default function Nav() {
     <header className="bg-white sticky top-0 z-40 shadow-md">
 
       {/* ── SINGLE WHITE BAR ── */}
-      <div className="max-w-site mx-auto px-6 xl:px-16 flex items-center justify-between" style={{ height: '130px' }}>
+      <div className="flex items-center justify-between" style={{ height: '120px', width: '100%', padding: '0 40px' }}>
 
         {/* Logo — fills bar height */}
         <Link href="/" className="flex-shrink-0 flex items-center h-full py-1">
@@ -52,9 +52,9 @@ export default function Nav() {
             src="/img/UJ%20Logo%20Final.png"
             alt="DoorMate Sliding Door Systems"
             width={520}
-            height={118}
+            height={110}
             className="object-contain"
-            style={{ height: '118px', width: 'auto' }}
+            style={{ height: '110px', width: 'auto' }}
             priority
           />
         </Link>
@@ -126,6 +126,13 @@ export default function Nav() {
             </svg>
           )}
         </button>
+      </div>
+
+      {/* ── TAGLINE STRIP ── */}
+      <div style={{ background: '#272446', padding: '10px 0', textAlign: 'center' }}>
+        <span style={{ color: '#ffffff', fontWeight: 'bold', fontSize: '15px', letterSpacing: '0.05em' }}>
+          Perfect Systems For Every Application
+        </span>
       </div>
 
       {/* ── MOBILE MENU ── */}

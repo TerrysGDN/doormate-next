@@ -546,4 +546,150 @@ Before any new build or major extension, run these checks. The old site died bec
 
 ---
 
-## END OF MASTER BIBLE v2 — 19 MAY 2026
+## SESSION SUMMARY — 21 MAY 2026 (EARLIER)
+
+### Homepage framework — LOCKED
+Terry's formula, agreed and not to be changed:
+**HEADLINE = AUTHORITY | REVIEWS WIDGET = TRUST | WHAT WE DO = 6 CARDS**
+Everything above the fold. This is the selling formula. Do not rearrange it.
+
+### Decisions made and pushed to GitHub
+- **Hero**: Fixed 360px height. Headline + subline only. No buttons. No phone number in hero.
+  - Headline: "The UK's Leading Sliding Door Specialists"
+  - Subline: "Built for real doors, real walls and real homes since 2009."
+- **Gold star bar above hero**: Removed — widget below makes it redundant.
+- **Trust strip**: Single line, navy background, gold text. "Trading Since 2009 | As Seen On Channel 4 | UK Sliding Door Specialists | Handmade In Cardiff"
+- **Houzz widget + 6 category cards**: Side by side, immediately below trust strip — above the fold on standard desktop. Houzz iframe left (300x435). Six cards right in 3-column grid.
+  - Card order: Doors | Pocket Door Kits | Barn Door Hardware | Internal Sliding Door Kits | External Sliding Door Kits | Shop
+  - Cards: image top, gold-bordered name label below. No gradient overlays. Clean.
+- **Trustpilot link**: Sits below Houzz widget (small text link).
+- **Background**: White throughout. Navy only for nav bar and trust strip. Dark navy sections below fold removed.
+- **Nav**: Merged into single bar. Logo left (width=260, height=72px). Links right. No phone number. No SHOP NOW button.
+  - HOME dropdown: As Seen On TV | News | About Us | Contact | Trade | Become A Partner | Fitters Wanted | Dropshipping
+  - Flat links: Doors | Barn Door Hardware | Pocket Door Kits | Internal Sliding Door Kits | External Sliding Door Kits | Gallery | Shop
+- **Phone number**: Footer only. Not in nav or hero.
+- All changes committed and pushed. Vercel auto-deployed.
+
+### Rules established this session — NEVER BREAK
+- **DISCUSS BEFORE MAKING ANY CODE CHANGES** — Terry raised this multiple times. No jumping ahead.
+- The Houzz widget is the biggest selling tool. It goes prominent and above fold. Never move it down the page.
+- White is the primary background. Navy is the nav. That's it.
+- No SHOP NOW in nav — the category cards do that job.
+- No phone number in nav or hero — footer only.
+
+### Outstanding — next session priorities
+1. Logo size refinement — Terry flagged it as too small ("WHO ARE THIS AMAZING COMPANY? OH WAIT LET ME INCREASE THE BROWSER ZOOM")
+2. Schema.org JSON-LD structured data — NOT yet added. Organisation, LocalBusiness in layout.jsx. Product + AggregateRating on every product page. AISEO critical.
+3. llms.txt file at root — for AI assistant citation
+4. Sitemap.xml — verify it's correct and submit to Google Search Console
+5. Footer — add phone number 029 2166 0393
+6. Category landing pages (Part 17)
+7. Individual product pages
+
+---
+
+## SESSION SUMMARY — 21 MAY 2026 (EVENING) — READ THIS FIRST — MOST RECENT
+
+### STATE OF THE HOMEPAGE RIGHT NOW
+Hero gradient removed — Augusta installation photos now visible. Channel 4 line removed from hero. Nav is one white bar with | separators between links. Logo visible but still too small — does not fill the full height of the white nav bar. This is the next fix.
+
+### WORKFLOW — LOCKED FOREVER — NEVER CHANGE
+- **Cowork** — strategy, bible, design decisions, writes Claude Code prompts
+- **Claude Code** — executes changes directly in NEW WEBSITE folder on Desktop
+- **Claude Code pushes directly to GitHub** — Terry does NOT type git commands
+- **GitHub Desktop** — installed and connected to doormate-next. Used as backup sync if needed.
+- **Vercel** — deploys automatically when GitHub receives the push
+- Terry refreshes the Vercel URL to see changes: `https://doormate-next-git-main-terry-s-projects-22f7d3c3.vercel.app`
+- Hard refresh = Ctrl + Shift + R
+
+### KNOWN MESS TO CLEAN UP
+- There is/was a duplicate nested folder `NEW WEBSITE\doormate-next` — Claude Code told to delete it. Confirm it's gone next session.
+- Dead Vercel project **doormate-website** still exists — delete it from Vercel dashboard when time allows.
+- Dead GitHub repo **doormate-website** — delete when time allows.
+
+### WHAT IS WRONG — FIX IN THIS ORDER NEXT SESSION
+1. **Nav balance** — logo is sitting too far right, links too far left. The whole nav needs proper spacing so logo sits left with breathing room and links sit right with breathing room. Balanced, not bunched.
+2. **Logo size** — must fill the full height of the white nav bar. The bar needs to be taller to give the logo room. Logo is `UJ Logo Final.png` in public/img.
+3. **Hero** — silent auto-scrolling through real installation images. Smooth transitions every 5 seconds. Headline stays fixed, images change underneath. Different products each slide.
+4. **Hero headline position** — currently bottom left. Needs to be properly positioned.
+5. **Nav bar height** — increase so logo has room to breathe and fill it properly.
+
+### WHAT IS WORKING — DO NOT TOUCH
+- Hero gradient removed — installation photos visible
+- Channel 4 line removed from hero
+- One white nav bar with | separators and navy links
+- Trust strip — navy background, gold text, one line
+- Houzz widget + 6 category cards side by side below trust strip
+- Footer with phone number
+- White background throughout below fold
+
+### DESIGN DIRECTION — LOCKED
+Terry designed the old site himself. £250k revenue 2017 on 5% Google visibility. His sales instincts built that. The new site takes those instincts and puts them where Google and AI assistants can see them. NOT a copy of the old site. NOT Claude's template. Terry's sales logic + 2026 technology.
+
+### PROCESS — LOCKED
+- One page at a time
+- Code snippet changes only — never full rebuilds
+- Claude Code makes change, Terry sees it live, approves or corrects
+- Discuss BEFORE making any code changes — never surprise Terry with design decisions
+- Homepage is NOT signed off. Still in progress.
+
+### TOKEN WASTE — CRITICAL
+Claude Code is reading files every time and syncing two folders. The nested doormate-next folder MUST be deleted. Every prompt must be specific — file name, exact change, nothing else. No reading unnecessary files.
+
+---
+
+## SESSION SUMMARY — 21 MAY 2026 (AFTERNOON) — READ THIS FIRST
+
+### THE MOST IMPORTANT THING AGREED TODAY — NEVER FORGET
+Terry built the old site (barn-doors.co.uk) himself. Every design decision, every sales technique, every layout choice — his. Not a designer. Not an agency. A 30-year industrial door salesman who spotted the barn door trend in 2012/13, jumped on it, manufactured when nobody else bothered, then spotted the trend dying and diversified into full sliding door systems. The old site did £250,000 in 2017 with Google seeing only 5% of it. That is the proof. The new site's ONLY job is to take Terry's sales instincts and put them somewhere Google can see them. NOT to reinvent. NOT to modernise for the sake of it. To execute Terry's vision with 2026 technology underneath.
+
+### THE WORKFLOW — LOCKED — NEVER CHANGE
+- **Cowork** — memory, bible, design conversations, writes Claude Code prompts. Does NOT touch code directly.
+- **Claude Code** — executes code changes in the NEW WEBSITE folder on Terry's Desktop. Has full PC access.
+- **GitHub Desktop** — syncs the NEW WEBSITE folder to GitHub automatically. Terry does NOT type git commands. Same process as the GDN project.
+- **Vercel** — deploys automatically when GitHub Desktop syncs.
+- Terry NEVER needs to open GitHub in a browser. NEVER types git commands. GitHub Desktop does it.
+
+### THE BUILD PROCESS — LOCKED
+- Work ONE PAGE at a time
+- Make CODE SNIPPET changes — not full rebuilds
+- Claude Code makes the change, Terry sees it live on Vercel, approves or corrects
+- NEVER ask Claude Code to rebuild whole sections — specific snippets only
+
+### WEBSITE2.HTML IS DEAD — REMOVE FROM ALL FUTURE BRIEFS
+website2.html was an HTML site — same structural problems as WebFactory. It is NOT the design reference. Remove any mention of it from Claude Code briefs. It does not exist as a reference.
+
+### THE HOMEPAGE VISUAL DIRECTION — LOCKED TODAY
+The current build (what's live on Vercel right now) has a solid foundation but is NOT signed off. Still in progress. Do not treat it as done.
+
+**What's working and must NOT be changed:**
+- Houzz widget + 6 category cards side by side — good, keep it
+- Trust strip — keep it
+- Overall white background below the fold — keep it
+- Footer structure — keep it, phone number is there
+
+**What is WRONG and must be fixed — in this order:**
+1. **Logo** — `UJ Logo Final.png` is the correct transparent PNG logo. Located at `C:\Users\Terry\My Drive (terryburnett98@gmail.com)\Work Folders\1Barn door\Logo2026\UJ Logo Final.png`. Copy to `public\img\doormate-logo.png`. Update Nav.jsx and Footer.jsx to use `doormate-logo.png` not `doormate-logo.jpg`.
+2. **Header** — White header bar above the gold/navy nav. Logo sits in white space, no box, no background clash. Then gold nav bar below it.
+3. **Nav links** — Must be GOLD not white. Navy background, gold links. Brand colours.
+4. **Hero** — Remove the dark gradient overlay entirely. The Augusta installation photo (three positions — closed, half open, fully open) is brilliant and we are hiding it. Show it. Also remove the "AS SEEN ON GEORGE CLARKE'S OLD HOUSE NEW HOME — CHANNEL 4" line from the hero — it's duplicated in the trust strip.
+5. **Hero — silent auto-scrolling** — Hero cycles through multiple real installation images silently and automatically. Smooth transitions. Different products each slide. Headline stays fixed. Images change underneath.
+
+### TERRY'S BUSINESS CONTEXT — BAKE THIS IN PERMANENTLY
+- £250k revenue in 2017 with Google seeing 5% of the site
+- Survived 10 years on a site Google mostly couldn't see — because Terry's sales instincts and product knowledge carried it
+- WebFactory was not honest about the SEO problems — Terry didn't know until 2026
+- The new site is not the rescue plan — Terry is the rescue plan. The new site gives him the visibility he should have had 10 years ago
+- Barn door hardware: spotted the trend 2012/13, manufactured when nobody else did, diversified when trend peaked. Now just one part of a full sliding door systems range.
+- No competitor can match the combination: manufacturer credibility + full sliding systems range + 30 years industry knowledge + Terry's sales ability
+
+### NEXT SESSION STARTS HERE
+1. Logo fix first — Claude Code prompt ready, paste it in, see it live
+2. White header bar + gold nav links — one snippet
+3. Hero gradient removed — one snippet  
+4. Hero auto-scroll — one snippet
+5. Homepage is signed off only when Terry says so — not before
+
+---
+
+## END OF MASTER BIBLE v2 — 19 MAY 2026 | Updated 21 MAY 2026 (twice)

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import HeroCarousel from '@/components/HeroCarousel'
 
 export const metadata = {
   title: "DoorMate Sliding Door Systems | Pocket Doors, Sliding Kits & Barn Door Hardware Cardiff",
@@ -16,28 +17,12 @@ export default function HomePage() {
   return (
     <main style={{width:'100%', margin:0, padding:0, fontFamily:'sans-serif', background:'#ffffff'}}>
 
-      {/* HERO — compact, not full screen */}
-      <section style={{position:'relative', width:'100%', height:'360px', overflow:'hidden'}}>
-        <Image
-          src="/img/hero-installed.jpg"
-          alt="DoorMate sliding door system installed in UK home"
-          fill
-          style={{objectFit:'cover', objectPosition:'center'}}
-          priority
-        />
-        <div style={{position:'absolute', inset:0, display:'flex', flexDirection:'column', justifyContent:'center', padding:'0 60px'}}>
-          <h1 style={{color:'#ffffff', fontSize:'clamp(28px, 4vw, 52px)', fontWeight:'900', lineHeight:'1.1', margin:'0 0 14px 0', maxWidth:'600px'}}>
-            The UK's Leading<br/>Sliding Door Specialists
-          </h1>
-          <p style={{color:'rgba(255,255,255,0.92)', fontSize:'clamp(14px, 1.6vw, 18px)', margin:'0 0 24px 0', maxWidth:'440px', lineHeight:'1.5'}}>
-            Built for real doors, real walls and real homes since 2009.
-          </p>
-        </div>
-      </section>
+      {/* HERO — silent auto-scrolling carousel */}
+      <HeroCarousel />
 
       {/* TRUST STRIP — thin, one line */}
       <div style={{width:'100%', background:'#272446', padding:'12px 40px', boxSizing:'border-box'}}>
-        <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', flexWrap:'wrap', gap:'8px', maxWidth:'1200px', margin:'0 auto'}}>
+        <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', flexWrap:'wrap', gap:'8px', maxWidth:'1400px', margin:'0 auto'}}>
           {[
             'Trading Since 2009',
             'As Seen On Channel 4',
@@ -54,7 +39,7 @@ export default function HomePage() {
 
       {/* HOUZZ REVIEWS — immediately after trust strip, above the fold */}
       <section style={{width:'100%', background:'#ffffff', padding:'40px 40px', boxSizing:'border-box', borderBottom:'1px solid #e8e8e8'}}>
-        <div style={{display:'grid', gridTemplateColumns:'320px 1fr', gap:'48px', maxWidth:'1300px', margin:'0 auto', alignItems:'start'}}>
+        <div style={{display:'grid', gridTemplateColumns:'320px 1fr', gap:'48px', maxWidth:'1400px', margin:'0 auto', alignItems:'start'}}>
           <div>
             <iframe
               scrolling="no"
@@ -94,7 +79,7 @@ export default function HomePage() {
 
       {/* ABOUT — white, two columns, real copy */}
       <section style={{width:'100%', background:'#ffffff', padding:'56px 40px', boxSizing:'border-box', borderTop:'1px solid #e8e8e8'}}>
-        <div style={{display:'grid', gridTemplateColumns:'3fr 2fr', gap:'56px', maxWidth:'1300px', margin:'0 auto', alignItems:'center'}}>
+        <div style={{display:'grid', gridTemplateColumns:'3fr 2fr', gap:'56px', maxWidth:'1400px', margin:'0 auto', alignItems:'center'}}>
           <div>
             <p style={{color:'#efb627', fontSize:'11px', fontWeight:'700', letterSpacing:'4px', textTransform:'uppercase', margin:'0 0 10px 0'}}>ABOUT DOORMATE</p>
             <h2 style={{color:'#272446', fontSize:'clamp(20px, 2.5vw, 32px)', fontWeight:'900', margin:'0 0 18px 0', lineHeight:'1.2'}}>
@@ -135,7 +120,7 @@ export default function HomePage() {
 
       {/* DON'T ACCEPT CHEAP IMITATIONS — white background now, not dark */}
       <section style={{width:'100%', background:'#ffffff', padding:'56px 40px', boxSizing:'border-box'}}>
-        <div style={{display:'grid', gridTemplateColumns:'2fr 3fr', gap:'56px', maxWidth:'1300px', margin:'0 auto', alignItems:'center'}}>
+        <div style={{display:'grid', gridTemplateColumns:'2fr 3fr', gap:'56px', maxWidth:'1400px', margin:'0 auto', alignItems:'center'}}>
           <div style={{position:'relative', height:'360px', overflow:'hidden'}}>
             <Image src="/img/gainesville-closeup.png" alt="DoorMate barn door hardware close-up — UK manufactured Cardiff" fill style={{objectFit:'cover'}} sizes="40vw" />
           </div>
@@ -160,7 +145,7 @@ export default function HomePage() {
 
       {/* CHANNEL 4 — thin strip, not a dark cave */}
       <section style={{width:'100%', background:'#f7f7f7', padding:'28px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'1px solid #e8e8e8'}}>
-        <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:'16px', maxWidth:'1300px', margin:'0 auto'}}>
+        <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:'16px', maxWidth:'1400px', margin:'0 auto'}}>
           <div>
             <p style={{color:'#999', fontSize:'11px', fontWeight:'700', letterSpacing:'3px', textTransform:'uppercase', margin:'0 0 4px 0'}}>FEATURED ON</p>
             <h3 style={{color:'#272446', fontSize:'clamp(15px, 2vw, 22px)', fontWeight:'900', margin:0}}>George Clarke's Old House New Home — Channel 4</h3>
@@ -173,7 +158,7 @@ export default function HomePage() {
 
       {/* SOCIAL MEDIA */}
       <section style={{width:'100%', background:'#ffffff', padding:'24px 40px', boxSizing:'border-box', borderBottom:'1px solid #e8e8e8'}}>
-        <div style={{display:'flex', justifyContent:'center', alignItems:'center', gap:'8px', flexWrap:'wrap', maxWidth:'800px', margin:'0 auto'}}>
+        <div style={{display:'flex', justifyContent:'center', alignItems:'center', gap:'8px', flexWrap:'wrap', maxWidth:'1400px', margin:'0 auto'}}>
           {[
             {label:'Facebook', href:'https://www.facebook.com/Door-Mate-1173024366050268/'},
             {label:'X / Twitter', href:'https://x.com/mate_door'},
