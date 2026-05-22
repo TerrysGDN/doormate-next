@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <main style={{width:'100%', margin:0, padding:0, fontFamily:'sans-serif', background:'#ffffff'}}>
+    <main style={{width:'100%', margin:0, padding:0, fontFamily:"'Libre Franklin', sans-serif", background:'#ffffff'}}>
 
       {/* HERO — silent auto-scrolling carousel */}
       <HeroCarousel />
@@ -24,7 +24,7 @@ export default function HomePage() {
       <div style={{width:'100%', background:'#272446', padding:'12px 40px', boxSizing:'border-box'}}>
         <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:'8px', maxWidth:'1400px', margin:'0 auto'}}>
           {['Trading Since 2009', 'As Seen On Channel 4', 'UK Sliding Door Specialists', 'Handmade In Cardiff'].flatMap((item, i, arr) => [
-            <span key={item} style={{color:'#efb627', fontWeight:'700', fontSize:'13px'}}>{item}</span>,
+            <span key={item} style={{color:'#efb627', fontWeight:'bold', fontSize:'16px', fontFamily:"'Franklin Gothic Demi', 'Libre Franklin', sans-serif"}}>{item}</span>,
             i < arr.length - 1 ? <span key={`sep-${i}`} style={{color:'#efb627'}}>|</span> : null,
           ])}
         </div>

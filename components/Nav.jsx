@@ -67,7 +67,7 @@ export default function Nav() {
             <button
               onClick={() => setHomeOpen(!homeOpen)}
               className="flex items-center gap-1 text-[16px] font-bold tracking-wide transition-colors"
-              style={{ color: '#272446' }}
+              style={{ color: '#272446', fontFamily: "'Libre Franklin', sans-serif" }}
             >
               HOME
               <svg xmlns="http://www.w3.org/2000/svg" className={`w-3 h-3 transition-transform ${homeOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -91,7 +91,7 @@ export default function Nav() {
           </div>
 
           {/* Separator after HOME */}
-          <span style={{ color: '#efb627', fontWeight: 300, fontSize: '14px', userSelect: 'none', lineHeight: 1 }}>|</span>
+          <span style={{ color: '#efb627', fontWeight: 700, fontSize: '14px', userSelect: 'none', lineHeight: 1 }}>|</span>
 
           {/* Flat links with separators between */}
           {NAV_LINKS.flatMap((link, i) => [
@@ -99,12 +99,12 @@ export default function Nav() {
               key={link.href}
               href={link.href}
               className="text-[16px] font-bold tracking-wide whitespace-nowrap transition-opacity hover:opacity-60"
-              style={{ color: '#272446' }}
+              style={{ color: '#272446', fontFamily: "'Libre Franklin', sans-serif" }}
             >
               {link.label}
             </Link>,
             i < NAV_LINKS.length - 1 && (
-              <span key={`sep-${i}`} style={{ color: '#efb627', fontWeight: 300, fontSize: '14px', userSelect: 'none', lineHeight: 1 }}>|</span>
+              <span key={`sep-${i}`} style={{ color: '#efb627', fontWeight: 700, fontSize: '14px', userSelect: 'none', lineHeight: 1 }}>|</span>
             ),
           ])}
         </nav>
@@ -130,7 +130,7 @@ export default function Nav() {
 
       {/* ── TAGLINE STRIP ── */}
       <div style={{ background: '#272446', padding: '10px 0', textAlign: 'center' }}>
-        <span style={{ color: '#ffffff', fontWeight: 'bold', fontSize: '16px', letterSpacing: '0.05em' }}>
+        <span style={{ color: '#ffffff', fontWeight: 'bold', fontSize: '16px', letterSpacing: '0.05em', fontFamily: "'Libre Franklin', sans-serif" }}>
           Sliding Systems — Built for real doors, real walls and real homes since 2009.
         </span>
       </div>
