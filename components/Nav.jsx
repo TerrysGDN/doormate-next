@@ -49,7 +49,7 @@ export default function Nav() {
         {/* Logo — fills bar height */}
         <Link href="/" className="flex-shrink-0 flex items-center h-full py-1">
           <Image
-            src="/img/UJ%20Logo%20Final.png"
+            src="/img/doormate-logo-cropped.png"
             alt="DoorMate Sliding Door Systems"
             width={520}
             height={76}
