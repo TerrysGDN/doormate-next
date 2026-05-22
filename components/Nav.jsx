@@ -130,7 +130,7 @@ export default function Nav() {
 
       {/* ── TAGLINE STRIP ── */}
       <div style={{ background: '#272446', padding: '10px 0', textAlign: 'center' }}>
-        <span style={{ color: '#ffffff', fontWeight: 'bold', fontSize: '15px', letterSpacing: '0.05em' }}>
+        <span style={{ color: '#ffffff', fontWeight: 'bold', fontSize: '16px', letterSpacing: '0.05em' }}>
           Sliding Systems — Built for real doors, real walls and real homes since 2009.
         </span>
       </div>

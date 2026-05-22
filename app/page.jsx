@@ -22,18 +22,11 @@ export default function HomePage() {
 
       {/* TRUST STRIP — thin, one line */}
       <div style={{width:'100%', background:'#272446', padding:'12px 40px', boxSizing:'border-box'}}>
-        <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', flexWrap:'wrap', gap:'8px', maxWidth:'1400px', margin:'0 auto'}}>
-          {[
-            'Trading Since 2009',
-            'As Seen On Channel 4',
-            'UK Sliding Door Specialists',
-            'Handmade In Cardiff',
-          ].map((item, i, arr) => (
-            <span key={item} style={{display:'inline-flex', alignItems:'center', gap:'8px'}}>
-              <span style={{color:'#efb627', fontWeight:'700', fontSize:'13px'}}>{item}</span>
-              {i < arr.length - 1 && <span style={{color:'#efb627', fontSize:'13px'}}>|</span>}
-            </span>
-          ))}
+        <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:'8px', maxWidth:'1400px', margin:'0 auto'}}>
+          {['Trading Since 2009', 'As Seen On Channel 4', 'UK Sliding Door Specialists', 'Handmade In Cardiff'].flatMap((item, i, arr) => [
+            <span key={item} style={{color:'#efb627', fontWeight:'700', fontSize:'13px'}}>{item}</span>,
+            i < arr.length - 1 ? <span key={`sep-${i}`} style={{color:'#efb627'}}>|</span> : null,
+          ])}
         </div>
       </div>
 
