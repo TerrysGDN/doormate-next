@@ -57,12 +57,12 @@ export default function HomePage() {
             {name:'Doors',                      img:'/img/door-v-brace.jpg',          href:'/doors',                alt:'Handmade barn doors'},
             {name:'Pocket Door Kits',           img:'/img/mirror-pocket-single.jpg',  href:'/pocket-door-kits',     alt:'Pocket door kits'},
             {name:'Barn Door Hardware',         img:'/img/gainesville-system.jpg',    href:'/barn-door-hardware',   alt:'Barn door hardware'},
-            {name:'Internal Sliding Door Kits', img:'/img/dm-150.jpg',               href:'/internal-sliding-kits',alt:'Internal sliding door kits'},
-            {name:'External Sliding Door Kits', img:'/img/external-kit.jpg',          href:'/external-sliding-kits',alt:'External sliding door kits'},
+            {name:'Internal Kits',              img:'/img/dm-150.jpg',               href:'/internal-sliding-kits',alt:'Internal sliding door kits'},
+            {name:'External Kits',              img:'/img/external-kit.jpg',          href:'/external-sliding-kits',alt:'External sliding door kits'},
             {name:'Shop',                       img:'/img/covington-system.jpg',      href:'/shop',                 alt:'Door accessories and hardware'},
           ].map((cat) => (
             <Link key={cat.name} href={cat.href} style={{textDecoration:'none', display:'flex', flexDirection:'column', height:'280px', background:'#272446', borderBottom:'3px solid #efb627', overflow:'hidden'}}>
-              <p style={{color:'#ffffff', fontSize:'14px', fontWeight:'bold', margin:0, padding:'10px', flexShrink:0}}>{cat.name}</p>
+              <p style={{color:'#ffffff', fontSize:'14px', fontWeight:'bold', margin:0, padding:'10px', flexShrink:0, textAlign:'center'}}>{cat.name}</p>
               <div style={{position:'relative', flex:1, overflow:'hidden'}}>
                 <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="15vw" />
               </div>
