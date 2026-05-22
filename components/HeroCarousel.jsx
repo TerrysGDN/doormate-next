@@ -53,9 +53,6 @@ export default function HeroCarousel() {
         <h1 style={{ color: '#ffffff', fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: '900', lineHeight: '1.1', margin: '0 0 14px 0', maxWidth: '600px' }}>
           The UK's Leading<br />Sliding Door Specialists
         </h1>
-        <p style={{ color: 'rgba(255,255,255,0.92)', fontSize: 'clamp(14px, 1.6vw, 18px)', margin: '0 0 24px 0', maxWidth: '440px', lineHeight: '1.5' }}>
-          Built for real doors, real walls and real homes since 2009.
-        </p>
       </div>
     </section>
   )
