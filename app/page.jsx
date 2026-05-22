@@ -61,7 +61,7 @@ export default function HomePage() {
             {name:'External Kits',              img:'/img/external-kit.jpg',          href:'/external-sliding-kits',alt:'External sliding door kits'},
             {name:'Shop',                       img:'/img/covington-system.jpg',      href:'/shop',                 alt:'Door accessories and hardware'},
           ].map((cat) => (
-            <Link key={cat.name} href={cat.href} style={{textDecoration:'none', display:'flex', flexDirection:'column', height:'280px', background:'#272446', border:'2px solid #272446', borderBottom:'3px solid #efb627', overflow:'hidden'}}>
+            <Link key={cat.name} href={cat.href} style={{textDecoration:'none', display:'flex', flexDirection:'column', height:'280px', background:'#272446', border:'2px solid #272446', overflow:'hidden'}}>
               <p style={{color:'#ffffff', fontSize:'14px', fontWeight:'bold', margin:0, padding:'10px', flexShrink:0, textAlign:'center'}}>{cat.name}</p>
               <div style={{position:'relative', flex:1, overflow:'hidden'}}>
                 <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="15vw" />
