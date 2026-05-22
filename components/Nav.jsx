@@ -47,7 +47,7 @@ export default function Nav() {
       <div className="flex items-center justify-between" style={{ height: '120px', width: '100%', padding: '0 40px' }}>
 
         {/* Logo — fills bar height */}
-        <Link href="/" className="flex-shrink-0 flex items-center h-full py-1">
+        <Link href="/" className="flex-shrink-0 flex items-center h-full py-1" style={{ marginRight: '40px' }}>
           <Image
             src="/img/doormate-logo-cropped.png"
             alt="DoorMate Sliding Door Systems"
