@@ -62,7 +62,7 @@ export default function HomePage() {
             {name:'Shop',                       img:'/img/covington-system.jpg',      href:'/shop',                 alt:'Door accessories and hardware'},
           ].map((cat) => (
             <div key={cat.name}>
-              <p style={{color:'#272446', fontSize:'14px', fontWeight:'900', textAlign:'center', margin:'0 0 6px 0', padding:0}}>{cat.name}</p>
+              <p style={{color:'#272446', fontSize:'18px', fontWeight:'900', textAlign:'center', margin:'0 0 6px 0', padding:0}}>{cat.name}</p>
               <Link href={cat.href} style={{textDecoration:'none', display:'block', height:'280px', background:'#ffffff', border:'2px solid #272446', overflow:'hidden', position:'relative'}}>
                 <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="15vw" />
               </Link>
