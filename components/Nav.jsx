@@ -60,7 +60,7 @@ export default function Nav() {
         </Link>
 
         {/* Desktop nav links */}
-        <nav className="hidden lg:flex items-center gap-4">
+        <nav className="hidden lg:flex items-center gap-0">
 
           {/* HOME with dropdown */}
           <div className="relative" ref={dropdownRef}>
