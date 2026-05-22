@@ -47,7 +47,7 @@ export default function Nav() {
       <div className="flex items-center justify-between" style={{ height: '120px', width: '100%', padding: '0 40px' }}>
 
         {/* Logo — fills bar height */}
-        <Link href="/" className="flex-shrink-0 flex items-center h-full py-1" style={{ marginRight: '40px' }}>
+        <Link href="/" className="flex-shrink-0 flex items-center h-full py-1">
           <Image
             src="/img/doormate-logo-cropped.png"
             alt="DoorMate Sliding Door Systems"
@@ -60,7 +60,7 @@ export default function Nav() {
         </Link>
 
         {/* Desktop nav links */}
-        <nav className="hidden lg:flex items-center gap-0">
+        <nav className="hidden lg:flex items-center gap-3">
 
           {/* HOME with dropdown */}
           <div className="relative" ref={dropdownRef}>
