@@ -105,7 +105,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />
       </head>
-      <body className="bg-white text-gray-900 antialiased" style={{ overflowX: 'hidden', maxWidth: '100vw' }}>
+      <body className="bg-white text-gray-900 antialiased">
         <Nav />
         <main>{children}</main>
         <Footer />
