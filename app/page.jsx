@@ -77,29 +77,11 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* HOUZZ REVIEWS + CATEGORY CARDS — 7-card single row */}
+      {/* CATEGORY CARDS — 6-card single row */}
       <section style={{width:'100%', background:'#ffffff', padding:'20px 40px', boxSizing:'border-box'}}>
-        <div style={{display:'grid', gridTemplateColumns:'repeat(7, 1fr)', gap:'12px', maxWidth:'1400px', margin:'0 auto'}}>
+        <div style={{display:'grid', gridTemplateColumns:'repeat(6, 1fr)', gap:'12px', maxWidth:'1400px', margin:'0 auto'}}>
 
-          {/* Card 1 — Houzz reviews widget */}
-          <div style={{display:'flex', flexDirection:'column', gap:'8px'}}>
-            <div style={{height:'280px', background:'#272446', borderBottom:'3px solid #efb627', overflow:'hidden', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', padding:'8px', boxSizing:'border-box'}}>
-              <iframe
-                scrolling="no"
-                frameBorder="0"
-                width="100%"
-                height="260"
-                src="https://www.houzz.com/reviewWidget/terryburnett98/"
-                style={{border:'none', display:'block'}}
-                title="DoorMate customer reviews on Houzz"
-              />
-            </div>
-            <a href="https://uk.trustpilot.com/review/doormate.co.uk" target="_blank" rel="noopener noreferrer" style={{display:'block', color:'#363557', fontSize:'12px', fontWeight:'700', textDecoration:'none', borderBottom:'1px solid #efb627', paddingBottom:'2px', width:'fit-content'}}>
-              View us on Trustpilot →
-            </a>
-          </div>
-
-          {/* Cards 2–7 — product categories */}
+          {/* Cards 1–6 — product categories */}
           {[
             {name:'Doors',                      img:'/img/door-v-brace.jpg',          href:'/doors',                alt:'Handmade barn doors'},
             {name:'Pocket Door Kits',           img:'/img/mirror-pocket-single.jpg',  href:'/pocket-door-kits',     alt:'Pocket door kits'},
