@@ -21,7 +21,7 @@ export default function HeroCarousel() {
   }, [])
 
   return (
-    <section style={{ position: 'relative', width: '100%', height: '360px', overflow: 'hidden' }}>
+    <section style={{ position: 'relative', width: '100%', maxWidth: '1400px', margin: '0 auto', height: '360px', overflow: 'hidden' }}>
       {IMAGES.map((img, i) => (
         <div
           key={img.src}
