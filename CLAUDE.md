@@ -638,6 +638,93 @@ Claude Code is reading files every time and syncing two folders. The nested door
 
 ---
 
+## SESSION SUMMARY — 22 MAY 2026 — READ THIS FIRST — MOST RECENT
+
+### WORKFLOW — LOCKED AND CONFIRMED
+- **Cowork** — strategy, bible, design decisions, writes Claude Code prompts. Does NOT touch code.
+- **Claude Code** — executes changes in NEW WEBSITE folder. Always point at `C:\Users\Terry\Dropbox\PC\Desktop\NEW WEBSITE`
+- **Claude Code session** — always use the most recent session. If it shows wrong folder at bottom, click the folder name and reselect NEW WEBSITE.
+- **GitHub Desktop** — Commit (any short summary title required) → Push origin. That's it every time.
+- **Vercel** — wait 2 MINUTES after Push origin before refreshing. Hard refresh = Ctrl + Shift + R.
+- **Always discuss design decisions in Cowork BEFORE pasting anything into Claude Code.**
+
+### CLEANUP DONE
+- Doormate-website folder deleted from Desktop ✅
+- website2.html deleted from Desktop ✅
+- Dead Doormate-website Claude Code sessions deleted ✅
+- Dead Vercel project doormate-website — STILL TO DELETE (low priority)
+- Dead GitHub repo doormate-website — STILL TO DELETE (low priority)
+
+### HOMEPAGE — STATE AS OF END OF SESSION 22 MAY 2026
+
+**NAV BAR — LOCKED — DO NOT TOUCH**
+- White background — logo must have white background (Union Flag)
+- Logo: `doormate-logo-cropped.png` (cropped version, padding removed) — fills full bar height
+- Bar height: 120px | Logo height: 112px
+- Links: 16px bold Libre Franklin, navy #272446, gold #efb627 separators
+- All nav links visible including Shop — no cut-off
+- HOME dropdown: As Seen On TV | News | About Us | Contact | Trade | Become A Partner | Fitters Wanted | Dropshipping
+- Flat links: Doors | Barn Door Hardware | Pocket Door Kits | Internal Sliding Door Kits | External Sliding Door Kits | Gallery | Shop
+
+**TAGLINE STRIP — LOCKED — DO NOT TOUCH**
+- Navy #272446 background
+- Text: "Sliding Systems — Built for real doors, real walls and real homes since 2009."
+- 16px bold white Libre Franklin
+- Subline removed from hero and moved here
+
+**HERO — WORKING — DO NOT TOUCH (images to be replaced)**
+- Silent auto-scrolling carousel (HeroCarousel.jsx)
+- 5 images cycling every 5 seconds, 1s crossfade
+- Headline fixed: "The UK's Leading Sliding Door Specialists"
+- No subline in hero — moved to tagline strip
+- Hero images need replacing — wrong aspect ratios, white space — see TODO below
+
+**TRUST STRIP — LOCKED — DO NOT TOUCH**
+- Navy #272446 background, gold #efb627 text and separators
+- "Trading Since 2009 | As Seen On Channel 4 | UK Sliding Door Specialists | Handmade In Cardiff"
+- 16px bold Libre Franklin — matches nav and tagline strip exactly
+- Separators: standalone gold | between items, space-between layout
+
+**FONT RULE — LOCKED**
+- All bars (nav, tagline, trust strip) = 16px bold Libre Franklin
+- Libre Franklin is a Google web font — guaranteed on every device
+
+**6 PRODUCT CARDS — IN PROGRESS**
+- Single row of 7 columns (col 1 = reviews card, cols 2-7 = products)
+- Card names sit ABOVE each card in bold navy 18px Libre Franklin
+- Cards have navy border #272446, white background, image fills card
+- Card names: Doors | Pocket Door Kits | Barn Door Kits | Internal Kits | External Kits | Shop
+- NOTE: Cards say "Barn Door Kits" — nav still says "Barn Door Hardware" — this is intentional
+- All 6 product cards visible above the fold at 100% zoom ✅
+
+**REVIEWS CARD — NOT YET BUILT**
+- To replace current Houzz iframe card
+- Design agreed: 3 rows — Google | Houzz | Trustpilot — each with logo, stars, click opens popup
+- Popup shows reviews without taking customer away from page
+- Terry to confirm star ratings on each platform before building
+- Houzz may not support popup embed — may open new tab instead
+
+### STRIPE / CHECKOUT — DECIDED
+- Stripe to be used for checkout (not PayPal only)
+- Payment options: Card, PayPal, Apple Pay, Google Pay, Klarna/Clearpay
+- Stripe sandbox/test mode first — Terry already has Stripe account from GDN project
+- Basket icon added to nav once Stripe is wired in — NOT before
+- Dedicated session needed for Stripe setup
+
+### TODO — NEXT SESSION PRIORITIES
+1. Reviews card — 3 platform rows with popup (confirm star ratings first)
+2. Hero images — select, crop to same ratio, replace current images
+3. Check footer is complete
+4. Schema.org JSON-LD structured data (AISIO critical — still missing)
+5. llms.txt file at root
+6. Category landing pages (Part 17)
+7. Individual product pages
+8. Stripe setup — dedicated session
+9. Delete dead Vercel doormate-website project
+10. Delete dead GitHub doormate-website repo
+
+---
+
 ## SESSION SUMMARY — 21 MAY 2026 (AFTERNOON) — READ THIS FIRST
 
 ### THE MOST IMPORTANT THING AGREED TODAY — NEVER FORGET
