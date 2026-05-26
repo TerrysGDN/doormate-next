@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <main style={{width:'100%', margin:0, padding:0, fontFamily:"'Libre Franklin', sans-serif", background:'#ffffff'}}>
+    <main style={{width:'100%', maxWidth:'100vw', overflowX:'hidden', margin:0, padding:0, fontFamily:"'Libre Franklin', sans-serif", background:'#ffffff'}}>
 
       {/* HERO — silent auto-scrolling carousel */}
       <HeroCarousel />

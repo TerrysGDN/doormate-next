@@ -98,14 +98,14 @@ const schemaOrg = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={libreFranklin.variable}>
+    <html lang="en" className={libreFranklin.variable} style={{ overflowX: 'hidden', maxWidth: '100vw' }}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
         />
       </head>
-      <body className="bg-white text-gray-900 antialiased">
+      <body className="bg-white text-gray-900 antialiased" style={{ overflowX: 'hidden', maxWidth: '100vw' }}>
         <Nav />
         <main>{children}</main>
         <Footer />
