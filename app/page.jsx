@@ -101,6 +101,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* WHY DOORMATE — text left, Houzz widget right */}
+      <section style={{width:'100%', background:'#ffffff', padding:'40px', boxSizing:'border-box', borderTop:'1px solid #e8e8e8'}}>
+        <div style={{display:'grid', gridTemplateColumns:'1fr 300px', gap:'56px', maxWidth:'1400px', margin:'0 auto', alignItems:'stretch'}}>
+
+          {/* Left — text content, height matched to widget */}
+          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', height:'435px', overflow:'hidden'}}>
+            <p style={{color:'#efb627', fontSize:'11px', fontWeight:'700', letterSpacing:'4px', textTransform:'uppercase', margin:'0 0 14px 0'}}>WHY DOORMATE</p>
+            <h2 style={{color:'#272446', fontSize:'clamp(18px, 2vw, 28px)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 20px 0'}}>
+              Manufacturers, Suppliers &amp; Installers of Quality Sliding Door Products
+            </h2>
+            <p style={{color:'#444444', fontSize:'16px', lineHeight:'1.8', margin:0}}>
+              DoorMate are based in Cardiff, South Wales. Have been supplying sliding door systems since 2009. In 2015 we began manufacturing our own sliding barn door hardware in the UK, built for real doors, real walls and real homes — not generic one-size kits. Every system is backed by clear fitting guidance and real support, from sales through to manufacture and installation.
+            </p>
+          </div>
+
+          {/* Right — Houzz embed, 300×435 */}
+          <div style={{flexShrink:0}}>
+            <iframe
+              scrolling="no"
+              frameBorder="0"
+              width="300"
+              height="435"
+              src="https://www.houzz.com/reviewWidget/terryburnett98/"
+              style={{border:'none', display:'block'}}
+              title="DoorMate reviews on Houzz"
+            />
+          </div>
+
+        </div>
+      </section>
 
       {/* ABOUT — white, two columns, real copy */}
       <section style={{width:'100%', background:'#ffffff', padding:'56px 40px', boxSizing:'border-box', borderTop:'1px solid #e8e8e8'}}>
