@@ -64,7 +64,8 @@ export default function Nav() {
 
           {/* HOME with dropdown */}
           <div className="relative" ref={dropdownRef}>
-            <button
+            <Link
+              href="/"
               onClick={() => setHomeOpen(!homeOpen)}
               className="flex items-center gap-1 text-[16px] font-bold tracking-wide transition-colors"
               style={{ color: '#272446', fontFamily: "'Libre Franklin', sans-serif" }}
@@ -73,7 +74,7 @@ export default function Nav() {
               <svg xmlns="http://www.w3.org/2000/svg" className={`w-3 h-3 transition-transform ${homeOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="square" d="M19 9l-7 7-7-7" />
               </svg>
-            </button>
+            </Link>
             {homeOpen && (
               <div className="absolute top-full left-0 bg-brand-navy shadow-xl min-w-[200px] py-1 z-50">
                 {HOME_DROPDOWN.map((item) => (
@@ -151,7 +152,8 @@ export default function Nav() {
 
             {/* HOME accordion */}
             <div>
-              <button
+              <Link
+                href="/"
                 onClick={() => setMobileHomeOpen(!mobileHomeOpen)}
                 className="flex items-center justify-between w-full text-[13px] font-bold tracking-wide py-2.5"
                 style={{ color: '#272446' }}
@@ -160,7 +162,7 @@ export default function Nav() {
                 <svg xmlns="http://www.w3.org/2000/svg" className={`w-3 h-3 transition-transform ${mobileHomeOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="square" d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
               {mobileHomeOpen && (
                 <div className="pl-4 space-y-1 pb-2">
                   {HOME_DROPDOWN.map((item) => (
