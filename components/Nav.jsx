@@ -63,10 +63,9 @@ export default function Nav() {
         <nav className="hidden lg:flex items-center gap-3">
 
           {/* HOME with dropdown */}
-          <div className="relative" ref={dropdownRef} onMouseLeave={() => setHomeOpen(false)}>
+          <div className="relative" ref={dropdownRef} onMouseEnter={() => setHomeOpen(true)} onMouseLeave={() => setHomeOpen(false)}>
             <Link
               href="/"
-              onClick={() => setHomeOpen(!homeOpen)}
               className="flex items-center gap-1 text-[16px] font-bold tracking-wide transition-colors"
               style={{ color: '#272446', fontFamily: "'Libre Franklin', sans-serif" }}
             >
