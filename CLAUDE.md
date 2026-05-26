@@ -171,9 +171,9 @@ PD1: £139 | PD2: £154 | Double: £288 | Accessories: £30
 Single: DM-75 £104 | DM-100 £156 | DM-150 £229 | DM-200 £281
 Bi-Parting: DM-75 £156 | DM-100 £230 | DM-150 £386 | DM-200 £444
 
-### Internal Sliding Kits — ON HOLD
-DM Internal aluminium | DM Urban Stainless Steel | FLEXIGLAS
-Terry confirming product names and weights before anything is built. Do not touch.
+### Internal Sliding Kits — PRODUCT NAMES CONFIRMED 26 MAY 2026
+Timber Door Systems | Stainless Door Systems | Glass Door Systems | Minimalist Door Systems
+Weights still to be confirmed before building product pages. Landing page tiles can be built.
 Correct recommendation when customer says modern — NOT barn door hardware.
 
 ### Accessories — Revenue Line We Must Not Lose (added 19 May)
@@ -423,7 +423,7 @@ Every flat link goes to a category landing page.
 Doors page — 3 tiles: Handmade Barn Doors | Pocket Doors | Internal Doors
 Barn Door Hardware page — 6 tiles: Gainesville | Brooklyn | Covington | Augusta | Detroit | Baltimore
 Pocket Door Kits page — 4 tiles: Rocket | Eclisse | Coburn | Barrier
-Internal Sliding Door Kits page — 3 tiles: DM Internal | DM Urban Stainless Steel | FLEXIGLAS
+Internal Sliding Door Kits page — 4 tiles: Timber Door Systems | Stainless Door Systems | Glass Door Systems | Minimalist Door Systems — CONFIRMED 26 MAY 2026
 External Sliding Door Kits page — 4 tiles: DM-75 | DM-100 | DM-150 | DM-200
 Accessories page — NEW — 4 tiles: Pull Handles | Locks | Brackets | Hardware Components
 Gallery page — TBD
