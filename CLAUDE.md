@@ -638,6 +638,56 @@ Claude Code is reading files every time and syncing two folders. The nested door
 
 ---
 
+## SESSION SUMMARY — 26 MAY 2026 — READ THIS FIRST — MOST RECENT
+
+### HOMEPAGE — STATE AS OF END OF SESSION 26 MAY 2026
+
+**TRUST STRIP — REBUILT AND LOCKED**
+- White background, navy border top and bottom
+- Four items: DoorMate logo (36px) + "Trading Since 2009" | Google 4.8 ★★★★★ | Trustpilot 4.5 ★★★★½ | Houzz 5.0 ★★★★★
+- Real platform logos in brand colours (Google multicolour G, Trustpilot green star, Houzz green house)
+- Proper half-star SVG for Trustpilot — top half gold, bottom half empty
+- All text same size and weight — 16px bold Libre Franklin
+- Replaces old navy text strip entirely
+
+**6 PRODUCT CARDS — DONE AND LOCKED**
+- Houzz iframe card removed — clean 6 cards full width
+- Card order: Doors | Pocket Door Kits | Barn Door Kits | Internal Kits | External Kits | Shop
+- Full page width, evenly spaced
+
+**NAV/HERO OVERFLOW — FIXED**
+- Nav and hero were stretching wider than page at low zoom levels
+- Root cause: justify-between on nav with no max-width + overflow-x hidden conflicting with sticky nav
+- Fix: 1400px max-width cap on nav inner div, overflow-x hidden removed from body (html only)
+- Now behaves correctly at all zoom levels ✅
+
+**WHO WE ARE SECTION — STARTED, NOT SIGNED OFF**
+- Two-column section below product cards
+- Left: "WHY DOORMATE" label + "Manufacturers, Suppliers & Installers of Quality Sliding Door Products" heading + body text
+- Right: Live Houzz widget (iframe 300x435)
+- Terry flagged the text is too small and lacks character compared to old site — needs redesigning to match old site's bold, gold-accented style
+- The duplicate "Manufacturers" section below it is still there — Terry to decide whether to keep or remove
+
+### RULES ESTABLISHED THIS SESSION — NEVER BREAK
+- **Send screenshots directly into Claude Code for visual problems** — description wastes time, images get it right first time
+- **Commit title at end of every Claude Code prompt** — short, one line, Terry copies straight to GitHub Desktop
+- **The red GitHub CLI warning is cosmetic** — Terry uses GitHub Desktop, not CLI, so it never affects the workflow
+- **Never comment on individual hero carousel frames** — it is a scrolling carousel, individual frames are photos not bugs
+
+### INTERNAL SLIDING KITS — PRODUCT NAMES CONFIRMED 26 MAY 2026
+4 tiles confirmed: Timber Door Systems | Stainless Door Systems | Glass Door Systems | Minimalist Door Systems
+Weights still to be confirmed before product pages built. Landing page tiles can proceed.
+
+### NEXT SESSION PRIORITIES — IN ORDER
+1. "Who We Are" section — redesign to match old site character: big bold heading, gold accent line, proper text size. Terry to send screenshot of old site version as reference.
+2. Remove duplicate "Manufacturers" section below it — or decide to keep one version
+3. Schema.org JSON-LD structured data — still missing, AISIO critical
+4. llms.txt file at root
+5. Category landing pages (Part 17)
+6. Individual product pages with prices and BUY NOW buttons — where the money is
+
+---
+
 ## SESSION SUMMARY — 22 MAY 2026 — READ THIS FIRST — MOST RECENT
 
 ### WORKFLOW — LOCKED AND CONFIRMED

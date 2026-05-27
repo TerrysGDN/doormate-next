@@ -21,57 +21,65 @@ export default function HomePage() {
       <HeroCarousel />
 
       {/* TRUST STRIP — white, navy border, 4 review items */}
-      <div style={{width:'100%', background:'#ffffff', borderTop:'2px solid #272446', borderBottom:'2px solid #272446', padding:'14px 40px', boxSizing:'border-box'}}>
+      <div style={{width:'100%', background:'#efb627', padding:'14px 40px', boxSizing:'border-box'}}>
         <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', maxWidth:'1400px', margin:'0 auto', gap:'24px'}}>
 
           {/* Trading Since 2009 */}
-          <div style={{display:'flex', alignItems:'center', gap:'10px', whiteSpace:'nowrap'}}>
-            <img src="/img/doormate-logo-cropped.png" alt="DoorMate" style={{height:'36px', width:'auto'}} />
-            <span style={{fontWeight:'bold', fontSize:'16px', color:'#272446', fontFamily:"'Libre Franklin', sans-serif"}}>Trading Since 2009</span>
+          <div style={{background:'#ffffff', borderRadius:'999px', padding:'8px 20px', display:'flex', alignItems:'center'}}>
+            <div style={{display:'flex', alignItems:'center', gap:'10px', whiteSpace:'nowrap'}}>
+              <img src="/img/doormate-logo-cropped.png" alt="DoorMate" style={{height:'36px', width:'auto'}} />
+              <span style={{fontWeight:'bold', fontSize:'16px', color:'#272446', fontFamily:"'Libre Franklin', sans-serif"}}>Trading Since 2009</span>
+            </div>
           </div>
 
           {/* Google */}
-          <div style={{display:'flex', alignItems:'center', gap:'8px', whiteSpace:'nowrap'}}>
-            <svg width="22" height="22" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-              <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
-              <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
-              <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/>
-              <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/>
-            </svg>
-            <span style={{fontWeight:'bold', fontSize:'16px', color:'#272446', fontFamily:"'Libre Franklin', sans-serif"}}>Google</span>
-            <span style={{fontWeight:'bold', fontSize:'16px', color:'#272446', fontFamily:"'Libre Franklin', sans-serif"}}>4.8</span>
-            <span style={{color:'#efb627', fontSize:'16px', lineHeight:1}}>★★★★★</span>
+          <div style={{background:'#ffffff', borderRadius:'999px', padding:'8px 20px', display:'flex', alignItems:'center'}}>
+            <div style={{display:'flex', alignItems:'center', gap:'8px', whiteSpace:'nowrap'}}>
+              <svg width="22" height="22" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
+                <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
+                <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/>
+                <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/>
+              </svg>
+              <span style={{fontWeight:'bold', fontSize:'16px', color:'#272446', fontFamily:"'Libre Franklin', sans-serif"}}>Google</span>
+              <span style={{fontWeight:'bold', fontSize:'16px', color:'#272446', fontFamily:"'Libre Franklin', sans-serif"}}>4.8</span>
+              <span style={{color:'#efb627', fontSize:'16px', lineHeight:1}}>★★★★★</span>
+            </div>
           </div>
 
           {/* Trustpilot */}
-          <div style={{display:'flex', alignItems:'center', gap:'8px', whiteSpace:'nowrap'}}>
-            <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <polygon fill="#00b67a" points="12,2 14.65,8.36 21.51,8.91 16.28,13.39 17.88,20.09 12,16.5 6.12,20.09 7.72,13.39 2.49,8.91 9.35,8.36"/>
-            </svg>
-            <span style={{fontWeight:'bold', fontSize:'16px', color:'#272446', fontFamily:"'Libre Franklin', sans-serif"}}>Trustpilot</span>
-            <span style={{fontWeight:'bold', fontSize:'16px', color:'#272446', fontFamily:"'Libre Franklin', sans-serif"}}>4.5</span>
-            <span style={{display:'inline-flex', alignItems:'center', gap:0, lineHeight:1}}>
-              <span style={{color:'#efb627', fontSize:'16px', lineHeight:1, letterSpacing:0}}>★★★★</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{display:'block', flexShrink:0}}>
-                <defs>
-                  <clipPath id="topHalf">
-                    <rect x="0" y="0" width="24" height="12"/>
-                  </clipPath>
-                </defs>
-                <polygon points="12,2 14.65,8.36 21.51,8.91 16.28,13.39 17.88,20.09 12,16.5 6.12,20.09 7.72,13.39 2.49,8.91 9.35,8.36" fill="none" stroke="#efb627" strokeWidth="1.5"/>
-                <polygon points="12,2 14.65,8.36 21.51,8.91 16.28,13.39 17.88,20.09 12,16.5 6.12,20.09 7.72,13.39 2.49,8.91 9.35,8.36" fill="#efb627" clipPath="url(#topHalf)"/>
+          <div style={{background:'#ffffff', borderRadius:'999px', padding:'8px 20px', display:'flex', alignItems:'center'}}>
+            <div style={{display:'flex', alignItems:'center', gap:'8px', whiteSpace:'nowrap'}}>
+              <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <polygon fill="#00b67a" points="12,2 14.65,8.36 21.51,8.91 16.28,13.39 17.88,20.09 12,16.5 6.12,20.09 7.72,13.39 2.49,8.91 9.35,8.36"/>
               </svg>
-            </span>
+              <span style={{fontWeight:'bold', fontSize:'16px', color:'#272446', fontFamily:"'Libre Franklin', sans-serif"}}>Trustpilot</span>
+              <span style={{fontWeight:'bold', fontSize:'16px', color:'#272446', fontFamily:"'Libre Franklin', sans-serif"}}>4.5</span>
+              <span style={{display:'inline-flex', alignItems:'center', gap:0, lineHeight:1}}>
+                <span style={{color:'#efb627', fontSize:'16px', lineHeight:1, letterSpacing:0}}>★★★★</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{display:'block', flexShrink:0}}>
+                  <defs>
+                    <clipPath id="topHalf">
+                      <rect x="0" y="0" width="24" height="12"/>
+                    </clipPath>
+                  </defs>
+                  <polygon points="12,2 14.65,8.36 21.51,8.91 16.28,13.39 17.88,20.09 12,16.5 6.12,20.09 7.72,13.39 2.49,8.91 9.35,8.36" fill="none" stroke="#efb627" strokeWidth="1.5"/>
+                  <polygon points="12,2 14.65,8.36 21.51,8.91 16.28,13.39 17.88,20.09 12,16.5 6.12,20.09 7.72,13.39 2.49,8.91 9.35,8.36" fill="#efb627" clipPath="url(#topHalf)"/>
+                </svg>
+              </span>
+            </div>
           </div>
 
           {/* Houzz */}
-          <div style={{display:'flex', alignItems:'center', gap:'8px', whiteSpace:'nowrap'}}>
-            <svg width="22" height="22" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <path fill="#7DC242" d="M50,5 L95,42 L80,42 L80,95 L55,95 L55,65 L45,65 L45,95 L20,95 L20,42 L5,42 Z"/>
-            </svg>
-            <span style={{fontWeight:'bold', fontSize:'16px', color:'#272446', fontFamily:"'Libre Franklin', sans-serif"}}>Houzz</span>
-            <span style={{fontWeight:'bold', fontSize:'16px', color:'#272446', fontFamily:"'Libre Franklin', sans-serif"}}>5.0</span>
-            <span style={{color:'#efb627', fontSize:'16px', lineHeight:1}}>★★★★★</span>
+          <div style={{background:'#ffffff', borderRadius:'999px', padding:'8px 20px', display:'flex', alignItems:'center'}}>
+            <div style={{display:'flex', alignItems:'center', gap:'8px', whiteSpace:'nowrap'}}>
+              <svg width="22" height="22" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#7DC242" d="M50,5 L95,42 L80,42 L80,95 L55,95 L55,65 L45,65 L45,95 L20,95 L20,42 L5,42 Z"/>
+              </svg>
+              <span style={{fontWeight:'bold', fontSize:'16px', color:'#272446', fontFamily:"'Libre Franklin', sans-serif"}}>Houzz</span>
+              <span style={{fontWeight:'bold', fontSize:'16px', color:'#272446', fontFamily:"'Libre Franklin', sans-serif"}}>5.0</span>
+              <span style={{color:'#efb627', fontSize:'16px', lineHeight:1}}>★★★★★</span>
+            </div>
           </div>
 
         </div>
