@@ -127,17 +127,24 @@ export default function HomePage() {
           </div>
 
           {/* Right — text content */}
-          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', minHeight:'435px', textAlign:'center'}}>
-            <h2 style={{color:'#272446', fontSize:'40px', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0', textTransform:'uppercase', fontFamily:"'Libre Franklin', sans-serif"}}>
-              The UK&apos;s Leading Sliding Door Specialists
+          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', minHeight:'435px', textAlign:'center', fontFamily:"'Libre Franklin', sans-serif"}}>
+            <p style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'4px', textTransform:'uppercase', margin:'0 0 16px 0'}}>Why DoorMate?</p>
+            <h2 style={{color:'#272446', fontSize:'38px', fontWeight:'900', lineHeight:'1.3', margin:'0 0 28px 0', textTransform:'uppercase'}}>
+              Real Industry Professionals.<br/>Real UK Manufacturers.<br/>Real Systems Delivered Direct To You.
             </h2>
-            <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.8', margin:'0 0 24px 0', fontFamily:"'Libre Franklin', sans-serif"}}>
-              DoorMate are based in Cardiff, South Wales. Have been supplying sliding door systems since 2009. In 2015 we began manufacturing our own sliding barn door hardware in the UK, built for real doors, real walls and real homes — not generic one-size kits. Every system is backed by clear fitting guidance and real support, from sales through to manufacture and installation.
+            <p style={{color:'#272446', fontSize:'16px', lineHeight:'1.8', margin:'0 0 16px 0'}}>
+              DoorMate are based in Cardiff, South Wales. We&apos;ve been supplying sliding door systems since 2009 — pocket doors, internal and external sliding kits, barn door hardware and handmade doors.
             </p>
-            <p style={{color:'#efb627', fontSize:'22px', fontWeight:'900', textTransform:'uppercase', margin:'0 0 14px 0', fontFamily:"'Libre Franklin', sans-serif"}}>
+            <p style={{color:'#272446', fontSize:'16px', lineHeight:'1.8', margin:'0 0 16px 0'}}>
+              While our competitors sit in warehouses waiting for imported boxes to arrive, we&apos;re in our Cardiff workshop making them. Not a call centre. Not a sales office. Us.
+            </p>
+            <p style={{color:'#272446', fontSize:'16px', lineHeight:'1.8', margin:'0 0 28px 0'}}>
+              Every system is backed by real industry knowledge, clear fitting guidance and direct support from the people who actually make them.
+            </p>
+            <p style={{color:'#efb627', fontSize:'20px', fontWeight:'900', textTransform:'uppercase', margin:'0 0 14px 0'}}>
               We Are Manufacturers, Suppliers &amp; Installers of Quality Door Products
             </p>
-            <p style={{color:'#272446', fontSize:'22px', fontWeight:'900', textTransform:'uppercase', fontFamily:"'Libre Franklin', sans-serif"}}>
+            <p style={{color:'#272446', fontSize:'20px', fontWeight:'900', textTransform:'uppercase', margin:0}}>
               Doors | Pocket Door Kits | Barn Door Kits | Internal Kits | External Kits
             </p>
           </div>
