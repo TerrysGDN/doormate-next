@@ -131,14 +131,14 @@ export default function HomePage() {
             <h2 style={{color:'#272446', fontSize:'28px', fontWeight:'900', lineHeight:'1.2', margin:'0 0 20px 0', textTransform:'uppercase', whiteSpace:'nowrap', fontFamily:"'Libre Franklin', sans-serif"}}>
               The UK&apos;s Leading Sliding Door Specialists
             </h2>
-            <p style={{color:'#444444', fontSize:'16px', lineHeight:'1.8', margin:'0 0 20px 0', fontFamily:"'Libre Franklin', sans-serif"}}>
+            <p style={{color:'#272446', fontSize:'16px', lineHeight:'1.8', margin:'0 0 20px 0', fontFamily:"'Libre Franklin', sans-serif"}}>
               DoorMate are based in Cardiff, South Wales. Have been supplying sliding door systems since 2009. In 2015 we began manufacturing our own sliding barn door hardware in the UK, built for real doors, real walls and real homes — not generic one-size kits. Every system is backed by clear fitting guidance and real support, from sales through to manufacture and installation.
             </p>
             <p style={{color:'#efb627', fontSize:'18px', fontWeight:'900', textTransform:'uppercase', margin:'0 0 12px 0', fontFamily:"'Libre Franklin', sans-serif"}}>
               We Are Manufacturers, Suppliers &amp; Installers of Quality Door Products
             </p>
             <p style={{color:'#272446', fontSize:'18px', fontWeight:'900', textTransform:'uppercase', margin:0, fontFamily:"'Libre Franklin', sans-serif"}}>
-              Barn Door Hardware | Pocket Door Kits | Internal &amp; External Sliding Systems
+              Barn Door Hardware | Pocket Door Kits | Internal Sliding Door Kits | External Sliding Door Kits
             </p>
           </div>
 
