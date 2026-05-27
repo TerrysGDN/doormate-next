@@ -109,22 +109,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHY DOORMATE — text left, Houzz widget right */}
+      {/* WHO WE ARE — Houzz left, text right */}
       <section style={{width:'100%', background:'#ffffff', padding:'40px', boxSizing:'border-box', borderTop:'1px solid #e8e8e8'}}>
-        <div style={{display:'grid', gridTemplateColumns:'1fr 300px', gap:'56px', maxWidth:'1400px', margin:'0 auto', alignItems:'stretch'}}>
+        <div style={{display:'grid', gridTemplateColumns:'300px 1fr', gap:'56px', maxWidth:'1400px', margin:'0 auto', alignItems:'center'}}>
 
-          {/* Left — text content, height matched to widget */}
-          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', height:'435px', overflow:'hidden'}}>
-            <p style={{color:'#efb627', fontSize:'11px', fontWeight:'700', letterSpacing:'4px', textTransform:'uppercase', margin:'0 0 14px 0'}}>WHY DOORMATE</p>
-            <h2 style={{color:'#272446', fontSize:'clamp(18px, 2vw, 28px)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 20px 0'}}>
-              Manufacturers, Suppliers &amp; Installers of Quality Sliding Door Products
-            </h2>
-            <p style={{color:'#444444', fontSize:'16px', lineHeight:'1.8', margin:0}}>
-              DoorMate are based in Cardiff, South Wales. Have been supplying sliding door systems since 2009. In 2015 we began manufacturing our own sliding barn door hardware in the UK, built for real doors, real walls and real homes — not generic one-size kits. Every system is backed by clear fitting guidance and real support, from sales through to manufacture and installation.
-            </p>
-          </div>
-
-          {/* Right — Houzz embed, 300×435 */}
+          {/* Left — Houzz embed, 300×435 */}
           <div style={{flexShrink:0}}>
             <iframe
               scrolling="no"
@@ -137,35 +126,22 @@ export default function HomePage() {
             />
           </div>
 
-        </div>
-      </section>
-
-      {/* ABOUT — white, two columns, real copy */}
-      <section style={{width:'100%', background:'#ffffff', padding:'56px 40px', boxSizing:'border-box', borderTop:'1px solid #e8e8e8'}}>
-        <div style={{display:'grid', gridTemplateColumns:'3fr 2fr', gap:'56px', maxWidth:'1400px', margin:'0 auto', alignItems:'center'}}>
+          {/* Right — text content */}
           <div>
-            <p style={{color:'#efb627', fontSize:'11px', fontWeight:'700', letterSpacing:'4px', textTransform:'uppercase', margin:'0 0 10px 0'}}>ABOUT DOORMATE</p>
-            <h2 style={{color:'#272446', fontSize:'clamp(20px, 2.5vw, 32px)', fontWeight:'900', margin:'0 0 18px 0', lineHeight:'1.2'}}>
-              Manufacturers, Suppliers & Installers of Quality Sliding Door Products
+            <h2 style={{color:'#272446', fontSize:'28px', fontWeight:'900', lineHeight:'1.2', margin:'0 0 20px 0', textTransform:'uppercase', whiteSpace:'nowrap', fontFamily:"'Libre Franklin', sans-serif"}}>
+              The UK&apos;s Leading Sliding Door Specialists
             </h2>
-            <p style={{color:'#444', fontSize:'16px', lineHeight:'1.85', margin:'0 0 14px 0'}}>
-              DoorMate are based in Cardiff, South Wales and have been supplying sliding door systems since 2009. In 2015 we began manufacturing our own sliding barn door hardware in the UK — built for real doors, real walls and real homes, not generic one-size kits.
+            <p style={{color:'#444444', fontSize:'16px', lineHeight:'1.8', margin:'0 0 20px 0', fontFamily:"'Libre Franklin', sans-serif"}}>
+              DoorMate are based in Cardiff, South Wales. Have been supplying sliding door systems since 2009. In 2015 we began manufacturing our own sliding barn door hardware in the UK, built for real doors, real walls and real homes — not generic one-size kits. Every system is backed by clear fitting guidance and real support, from sales through to manufacture and installation.
             </p>
-            <p style={{color:'#444', fontSize:'16px', lineHeight:'1.85', margin:'0 0 24px 0'}}>
-              Every system is backed by clear fitting guidance and real support from sales through to installation. Not sure which system fits your project? Call us.
+            <p style={{color:'#efb627', fontSize:'18px', fontWeight:'900', textTransform:'uppercase', margin:'0 0 12px 0', fontFamily:"'Libre Franklin', sans-serif"}}>
+              We Are Manufacturers, Suppliers &amp; Installers of Quality Door Products
             </p>
-            <div style={{display:'flex', gap:'12px', flexWrap:'wrap', alignItems:'center'}}>
-              <a href="tel:02921660393" style={{background:'#272446', color:'#ffffff', padding:'12px 28px', fontWeight:'900', fontSize:'15px', textDecoration:'none', display:'inline-block'}}>
-                CALL 029 2166 0393
-              </a>
-              <a href="mailto:info@doormate.co.uk" style={{color:'#363557', fontWeight:'700', fontSize:'15px', textDecoration:'none', borderBottom:'2px solid #efb627', paddingBottom:'2px'}}>
-                info@doormate.co.uk
-              </a>
-            </div>
+            <p style={{color:'#272446', fontSize:'18px', fontWeight:'900', textTransform:'uppercase', margin:0, fontFamily:"'Libre Franklin', sans-serif"}}>
+              Barn Door Hardware | Pocket Door Kits | Internal &amp; External Sliding Systems
+            </p>
           </div>
-          <div style={{position:'relative', height:'380px', overflow:'hidden'}}>
-            <Image src="/img/brooklyn-system.jpg" alt="DoorMate barn door hardware installed" fill style={{objectFit:'cover'}} sizes="40vw" />
-          </div>
+
         </div>
       </section>
 
