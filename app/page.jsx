@@ -129,16 +129,16 @@ export default function HomePage() {
           {/* Right — text content */}
           <div style={{display:'flex', flexDirection:'column', justifyContent:'center', minHeight:'435px', textAlign:'center', fontFamily:"'Libre Franklin', sans-serif"}}>
             <p style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'4px', textTransform:'uppercase', margin:'0 0 16px 0'}}>Why DoorMate?</p>
-            <h2 style={{color:'#272446', fontSize:'28px', fontWeight:'900', lineHeight:'1.3', margin:'0 0 28px 0', textTransform:'uppercase'}}>
+            <h2 style={{color:'#272446', fontSize:'22px', fontWeight:'900', lineHeight:'1.3', margin:'0 0 28px 0', textTransform:'uppercase'}}>
               Real Industry Professionals. Real UK Manufacturers. Real Systems Delivered Direct To You.
             </h2>
-            <p style={{color:'#272446', fontSize:'20px', lineHeight:'1.8', margin:'0 0 16px 0'}}>
+            <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.8', margin:'0 0 16px 0'}}>
               DoorMate are based in Cardiff, South Wales. We&apos;ve been supplying sliding door systems since 2009 — pocket doors, internal and external sliding kits, barn door hardware and handmade doors.
             </p>
-            <p style={{color:'#272446', fontSize:'20px', lineHeight:'1.8', margin:'0 0 16px 0'}}>
+            <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.8', margin:'0 0 16px 0'}}>
               While our competitors sit in warehouses waiting for imported boxes to arrive, we&apos;re in our Cardiff workshop making them. Not a call centre. Not a sales office. Us.
             </p>
-            <p style={{color:'#272446', fontSize:'20px', lineHeight:'1.8', margin:'0 0 28px 0'}}>
+            <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.8', margin:'0 0 28px 0'}}>
               Every system is backed by real industry knowledge, clear fitting guidance and direct support from the people who actually make them.
             </p>
             <p style={{color:'#efb627', fontSize:'20px', fontWeight:'900', textTransform:'uppercase', margin:'0 0 14px 0'}}>
