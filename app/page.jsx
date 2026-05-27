@@ -21,7 +21,7 @@ export default function HomePage() {
       <HeroCarousel />
 
       {/* TRUST STRIP — white, navy border, 4 review items */}
-      <div style={{width:'100%', background:'#efb627', padding:'14px 40px', boxSizing:'border-box'}}>
+      <div style={{width:'100%', background:'#efb627', padding:'10px 40px', boxSizing:'border-box'}}>
         <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', maxWidth:'1400px', margin:'0 auto', gap:'24px'}}>
 
           {/* Trading Since 2009 */}
