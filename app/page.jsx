@@ -196,71 +196,26 @@ export default function HomePage() {
       </section>
 
       {/* SYSTEMS SECTION */}
-      <section style={{width:'100%', background:'#ffffff', boxSizing:'border-box'}}>
-
-        {/* Header */}
-        <div style={{background:'#272446', padding:'48px 40px', textAlign:'center'}}>
-          <p style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'4px', textTransform:'uppercase', margin:'0 0 12px 0'}}>We Don&apos;t Sell Components. We Sell Complete Systems.</p>
-          <h2 style={{color:'#ffffff', fontSize:'clamp(22px, 3vw, 38px)', fontWeight:'900', margin:'0 0 12px 0', textTransform:'uppercase', lineHeight:'1.2'}}>Built For Real Doors, Real Walls And Real Homes</h2>
-          <p style={{color:'rgba(255,255,255,0.7)', fontSize:'18px', margin:0}}>Tell us what you need. We&apos;ve already done the thinking.</p>
-        </div>
-
-        {/* Row 1 — Pocket Doors — text left, image right */}
-        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', minHeight:'260px'}}>
-          <div style={{background:'#f4f4f4', display:'flex', alignItems:'center', padding:'48px'}}>
-            <div>
-              <p style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'3px', textTransform:'uppercase', margin:'0 0 10px 0'}}>No wasted space</p>
-              <h3 style={{color:'#272446', fontSize:'clamp(18px, 2vw, 26px)', fontWeight:'900', margin:'0 0 16px 0', lineHeight:'1.3'}}>&ldquo;I want a door that disappears into the wall.&rdquo;</h3>
-              <Link href="/pocket-door-kits" style={{color:'#272446', fontWeight:'900', fontSize:'14px', textDecoration:'none', borderBottom:'2px solid #efb627', paddingBottom:'2px', textTransform:'uppercase', letterSpacing:'1px'}}>Pocket Door Kits →</Link>
-            </div>
-          </div>
-          <div style={{position:'relative', minHeight:'260px', overflow:'hidden'}}>
-            <Image src="/img/mirror-pocket-single.jpg" alt="Pocket door installed in a real home" fill style={{objectFit:'cover'}} sizes="50vw" />
+      <section style={{width:'100%', background:'#ffffff', padding:'20px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
+        <div style={{maxWidth:'1400px', margin:'0 auto'}}>
+          <p style={{color:'#272446', fontSize:'13px', fontWeight:'900', letterSpacing:'3px', textTransform:'uppercase', textAlign:'center', margin:'0 0 16px 0'}}>We don&apos;t sell components. We sell complete systems.</p>
+          <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
+            {[
+              {headline:'The Ultimate Space Saver', href:'/pocket-door-kits', img:'/img/mirror-pocket-single.jpg', alt:'Pocket door kits'},
+              {headline:'The Door That Makes The Room', href:'/barn-door-hardware', img:'/img/gainesville-system.jpg', alt:'Barn door hardware'},
+              {headline:'Sliding Systems For Modern Living', href:'/internal-sliding-kits', img:'/img/dm-150.jpg', alt:'Internal sliding door kits'},
+              {headline:'Built To Last. Whatever The Weather.', href:'/external-sliding-kits', img:'/img/external-kit.jpg', alt:'External sliding door kits'},
+            ].map(item => (
+              <Link key={item.headline} href={item.href} style={{textDecoration:'none', display:'block', position:'relative', height:'200px', overflow:'hidden'}}>
+                <Image src={item.img} alt={item.alt} fill style={{objectFit:'cover'}} sizes="50vw" />
+                <div style={{position:'absolute', inset:0, background:'rgba(39,36,70,0.55)', display:'flex', flexDirection:'column', justifyContent:'flex-end', padding:'20px'}}>
+                  <h3 style={{color:'#ffffff', fontSize:'clamp(16px, 1.8vw, 22px)', fontWeight:'900', margin:'0 0 8px 0', lineHeight:'1.2'}}>{item.headline}</h3>
+                  <span style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'2px', textTransform:'uppercase'}}>Find Out More →</span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
-
-        {/* Row 2 — Barn Door Hardware — image left, text right */}
-        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', minHeight:'260px'}}>
-          <div style={{position:'relative', minHeight:'260px', overflow:'hidden'}}>
-            <Image src="/img/gainesville-system.jpg" alt="Barn door hardware installed" fill style={{objectFit:'cover'}} sizes="50vw" />
-          </div>
-          <div style={{background:'#ffffff', display:'flex', alignItems:'center', padding:'48px', borderTop:'1px solid #eeeeee'}}>
-            <div>
-              <p style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'3px', textTransform:'uppercase', margin:'0 0 10px 0'}}>Character &amp; style</p>
-              <h3 style={{color:'#272446', fontSize:'clamp(18px, 2vw, 26px)', fontWeight:'900', margin:'0 0 16px 0', lineHeight:'1.3'}}>&ldquo;I want a door with real character.&rdquo;</h3>
-              <Link href="/barn-door-hardware" style={{color:'#272446', fontWeight:'900', fontSize:'14px', textDecoration:'none', borderBottom:'2px solid #efb627', paddingBottom:'2px', textTransform:'uppercase', letterSpacing:'1px'}}>Barn Door Hardware →</Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Row 3 — Internal Kits — text left, image right */}
-        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', minHeight:'260px'}}>
-          <div style={{background:'#f4f4f4', display:'flex', alignItems:'center', padding:'48px'}}>
-            <div>
-              <p style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'3px', textTransform:'uppercase', margin:'0 0 10px 0'}}>Clean &amp; modern</p>
-              <h3 style={{color:'#272446', fontSize:'clamp(18px, 2vw, 26px)', fontWeight:'900', margin:'0 0 16px 0', lineHeight:'1.3'}}>&ldquo;I want something modern that suits my home.&rdquo;</h3>
-              <Link href="/internal-sliding-kits" style={{color:'#272446', fontWeight:'900', fontSize:'14px', textDecoration:'none', borderBottom:'2px solid #efb627', paddingBottom:'2px', textTransform:'uppercase', letterSpacing:'1px'}}>Internal Sliding Kits →</Link>
-            </div>
-          </div>
-          <div style={{position:'relative', minHeight:'260px', overflow:'hidden'}}>
-            <Image src="/img/dm-150.jpg" alt="Internal sliding door kit installed" fill style={{objectFit:'cover'}} sizes="50vw" />
-          </div>
-        </div>
-
-        {/* Row 4 — External Kits — image left, text right */}
-        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', minHeight:'260px'}}>
-          <div style={{position:'relative', minHeight:'260px', overflow:'hidden'}}>
-            <Image src="/img/external-kit.jpg" alt="External sliding door kit installed" fill style={{objectFit:'cover'}} sizes="50vw" />
-          </div>
-          <div style={{background:'#ffffff', display:'flex', alignItems:'center', padding:'48px', borderTop:'1px solid #eeeeee'}}>
-            <div>
-              <p style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'3px', textTransform:'uppercase', margin:'0 0 10px 0'}}>Built to last outside</p>
-              <h3 style={{color:'#272446', fontSize:'clamp(18px, 2vw, 26px)', fontWeight:'900', margin:'0 0 16px 0', lineHeight:'1.3'}}>&ldquo;I need something solid for outside.&rdquo;</h3>
-              <Link href="/external-sliding-kits" style={{color:'#272446', fontWeight:'900', fontSize:'14px', textDecoration:'none', borderBottom:'2px solid #efb627', paddingBottom:'2px', textTransform:'uppercase', letterSpacing:'1px'}}>External Sliding Kits →</Link>
-            </div>
-          </div>
-        </div>
-
       </section>
 
       {/* CHANNEL 4 — thin strip, not a dark cave */}
