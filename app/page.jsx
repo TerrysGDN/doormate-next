@@ -198,7 +198,7 @@ export default function HomePage() {
       {/* SYSTEMS SECTION */}
       <section style={{width:'100%', background:'#ffffff', padding:'48px 40px', boxSizing:'border-box'}}>
         <div style={{maxWidth:'1400px', margin:'0 auto'}}>
-          <h2 style={{color:'#272446', fontSize:'clamp(18px, 2vw, 26px)', fontWeight:'900', margin:'0 0 16px 0', textAlign:'center'}}>
+          <h2 style={{color:'#272446', fontSize:'clamp(24px, 3vw, 38px)', fontWeight:'900', margin:'0 0 24px 0', textAlign:'center', textTransform:'uppercase', lineHeight:'1.2'}}>
             We offer complete sliding door solutions, for real homes, real doors and real walls
           </h2>
           <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.85', textAlign:'center', maxWidth:'800px', margin:'0 auto 40px auto', fontWeight:'600'}}>
