@@ -154,15 +154,56 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* POCKET DOOR BRAND LOGOS */}
-      <section style={{width:'100%', background:'#ffffff', padding:'32px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'4px solid #efb627'}}>
-        <p style={{color:'#999', fontSize:'11px', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0', letterSpacing:'3px', textTransform:'uppercase'}}>Pocket Door Kit Brands We Supply & Support</p>
-        <div style={{display:'flex', justifyContent:'center', alignItems:'center', gap:'48px', flexWrap:'wrap'}}>
-          {['COBURN', 'ECLISSE', 'ROCKET', 'MIRROR POCKET DOORS'].map(brand => (
-            <Link key={brand} href="/pocket-door-kits" style={{textDecoration:'none'}}>
-              <span style={{fontSize:'16px', fontWeight:'900', color:'#272446', letterSpacing:'1px', opacity:'0.6'}}>{brand}</span>
-            </Link>
-          ))}
+      {/* BRANDS WE WORK WITH — scrolling logo banner */}
+      <section style={{width:'100%', background:'#ffffff', padding:'32px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'4px solid #efb627', overflow:'hidden'}}>
+        <p style={{color:'#999', fontSize:'11px', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0', letterSpacing:'3px', textTransform:'uppercase'}}>Brands We Work With</p>
+        <style>{`
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .logo-track {
+            display: flex;
+            align-items: center;
+            gap: 64px;
+            animation: scroll 20s linear infinite;
+            width: max-content;
+          }
+          .logo-track img {
+            height: 36px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: opacity 0.3s, filter 0.3s;
+          }
+          .logo-track img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+          }
+        `}</style>
+        <div style={{overflow:'hidden', width:'100%'}}>
+          <div className="logo-track">
+            <img src="/img/brands/barrier.png" alt="Barrier Components" />
+            <img src="/img/brands/coburn.png" alt="Coburn Systems" />
+            <img src="/img/brands/eclisse.jpg" alt="Eclisse" />
+            <img src="/img/brands/rocket.jpg" alt="Rocket Door Frames" />
+            <img src="/img/brands/jbkind.svg" alt="JB Kind" />
+            <img src="/img/brands/fhbrundle.png" alt="FH Brundle" />
+            <img src="/img/brands/charlesday.svg" alt="Charles Day Steels" />
+            <img src="/img/brands/titus.png" alt="Titus UK" />
+            <img src="/img/brands/rtbearings.jpg" alt="RT Bearings" />
+            {/* Duplicate set for seamless loop */}
+            <img src="/img/brands/barrier.png" alt="Barrier Components" />
+            <img src="/img/brands/coburn.png" alt="Coburn Systems" />
+            <img src="/img/brands/eclisse.jpg" alt="Eclisse" />
+            <img src="/img/brands/rocket.jpg" alt="Rocket Door Frames" />
+            <img src="/img/brands/jbkind.svg" alt="JB Kind" />
+            <img src="/img/brands/fhbrundle.png" alt="FH Brundle" />
+            <img src="/img/brands/charlesday.svg" alt="Charles Day Steels" />
+            <img src="/img/brands/titus.png" alt="Titus UK" />
+            <img src="/img/brands/rtbearings.jpg" alt="RT Bearings" />
+          </div>
         </div>
       </section>
 

@@ -2,7 +2,28 @@
   "permissions": {
     "allow": [
       "Bash(git add *)",
-      "Bash(git commit -m ' *)"
+      "Bash(git commit -m ' *)",
+      "WebFetch(domain:www.barriercomponents.co.uk)",
+      "WebFetch(domain:www.coburn.co.uk)",
+      "WebFetch(domain:www.eclisse.co.uk)",
+      "WebFetch(domain:www.rocketdoorsystems.co.uk)",
+      "WebFetch(domain:www.fhbrundle.co.uk)",
+      "WebFetch(domain:www.daysteel.co.uk)",
+      "WebFetch(domain:uk.titusplus.com)",
+      "WebFetch(domain:rtbearings.com)",
+      "Bash(curl -L -o coburn.png \"https://www.coburn.co.uk/wp-content/uploads/2016/04/coburn-logo-1.png\")",
+      "Bash(curl -L -o eclisse.jpg \"https://www.eclisse.co.uk/cdn/shop/files/EN_logo_ECLISSE_LOOKING_FURTHER_22_noR_1.jpg?v=1731777258&width=600\")",
+      "Bash(curl -L -o fhbrundle.png \"https://samsara-web.s3-eu-west-1.amazonaws.com/static/logos/logo_stacked_256px_nosince.png\")",
+      "Bash(curl -L -o charlesday.svg \"https://www.daysteel.co.uk/wp-content/uploads/Charles-Day-Steels-Logo-1.svg\")",
+      "Bash(curl -L -o titus.png \"https://uk.titusplus.com/wp-content/uploads/2019/04/Titus-hinges-logo.png\")",
+      "WebFetch(domain:www.barrier-components.co.uk)",
+      "WebFetch(domain:rocketdoorframes.co.uk)",
+      "WebFetch(domain:www.jbkind.com)",
+      "Bash(curl -sI \"https://www.jbkind.com\")",
+      "Bash(curl -s \"https://www.jbkind.com\")",
+      "Bash(curl -L -o barrier.png \"https://www.barrier-components.co.uk/media/logo/default/barrier-logo_2.png\")",
+      "Bash(curl -L -o rocket.jpg \"https://images.squarespace-cdn.com/content/v1/672b7de014e94b547776c965/07e14c96-d386-4578-b50c-d643348d4b8c/RDF+Cover+%28600+x+250+px%29+%28600+x+125+px%29+%28600+x+75+px%29+%281200+x+80+px%29.jpg?format=1500w\")",
+      "Bash(curl -L -o jbkind.svg \"https://www.jbkind.com/wp-content/themes/cb-jbkind/img/JB-Kind-Logo.svg\")"
     ]
   }
 }
