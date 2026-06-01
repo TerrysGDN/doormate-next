@@ -125,18 +125,29 @@ export default function HomePage() {
             />
           </div>
 
-          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', minHeight:'435px', fontFamily:"'Libre Franklin', sans-serif"}}>
-            <h2 style={{color:'#272446', fontSize:'clamp(24px, 3vw, 38px)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0', textTransform:'uppercase'}}>
+          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', minHeight:'435px', fontFamily:"'Libre Franklin', sans-serif", textAlign:'center'}}>
+            <h2 style={{color:'#272446', fontSize:'clamp(16px, 2vw, 26px)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0', textTransform:'uppercase', whiteSpace:'nowrap'}}>
               Real UK Manufacturers. Real Systems Delivered Direct To You.
             </h2>
-            <p style={{color:'#272446', fontSize:'18px', lineHeight:'1.85', margin:'0 0 20px 0'}}>
-              DoorMate are based in Cardiff, South Wales — manufacturing and supplying sliding door systems since 2009. While our competitors are simply importing boxes of hardware, sat in warehouses with sales staff and warehouse workers loading the vans, we manufacture our own systems alongside handmade barn doors, mirror pocket doors and the widest range of pocket door kits, internal and external sliding systems. Every system we sell is backed by real industry knowledge, clear fitting guidance and direct support from the people who actually make them.
+            <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.85', margin:'0 0 20px 0'}}>
+              DoorMate are based in Cardiff, South Wales — manufacturing and supplying sliding door systems since 2009. While our competitors are simply importing boxes of hardware, sat in warehouses with sales staff and warehouse workers loading the vans, we manufacture our own systems alongside handmade barn doors, mirror pocket doors and the widest range of pocket door kits, internal and external sliding systems.
+            </p>
+            <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.85', margin:'0 0 28px 0'}}>
+              Every system we sell is backed by real industry knowledge, clear fitting guidance and direct support from the people who actually make them.
             </p>
             <p style={{color:'#efb627', fontSize:'18px', fontWeight:'900', textTransform:'uppercase', margin:'0 0 12px 0', borderTop:'2px solid #efb627', paddingTop:'16px'}}>
               We Are Manufacturers, Suppliers &amp; Installers of Quality Door Products
             </p>
-            <p style={{color:'#272446', fontSize:'17px', fontWeight:'900', textTransform:'uppercase', margin:0}}>
-              Doors | Pocket Door Kits | Barn Door Kits | Internal Kits | External Kits
+            <p style={{fontSize:'17px', fontWeight:'900', textTransform:'uppercase', margin:0}}>
+              <Link href="/doors" style={{color:'#272446', textDecoration:'none'}}>Doors</Link>
+              <span style={{color:'#efb627', margin:'0 10px'}}>|</span>
+              <Link href="/pocket-door-kits" style={{color:'#272446', textDecoration:'none'}}>Pocket Door Kits</Link>
+              <span style={{color:'#efb627', margin:'0 10px'}}>|</span>
+              <Link href="/barn-door-hardware" style={{color:'#272446', textDecoration:'none'}}>Barn Door Kits</Link>
+              <span style={{color:'#efb627', margin:'0 10px'}}>|</span>
+              <Link href="/internal-sliding-kits" style={{color:'#272446', textDecoration:'none'}}>Internal Kits</Link>
+              <span style={{color:'#efb627', margin:'0 10px'}}>|</span>
+              <Link href="/external-sliding-kits" style={{color:'#272446', textDecoration:'none'}}>External Kits</Link>
             </p>
           </div>
 
