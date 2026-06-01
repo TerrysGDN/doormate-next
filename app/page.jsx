@@ -195,29 +195,72 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* DON'T ACCEPT CHEAP IMITATIONS — white background now, not dark */}
-      <section style={{width:'100%', background:'#ffffff', padding:'56px 40px', boxSizing:'border-box'}}>
-        <div style={{display:'grid', gridTemplateColumns:'2fr 3fr', gap:'56px', maxWidth:'1400px', margin:'0 auto', alignItems:'center'}}>
-          <div style={{position:'relative', height:'360px', overflow:'hidden'}}>
-            <Image src="/img/gainesville-closeup.png" alt="DoorMate barn door hardware close-up — UK manufactured Cardiff" fill style={{objectFit:'cover'}} sizes="40vw" />
+      {/* SYSTEMS SECTION */}
+      <section style={{width:'100%', background:'#ffffff', boxSizing:'border-box'}}>
+
+        {/* Header */}
+        <div style={{background:'#272446', padding:'48px 40px', textAlign:'center'}}>
+          <p style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'4px', textTransform:'uppercase', margin:'0 0 12px 0'}}>We Don&apos;t Sell Components. We Sell Complete Systems.</p>
+          <h2 style={{color:'#ffffff', fontSize:'clamp(22px, 3vw, 38px)', fontWeight:'900', margin:'0 0 12px 0', textTransform:'uppercase', lineHeight:'1.2'}}>Built For Real Doors, Real Walls And Real Homes</h2>
+          <p style={{color:'rgba(255,255,255,0.7)', fontSize:'18px', margin:0}}>Tell us what you need. We&apos;ve already done the thinking.</p>
+        </div>
+
+        {/* Row 1 — Pocket Doors — text left, image right */}
+        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', minHeight:'260px'}}>
+          <div style={{background:'#f4f4f4', display:'flex', alignItems:'center', padding:'48px'}}>
+            <div>
+              <p style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'3px', textTransform:'uppercase', margin:'0 0 10px 0'}}>No wasted space</p>
+              <h3 style={{color:'#272446', fontSize:'clamp(18px, 2vw, 26px)', fontWeight:'900', margin:'0 0 16px 0', lineHeight:'1.3'}}>&ldquo;I want a door that disappears into the wall.&rdquo;</h3>
+              <Link href="/pocket-door-kits" style={{color:'#272446', fontWeight:'900', fontSize:'14px', textDecoration:'none', borderBottom:'2px solid #efb627', paddingBottom:'2px', textTransform:'uppercase', letterSpacing:'1px'}}>Pocket Door Kits →</Link>
+            </div>
           </div>
-          <div>
-            <p style={{color:'#efb627', fontSize:'11px', fontWeight:'700', letterSpacing:'4px', textTransform:'uppercase', margin:'0 0 10px 0'}}>WHY DOORMATE</p>
-            <h2 style={{color:'#272446', fontSize:'clamp(20px, 2.5vw, 32px)', fontWeight:'900', margin:'0 0 18px 0'}}>Don't Accept Cheap Imitations</h2>
-            <p style={{color:'#444', fontSize:'16px', lineHeight:'1.85', margin:'0 0 14px 0'}}>
-              The market is flooded with mass-produced barn door kits designed to look the part, but built without consideration for real door weights, real wall constructions, or long-term reliability.
-            </p>
-            <p style={{color:'#444', fontSize:'16px', lineHeight:'1.85', margin:'0 0 14px 0'}}>
-              Many of these systems are manufactured to a price, not a standard — resulting in poor fixing points, undersized tracks, noisy rollers, and premature wear.
-            </p>
-            <p style={{color:'#444', fontSize:'16px', lineHeight:'1.85', margin:'0 0 28px 0'}}>
-              At DoorMate, our barn door hardware is designed and manufactured in Cardiff with performance, strength, and longevity in mind. If you're investing in a sliding door system, it should work smoothly, fix securely, and perform for years — not just on the day it's installed.
-            </p>
-            <Link href="/barn-door-hardware" style={{background:'#efb627', color:'#0f0d24', padding:'12px 28px', fontWeight:'900', fontSize:'14px', textDecoration:'none', display:'inline-block', letterSpacing:'1px', textTransform:'uppercase'}}>
-              VIEW BARN DOOR HARDWARE →
-            </Link>
+          <div style={{position:'relative', minHeight:'260px', overflow:'hidden'}}>
+            <Image src="/img/mirror-pocket-single.jpg" alt="Pocket door installed in a real home" fill style={{objectFit:'cover'}} sizes="50vw" />
           </div>
         </div>
+
+        {/* Row 2 — Barn Door Hardware — image left, text right */}
+        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', minHeight:'260px'}}>
+          <div style={{position:'relative', minHeight:'260px', overflow:'hidden'}}>
+            <Image src="/img/gainesville-system.jpg" alt="Barn door hardware installed" fill style={{objectFit:'cover'}} sizes="50vw" />
+          </div>
+          <div style={{background:'#ffffff', display:'flex', alignItems:'center', padding:'48px', borderTop:'1px solid #eeeeee'}}>
+            <div>
+              <p style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'3px', textTransform:'uppercase', margin:'0 0 10px 0'}}>Character &amp; style</p>
+              <h3 style={{color:'#272446', fontSize:'clamp(18px, 2vw, 26px)', fontWeight:'900', margin:'0 0 16px 0', lineHeight:'1.3'}}>&ldquo;I want a door with real character.&rdquo;</h3>
+              <Link href="/barn-door-hardware" style={{color:'#272446', fontWeight:'900', fontSize:'14px', textDecoration:'none', borderBottom:'2px solid #efb627', paddingBottom:'2px', textTransform:'uppercase', letterSpacing:'1px'}}>Barn Door Hardware →</Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Row 3 — Internal Kits — text left, image right */}
+        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', minHeight:'260px'}}>
+          <div style={{background:'#f4f4f4', display:'flex', alignItems:'center', padding:'48px'}}>
+            <div>
+              <p style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'3px', textTransform:'uppercase', margin:'0 0 10px 0'}}>Clean &amp; modern</p>
+              <h3 style={{color:'#272446', fontSize:'clamp(18px, 2vw, 26px)', fontWeight:'900', margin:'0 0 16px 0', lineHeight:'1.3'}}>&ldquo;I want something modern that suits my home.&rdquo;</h3>
+              <Link href="/internal-sliding-kits" style={{color:'#272446', fontWeight:'900', fontSize:'14px', textDecoration:'none', borderBottom:'2px solid #efb627', paddingBottom:'2px', textTransform:'uppercase', letterSpacing:'1px'}}>Internal Sliding Kits →</Link>
+            </div>
+          </div>
+          <div style={{position:'relative', minHeight:'260px', overflow:'hidden'}}>
+            <Image src="/img/dm-150.jpg" alt="Internal sliding door kit installed" fill style={{objectFit:'cover'}} sizes="50vw" />
+          </div>
+        </div>
+
+        {/* Row 4 — External Kits — image left, text right */}
+        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', minHeight:'260px'}}>
+          <div style={{position:'relative', minHeight:'260px', overflow:'hidden'}}>
+            <Image src="/img/external-kit.jpg" alt="External sliding door kit installed" fill style={{objectFit:'cover'}} sizes="50vw" />
+          </div>
+          <div style={{background:'#ffffff', display:'flex', alignItems:'center', padding:'48px', borderTop:'1px solid #eeeeee'}}>
+            <div>
+              <p style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'3px', textTransform:'uppercase', margin:'0 0 10px 0'}}>Built to last outside</p>
+              <h3 style={{color:'#272446', fontSize:'clamp(18px, 2vw, 26px)', fontWeight:'900', margin:'0 0 16px 0', lineHeight:'1.3'}}>&ldquo;I need something solid for outside.&rdquo;</h3>
+              <Link href="/external-sliding-kits" style={{color:'#272446', fontWeight:'900', fontSize:'14px', textDecoration:'none', borderBottom:'2px solid #efb627', paddingBottom:'2px', textTransform:'uppercase', letterSpacing:'1px'}}>External Sliding Kits →</Link>
+            </div>
+          </div>
+        </div>
+
       </section>
 
       {/* CHANNEL 4 — thin strip, not a dark cave */}
