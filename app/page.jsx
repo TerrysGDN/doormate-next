@@ -165,37 +165,32 @@ export default function HomePage() {
           .logo-track {
             display: flex;
             align-items: center;
-            gap: 64px;
-            animation: scroll 20s linear infinite;
+            gap: 48px;
+            animation: scroll 24s linear infinite;
             width: max-content;
-          }
-          .logo-track img {
-            width: 100px;
-            height: 40px;
-            object-fit: contain;
           }
         `}</style>
         <div style={{overflow:'hidden', width:'100%'}}>
           <div className="logo-track">
-            <img src="/img/brands/barrier.png" alt="Barrier Components" />
-            <img src="/img/brands/coburn.png" alt="Coburn Systems" />
-            <img src="/img/brands/eclisse.jpg" alt="Eclisse" />
-            <img src="/img/brands/rocket.jpg" alt="Rocket Door Frames" />
-            <img src="/img/brands/jbkind.svg" alt="JB Kind" />
-            <img src="/img/brands/fhbrundle.png" alt="FH Brundle" />
-            <img src="/img/brands/charlesday.svg" alt="Charles Day Steels" />
-            <img src="/img/brands/titus.png" alt="Titus UK" />
-            <img src="/img/brands/rtbearings.jpg" alt="RT Bearings" />
+            <img src="/img/brands/barrier.png" alt="Barrier Components" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/coburn.png" alt="Coburn Systems" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/eclisse.jpg" alt="Eclisse" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/rocket.png" alt="Rocket Door Frames" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/jbkind.png" alt="JB Kind" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/fhbrundle.png" alt="FH Brundle" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/charlesday.png" alt="Charles Day Steels" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/titus.png" alt="Titus UK" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/rtbearings.jpg" alt="RT Bearings" style={{width:'200px', height:'80px', objectFit:'contain'}} />
             {/* Duplicate set for seamless loop */}
-            <img src="/img/brands/barrier.png" alt="Barrier Components" />
-            <img src="/img/brands/coburn.png" alt="Coburn Systems" />
-            <img src="/img/brands/eclisse.jpg" alt="Eclisse" />
-            <img src="/img/brands/rocket.jpg" alt="Rocket Door Frames" />
-            <img src="/img/brands/jbkind.svg" alt="JB Kind" />
-            <img src="/img/brands/fhbrundle.png" alt="FH Brundle" />
-            <img src="/img/brands/charlesday.svg" alt="Charles Day Steels" />
-            <img src="/img/brands/titus.png" alt="Titus UK" />
-            <img src="/img/brands/rtbearings.jpg" alt="RT Bearings" />
+            <img src="/img/brands/barrier.png" alt="Barrier Components" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/coburn.png" alt="Coburn Systems" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/eclisse.jpg" alt="Eclisse" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/rocket.png" alt="Rocket Door Frames" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/jbkind.png" alt="JB Kind" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/fhbrundle.png" alt="FH Brundle" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/charlesday.png" alt="Charles Day Steels" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/titus.png" alt="Titus UK" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            <img src="/img/brands/rtbearings.jpg" alt="RT Bearings" style={{width:'200px', height:'80px', objectFit:'contain'}} />
           </div>
         </div>
       </section>
