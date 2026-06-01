@@ -109,11 +109,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHO WE ARE — Houzz left, text right */}
-      <section style={{width:'100%', background:'#ffffff', padding:'40px', boxSizing:'border-box', borderTop:'1px solid #e8e8e8'}}>
+      {/* WHO WE ARE */}
+      <section style={{width:'100%', background:'#ffffff', padding:'40px', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
         <div style={{display:'grid', gridTemplateColumns:'300px 1fr', gap:'56px', maxWidth:'1400px', margin:'0 auto', alignItems:'start'}}>
 
-          {/* Left — Houzz embed, 300×435 */}
           <div style={{flexShrink:0}}>
             <iframe
               scrolling="no"
@@ -126,25 +125,17 @@ export default function HomePage() {
             />
           </div>
 
-          {/* Right — text content */}
-          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', minHeight:'435px', textAlign:'center', fontFamily:"'Libre Franklin', sans-serif"}}>
-            <p style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'4px', textTransform:'uppercase', margin:'0 0 16px 0'}}>Why DoorMate?</p>
-            <h2 style={{color:'#272446', fontSize:'22px', fontWeight:'900', lineHeight:'1.3', margin:'0 0 28px 0', textTransform:'uppercase'}}>
+          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', minHeight:'435px', fontFamily:"'Libre Franklin', sans-serif"}}>
+            <h2 style={{color:'#272446', fontSize:'clamp(24px, 3vw, 38px)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0', textTransform:'uppercase'}}>
               Real UK Manufacturers. Real Systems Delivered Direct To You.
             </h2>
-            <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.8', margin:'0 0 16px 0'}}>
-              DoorMate are based in Cardiff, South Wales. We&apos;ve been supplying sliding door systems since 2009 — pocket doors, internal and external sliding kits, barn door hardware and handmade doors.
+            <p style={{color:'#272446', fontSize:'18px', lineHeight:'1.85', margin:'0 0 20px 0'}}>
+              DoorMate are based in Cardiff, South Wales — manufacturing and supplying sliding door systems since 2009. While our competitors are simply importing boxes of hardware, sat in warehouses with sales staff and warehouse workers loading the vans, we manufacture our own systems alongside handmade barn doors, mirror pocket doors and the widest range of pocket door kits, internal and external sliding systems. Every system we sell is backed by real industry knowledge, clear fitting guidance and direct support from the people who actually make them.
             </p>
-            <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.8', margin:'0 0 16px 0'}}>
-              While our competitors sit in warehouses waiting for imported boxes to arrive, we&apos;re in our Cardiff workshop making them. Not a call centre. Not a sales office. Us.
-            </p>
-            <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.8', margin:'0 0 28px 0'}}>
-              Every system is backed by real industry knowledge, clear fitting guidance and direct support from the people who actually make them.
-            </p>
-            <p style={{color:'#efb627', fontSize:'20px', fontWeight:'900', textTransform:'uppercase', margin:'0 0 14px 0'}}>
+            <p style={{color:'#efb627', fontSize:'18px', fontWeight:'900', textTransform:'uppercase', margin:'0 0 12px 0', borderTop:'2px solid #efb627', paddingTop:'16px'}}>
               We Are Manufacturers, Suppliers &amp; Installers of Quality Door Products
             </p>
-            <p style={{color:'#272446', fontSize:'20px', fontWeight:'900', textTransform:'uppercase', margin:0}}>
+            <p style={{color:'#272446', fontSize:'17px', fontWeight:'900', textTransform:'uppercase', margin:0}}>
               Doors | Pocket Door Kits | Barn Door Kits | Internal Kits | External Kits
             </p>
           </div>
@@ -153,7 +144,7 @@ export default function HomePage() {
       </section>
 
       {/* POCKET DOOR BRAND LOGOS */}
-      <section style={{width:'100%', background:'#ffffff', padding:'32px 40px', boxSizing:'border-box', borderTop:'1px solid #e8e8e8', borderBottom:'1px solid #e8e8e8'}}>
+      <section style={{width:'100%', background:'#ffffff', padding:'32px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'4px solid #efb627'}}>
         <p style={{color:'#999', fontSize:'11px', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0', letterSpacing:'3px', textTransform:'uppercase'}}>Pocket Door Kit Brands We Supply & Support</p>
         <div style={{display:'flex', justifyContent:'center', alignItems:'center', gap:'48px', flexWrap:'wrap'}}>
           {['COBURN', 'ECLISSE', 'ROCKET', 'MIRROR POCKET DOORS'].map(brand => (
