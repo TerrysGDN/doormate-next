@@ -201,21 +201,21 @@ export default function HomePage() {
           <h2 style={{color:'#272446', fontSize:'clamp(18px, 2vw, 26px)', fontWeight:'900', margin:'0 0 16px 0', textAlign:'center'}}>
             We sell complete sliding door solutions, for real homes, real doors and real walls
           </h2>
-          <p style={{color:'#444444', fontSize:'17px', lineHeight:'1.85', textAlign:'center', maxWidth:'800px', margin:'0 auto 40px auto', fontWeight:'400'}}>
+          <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.85', textAlign:'center', maxWidth:'800px', margin:'0 auto 40px auto', fontWeight:'600'}}>
             Choosing a sliding door system shouldn&apos;t be difficult. That&apos;s why we&apos;ve made it easy to find the right solution for your project. By organising our systems around real-world applications, we&apos;ve already done the thinking for you. Simply choose the category that best suits your project and take the next step with confidence.
           </p>
           <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
             {[
-              {headline:'The Ultimate Space Saver', href:'/pocket-door-kits', img:'/img/mirror-pocket-single.jpg', alt:'Pocket door kits'},
-              {headline:'The Door That Makes The Room', href:'/barn-door-hardware', img:'/img/gainesville-system.jpg', alt:'Barn door hardware'},
-              {headline:'Sliding Systems For Modern Living', href:'/internal-sliding-kits', img:'/img/dm-150.jpg', alt:'Internal sliding door kits'},
-              {headline:'Built To Last. Whatever The Weather.', href:'/external-sliding-kits', img:'/img/external-kit.jpg', alt:'External sliding door kits'},
+              {top:'Pocket Door Systems', bottom:'For the ultimate space saver', href:'/pocket-door-kits', img:'/img/mirror-pocket-single.jpg', alt:'Pocket door kits'},
+              {top:'Sliding Barn Door Systems', bottom:'For traditional style and charm', href:'/barn-door-hardware', img:'/img/gainesville-system.jpg', alt:'Barn door hardware'},
+              {top:'Internal Sliding Systems', bottom:'For modern living', href:'/internal-sliding-kits', img:'/img/dm-150.jpg', alt:'Internal sliding door kits'},
+              {top:'External Sliding Systems', bottom:'Built to last. Whatever the weather.', href:'/external-sliding-kits', img:'/img/external-kit.jpg', alt:'External sliding door kits'},
             ].map(item => (
-              <Link key={item.headline} href={item.href} style={{textDecoration:'none', display:'block', position:'relative', height:'200px', overflow:'hidden'}}>
+              <Link key={item.top} href={item.href} style={{textDecoration:'none', display:'block', position:'relative', height:'200px', overflow:'hidden'}}>
                 <Image src={item.img} alt={item.alt} fill style={{objectFit:'cover'}} sizes="50vw" />
                 <div style={{position:'absolute', inset:0, background:'rgba(39,36,70,0.5)', display:'flex', flexDirection:'column', justifyContent:'flex-end', padding:'20px'}}>
-                  <h3 style={{color:'#ffffff', fontSize:'clamp(16px, 1.8vw, 22px)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>{item.headline}</h3>
-                  <span style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'1px'}}>Find out more →</span>
+                  <span style={{color:'#efb627', fontSize:'14px', fontWeight:'900', letterSpacing:'1px', margin:'0 0 4px 0', display:'block'}}>{item.top}</span>
+                  <span style={{color:'#ffffff', fontSize:'clamp(16px, 1.8vw, 22px)', fontWeight:'900', lineHeight:'1.2', display:'block'}}>{item.bottom}</span>
                 </div>
               </Link>
             ))}
