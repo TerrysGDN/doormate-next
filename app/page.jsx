@@ -135,10 +135,10 @@ export default function HomePage() {
             <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.85', margin:'0 0 28px 0'}}>
               Every system we sell is backed by real industry knowledge, clear fitting guidance and direct support from the people who actually make them.
             </p>
-            <p style={{color:'#efb627', fontSize:'18px', fontWeight:'900', textTransform:'uppercase', margin:'0 0 12px 0', borderTop:'2px solid #efb627', paddingTop:'16px'}}>
+            <p style={{color:'#efb627', fontSize:'18px', fontWeight:'900', margin:'0 0 12px 0'}}>
               We Are Manufacturers, Suppliers &amp; Installers of Quality Door Products
             </p>
-            <p style={{fontSize:'17px', fontWeight:'900', textTransform:'uppercase', margin:0}}>
+            <p style={{fontSize:'17px', fontWeight:'900', margin:0}}>
               <Link href="/doors" style={{color:'#272446', textDecoration:'none'}}>Doors</Link>
               <span style={{color:'#efb627', margin:'0 10px'}}>|</span>
               <Link href="/pocket-door-kits" style={{color:'#272446', textDecoration:'none'}}>Pocket Door Kits</Link>
