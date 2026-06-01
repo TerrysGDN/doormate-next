@@ -196,9 +196,14 @@ export default function HomePage() {
       </section>
 
       {/* SYSTEMS SECTION */}
-      <section style={{width:'100%', background:'#ffffff', padding:'20px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
+      <section style={{width:'100%', background:'#ffffff', padding:'48px 40px', boxSizing:'border-box'}}>
         <div style={{maxWidth:'1400px', margin:'0 auto'}}>
-          <p style={{color:'#272446', fontSize:'13px', fontWeight:'900', letterSpacing:'3px', textTransform:'uppercase', textAlign:'center', margin:'0 0 16px 0'}}>We don&apos;t sell components. We sell complete systems.</p>
+          <h2 style={{color:'#272446', fontSize:'clamp(18px, 2vw, 26px)', fontWeight:'900', margin:'0 0 16px 0', textAlign:'center'}}>
+            We sell complete sliding door solutions, for real homes, real doors and real walls
+          </h2>
+          <p style={{color:'#444444', fontSize:'17px', lineHeight:'1.85', textAlign:'center', maxWidth:'800px', margin:'0 auto 40px auto', fontWeight:'400'}}>
+            Choosing a sliding door system shouldn&apos;t be difficult. That&apos;s why we&apos;ve made it easy to find the right solution for your project. By organising our systems around real-world applications, we&apos;ve already done the thinking for you. Simply choose the category that best suits your project and take the next step with confidence.
+          </p>
           <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
             {[
               {headline:'The Ultimate Space Saver', href:'/pocket-door-kits', img:'/img/mirror-pocket-single.jpg', alt:'Pocket door kits'},
@@ -208,9 +213,9 @@ export default function HomePage() {
             ].map(item => (
               <Link key={item.headline} href={item.href} style={{textDecoration:'none', display:'block', position:'relative', height:'200px', overflow:'hidden'}}>
                 <Image src={item.img} alt={item.alt} fill style={{objectFit:'cover'}} sizes="50vw" />
-                <div style={{position:'absolute', inset:0, background:'rgba(39,36,70,0.55)', display:'flex', flexDirection:'column', justifyContent:'flex-end', padding:'20px'}}>
-                  <h3 style={{color:'#ffffff', fontSize:'clamp(16px, 1.8vw, 22px)', fontWeight:'900', margin:'0 0 8px 0', lineHeight:'1.2'}}>{item.headline}</h3>
-                  <span style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'2px', textTransform:'uppercase'}}>Find Out More →</span>
+                <div style={{position:'absolute', inset:0, background:'rgba(39,36,70,0.5)', display:'flex', flexDirection:'column', justifyContent:'flex-end', padding:'20px'}}>
+                  <h3 style={{color:'#ffffff', fontSize:'clamp(16px, 1.8vw, 22px)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>{item.headline}</h3>
+                  <span style={{color:'#efb627', fontSize:'13px', fontWeight:'900', letterSpacing:'1px'}}>Find out more →</span>
                 </div>
               </Link>
             ))}
