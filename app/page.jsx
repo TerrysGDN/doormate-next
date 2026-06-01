@@ -170,16 +170,9 @@ export default function HomePage() {
             width: max-content;
           }
           .logo-track img {
-            height: 36px;
+            height: 40px;
             width: auto;
             object-fit: contain;
-            filter: grayscale(100%);
-            opacity: 0.6;
-            transition: opacity 0.3s, filter 0.3s;
-          }
-          .logo-track img:hover {
-            filter: grayscale(0%);
-            opacity: 1;
           }
         `}</style>
         <div style={{overflow:'hidden', width:'100%'}}>
