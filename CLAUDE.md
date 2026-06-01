@@ -638,9 +638,33 @@ Claude Code is reading files every time and syncing two folders. The nested door
 
 ---
 
-## SESSION SUMMARY — 26 MAY 2026 — READ THIS FIRST — MOST RECENT
+## SESSION SUMMARY — 27 MAY 2026 — READ THIS FIRST — MOST RECENT
 
-### HOMEPAGE — STATE AS OF END OF SESSION 26 MAY 2026
+### TRUST STRIP — REBUILT AND LOCKED 27 MAY 2026
+- Gold band (#efb627) full width background
+- Four white pill boxes (borderRadius 999px) containing: DoorMate logo + "Trading Since 2009" | Google 4.8 ★★★★★ | Trustpilot 4.5 ★★★★½ | Houzz 5.0 ★★★★★
+- Padding matches navy tagline strip above — 10px top and bottom
+- DO NOT CHANGE
+
+### WHO WE ARE SECTION — LAYOUT LOCKED, BODY COPY OUTSTANDING
+Layout confirmed working and balanced. DO NOT touch layout, sizing or structure.
+
+**LOCKED:**
+- Houzz widget LEFT (300px), text column RIGHT
+- Gold eyebrow label: "WHY DOORMATE?" — small, gold, uppercase
+- Headline: "Real UK Manufacturers. Real Systems Delivered Direct To You." — large, navy, bold, single line, centred
+- All text centred
+- Gold line: "We Are Manufacturers, Suppliers & Installers of Quality Door Products"
+- Navy product line: "Doors | Pocket Door Kits | Barn Door Kits | Internal Kits | External Kits"
+- grid alignItems:'start', text column minHeight:'435px' with flexDirection column justifyContent center
+
+**BODY COPY — ONE OUTSTANDING TASK NEXT SESSION:**
+Terry's approved direction — word for word his intent:
+DoorMate are based in Cardiff, South Wales — manufacturing and supplying sliding door systems since 2009. While our competitors are simply importing boxes of hardware, sat in warehouses with sales staff and warehouse workers loading the vans, we manufacture our own systems alongside handmade barn doors, mirror pocket doors and the widest range of pocket door kits, internal and external sliding systems. Every system we sell is backed by real industry knowledge, clear fitting guidance and direct support from the people who actually make them.
+
+NOTE: The contrast is the point — competitors import/warehouse/shift. DoorMate manufacture. The words carry intent. Never paraphrase Terry's copy without his explicit approval. Every word he chooses has meaning and sales intent behind it.
+
+### SESSION SUMMARY — 26 MAY 2026
 
 **TRUST STRIP — REBUILT AND LOCKED**
 - White background, navy border top and bottom
@@ -648,7 +672,7 @@ Claude Code is reading files every time and syncing two folders. The nested door
 - Real platform logos in brand colours (Google multicolour G, Trustpilot green star, Houzz green house)
 - Proper half-star SVG for Trustpilot — top half gold, bottom half empty
 - All text same size and weight — 16px bold Libre Franklin
-- Replaces old navy text strip entirely
+- Replaces old navy text strip entirely — SUPERSEDED 27 MAY, see above
 
 **6 PRODUCT CARDS — DONE AND LOCKED**
 - Houzz iframe card removed — clean 6 cards full width
@@ -656,17 +680,7 @@ Claude Code is reading files every time and syncing two folders. The nested door
 - Full page width, evenly spaced
 
 **NAV/HERO OVERFLOW — FIXED**
-- Nav and hero were stretching wider than page at low zoom levels
-- Root cause: justify-between on nav with no max-width + overflow-x hidden conflicting with sticky nav
-- Fix: 1400px max-width cap on nav inner div, overflow-x hidden removed from body (html only)
 - Now behaves correctly at all zoom levels ✅
-
-**WHO WE ARE SECTION — STARTED, NOT SIGNED OFF**
-- Two-column section below product cards
-- Left: "WHY DOORMATE" label + "Manufacturers, Suppliers & Installers of Quality Sliding Door Products" heading + body text
-- Right: Live Houzz widget (iframe 300x435)
-- Terry flagged the text is too small and lacks character compared to old site — needs redesigning to match old site's bold, gold-accented style
-- The duplicate "Manufacturers" section below it is still there — Terry to decide whether to keep or remove
 
 ### RULES ESTABLISHED THIS SESSION — NEVER BREAK
 - **Send screenshots directly into Claude Code for visual problems** — description wastes time, images get it right first time
