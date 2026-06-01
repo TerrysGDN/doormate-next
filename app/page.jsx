@@ -171,7 +171,7 @@ export default function HomePage() {
           }
           .logo-track img {
             height: 40px;
-            width: auto;
+            width: 120px;
             object-fit: contain;
           }
         `}</style>
