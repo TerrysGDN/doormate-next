@@ -170,8 +170,8 @@ export default function HomePage() {
             width: max-content;
           }
           .logo-track img {
+            width: 100px;
             height: 40px;
-            width: 120px;
             object-fit: contain;
           }
         `}</style>

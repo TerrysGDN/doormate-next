@@ -23,7 +23,14 @@
       "Bash(curl -s \"https://www.jbkind.com\")",
       "Bash(curl -L -o barrier.png \"https://www.barrier-components.co.uk/media/logo/default/barrier-logo_2.png\")",
       "Bash(curl -L -o rocket.jpg \"https://images.squarespace-cdn.com/content/v1/672b7de014e94b547776c965/07e14c96-d386-4578-b50c-d643348d4b8c/RDF+Cover+%28600+x+250+px%29+%28600+x+125+px%29+%28600+x+75+px%29+%281200+x+80+px%29.jpg?format=1500w\")",
-      "Bash(curl -L -o jbkind.svg \"https://www.jbkind.com/wp-content/themes/cb-jbkind/img/JB-Kind-Logo.svg\")"
+      "Bash(curl -L -o jbkind.svg \"https://www.jbkind.com/wp-content/themes/cb-jbkind/img/JB-Kind-Logo.svg\")",
+      "Bash(curl -s \"https://uk.titusplus.com\")",
+      "Bash(curl -s \"https://rtbearings.com\")",
+      "Bash(python3 -c \"from PIL import Image; img = Image.open\\(r'C:\\\\Users\\\\Terry\\\\Dropbox\\\\PC\\\\Desktop\\\\NEW WEBSITE\\\\public\\\\img\\\\brands\\\\titus.png'\\); rotated = img.rotate\\(-90, expand=True\\); rotated.save\\(r'C:\\\\Users\\\\Terry\\\\Dropbox\\\\PC\\\\Desktop\\\\NEW WEBSITE\\\\public\\\\img\\\\brands\\\\titus.png'\\); print\\(rotated.size\\)\")",
+      "Bash(magick --version)",
+      "Bash(node -e \"const fs=require\\('fs'\\); console.log\\(fs.existsSync\\('node_modules/sharp'\\) || fs.existsSync\\('node_modules/jimp'\\) || fs.existsSync\\('node_modules/@jimp/core'\\)\\)\")",
+      "Bash(node -e \"const fs=require\\('fs'\\); console.log\\('sharp:', fs.existsSync\\('node_modules/sharp'\\)\\); console.log\\('jimp:', fs.existsSync\\('node_modules/jimp'\\)\\);\")",
+      "Bash(node -e ' *)"
     ]
   }
 }
