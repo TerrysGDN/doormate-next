@@ -638,6 +638,64 @@ Claude Code is reading files every time and syncing two folders. The nested door
 
 ---
 
+## SESSION SUMMARY — 1 JUNE 2026 — READ THIS FIRST — MOST RECENT
+
+### HOMEPAGE TYPOGRAPHY RULES — LOCKED FOREVER
+- No ALL CAPS anywhere on the site. Ever. British grammar. DoorMate is a British company.
+- Section headlines: navy #272446, bold, large, centred, sentence case, single line
+- Body text: navy #272446, fontWeight:'600', centred, full width — no maxWidth constraints
+- This is the template. Every page follows it. No exceptions.
+
+### WHO WE ARE SECTION — LOCKED
+- Layout: Houzz widget left, text column right — DO NOT TOUCH
+- Headline: "Real UK Manufacturers. Real Systems Delivered Direct To You." — LOCKED
+- Body copy: Terry's exact words — never paraphrase, never change
+- Gold line: "We Are Manufacturers, Suppliers & Installers of Quality Door Products"
+- Product links: Doors | Pocket Door Kits | Barn Door Kits | Internal Kits | External Kits — gold dividers, each links to landing page
+- Body text fontWeight:'600' — LOCKED
+
+### SYSTEMS SECTION — LOCKED 1 JUNE 2026
+Headline: "We offer complete sliding door solutions, for real homes, real doors and real walls"
+Body copy (ChatGPT — Terry approved — DO NOT CHANGE):
+"Choosing a sliding door system shouldn't be difficult. That's why we've made it easy to find the right solution for your project. By organising our systems around real-world applications, we've already done the thinking for you. Simply choose the category that best suits your project and take the next step with confidence."
+4 cards, 2x2 grid, gold product name top, white solution line below:
+- Pocket Door Systems | For The Ultimate Space Saver → /pocket-door-kits
+- Sliding Barn Door Systems | For Traditional Style And Charm → /barn-door-hardware
+- Internal Sliding Systems | For Modern Living → /internal-sliding-kits
+- External Sliding Systems | Built To Last. Whatever The Weather. → /external-sliding-kits
+Images are placeholders — replace all images in one pass when Terry has proper installation photos.
+
+### BRANDS WE WORK WITH — SCROLLING BANNER
+9 brands: Barrier Components, Coburn Systems, Eclisse, Rocket, JB Kind, FH Brundle, Charles Day, Titus UK, RT Bearings
+Logos downloaded to /public/img/brands/ — sizes inconsistent, Terry to prep to same canvas size when time allows
+Section live but logo sizing not perfect — revisit when logos are ready
+
+### KEY DECISIONS — 1 JUNE 2026
+- DoorMate's USP: complete systems, not components. Every competitor (Sliding Doorstuff, SD Hardware, IronmongeryDirect) sells components — customers have to figure out what goes with what. DoorMate sells complete ready-to-hang systems for every application. This is the market opportunity.
+- The systems section messaging comes from Terry researching competitors — it took 5+ hours to land. NEVER change this copy without Terry's explicit approval.
+- ChatGPT wrote the body copy for the systems section after Terry explained the brief. It works. Keep it.
+- No guessing. No assuming. Rule 1 applies especially when Claude doesn't recognise something on screen — say so, don't dress up a guess as analysis.
+- page.jsx IS the homepage template. Every section on this page sets the standard for every other page on the site.
+
+### HOMEPAGE — SECTIONS COMPLETE AS OF 1 JUNE 2026
+✅ Nav bar
+✅ Tagline strip
+✅ Hero carousel
+✅ Gold trust strip (4 review pills)
+✅ 6 category cards
+✅ Who We Are (Houzz + text)
+✅ Brands We Work With (scrolling banner — logos need replacing)
+✅ Systems section (4 cards — images need replacing)
+⬜ Channel 4 strip — next session
+⬜ Social media strip
+⬜ Footer
+
+### NEXT SESSION — START HERE
+1. Channel 4 strip — review and confirm or fix
+2. Social media strip — review
+3. Footer — review and confirm complete
+4. Homepage signed off — then category landing pages (Part 17)
+
 ## SESSION SUMMARY — 27 MAY 2026 — READ THIS FIRST — MOST RECENT
 
 ### TRUST STRIP — REBUILT AND LOCKED 27 MAY 2026
