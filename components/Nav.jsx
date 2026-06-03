@@ -29,7 +29,7 @@ const SOCIAL_LINKS = [
     label: 'Facebook',
     href: 'https://www.facebook.com/doormate',
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true">
         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
       </svg>
     ),
@@ -38,17 +38,8 @@ const SOCIAL_LINKS = [
     label: 'Instagram',
     href: 'https://www.instagram.com/doormate',
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
-        <defs>
-          <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#f09433"/>
-            <stop offset="25%" stopColor="#e6683c"/>
-            <stop offset="50%" stopColor="#dc2743"/>
-            <stop offset="75%" stopColor="#cc2366"/>
-            <stop offset="100%" stopColor="#bc1888"/>
-          </linearGradient>
-        </defs>
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="url(#ig-grad)"/>
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="#E1306C"/>
         <circle cx="12" cy="12" r="4.5" fill="none" stroke="#fff" strokeWidth="1.8"/>
         <circle cx="17.5" cy="6.5" r="1.2" fill="#fff"/>
       </svg>
@@ -58,7 +49,7 @@ const SOCIAL_LINKS = [
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/company/doormate',
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#0A66C2" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#0A66C2" aria-hidden="true">
         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
       </svg>
     ),
@@ -67,7 +58,7 @@ const SOCIAL_LINKS = [
     label: 'YouTube',
     href: 'https://www.youtube.com/@doormate',
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
         <path fill="#FF0000" d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#fff"/>
       </svg>
     ),
@@ -76,7 +67,7 @@ const SOCIAL_LINKS = [
     label: 'Pinterest',
     href: 'https://www.pinterest.co.uk/doormate',
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#E60023" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#E60023" aria-hidden="true">
         <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
       </svg>
     ),
@@ -85,7 +76,7 @@ const SOCIAL_LINKS = [
     label: 'Houzz',
     href: 'https://www.houzz.co.uk/pro/doormate',
     icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#73BA37" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#73BA37" aria-hidden="true">
         <path d="M11.5 2L2 8.5V22h7v-7h5v7h7V8.5L11.5 2z"/>
       </svg>
     ),
@@ -111,12 +102,26 @@ export default function Nav() {
   return (
     <header style={{ position: 'sticky', top: 0, zIndex: 40, boxShadow: '0 2px 8px rgba(0,0,0,0.12)' }}>
 
-      {/* ── BAR 1 — WHITE: social icons | logo | contact + icons ── */}
-      <div style={{ background: '#ffffff', padding: '15px 0', minHeight: '100px', display: 'flex', alignItems: 'center' }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+      {/* ── BAR 1 — WHITE: social icons | logo (centred) | contact + icons ── */}
+      <div style={{ background: '#ffffff', height: '110px', position: 'relative', display: 'flex', alignItems: 'center', width: '100%' }}>
+
+        {/* Logo — absolutely centred */}
+        <Link href="/" style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
+          <Image
+            src="/img/doormate-logo-cropped.png"
+            alt="DoorMate Sliding Door Systems — Cardiff"
+            width={450}
+            height={90}
+            style={{ height: '90px', width: 'auto', objectFit: 'contain' }}
+            priority
+          />
+        </Link>
+
+        {/* Full-width inner row for left/right sections */}
+        <div style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px' }}>
 
           {/* Social icons — left */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
             {SOCIAL_LINKS.map((s) => (
               <a
                 key={s.label}
@@ -132,18 +137,6 @@ export default function Nav() {
               </a>
             ))}
           </div>
-
-          {/* Logo — centre */}
-          <Link href="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
-            <Image
-              src="/img/doormate-logo-cropped.png"
-              alt="DoorMate Sliding Door Systems — Cardiff"
-              width={450}
-              height={90}
-              style={{ height: '90px', width: 'auto', objectFit: 'contain' }}
-              priority
-            />
-          </Link>
 
           {/* Contact + utility icons — right */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
@@ -251,12 +244,7 @@ export default function Nav() {
         </div>
       </nav>
 
-      {/* ── TAGLINE STRIP ── */}
-      <div style={{ background: '#272446', padding: '10px 0', textAlign: 'center' }}>
-        <span style={{ color: '#ffffff', fontWeight: 'bold', fontSize: '16px', letterSpacing: '0.05em', fontFamily: "'Libre Franklin', sans-serif" }}>
-          Sliding Systems — Built for real doors, real walls and real homes since 2009.
-        </span>
-      </div>
+
 
       {/* ── MOBILE MENU ── */}
       {mobileOpen && (
