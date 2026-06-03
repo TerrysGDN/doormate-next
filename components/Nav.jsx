@@ -103,22 +103,7 @@ export default function Nav() {
     <header style={{ position: 'sticky', top: 0, zIndex: 40, boxShadow: '0 2px 8px rgba(0,0,0,0.12)' }}>
 
       {/* ── BAR 1 — WHITE: social icons | logo (centred) | contact + icons ── */}
-      <div style={{ background: '#ffffff', height: '110px', position: 'relative', display: 'flex', alignItems: 'center', width: '100%' }}>
-
-        {/* Logo — absolutely centred */}
-        <Link href="/" style={{ position: 'absolute', left: '50%', top: '50%', transform: 'translate(-50%, -50%)', display: 'flex', alignItems: 'center', flexShrink: 0 }}>
-          <Image
-            src="/img/doormate-logo-cropped.png"
-            alt="DoorMate Sliding Door Systems — Cardiff"
-            width={450}
-            height={90}
-            style={{ height: '90px', width: 'auto', objectFit: 'contain' }}
-            priority
-          />
-        </Link>
-
-        {/* Full-width inner row for left/right sections */}
-        <div style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0 20px' }}>
+      <div style={{ background: '#ffffff', minHeight: '110px', display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', width: '100%', padding: '0 20px' }}>
 
           {/* Social icons — left */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
@@ -138,8 +123,20 @@ export default function Nav() {
             ))}
           </div>
 
+          {/* Logo — centre column */}
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+            <Image
+              src="/img/doormate-logo-cropped.png"
+              alt="DoorMate Sliding Door Systems — Cardiff"
+              width={450}
+              height={90}
+              style={{ height: '90px', width: 'auto', objectFit: 'contain' }}
+              priority
+            />
+          </Link>
+
           {/* Contact + utility icons — right */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px', justifyContent: 'flex-end' }}>
             <a
               href="tel:02921660393"
               style={{ color: '#272446', fontWeight: 'bold', fontSize: '15px', fontFamily: "'Libre Franklin', sans-serif", textDecoration: 'none', whiteSpace: 'nowrap' }}
@@ -184,7 +181,6 @@ export default function Nav() {
               )}
             </button>
           </div>
-        </div>
       </div>
 
       {/* ── BAR 2 — GOLD: main nav links ── */}
