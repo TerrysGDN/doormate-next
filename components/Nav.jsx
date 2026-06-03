@@ -103,7 +103,7 @@ export default function Nav() {
     <header style={{ position: 'sticky', top: 0, zIndex: 40, boxShadow: '0 2px 8px rgba(0,0,0,0.12)' }}>
 
       {/* ── BAR 1 — WHITE: social icons | logo (centred) | contact + icons ── */}
-      <div style={{ background: '#ffffff', minHeight: '110px', display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', width: '100%', padding: '0 20px' }}>
+      <div style={{ background: '#ffffff', minHeight: '140px', display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', width: '100%', padding: '0 20px' }}>
 
           {/* Social icons — left */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
@@ -128,9 +128,9 @@ export default function Nav() {
             <Image
               src="/img/doormate-logo-cropped.png"
               alt="DoorMate Sliding Door Systems — Cardiff"
-              width={450}
-              height={90}
-              style={{ height: '90px', width: 'auto', objectFit: 'contain' }}
+              width={600}
+              height={130}
+              style={{ height: '130px', width: 'auto', objectFit: 'contain' }}
               priority
             />
           </Link>
@@ -139,15 +139,15 @@ export default function Nav() {
           <div style={{ display: 'flex', alignItems: 'center', gap: '20px', justifyContent: 'flex-end' }}>
             <a
               href="tel:02921660393"
-              style={{ color: '#272446', fontWeight: 'bold', fontSize: '15px', fontFamily: "'Libre Franklin', sans-serif", textDecoration: 'none', whiteSpace: 'nowrap' }}
+              style={{ color: '#efb627', fontWeight: 'bold', fontSize: '15px', fontFamily: "'Libre Franklin', sans-serif", textDecoration: 'none', whiteSpace: 'nowrap' }}
             >
-              029 2166 0393
+              T. 029 2166 0393
             </a>
             <a
               href="mailto:info@doormate.co.uk"
               style={{ color: '#272446', fontWeight: 'bold', fontSize: '15px', fontFamily: "'Libre Franklin', sans-serif", textDecoration: 'none', whiteSpace: 'nowrap' }}
             >
-              info@doormate.co.uk
+              E. info@doormate.co.uk
             </a>
             {/* Search icon */}
             <button aria-label="Search" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#efb627', padding: 0, display: 'flex', alignItems: 'center' }}>
