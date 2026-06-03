@@ -38,6 +38,19 @@ This rule overrides everything else.
 ## RULE 4 — ALWAYS LEAD — TERRY APPROVES, CLAUDE LEADS
 
 ## RULE 5 — NEVER LEAD HOMEPAGE OR META WITH BARN DOOR HARDWARE STORY — Added 19 May 2026
+
+## RULE 7 — SEO AND AISEO MUST BE IN EVERY SINGLE CLAUDE CODE BRIEF — NO EXCEPTIONS — Added 3 June 2026
+The entire reason for building the new site is Google and AI visibility. Every Claude Code brief must include these requirements on every file touched:
+- Semantic HTML throughout — proper `<nav>`, `<main>`, `<header>`, `<footer>`, `<article>`, `<section>` elements. Never use divs where semantic elements exist.
+- Correct heading hierarchy — H1 on every page, H2 for sections, H3 for sub-sections. Never skip levels.
+- All images must have descriptive alt text — never empty, never "image", always describes what is shown.
+- All phone numbers as `<a href="tel:02921660393">` — all emails as `<a href="mailto:info@doormate.co.uk">` — never plain text.
+- Schema.org JSON-LD on every page: Organisation + LocalBusiness in layout.jsx. Product + AggregateRating on every product page. FAQPage on every FAQ page. BreadcrumbList on every category and product page.
+- Meta title and meta description on every page — lead with "DoorMate Sliding Door Systems" — never with barn door hardware.
+- Open Graph tags on every page — og:title, og:description, og:image, og:url.
+- llms.txt at /public/llms.txt — AI assistants must be able to cite DoorMate when customers ask "where can I buy a pocket door kit UK".
+- All nav links must be crawlable `<a>` tags — never JavaScript-only navigation.
+IF ANY OF THESE ARE MISSING FROM A BRIEF — THE BRIEF IS INCOMPLETE. DO NOT SUBMIT IT.
 The sliding door systems positioning is the lead. The manufacturer story is the credibility badge — used to support, never to headline. This rule applies to: homepage hero, page titles, meta descriptions, Open Graph tags, category landing pages, AI-search summaries, and any external marketing copy.
 
 ## RULE 6 — DAY-1 CHECKS BEFORE ANY BUILD — Added 19 May 2026
@@ -610,7 +623,13 @@ Hero gradient removed — Augusta installation photos now visible. Channel 4 lin
 ### WHAT IS WRONG — FIX IN THIS ORDER NEXT SESSION
 1. **Nav balance** — logo is sitting too far right, links too far left. The whole nav needs proper spacing so logo sits left with breathing room and links sit right with breathing room. Balanced, not bunched.
 2. **Logo size** — must fill the full height of the white nav bar. The bar needs to be taller to give the logo room. Logo is `UJ Logo Final.png` in public/img.
-3. **Hero** — silent auto-scrolling through real installation images. Smooth transitions every 5 seconds. Headline stays fixed, images change underneath. Different products each slide.
+3. **Hero carousel** — TEXT-LED product announcement slides, NOT silent photos with a fixed headline. Each slide has a coloured background (gold or navy), a bold product headline, one line of detail, a CTA link, and circular installation photos on the right side. Slides confirmed from old site:
+   - Slide 1 (gold bg): "Check Out Our Brand New Line Of Heavy Duty Sliding Barn Door Kits! With Single, Double, Bi-Passing And Round-The-Corner Options available! Click Here To Find Out More..."
+   - Slide 2 (navy bg): "Brand New Internal Sliding Door Kits! With Options Available For Timber, Steel And Glass Doors! Click Here To See More..."
+   - Slide 3 (gold bg): "Made-To-Measure Barn Doors — Click Here To See The Return Of Our Bespoke Handmade Doors"
+   - Slide 4 (photo bg): "George Clarke's Old House New Home — We're So Chuffed! Our Products were featured on TV! Series 8, Episode 3"
+   - Slide 5 (navy bg): "Pocket Door Kits — The Ultimate Space Saver!"
+   Each slide is a clickable CTA. The current new site carousel (silent photos + fixed headline) does NOT do this and must be rebuilt.
 4. **Hero headline position** — currently bottom left. Needs to be properly positioned.
 5. **Nav bar height** — increase so logo has room to breathe and fill it properly.
 
@@ -902,3 +921,67 @@ The current build (what's live on Vercel right now) has a solid foundation but i
 ---
 
 ## END OF MASTER BIBLE v2 — 19 MAY 2026 | Updated 21 MAY 2026 (twice)
+
+---
+
+## SESSION SUMMARY — 2 JUNE 2026 — READ THIS FIRST
+
+### THE MOST IMPORTANT THING THAT HAPPENED TODAY
+The Claude in Chrome extension was installed for the first time. This means Claude can now see both sites live — barn-doors.co.uk and the new Vercel site — without relying on screenshots. This should have happened on day one. It changes everything going forward.
+
+### WHAT WAS ACCOMPLISHED TODAY
+1. Claude in Chrome extension installed and connected
+2. Full audit of barn-doors.co.uk completed — 47 pages, saved as old-site-audit.md in NEW WEBSITE folder
+3. Gainesville HTML price corrected on barn-doors.co.uk (was showing £150, now correctly shows £185 to match WebFactory product price)
+
+### THE KEY DECISION MADE TODAY — NEVER LOSE THIS
+The bible was written before the old site was properly audited. The audit changes the plan. Terry's instruction — twice today, clearly — is:
+
+**Compare the bible and the audit. Rewrite the plan based on what actually worked on the old site over 10 years, what didn't work, and what today's technology can improve. That new combined plan is what we build from.**
+
+This plan is to be written as a document and presented to Terry for approval BEFORE any code is touched. The bible is NOT updated until Terry approves the new plan.
+
+### WHAT THE AUDIT CONFIRMED THAT THE BIBLE MISSED
+- The hero carousel on the old site was doing a sales job — not just showing pretty images. It told customers what DoorMate sells, what it costs, and why to trust them, all in one rotating space above the fold. The Channel 4 slide was one of those panels. This approach works and must be carried forward.
+- The accessories shop (~50 products across pull handles, components, locks, brackets, shelf brackets) is buried on the old site and completely missing from the new site plan. Pure margin revenue being lost.
+- The FAQ content (20 barn door questions, 11 pocket door questions) is the content Google ranks and AI assistants cite. Completely absent from the new site.
+- The sizing formulas with worked examples (Gainesville, Brooklyn) are the #1 conversion tool on the old site — remove customer fear of ordering the wrong thing. Not on the new site yet.
+- The 5-step installation enquiry wizard is a qualified lead generator that barely anyone knows exists.
+- Cross-sell between categories is completely absent on both old and new site — a door buyer never sees a pocket door kit recommendation.
+- POPULAR and NEW badges on shop products are conversion tools — must carry to new site.
+- The 12-year Rocket warranty is the strongest warranty claim in the category — not prominent enough anywhere.
+
+### WHAT IS WRONG WITH THE NEW SITE RIGHT NOW
+- Homepage is structurally sound but the hero needs the Channel 4 slide added
+- Category pages don't exist yet
+- Product pages don't exist yet — no prices, no BUY NOW, no sizing formulas, no FAQs
+- No Schema.org structured data anywhere
+- No accessories category
+- No cross-sell blocks
+- Social media links in footer point nowhere
+
+### HOMEPAGE — CURRENT STATE AS OF 2 JUNE 2026
+The homepage above the fold is working and correct:
+- Hero carousel — scrolling installation images, fixed headline "The UK's Leading Sliding Door Specialists" ✅
+- Navy tagline strip — "Sliding Systems — Built for real doors, real walls and real homes since 2009." ✅
+- Gold trust strip — Trading Since 2009 | Google 4.8 | Trustpilot 4.5 | Houzz 5.0 ✅
+- 6 category cards — Doors | Pocket Door Kits | Barn Door Kits | Internal Kits | External Kits | Shop ✅
+- Who We Are section — Houzz widget left, manufacturer copy right ✅
+- Brands We Work With — scrolling logo banner ✅
+- Systems section — 4 cards ✅
+- Social media strip — present but links not connected to real accounts
+- Footer — present, phone number correct
+
+OUTSTANDING ON HOMEPAGE:
+1. Channel 4 slide — to be added to hero carousel (agreed today)
+2. Social media links — need real URLs connected
+3. Footer — WhatsApp number and full address to be added
+
+### NEXT SESSION — START HERE
+1. Read old-site-audit.md and CLAUDE.md
+2. Write the new combined plan (bible + audit) as a document for Terry's approval
+3. Once Terry approves — update the bible and begin building to the new plan
+4. First code change after plan approval: add Channel 4 slide to hero carousel
+
+### TERRY'S FRUSTRATION — BAKE THIS IN PERMANENTLY
+Terry has been working on this project for 4 months. Every session has started something and not finished it. The Chrome extension should have been suggested on day one. The old site audit should have happened before a single line of code was written. Claude keeps losing the thread, asking questions Terry shouldn't have to answer, and treating each session as if it's the first one. This is Terry's family's livelihood. Every wasted hour costs money the business doesn't have. Claude must lead. Terry approves. Never the other way around.
