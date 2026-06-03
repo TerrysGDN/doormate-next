@@ -30,7 +30,9 @@
       "Bash(magick --version)",
       "Bash(node -e \"const fs=require\\('fs'\\); console.log\\(fs.existsSync\\('node_modules/sharp'\\) || fs.existsSync\\('node_modules/jimp'\\) || fs.existsSync\\('node_modules/@jimp/core'\\)\\)\")",
       "Bash(node -e \"const fs=require\\('fs'\\); console.log\\('sharp:', fs.existsSync\\('node_modules/sharp'\\)\\); console.log\\('jimp:', fs.existsSync\\('node_modules/jimp'\\)\\);\")",
-      "Bash(node -e ' *)"
+      "Bash(node -e ' *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   }
 }
