@@ -24,9 +24,66 @@ const NAV_LINKS = [
   { label: 'Shop',                       href: '/shop' },
 ]
 
+const SOCIAL_LINKS = [
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/doormate',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/doormate',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/doormate',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'YouTube',
+    href: 'https://www.youtube.com/@doormate',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#fff"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Pinterest',
+    href: 'https://www.pinterest.co.uk/doormate',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Houzz',
+    href: 'https://www.houzz.co.uk/pro/doormate',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M11.5 2L2 8.5V22h7v-7h5v7h7V8.5L11.5 2z"/>
+      </svg>
+    ),
+  },
+]
+
 export default function Nav() {
-  const [homeOpen, setHomeOpen]       = useState(false)
-  const [mobileOpen, setMobileOpen]   = useState(false)
+  const [homeOpen, setHomeOpen]           = useState(false)
+  const [mobileOpen, setMobileOpen]       = useState(false)
   const [mobileHomeOpen, setMobileHomeOpen] = useState(false)
   const dropdownRef = useRef(null)
 
@@ -41,47 +98,119 @@ export default function Nav() {
   }, [])
 
   return (
-    <header className="bg-white sticky top-0 z-40 shadow-md">
+    <header style={{ position: 'sticky', top: 0, zIndex: 40, boxShadow: '0 2px 8px rgba(0,0,0,0.12)' }}>
 
-      {/* ── SINGLE WHITE BAR ── */}
-      <div className="flex items-center justify-between" style={{ height: '120px', width: '100%', maxWidth: '1400px', margin: '0 auto', padding: '0 40px' }}>
+      {/* ── BAR 1 — WHITE: social icons | logo | contact + icons ── */}
+      <div style={{ background: '#ffffff', padding: '10px 0' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 40px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
 
-        {/* Logo — fills bar height */}
-        <Link href="/" className="flex-shrink-0 flex items-center h-full py-1">
-          <Image
-            src="/img/doormate-logo-cropped.png"
-            alt="DoorMate Sliding Door Systems"
-            width={520}
-            height={112}
-            className="object-contain"
-            style={{ height: '112px', width: 'auto' }}
-            priority
-          />
-        </Link>
+          {/* Social icons — left */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+            {SOCIAL_LINKS.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                aria-label={`DoorMate on ${s.label}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: '#efb627', display: 'flex', alignItems: 'center', transition: 'opacity 0.2s' }}
+                onMouseEnter={e => e.currentTarget.style.opacity = '0.7'}
+                onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+              >
+                {s.icon}
+              </a>
+            ))}
+          </div>
 
-        {/* Desktop nav links */}
-        <nav className="hidden lg:flex items-center gap-3">
+          {/* Logo — centre */}
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
+            <Image
+              src="/img/doormate-logo-cropped.png"
+              alt="DoorMate Sliding Door Systems — Cardiff"
+              width={400}
+              height={80}
+              style={{ height: '80px', width: 'auto', objectFit: 'contain' }}
+              priority
+            />
+          </Link>
+
+          {/* Contact + utility icons — right */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            <a
+              href="tel:02921660393"
+              style={{ color: '#272446', fontWeight: 'bold', fontSize: '15px', fontFamily: "'Libre Franklin', sans-serif", textDecoration: 'none', whiteSpace: 'nowrap' }}
+            >
+              029 2166 0393
+            </a>
+            <a
+              href="mailto:info@doormate.co.uk"
+              style={{ color: '#272446', fontWeight: 'bold', fontSize: '15px', fontFamily: "'Libre Franklin', sans-serif", textDecoration: 'none', whiteSpace: 'nowrap' }}
+            >
+              info@doormate.co.uk
+            </a>
+            {/* Search icon */}
+            <button aria-label="Search" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#efb627', padding: 0, display: 'flex', alignItems: 'center' }}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </button>
+            {/* Basket icon */}
+            <button aria-label="Basket (0 items)" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#efb627', padding: 0, display: 'flex', alignItems: 'center', position: 'relative' }}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+              </svg>
+              <span style={{ position: 'absolute', top: '-6px', right: '-8px', background: '#272446', color: '#ffffff', borderRadius: '999px', fontSize: '10px', fontWeight: 'bold', width: '16px', height: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1 }}>0</span>
+            </button>
+            {/* Mobile hamburger */}
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+              aria-expanded={mobileOpen}
+              className="lg:hidden"
+              style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#272446', padding: 0, display: 'flex', alignItems: 'center' }}
+            >
+              {mobileOpen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                  <path strokeLinecap="square" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
+                  <path strokeLinecap="square" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* ── BAR 2 — GOLD: main nav links ── */}
+      <nav aria-label="Main navigation" className="hidden lg:block" style={{ background: '#efb627' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 40px', display: 'flex', alignItems: 'stretch', justifyContent: 'center' }}>
 
           {/* HOME with dropdown */}
-          <div className="relative" ref={dropdownRef} onMouseEnter={() => setHomeOpen(true)} onMouseLeave={() => setHomeOpen(false)}>
-            <Link
+          <div className="relative" ref={dropdownRef} onMouseEnter={() => setHomeOpen(true)} onMouseLeave={() => setHomeOpen(false)}
+            style={{ display: 'flex', alignItems: 'center' }}>
+            <a
               href="/"
-              className="flex items-center gap-1 text-[16px] font-bold tracking-wide transition-colors"
-              style={{ color: '#272446', fontFamily: "'Libre Franklin', sans-serif" }}
+              style={{ display: 'flex', alignItems: 'center', gap: '4px', color: '#272446', fontFamily: "'Libre Franklin', sans-serif", fontWeight: 'bold', fontSize: '16px', textDecoration: 'none', padding: '14px 18px', whiteSpace: 'nowrap' }}
+              onMouseEnter={e => e.currentTarget.style.background = 'rgba(0,0,0,0.08)'}
+              onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
             >
               HOME
-              <svg xmlns="http://www.w3.org/2000/svg" className={`w-3 h-3 transition-transform ${homeOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true" style={{ transition: 'transform 0.2s', transform: homeOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>
                 <path strokeLinecap="square" d="M19 9l-7 7-7-7" />
               </svg>
-            </Link>
+            </a>
             {homeOpen && (
-              <div className="absolute top-full left-0 bg-brand-navy shadow-xl min-w-[200px] py-1 z-50">
+              <div style={{ position: 'absolute', top: '100%', left: 0, background: '#272446', minWidth: '200px', zIndex: 50, boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }}>
                 {HOME_DROPDOWN.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
                     onClick={() => setHomeOpen(false)}
-                    className="block px-5 py-2.5 text-[13px] font-bold tracking-wide text-white hover:bg-brand-gold hover:text-brand-navy transition-colors"
+                    style={{ display: 'block', padding: '10px 20px', fontSize: '14px', fontWeight: 'bold', fontFamily: "'Libre Franklin', sans-serif", color: '#ffffff', textDecoration: 'none' }}
+                    onMouseEnter={e => { e.currentTarget.style.background = '#efb627'; e.currentTarget.style.color = '#272446' }}
+                    onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#ffffff' }}
                   >
                     {item.label}
                   </Link>
@@ -90,43 +219,26 @@ export default function Nav() {
             )}
           </div>
 
-          {/* Separator after HOME */}
-          <span style={{ color: '#efb627', fontWeight: 700, fontSize: '14px', userSelect: 'none', lineHeight: 1 }}>|</span>
+          {/* White divider */}
+          <span style={{ width: '1px', background: 'rgba(255,255,255,0.6)', alignSelf: 'stretch', margin: '8px 0' }} aria-hidden="true" />
 
-          {/* Flat links with separators between */}
+          {/* Flat nav links with white dividers between */}
           {NAV_LINKS.flatMap((link, i) => [
             <Link
               key={link.href}
               href={link.href}
-              className="text-[16px] font-bold tracking-wide whitespace-nowrap transition-opacity hover:opacity-60"
-              style={{ color: '#272446', fontFamily: "'Libre Franklin', sans-serif" }}
+              style={{ display: 'flex', alignItems: 'center', color: '#272446', fontFamily: "'Libre Franklin', sans-serif", fontWeight: 'bold', fontSize: '16px', textDecoration: 'none', padding: '14px 18px', whiteSpace: 'nowrap', transition: 'background 0.15s' }}
+              onMouseEnter={e => e.currentTarget.style.background = 'rgba(0,0,0,0.08)'}
+              onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
             >
               {link.label}
             </Link>,
             i < NAV_LINKS.length - 1 && (
-              <span key={`sep-${i}`} style={{ color: '#efb627', fontWeight: 700, fontSize: '14px', userSelect: 'none', lineHeight: 1 }}>|</span>
+              <span key={`sep-${i}`} style={{ width: '1px', background: 'rgba(255,255,255,0.6)', alignSelf: 'stretch', margin: '8px 0' }} aria-hidden="true" />
             ),
           ])}
-        </nav>
-
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-          className="lg:hidden p-2"
-          style={{ color: '#272446' }}
-        >
-          {mobileOpen ? (
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="square" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="square" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
-      </div>
+        </div>
+      </nav>
 
       {/* ── TAGLINE STRIP ── */}
       <div style={{ background: '#272446', padding: '10px 0', textAlign: 'center' }}>
@@ -137,40 +249,36 @@ export default function Nav() {
 
       {/* ── MOBILE MENU ── */}
       {mobileOpen && (
-        <nav className="lg:hidden border-t border-gray-100 bg-white">
-          <div className="px-6 py-4 space-y-1">
+        <nav aria-label="Mobile navigation" style={{ background: '#ffffff', borderTop: '1px solid #e5e7eb' }}>
+          <div style={{ padding: '16px 24px' }}>
 
-            {/* Phone */}
-            <a
-              href="tel:02921660393"
-              className="block font-bold text-sm py-2 border-b border-gray-100 mb-2"
-              style={{ color: '#272446' }}
-            >
-              029 2166 0393
+            <a href="tel:02921660393" style={{ display: 'block', fontWeight: 'bold', fontSize: '14px', color: '#272446', textDecoration: 'none', paddingBottom: '8px', marginBottom: '8px', borderBottom: '1px solid #f3f4f6', fontFamily: "'Libre Franklin', sans-serif" }}>
+              📞 029 2166 0393
+            </a>
+            <a href="mailto:info@doormate.co.uk" style={{ display: 'block', fontWeight: 'bold', fontSize: '14px', color: '#272446', textDecoration: 'none', paddingBottom: '8px', marginBottom: '8px', borderBottom: '1px solid #f3f4f6', fontFamily: "'Libre Franklin', sans-serif" }}>
+              ✉ info@doormate.co.uk
             </a>
 
             {/* HOME accordion */}
             <div>
-              <Link
-                href="/"
+              <button
                 onClick={() => setMobileHomeOpen(!mobileHomeOpen)}
-                className="flex items-center justify-between w-full text-[13px] font-bold tracking-wide py-2.5"
-                style={{ color: '#272446' }}
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', background: 'none', border: 'none', cursor: 'pointer', padding: '10px 0', fontWeight: 'bold', fontSize: '14px', color: '#272446', fontFamily: "'Libre Franklin', sans-serif" }}
+                aria-expanded={mobileHomeOpen}
               >
                 HOME
-                <svg xmlns="http://www.w3.org/2000/svg" className={`w-3 h-3 transition-transform ${mobileHomeOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5} aria-hidden="true" style={{ transform: mobileHomeOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}>
                   <path strokeLinecap="square" d="M19 9l-7 7-7-7" />
                 </svg>
-              </Link>
+              </button>
               {mobileHomeOpen && (
-                <div className="pl-4 space-y-1 pb-2">
+                <div style={{ paddingLeft: '16px', paddingBottom: '8px' }}>
                   {HOME_DROPDOWN.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
                       onClick={() => setMobileOpen(false)}
-                      className="block text-[13px] font-bold tracking-wide py-2"
-                      style={{ color: '#272446' }}
+                      style={{ display: 'block', padding: '8px 0', fontWeight: 'bold', fontSize: '13px', color: '#272446', textDecoration: 'none', fontFamily: "'Libre Franklin', sans-serif" }}
                     >
                       {item.label}
                     </Link>
@@ -179,14 +287,12 @@ export default function Nav() {
               )}
             </div>
 
-            {/* Flat links */}
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block text-[13px] font-bold tracking-wide py-2.5 border-t border-gray-100"
-                style={{ color: '#272446' }}
+                style={{ display: 'block', padding: '10px 0', fontWeight: 'bold', fontSize: '14px', color: '#272446', textDecoration: 'none', borderTop: '1px solid #f3f4f6', fontFamily: "'Libre Franklin', sans-serif" }}
               >
                 {link.label}
               </Link>
