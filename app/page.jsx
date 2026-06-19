@@ -126,7 +126,7 @@ export default function HomePage() {
           </div>
 
           <div style={{display:'flex', flexDirection:'column', justifyContent:'center', minHeight:'435px', fontFamily:"'Libre Franklin', sans-serif", textAlign:'center'}}>
-            <h2 style={{color:'#272446', fontSize:'clamp(16px, 2vw, 26px)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0', textTransform:'uppercase', whiteSpace:'nowrap'}}>
+            <h2 style={{color:'#272446', fontSize:'clamp(16px, 2vw, 26px)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0', whiteSpace:'nowrap'}}>
               Real UK Manufacturers. Real Systems Delivered Direct To You.
             </h2>
             <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.85', margin:'0 0 20px 0', fontWeight:'600'}}>
@@ -156,7 +156,7 @@ export default function HomePage() {
 
       {/* BRANDS WE WORK WITH — scrolling logo banner */}
       <section style={{width:'100%', background:'#ffffff', padding:'32px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'4px solid #efb627', overflow:'hidden'}}>
-        <p style={{color:'#999', fontSize:'11px', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0', letterSpacing:'3px', textTransform:'uppercase'}}>Brands We Work With</p>
+        <p style={{color:'#272446', fontSize:'11px', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0', letterSpacing:'3px', textTransform:'uppercase'}}>Brands We Work With</p>
         <style>{`
           @keyframes scroll {
             0% { transform: translateX(0); }
