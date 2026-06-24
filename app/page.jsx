@@ -204,7 +204,7 @@ export default function HomePage() {
           <p style={{color:'#efb627', fontSize:'clamp(18px, 2.2vw, 28px)', fontWeight:'900', textAlign:'center', margin:'0 0 24px 0', lineHeight:'1.2'}}>
             For Real Homes. Real Doors. Real Walls.
           </p>
-          <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.85', textAlign:'center', margin:'0 0 40px 0', fontWeight:'600'}}>
+          <p style={{color:'#272446', fontSize:'clamp(18px, 1.8vw, 22px)', lineHeight:'1.75', textAlign:'center', margin:'0 auto 40px auto', fontWeight:'700', maxWidth:'900px'}}>
             Choosing a sliding door system shouldn&apos;t be difficult. That&apos;s why we&apos;ve made it easy to find the right solution for your project. By organising our systems around real-world applications, we&apos;ve already done the thinking for you. Simply choose the category that best suits your project and take the next step with confidence.
           </p>
           <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
