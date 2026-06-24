@@ -156,7 +156,7 @@ export default function HomePage() {
 
       {/* BRANDS WE WORK WITH — scrolling logo banner */}
       <section style={{width:'100%', background:'#ffffff', padding:'32px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'4px solid #efb627', overflow:'hidden'}}>
-        <p style={{color:'#272446', fontSize:'11px', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0', letterSpacing:'3px', textTransform:'uppercase'}}>Brands We Work With</p>
+        <p style={{color:'#272446', fontSize:'11px', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0'}}>Brands We Work With</p>
         <style>{`
           @keyframes scroll {
             0% { transform: translateX(0); }
@@ -198,9 +198,12 @@ export default function HomePage() {
       {/* SYSTEMS SECTION */}
       <section style={{width:'100%', background:'#ffffff', padding:'48px 40px', boxSizing:'border-box'}}>
         <div style={{maxWidth:'1400px', margin:'0 auto'}}>
-          <h2 style={{color:'#272446', fontSize:'clamp(18px, 2.2vw, 28px)', fontWeight:'900', margin:'0 0 24px 0', textAlign:'center', lineHeight:'1.2'}}>
-            We offer complete sliding door solutions, for real homes, real doors and real walls
+          <h2 style={{color:'#272446', fontSize:'clamp(18px, 2.2vw, 28px)', fontWeight:'900', margin:'0 0 8px 0', textAlign:'center', lineHeight:'1.2'}}>
+            We Offer Complete Sliding Door Solutions
           </h2>
+          <p style={{color:'#efb627', fontSize:'clamp(18px, 2.2vw, 28px)', fontWeight:'900', textAlign:'center', margin:'0 0 24px 0', lineHeight:'1.2'}}>
+            For Real Homes. Real Doors. Real Walls.
+          </p>
           <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.85', textAlign:'center', margin:'0 0 40px 0', fontWeight:'600'}}>
             Choosing a sliding door system shouldn&apos;t be difficult. That&apos;s why we&apos;ve made it easy to find the right solution for your project. By organising our systems around real-world applications, we&apos;ve already done the thinking for you. Simply choose the category that best suits your project and take the next step with confidence.
           </p>
@@ -248,10 +251,10 @@ export default function HomePage() {
             {label:'Pinterest', href:'https://www.pinterest.co.uk/burnett7776/boards/'},
           ].map((s, i, arr) => (
             <span key={s.label} style={{display:'inline-flex', alignItems:'center', gap:'8px'}}>
-              <a href={s.href} target="_blank" rel="noopener noreferrer" style={{color:'#363557', fontWeight:'700', fontSize:'12px', textDecoration:'none', letterSpacing:'1px', textTransform:'uppercase'}}>
+              <a href={s.href} target="_blank" rel="noopener noreferrer" style={{color:'#363557', fontWeight:'700', fontSize:'12px', textDecoration:'none'}}>
                 {s.label}
               </a>
-              {i < arr.length - 1 && <span style={{color:'#ccc'}}>|</span>}
+              {i < arr.length - 1 && <span style={{color:'#efb627'}}>|</span>}
             </span>
           ))}
         </div>
