@@ -204,26 +204,26 @@ export default function HomePage() {
           <p style={{color:'#efb627', fontSize:'clamp(20px, 2.4vw, 30px)', fontWeight:'900', margin:'0 0 48px 0', textAlign:'center', lineHeight:'1.2'}}>
             For Real Homes, Real Doors And Real Walls.
           </p>
-          <div style={{display:'grid', gridTemplateColumns:'62% 38%', gap:'48px', alignItems:'center'}}>
-            <div>
-              <p style={{color:'#272446', fontSize:'clamp(16px, 1.6vw, 22px)', fontWeight:'700', margin:'0 0 28px 0', lineHeight:'1.6'}}>Choosing a sliding door system shouldn&apos;t be difficult.</p>
-              <p style={{color:'#272446', fontSize:'clamp(15px, 1.4vw, 18px)', fontWeight:'600', margin:'0 0 24px 0', lineHeight:'1.7'}}>That&apos;s why we&apos;ve made it easy to find the right solution for your project.</p>
-              <p style={{color:'#272446', fontSize:'clamp(15px, 1.4vw, 18px)', fontWeight:'600', margin:'0 0 24px 0', lineHeight:'1.7'}}>By organising our systems around real-world applications &mdash;</p>
-              <p style={{color:'#efb627', fontSize:'clamp(18px, 2vw, 28px)', fontWeight:'900', margin:'0 0 28px 0', lineHeight:'1.3'}}>We&apos;ve already done the thinking for you.</p>
-              <p style={{color:'#272446', fontSize:'clamp(15px, 1.4vw, 18px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>Simply choose the category that best suits your project and take the next step with confidence.</p>
+          <div style={{display:'grid', gridTemplateColumns:'55% 45%', gap:'40px', alignItems:'stretch'}}>
+            <div style={{display:'flex', flexDirection:'column', justifyContent:'center', textAlign:'center', padding:'0 24px'}}>
+              <p style={{color:'#272446', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0 0 32px 0', lineHeight:'1.6'}}>Choosing a sliding door system shouldn&apos;t be difficult.</p>
+              <p style={{color:'#272446', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0 0 28px 0', lineHeight:'1.7'}}>That&apos;s why we&apos;ve made it easy to find the right solution for your project.</p>
+              <p style={{color:'#272446', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0 0 28px 0', lineHeight:'1.7'}}>By organising our systems around real-world applications &mdash;</p>
+              <p style={{color:'#efb627', fontSize:'clamp(22px, 2.2vw, 32px)', fontWeight:'900', margin:'0 0 32px 0', lineHeight:'1.3'}}>We&apos;ve already done the thinking for you.</p>
+              <p style={{color:'#272446', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>Simply choose the category that best suits your project and take the next step with confidence.</p>
             </div>
-            <div style={{display:'flex', flexDirection:'column', gap:'8px'}}>
+            <div style={{display:'flex', flexDirection:'column', gap:'6px'}}>
               {[
                 {top:'Pocket Door Systems', bottom:'For the ultimate space saver', href:'/pocket-door-kits', img:'/img/mirror-pocket-single.jpg', alt:'Pocket door kits'},
                 {top:'Sliding Barn Door Systems', bottom:'For traditional style and charm', href:'/barn-door-hardware', img:'/img/gainesville-system.jpg', alt:'Barn door hardware'},
                 {top:'Internal Sliding Systems', bottom:'For modern living', href:'/internal-sliding-kits', img:'/img/dm-150.jpg', alt:'Internal sliding door kits'},
                 {top:'External Sliding Systems', bottom:'Built to last. Whatever the weather.', href:'/external-sliding-kits', img:'/img/external-kit.jpg', alt:'External sliding door kits'},
               ].map(item => (
-                <Link key={item.top} href={item.href} style={{textDecoration:'none', display:'block', position:'relative', height:'120px', overflow:'hidden'}}>
-                  <Image src={item.img} alt={item.alt} fill style={{objectFit:'cover'}} sizes="38vw" />
+                <Link key={item.top} href={item.href} style={{textDecoration:'none', display:'block', position:'relative', flex:'1', minHeight:'140px', overflow:'hidden'}}>
+                  <Image src={item.img} alt={item.alt} fill style={{objectFit:'cover'}} sizes="45vw" />
                   <div style={{position:'absolute', inset:0, background:'rgba(39,36,70,0.5)', display:'flex', flexDirection:'column', justifyContent:'flex-end', padding:'14px'}}>
-                    <span style={{color:'#efb627', fontSize:'clamp(14px, 1.4vw, 16px)', fontWeight:'900', margin:'0 0 3px 0', display:'block'}}>{item.top}</span>
-                    <span style={{color:'#ffffff', fontSize:'clamp(12px, 1.1vw, 13px)', fontWeight:'700', lineHeight:'1.2', display:'block'}}>{item.bottom}</span>
+                    <span style={{color:'#efb627', fontSize:'clamp(14px, 1.4vw, 17px)', fontWeight:'900', margin:'0 0 3px 0', display:'block'}}>{item.top}</span>
+                    <span style={{color:'#ffffff', fontSize:'clamp(12px, 1.1vw, 14px)', fontWeight:'700', lineHeight:'1.2', display:'block'}}>{item.bottom}</span>
                   </div>
                 </Link>
               ))}
