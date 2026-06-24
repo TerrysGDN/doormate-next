@@ -1308,6 +1308,35 @@ Section headlines: Title Case — first letter of every word capitalised.
 This was agreed in this session and is now saved in the Foundations section of this Bible.
 Check it is there before every Claude Code brief. Do not trust memory alone — verify in the file.
 
-### SYSTEMS SECTION — NOT YET BUILT
-The mockup was approved in concept but the section has NOT been built into page.jsx yet.
-Next session: write the Claude Code brief for this section. One section. Build it. Check it live. Approve it. Move on.
+### SYSTEMS SECTION — BUILT 24 JUNE 2026
+Layout: 55% left (headlines + copy beats) | 45% right (4 stacked image cards)
+Headlines full width at top of left column. Copy beats spaced with space-between to fill image height.
+Closer line agreed by Terry: "Simply choose your system. Let's get this project done!"
+Images are placeholders — replace in one pass across the whole page when real photos are ready.
+Section is signed off as good enough to move on — not perfect, images need replacing.
+
+### CHANNEL 4 SECTION — REMOVED 24 JUNE 2026
+Removed from homepage. To be added as a slide in the hero carousel — where it lived on the old site.
+
+### FOOTER — FIXED 24 JUNE 2026
+All ALL CAPS headings changed to Title Case: Products, Company, Contact, Phone, Email, Location, Hours.
+Bottom bar fixed to single row (was wrapping onto two rows).
+
+### HOMEPAGE — HONEST STATE 24 JUNE 2026
+The homepage is NOT done. It is not the state of the art 2026 product-selling site that was the brief.
+Critical problems still outstanding:
+1. SCALING — the hero headline gets lost at 100% browser zoom. The old site scales correctly because it uses percentage/viewport-relative sizing throughout. The new site does not. This is the first fix next session.
+2. Hero — still not selling the way the old site hero did. The old hero had text-led slides with product announcements and circular installation photos. The new hero is silent photos with a fixed headline.
+3. No product pages — no prices, no BUY NOW buttons anywhere on the site. Nothing a customer can buy from.
+4. No schema.org structured data — AISIO critical, still missing.
+5. No chatbot wired in.
+6. No accessories category.
+
+### WHAT TERRY SPOTTED THAT CLAUDE MISSED
+Terry compared the old site (barn-doors.co.uk) to the new site at 100% browser zoom and identified that the old site scales correctly — sections grow with zoom so the main message is never lost. Claude did not spot this. Terry had to point it out. This is a fundamental requirement, not an enhancement.
+
+### NEXT SESSION — START HERE IN THIS ORDER
+1. Fix homepage scaling — percentage/viewport-relative sizing throughout, no fixed pixel sizes that break at zoom
+2. Fix hero — text-led slides matching old site approach, Channel 4 slide added
+3. Only when homepage genuinely sells — move to product pages
+4. First product page: Pocket Door Kits — price visible, BUY NOW above fold, trust signals, chatbot
