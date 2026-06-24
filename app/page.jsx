@@ -200,13 +200,13 @@ export default function HomePage() {
         <div style={{maxWidth:'1400px', margin:'0 auto'}}>
           <div style={{display:'grid', gridTemplateColumns:'55% 45%', gap:'40px', alignItems:'stretch'}}>
             <div style={{display:'flex', flexDirection:'column', justifyContent:'center', textAlign:'center', padding:'0 16px'}}>
-              <h2 style={{color:'#272446', fontSize:'clamp(22px, 2.8vw, 38px)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>We Offer Complete Sliding Door Solutions,</h2>
-              <p style={{color:'#efb627', fontSize:'clamp(22px, 2.8vw, 38px)', fontWeight:'900', margin:'0 0 36px 0', lineHeight:'1.2'}}>For Real Homes, Real Doors And Real Walls.</p>
+              <h2 style={{color:'#272446', fontSize:'clamp(22px, 2.8vw, 38px)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2', whiteSpace:'nowrap'}}>We Offer Complete Sliding Door Solutions</h2>
+              <p style={{color:'#efb627', fontSize:'clamp(18px, 2.2vw, 30px)', fontWeight:'900', margin:'0 0 36px 0', lineHeight:'1.2', whiteSpace:'nowrap'}}>For Real Homes, Real Doors And Real Walls.</p>
               <p style={{color:'#272446', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0 0 28px 0', lineHeight:'1.6'}}>Choosing a sliding door system shouldn&apos;t be difficult.</p>
               <p style={{color:'#272446', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0 0 24px 0', lineHeight:'1.7'}}>That&apos;s why we&apos;ve made it easy to find the right solution for your project.</p>
               <p style={{color:'#272446', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0 0 24px 0', lineHeight:'1.7'}}>By organising our systems around real-world applications &mdash;</p>
               <p style={{color:'#efb627', fontSize:'clamp(22px, 2.2vw, 32px)', fontWeight:'900', margin:'0 0 28px 0', lineHeight:'1.3'}}>We&apos;ve already done the thinking for you.</p>
-              <p style={{color:'#272446', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>Simply choose the category that best suits your project and take the next step with confidence.</p>
+              <p style={{color:'#272446', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0', lineHeight:'1.6'}}>Simply choose your system.</p>
             </div>
             <div style={{display:'flex', flexDirection:'column', gap:'6px'}}>
               {[
