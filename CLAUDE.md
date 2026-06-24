@@ -8,7 +8,7 @@
 
 ## ⚠️ WORKFLOW — READ THIS FIRST — BEFORE ANYTHING ELSE ⚠️
 
-1. Cowork (Claude) edits files directly in the NEW WEBSITE folder on Terry's Desktop
+1. Claude Cowork edits files directly in the NEW WEBSITE folder on Terry's Desktop
 2. Cowork gives Terry a commit title (one short line)
 3. Terry opens GitHub Desktop, types the title in the Summary box, clicks Commit, then clicks Push origin (big blue button in the right panel — NOT the top bar)
 4. Vercel deploys automatically. Wait 2 minutes then Ctrl+Shift+R to see changes.
