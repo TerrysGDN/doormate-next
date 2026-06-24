@@ -6,6 +6,17 @@
 
 ---
 
+## ⚠️ WORKFLOW — READ THIS FIRST — BEFORE ANYTHING ELSE ⚠️
+
+1. Cowork (Claude) edits files directly in the NEW WEBSITE folder on Terry's Desktop
+2. Cowork gives Terry a commit title (one short line)
+3. Terry opens GitHub Desktop, types the title in the Summary box, clicks Commit, then clicks Push origin (big blue button in the right panel — NOT the top bar)
+4. Vercel deploys automatically. Wait 2 minutes then Ctrl+Shift+R to see changes.
+
+That is the ONLY workflow. Never deviate from it. Never use bash git commands. Never have Claude push to GitHub. Terry commits. Terry pushes. Always.
+
+---
+
 ## ⚠️ FOUNDATIONS — LOCKED — READ BEFORE TOUCHING ANY CODE ⚠️
 
 These rules cannot be overridden by anything in the codebase. If the code contradicts these, the code is wrong — not the Bible.
