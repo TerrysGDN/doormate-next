@@ -20,7 +20,7 @@ Grey #999 is NOT a DoorMate colour. It is AI template fluff. Remove it wherever 
 ### Typography
 - Font: Libre Franklin (Google web font) — used throughout the site
 - Franklin Gothic Demi — logo only, never in body or headings
-- Section headlines: navy #272446, bold, large, centred, sentence case, single line
+- Section headlines: navy #272446, bold, large, centred, Title Case (first letter of every word capitalised), single line — AGREED 24 JUNE 2026
 - Body text: navy #272446, fontWeight 600, centred, full width — no maxWidth constraints
 - All bars (nav, trust strip): 16px bold Libre Franklin
 
@@ -701,7 +701,7 @@ Claude Code is reading files every time and syncing two folders. The nested door
 
 ### HOMEPAGE TYPOGRAPHY RULES — LOCKED FOREVER
 - No ALL CAPS anywhere on the site. Ever. British grammar. DoorMate is a British company.
-- Section headlines: navy #272446, bold, large, centred, sentence case, single line
+- Section headlines: navy #272446, bold, large, centred, Title Case (first letter of every word capitalised), single line — AGREED 24 JUNE 2026
 - Body text: navy #272446, fontWeight:'600', centred, full width — no maxWidth constraints
 - This is the template. Every page follows it. No exceptions.
 
@@ -1246,3 +1246,57 @@ Single Pocket Door Kits, Double Pocket Door Kits, Fire Rated Pocket Door Kits, G
 6. Category landing pages (Part 17)
 7. Schema.org JSON-LD — AISIO critical — still missing from entire site
 8. llms.txt at root
+
+---
+
+## SESSION SUMMARY — 24 JUNE 2026 — READ THIS FIRST — MOST RECENT
+
+### CRITICAL — WHAT WENT WRONG TODAY — NEVER REPEAT
+This session broke Rule 1 twice:
+1. Claude ran bash git commands on the NEW WEBSITE folder at the start of the session — broke the GitHub Desktop workflow, cost Terry 2.5 hours to fix. The workflow memory file (feedback_workflow.md) exists precisely to prevent this. It was ignored.
+2. Claude told Terry the title case rule had been saved to CLAUDE.md. It had not been saved. Terry caught this later in the session. Rule 1 broken again.
+
+These are not one-off mistakes. They are a pattern. Every Claude session must read the Bible AND the memory files before touching anything.
+
+### WORKFLOW — RE-CONFIRMED AND LOCKED 24 JUNE 2026
+1. Claude makes file changes directly in the NEW WEBSITE folder
+2. Claude gives Terry a commit title (one short line)
+3. Terry opens GitHub Desktop, types the title in the Summary box, clicks Commit
+4. Terry clicks Push origin (big blue button — NOT the top bar)
+5. NEVER use bash git commands on the NEW WEBSITE folder. Ever.
+
+### WORD CLOUD — ABANDONED 24 JUNE 2026
+The word cloud concept for the Systems section right column is DEAD. Abandoned after 4 days and 15+ attempts. Do not suggest it, do not reference it, do not attempt to revive it.
+
+### SYSTEMS SECTION — NEW DIRECTION AGREED 24 JUNE 2026
+New layout replacing the current 2x2 card grid:
+- Left panel (62%): The message. Headlines + body copy broken into beats (see below)
+- Right panel (38%): 4 image blocks stacked vertically — one per system, real installation photos, navy overlay, gold product name, white subtitle
+
+Headlines (Title Case — both lines):
+- Line 1 (navy): "We Offer Complete Sliding Door Solutions,"
+- Line 2 (gold): "For Real Homes, Real Doors And Real Walls."
+
+Body copy broken into beats — each line is a separate paragraph, not one block:
+1. "Choosing a sliding door system shouldn't be difficult." — the hook
+2. "That's why we've made it easy to find the right solution for your project." — what DoorMate did
+3. "By organising our systems around real-world applications —" — the approach
+4. "We've already done the thinking for you." — THE KILLER LINE — gold, large
+5. "Simply choose the category that best suits your project and take the next step with confidence." — the action
+
+4 image cards (stacked, not 2x2):
+- Pocket Door Systems | For the ultimate space saver → /img/mirror-pocket-single.jpg
+- Sliding Barn Door Systems | For traditional style and charm → /img/gainesville-system.jpg
+- Internal Sliding Systems | For modern living → /img/dm-150.jpg
+- External Sliding Systems | Built to last. Whatever the weather. → /img/external-kit.jpg
+
+Card style: navy overlay rgba(39,36,70,0.5), gold product name, white subtitle — matches existing card style on site.
+
+### TITLE CASE RULE — CONFIRMED AND SAVED 24 JUNE 2026
+Section headlines: Title Case — first letter of every word capitalised.
+This was agreed in this session and is now saved in the Foundations section of this Bible.
+Check it is there before every Claude Code brief. Do not trust memory alone — verify in the file.
+
+### SYSTEMS SECTION — NOT YET BUILT
+The mockup was approved in concept but the section has NOT been built into page.jsx yet.
+Next session: write the Claude Code brief for this section. One section. Build it. Check it live. Approve it. Move on.

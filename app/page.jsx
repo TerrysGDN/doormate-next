@@ -198,30 +198,36 @@ export default function HomePage() {
       {/* SYSTEMS SECTION */}
       <section style={{width:'100%', background:'#ffffff', padding:'48px 40px', boxSizing:'border-box'}}>
         <div style={{maxWidth:'1400px', margin:'0 auto'}}>
-          <h2 style={{color:'#272446', fontSize:'clamp(18px, 2.2vw, 28px)', fontWeight:'900', margin:'0 0 8px 0', textAlign:'center', lineHeight:'1.2'}}>
-            We Offer Complete Sliding Door Solutions
+          <h2 style={{color:'#272446', fontSize:'clamp(20px, 2.4vw, 30px)', fontWeight:'900', margin:'0 0 6px 0', textAlign:'center', lineHeight:'1.2'}}>
+            We Offer Complete Sliding Door Solutions,
           </h2>
-          <p style={{color:'#efb627', fontSize:'clamp(18px, 2.2vw, 28px)', fontWeight:'900', textAlign:'center', margin:'0 0 24px 0', lineHeight:'1.2'}}>
-            For Real Homes. Real Doors. Real Walls.
+          <p style={{color:'#efb627', fontSize:'clamp(20px, 2.4vw, 30px)', fontWeight:'900', margin:'0 0 48px 0', textAlign:'center', lineHeight:'1.2'}}>
+            For Real Homes, Real Doors And Real Walls.
           </p>
-          <p style={{color:'#272446', fontSize:'clamp(18px, 1.8vw, 22px)', lineHeight:'1.75', textAlign:'center', margin:'0 auto 40px auto', fontWeight:'700', maxWidth:'900px'}}>
-            Choosing a sliding door system shouldn&apos;t be difficult. That&apos;s why we&apos;ve made it easy to find the right solution for your project. By organising our systems around real-world applications, we&apos;ve already done the thinking for you. Simply choose the category that best suits your project and take the next step with confidence.
-          </p>
-          <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
-            {[
-              {top:'Pocket Door Systems', bottom:'For The Ultimate Space Saver', href:'/pocket-door-kits', img:'/img/mirror-pocket-single.jpg', alt:'Pocket door kits'},
-              {top:'Sliding Barn Door Systems', bottom:'For Traditional Style And Charm', href:'/barn-door-hardware', img:'/img/gainesville-system.jpg', alt:'Barn door hardware'},
-              {top:'Internal Sliding Systems', bottom:'For Modern Living', href:'/internal-sliding-kits', img:'/img/dm-150.jpg', alt:'Internal sliding door kits'},
-              {top:'External Sliding Systems', bottom:'Built To Last. Whatever The Weather.', href:'/external-sliding-kits', img:'/img/external-kit.jpg', alt:'External sliding door kits'},
-            ].map(item => (
-              <Link key={item.top} href={item.href} style={{textDecoration:'none', display:'block', position:'relative', height:'200px', overflow:'hidden'}}>
-                <Image src={item.img} alt={item.alt} fill style={{objectFit:'cover'}} sizes="50vw" />
-                <div style={{position:'absolute', inset:0, background:'rgba(39,36,70,0.5)', display:'flex', flexDirection:'column', justifyContent:'flex-end', padding:'20px'}}>
-                  <span style={{color:'#efb627', fontSize:'clamp(18px, 2vw, 24px)', fontWeight:'900', letterSpacing:'1px', margin:'0 0 4px 0', display:'block'}}>{item.top}</span>
-                  <span style={{color:'#ffffff', fontSize:'clamp(14px, 1.5vw, 18px)', fontWeight:'700', lineHeight:'1.2', display:'block'}}>{item.bottom}</span>
-                </div>
-              </Link>
-            ))}
+          <div style={{display:'grid', gridTemplateColumns:'62% 38%', gap:'48px', alignItems:'center'}}>
+            <div>
+              <p style={{color:'#272446', fontSize:'clamp(16px, 1.6vw, 22px)', fontWeight:'700', margin:'0 0 28px 0', lineHeight:'1.6'}}>Choosing a sliding door system shouldn&apos;t be difficult.</p>
+              <p style={{color:'#272446', fontSize:'clamp(15px, 1.4vw, 18px)', fontWeight:'600', margin:'0 0 24px 0', lineHeight:'1.7'}}>That&apos;s why we&apos;ve made it easy to find the right solution for your project.</p>
+              <p style={{color:'#272446', fontSize:'clamp(15px, 1.4vw, 18px)', fontWeight:'600', margin:'0 0 24px 0', lineHeight:'1.7'}}>By organising our systems around real-world applications &mdash;</p>
+              <p style={{color:'#efb627', fontSize:'clamp(18px, 2vw, 28px)', fontWeight:'900', margin:'0 0 28px 0', lineHeight:'1.3'}}>We&apos;ve already done the thinking for you.</p>
+              <p style={{color:'#272446', fontSize:'clamp(15px, 1.4vw, 18px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>Simply choose the category that best suits your project and take the next step with confidence.</p>
+            </div>
+            <div style={{display:'flex', flexDirection:'column', gap:'8px'}}>
+              {[
+                {top:'Pocket Door Systems', bottom:'For the ultimate space saver', href:'/pocket-door-kits', img:'/img/mirror-pocket-single.jpg', alt:'Pocket door kits'},
+                {top:'Sliding Barn Door Systems', bottom:'For traditional style and charm', href:'/barn-door-hardware', img:'/img/gainesville-system.jpg', alt:'Barn door hardware'},
+                {top:'Internal Sliding Systems', bottom:'For modern living', href:'/internal-sliding-kits', img:'/img/dm-150.jpg', alt:'Internal sliding door kits'},
+                {top:'External Sliding Systems', bottom:'Built to last. Whatever the weather.', href:'/external-sliding-kits', img:'/img/external-kit.jpg', alt:'External sliding door kits'},
+              ].map(item => (
+                <Link key={item.top} href={item.href} style={{textDecoration:'none', display:'block', position:'relative', height:'120px', overflow:'hidden'}}>
+                  <Image src={item.img} alt={item.alt} fill style={{objectFit:'cover'}} sizes="38vw" />
+                  <div style={{position:'absolute', inset:0, background:'rgba(39,36,70,0.5)', display:'flex', flexDirection:'column', justifyContent:'flex-end', padding:'14px'}}>
+                    <span style={{color:'#efb627', fontSize:'clamp(14px, 1.4vw, 16px)', fontWeight:'900', margin:'0 0 3px 0', display:'block'}}>{item.top}</span>
+                    <span style={{color:'#ffffff', fontSize:'clamp(12px, 1.1vw, 13px)', fontWeight:'700', lineHeight:'1.2', display:'block'}}>{item.bottom}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
