@@ -1,5 +1,5 @@
 # DOORMATE — MASTER BIBLE — LIVE DOCUMENT
-## Last updated: 15 June 2026
+## Last updated: 23 June 2026
 ## This file IS the project bible. Cowork reads CLAUDE.md automatically from this folder.
 ## Most recent decision always overwrites older ones.
 ## Session summaries at the bottom are in the order they were written — the LAST one is always most recent.
@@ -1148,3 +1148,101 @@ The Systems section in the live build still has the old 2x2 photo card grid. The
 
 ### TERRY'S SHORT ROUTE PRINCIPLE — TO BE ADDED AS A PERMANENT SECTION
 Terry shared his core sales philosophy in this session. It has not yet been formally written into the Bible as its own section. Next session: add it as Part 26. It informs the Systems section concept and the chatbot behaviour. Key point: DoorMate organises complexity so the customer doesn't have to. The section is not a decision tree — it is proof that the thinking has already been done.
+
+---
+
+## SESSION SUMMARY — 23 JUNE 2026 — READ THIS FIRST — MOST RECENT
+
+### THE MOST IMPORTANT THING — NEVER LOSE THIS
+The Systems section word cloud is NOT decoration. It is the emotional sales mechanism. The concept:
+Customer lands → sees a wall of overwhelming sliding door jargon → feels the complexity they were dreading → reads DoorMate's message over the top → feels instant relief. That IS the sell. Without the overwhelm, the message means nothing. Every Claude that works on this project must understand this before touching the section.
+
+### CHANNEL 4 SECTION — PERMANENT NOTE — NEVER RAISE AGAIN
+Terry says every single session: ignore the Channel 4 section, it may be removed. It has never been recorded. Recording it now. DO NOT raise the Channel 4 section fixes as a task. It may be deleted entirely. Leave it alone until Terry raises it.
+
+### THE WORD CLOUD SECTION — FULL HISTORY — DO NOT REPEAT ANY OF THESE
+
+**What was tried and failed:**
+1. **wordclouds.com** — tried early in the project. Failed. Reason not recorded (Terry's instruction — record this). Do not suggest again.
+2. **wordart.com** — tried. Failed. Reason not recorded. Do not suggest again.
+3. **Chat widget word cloud attempts (23 June)** — approximately 15+ attempts in the Cowork chat widget. All failed for one or more of these reasons:
+   - WordCloud2.js library produces oval/cloud shape, not rectangular
+   - Custom canvas spiral placement left gaps in corners
+   - Continuous horizontal text flow looked like wallpaper, not a word cloud
+   - Colours kept coming out as one tone (all blues, all greys)
+   - Fonts appeared similar despite different families specified
+   - White fade/vignette behind message text produced a "big white blob"
+   - Line-by-line fade technique worked for heading but body text remained unreadable
+4. **The closest version achieved (23 June):** Continuous rows of washed-out grey text, multiple fonts and sizes, navy message text over the top. Terry said "maybe this is the solution" then "it's a 10th layer compromise." It is currently in page.jsx as the Systems section background.
+
+**What has NOT been tried:**
+- D3.js word cloud layout built directly into page.jsx via Claude Code. This is the one remaining option that uses a proper layout engine. Has not been attempted. May work.
+
+**Current state of Systems section in page.jsx:**
+Rows of grey washed-out text as background. Approved message over the top. Terry considers this a compromise but it is there. Do not remove or change without Terry's explicit approval.
+
+### HOMEPAGE — HONEST STATE — 23 JUNE 2026
+Compared old site (barn-doors.co.uk) to new site (Vercel) via Chrome extension today. Honest assessment:
+- New site nav and trust strip are BETTER than old site
+- New site hero is WEAKER — text lost bottom left of dark photo, not impactful
+- Old site hero has circular installation photos, clear message, reviews visible immediately — it sells
+- New site has NO product pages — no prices, no BUY NOW buttons anywhere
+- Every homepage section is a compromise that was rushed and never finished
+- Terry's diagnosis: every section was rushed to "good enough" then abandoned. None are what he wanted.
+- The pattern: Section 1 rushed compromise → Section 2 rushed compromise → etc. Must stop.
+- Rule going forward: FINISH ONE SECTION COMPLETELY before moving to the next. No exceptions.
+
+### WHAT TERRY NEEDS NEXT SESSION
+1. Decide: D3 word cloud in Claude Code — yes or no. If yes, one attempt. If it fails, section stays as current compromise.
+2. If word cloud resolved — go back to Section 1 (hero) and finish it properly.
+3. Then Section 2. Then Section 3. One at a time. Finished. Not rushed.
+4. Product pages are the revenue. Homepage must be finished first because customers need to be enticed in.
+
+### RULES ADDED THIS SESSION
+- NEVER suggest wordclouds.com or wordart.com — both tried and failed
+- NEVER update the bible mid-session — update at end of session only
+- FINISH ONE SECTION BEFORE MOVING TO THE NEXT — this is now a hard rule
+- The homepage is NOT done. Do not treat any section as signed off unless Terry explicitly says so.
+- The word cloud concept is THE emotional core of the Systems section — never replace it with plain copy
+
+---
+
+## SESSION SUMMARY — 20 JUNE 2026
+
+### WHAT THIS SESSION WAS
+Continued the word cloud work started 15 June. The Systems section right column background is a word cloud of sliding door jargon — representing the confusion customers face on competitor sites. DoorMate's overlay message is the relief: "We've already done the thinking."
+
+### WHAT WAS AGREED — LOCKED
+- Terry will build the word cloud himself in Microsoft Paint
+- Claude supplies a word sheet image: all words horizontal, multiple sizes, genuinely different font CATEGORIES (not variations of the same family), agreed colour palette
+- Colour palette: #111111, #1a3a5f, #333333, #2869a8, #555555, #4a8fd4, #777777, #88aacc
+- Font categories required: heavy display, script/handwriting, slab serif, condensed, classic serif
+
+### TWO PAGE.JSX FIXES COMPLETED THIS SESSION
+- Line 129: Removed `textTransform:'uppercase'` from Who We Are h2 — ALL CAPS violation fixed
+- Line 159: Changed `color:'#999'` to `color:'#272446'` on Brands We Work With label — grey banned, now navy
+- Committed to GitHub. Still outstanding (NOT yet fixed):
+  - Line 227: `background:'#f7f7f7'` → white (Channel 4 section)
+  - Line 230: `color:'#999'` on "FEATURED ON" label → navy
+
+### THE WORD LIST — STATE AT END OF SESSION
+Two lists exist. Terry to review, remove unwanted terms, then confirm.
+
+**List 1 — Original verified terms** saved to: `C:\Users\Terry\AppData\Roaming\Claude\local-agent-mode-sessions\...\outputs\wordcloud_terms_v1.txt`
+
+System Types: Bi-Parting Door Systems | Bi-Passing Door Systems | Top Hung Systems | Bottom Rolling Systems | Telescopic Door Systems | Low Headroom Kits | Self Closing Systems | Soft Closing Systems | Simultaneous Action Systems | Round the Corner Systems | Glass Door Systems | Fire Rated Systems
+
+Components: Wheel Hangers | Adjustable Hangers | End Hangers | Door Hangers | Bottom Guides | Bottom Rollers | Bottom Channel | Top Channel | Floor Guides | Floor Channel | Roller Floor Guide | Concealed Floor Guide | Cupped Floor Guide | Galvanised Track | Carbon Steel Track | Aluminium Track | Stainless Steel Track | Wall Fix Brackets | Soffit Fix Brackets | Top Fix Brackets | Side Fix Brackets | Jointing Brackets | Soft Close Mechanisms | Soft Close Kits | Track Stop | Anti-Jump Bolts | Anti-Jump Cam | Nylon Rollers | Glass Clamp Kit | Glass Profile | Guide Channel | Pocket Entrance Guide | Dovetail Corrugation | Fire Rated Jamb Kit | Double Door Jointing Kit | Glass Door Fitting Kit | Wrap Around Kit | Flush Pull | Finger Pull | Bow Handle | Fascia | Top Mounted Hardware | Fixed Panel
+
+**List 2 — 100 new terms** found this session from Eclisse, IronmongeryDirect and PC Henderson product pages:
+Single Pocket Door Kits, Double Pocket Door Kits, Fire Rated Pocket Door Kits, Glass Pocket Door Systems, Timber Door Kits, Bi-Fold Door Kits, Patio Door Kits, Wiring-Ready Systems, Acoustic Systems, Hoist Systems, Curved Pocket Door Systems, Half Pocket Half Hinged Systems, Lift and Slide Systems, Top Mounted Systems, Face Mounted Systems, Centre Fold Systems, End Fold Systems, Barn Strap Sliding Door Kits, Wardrobe Door Gear, Overhead Track Systems, Double Track Systems, Bi-Directional Soft-Close Mechanisms, Anti-Slam Devices, Self Closing Devices, Double Door Synchronisation Kits, Telescopic Synchronisation Kits, Co-Ordination Kits, Floor Springs, Door Closers, Overhead Closers, Privacy Sets with Bolt, Privacy Sets with Lock, Bathroom Lock Sets, Key Lock Sets, Privacy Lock Sets, Indicator Bolt Sets, 3 Lever Sliding Door Locks, 5 Lever Sliding Door Locks, Mortice Lock Sets, Flush Bolt Sets, Security Bolt Sets, Shoot Bolt Sets, Latch Bolt Sets, Door Edge Finger Pulls, Door Edge Pull Handles, Door Edge Thumb Pulls, Half Moon Flush Pull Handles, Square Flush Pull Handles, Round Flush Pull Handles, Pull Bar Handles, Privacy Handle Sets, Flush Handle Sets, Barn Strap Rails, Ceiling Fix Brackets, Ceiling Fix Track, Soffit Fix Track, Face Fix Brackets, Hanging Brackets, Wall Fixing Kits, Track End Caps, Extension Track Kits, Backplate Sets, Face Plate Sets, Strike Plates, Fixing Bolt Sets, Floor Socket Sets, Pelmet, Pelmet and Post Kits, Timber Frame Kits, Running Rollers, Dual Wheel Hangers, Heavy Duty Hangers, Load Bearing Trolleys, Trolley Assemblies, Top Pivot Sets, Bottom Pivot Sets, Pivot Hinges, Conversion Kits, Drop Down Seals, Brush Seals, Compression Seals, Intumescent Strips, Steel Frame Kits, Fire Door Closer Kits, Cavity Widening Kits, Telescopic Floor Guides, Door End Caps, Touch Latch, End Stops, Buffer Stops, Rubber Buffers, Magnetic Door Stops, Rail Joining Kits, Jointing Sleeves, Guide Packs, Spare Fittings Packs, Universal Fittings Packs, Flush Handles with Latch
+
+### NEXT SESSION — START HERE IN THIS ORDER
+1. Terry to send confirmed/trimmed word list
+2. Claude builds word sheet image IN the Cowork chat (show_widget — visible inline, NOT a download) using genuinely different font categories
+3. Fix page.jsx Lines 227 and 230 (Channel 4 section grey → white, label grey → navy)
+4. Agree approach for Systems section right column — word cloud background + DoorMate overlay statement
+5. Sign off the homepage — it has been in progress for weeks
+6. Category landing pages (Part 17)
+7. Schema.org JSON-LD — AISIO critical — still missing from entire site
+8. llms.txt at root
