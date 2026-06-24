@@ -228,18 +228,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CHANNEL 4 — thin strip, not a dark cave */}
-      <section style={{width:'100%', background:'#f7f7f7', padding:'28px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'1px solid #e8e8e8'}}>
-        <div style={{display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:'16px', maxWidth:'1400px', margin:'0 auto'}}>
-          <div>
-            <p style={{color:'#999', fontSize:'11px', fontWeight:'700', letterSpacing:'3px', textTransform:'uppercase', margin:'0 0 4px 0'}}>FEATURED ON</p>
-            <h3 style={{color:'#272446', fontSize:'clamp(15px, 2vw, 22px)', fontWeight:'900', margin:0}}>George Clarke's Old House New Home — Channel 4</h3>
-          </div>
-          <Link href="/as-seen-on-tv" style={{background:'#272446', color:'#ffffff', padding:'11px 24px', fontWeight:'900', fontSize:'13px', textDecoration:'none', display:'inline-block', letterSpacing:'1px', textTransform:'uppercase', whiteSpace:'nowrap'}}>
-            WATCH NOW →
-          </Link>
-        </div>
-      </section>
 
       {/* SOCIAL MEDIA */}
       <section style={{width:'100%', background:'#ffffff', padding:'24px 40px', boxSizing:'border-box', borderBottom:'1px solid #e8e8e8'}}>
