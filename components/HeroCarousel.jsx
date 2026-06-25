@@ -52,7 +52,7 @@ export default function HeroCarousel() {
         zIndex: 10,
       }}>
         <h1 style={{ color: '#ffffff', fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: '900', lineHeight: '1.1', margin: '0 0 14px 0', maxWidth: '600px', textShadow: '1px 2px 6px rgba(0,0,0,0.4)' }}>
-          The UK's Leading<br />Sliding Door Specialists
+          The UK's Leading<br />Sliding Door Systems Specialists
         </h1>
       </div>
     </section>
