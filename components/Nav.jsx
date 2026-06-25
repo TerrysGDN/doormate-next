@@ -27,7 +27,7 @@ const NAV_LINKS = [
 const SOCIAL_LINKS = [
   {
     label: 'Facebook',
-    href: 'https://www.facebook.com/doormate',
+    href: 'https://www.facebook.com/people/Door-Mate/100065342387768/',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="#1877F2" aria-hidden="true">
         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
@@ -35,8 +35,17 @@ const SOCIAL_LINKS = [
     ),
   },
   {
+    label: 'X (Twitter)',
+    href: 'https://x.com/mate_door',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#000000" aria-hidden="true">
+        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.259 5.629L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
+      </svg>
+    ),
+  },
+  {
     label: 'Instagram',
-    href: 'https://www.instagram.com/doormate',
+    href: 'https://www.instagram.com/doormate_cardiff/',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="#E1306C"/>
