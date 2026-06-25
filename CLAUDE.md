@@ -1396,9 +1396,23 @@ Boring. Not suitable for the hero carousel.
 ### TERRY'S POINT — RECORDED PERMANENTLY
 DoorMate is NOT a barn door hardware company. Barn door hardware was where DoorMate started when the trend was live (2012/13). DoorMate diversified precisely because the trend peaked. The new site must never read as a barn door hardware company — especially not in the hero.
 
+### AI-GENERATED HERO IMAGES — NEW ROUTE AGREED 25 JUNE 2026
+Terry tested Nano Banana AI image generator. Third attempt produced a usable result: woman in blue dress walking through large dark steel-framed glass panel sliding doors, beautiful luxury home behind her, warm wood floors. Lifestyle feel is exactly right.
+
+The winning prompt that worked:
+*"lifestyle photo, close-up of two large sliding pocket doors with dark steel frames and glass panels, partially open, beautiful woman in elegant dress visible walking through them, luxury home interior behind her, warm wood floors, bright natural light, architectural photography style"*
+
+Key lesson: lead the prompt with the DOORS, put the woman second. AI prioritises what comes first.
+
+This solves the hero image problem without waiting for Eclisse, photographers, or WeTransfer. Generate 3-4 images covering different door types and the carousel is done.
+
 ### TOMORROW — FIRST JOB IN THIS ORDER
-1. Fix hero carousel: remove 2 of the 3 barn door images. Keep only gainesville-system.jpg (1 barn door for credibility). Keep dm-150.jpg and external-kit.jpg. The carousel should read sliding door systems, not barn door hardware.
-2. Email hester@eclisse.co.uk — ask to resend the May 2025 WeTransfer lifestyle image pack.
-3. LinkedIn/YouTube/Pinterest social links — Terry to provide URLs.
-4. Delete from /public/img/: pocket-door-lifestyle.jpg and eclisse-lifestyle.jpg.
-5. Commit title for tomorrow's hero fix: "Fix hero carousel - remove barn door dominance"
+1. **AI hero images — generate 3 more via Nano Banana:**
+   - Pocket doors: use the winning prompt above
+   - Barn door (single, on track): *"lifestyle photo, close-up of a large barn door on exposed steel wall-mounted track, dark finish, partially open, luxury farmhouse interior behind, warm wood floors, natural light, architectural photography"*
+   - External sliding door: *"lifestyle photo, large heavy-duty external sliding door on steel track, open to reveal a beautiful garden beyond, modern home exterior, natural light"*
+2. Fix hero carousel: swap in the AI images, remove barn door dominance. Keep only 1 barn door image for credibility.
+3. Delete from /public/img/: pocket-door-lifestyle.jpg and eclisse-lifestyle.jpg.
+4. LinkedIn/YouTube/Pinterest social links — Terry to provide URLs.
+5. Email hester@eclisse.co.uk — ask to resend the May 2025 WeTransfer lifestyle image pack (still worth having for product pages).
+6. Commit title for tomorrow's hero fix: "Fix hero carousel - lifestyle images, remove barn door dominance"
