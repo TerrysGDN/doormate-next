@@ -100,7 +100,7 @@ export default function HomePage() {
           ].map((cat) => (
             <div key={cat.name}>
               <p style={{color:'#272446', fontSize:'18px', fontWeight:'900', textAlign:'center', margin:'0 0 6px 0', padding:0}}>{cat.name}</p>
-              <Link href={cat.href} style={{textDecoration:'none', display:'block', height:'280px', background:'#ffffff', border:'2px solid #272446', overflow:'hidden', position:'relative'}}>
+              <Link href={cat.href} style={{textDecoration:'none', display:'block', height:'clamp(180px, 20vw, 340px)', background:'#ffffff', border:'2px solid #272446', overflow:'hidden', position:'relative'}}>
                 <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="15vw" />
               </Link>
             </div>
@@ -215,7 +215,7 @@ export default function HomePage() {
                 {top:'Internal Sliding Systems', bottom:'For modern living', href:'/internal-sliding-kits', img:'/img/dm-150.jpg', alt:'Internal sliding door kits'},
                 {top:'External Sliding Systems', bottom:'Built to last. Whatever the weather.', href:'/external-sliding-kits', img:'/img/external-kit.jpg', alt:'External sliding door kits'},
               ].map(item => (
-                <Link key={item.top} href={item.href} style={{textDecoration:'none', display:'block', position:'relative', flex:'1', minHeight:'140px', overflow:'hidden'}}>
+                <Link key={item.top} href={item.href} style={{textDecoration:'none', display:'block', position:'relative', flex:'1', minHeight:'clamp(100px, 12vw, 180px)', overflow:'hidden'}}>
                   <Image src={item.img} alt={item.alt} fill style={{objectFit:'cover'}} sizes="45vw" />
                   <div style={{position:'absolute', inset:0, background:'rgba(39,36,70,0.5)', display:'flex', flexDirection:'column', justifyContent:'flex-end', padding:'14px'}}>
                     <span style={{color:'#efb627', fontSize:'clamp(14px, 1.4vw, 17px)', fontWeight:'900', margin:'0 0 3px 0', display:'block'}}>{item.top}</span>

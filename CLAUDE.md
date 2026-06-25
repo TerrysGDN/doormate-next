@@ -90,6 +90,13 @@ This rule overrides everything else.
 
 ## RULE 5 — NEVER LEAD HOMEPAGE OR META WITH BARN DOOR HARDWARE STORY — Added 19 May 2026
 
+## RULE 8 — THE MEASURING STICK — NEVER IGNORE IT — Added 24 June 2026
+barn-doors.co.uk is the measuring stick. It was built by Terry — a door fitter, not a developer — and it sold £250k in 2017 with Google seeing only 5% of it. Every single decision on the new site must be checked against it.
+Before touching any section ask: does the old site do this better? If yes — find out why and match it first, then beat it.
+The old site audit (old-site-audit.md) exists in the NEW WEBSITE folder. Read it. Use it.
+Terry had to point out the scaling issue, the hero carousel approach, the circular photos, the section sizing. All of it was in the audit. Claude had the measuring stick and chose not to use it. That cost 4 months of progress.
+This rule exists so it never happens again. The measuring stick is always the first reference — not the last.
+
 ## RULE 7 — SEO AND AISEO MUST BE IN EVERY SINGLE CLAUDE CODE BRIEF — NO EXCEPTIONS — Added 3 June 2026
 The entire reason for building the new site is Google and AI visibility. Every Claude Code brief must include these requirements on every file touched:
 - Semantic HTML throughout — proper `<nav>`, `<main>`, `<header>`, `<footer>`, `<article>`, `<section>` elements. Never use divs where semantic elements exist.

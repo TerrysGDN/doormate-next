@@ -21,7 +21,7 @@ export default function HeroCarousel() {
   }, [])
 
   return (
-    <section style={{ position: 'relative', width: '100%', maxWidth: '1400px', margin: '0 auto', height: '360px', overflow: 'hidden' }}>
+    <section style={{ position: 'relative', width: '100%', maxWidth: '1400px', margin: '0 auto', height: 'clamp(300px, 42vh, 500px)', overflow: 'hidden' }}>
       {IMAGES.map((img, i) => (
         <div
           key={img.src}
@@ -44,13 +44,14 @@ export default function HeroCarousel() {
       <div style={{
         position: 'absolute',
         inset: 0,
+        background: 'linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0) 70%)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         padding: '0 60px',
         zIndex: 10,
       }}>
-        <h1 style={{ color: '#ffffff', fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: '900', lineHeight: '1.1', margin: '0 0 14px 0', maxWidth: '600px' }}>
+        <h1 style={{ color: '#ffffff', fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: '900', lineHeight: '1.1', margin: '0 0 14px 0', maxWidth: '600px', textShadow: '1px 2px 6px rgba(0,0,0,0.4)' }}>
           The UK's Leading<br />Sliding Door Specialists
         </h1>
       </div>
