@@ -62,8 +62,8 @@ export default function Footer() {
               <a href="mailto:info@doormate.co.uk" className="hover:text-brand-gold transition-colors">info@doormate.co.uk</a>
             </li>
             <li>
-              <span className="block text-white/40 text-[11px] font-bold mb-1">Location</span>
-              <span>Cardiff, South Wales</span>
+              <span className="block text-white/40 text-[11px] font-bold mb-1">Registered Address</span>
+              <span>DoorMate Hardware Limited<br />15 Neptune Court<br />Vanguard Way<br />Cardiff CF24 5PJ</span>
             </li>
             <li>
               <span className="block text-white/40 text-[11px] font-bold mb-1">Hours</span>
