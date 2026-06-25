@@ -1347,3 +1347,58 @@ Terry compared the old site (barn-doors.co.uk) to the new site at 100% browser z
 2. Fix hero — text-led slides matching old site approach, Channel 4 slide added
 3. Only when homepage genuinely sells — move to product pages
 4. First product page: Pocket Door Kits — price visible, BUY NOW above fold, trust signals, chatbot
+
+---
+
+## SESSION SUMMARY — 25 JUNE 2026 — READ THIS FIRST — MOST RECENT
+
+### WHAT WAS DONE THIS SESSION
+
+**Hero headline updated — LOCKED**
+Changed from "The UK's Leading Sliding Door Specialists" to "The UK's Leading Sliding Door Systems Specialists" — Terry added "Systems." Committed to GitHub.
+
+**Social media links updated in Nav.jsx — PARTIAL**
+Three confirmed and live:
+- Facebook: https://www.facebook.com/people/Door-Mate/100065342387768/
+- X (Twitter): https://x.com/mate_door — was completely missing, now added
+- Instagram: https://www.instagram.com/doormate_cardiff/
+Still missing — Terry to provide URLs: LinkedIn | YouTube | Pinterest
+
+**Hero carousel — current state**
+IMAGES array in HeroCarousel.jsx:
+1. /img/brooklyn-system.jpg — barn door
+2. /img/augusta-system.jpg — barn door
+3. /img/dm-150.jpg — internal/external sliding
+4. /img/external-kit.jpg — external sliding
+5. /img/gainesville-system.jpg — barn door
+
+3 barn door images + 2 sliding system images = carousel reads as a barn door company. This is WRONG and must be fixed tomorrow.
+
+**pocket-door-lifestyle.jpg** — removed from carousel (was showing an elderly man, not an installation). File still exists in /public/img — delete it.
+**eclisse-lifestyle.jpg** — unused, still in /public/img — delete it.
+
+### ECLISSE IMAGES — FULL HISTORY — DO NOT REPEAT ANY OF THIS
+
+**WeTransfer from Hester at Eclisse (hester@eclisse.co.uk), sent 20 May 2025:**
+Files were NEVER downloaded. WeTransfer link expired. Over a year old — gone.
+
+**Eclisse gallery at eclisse.co.uk/pages/gallery:**
+Images are Instagram CDN embeds with signed query-string URLs. Cannot be extracted programmatically — they lazy-load via JavaScript after page render. Do not attempt this again.
+
+**Eclisse Glass.jpg (476KB, 01/09/2021):**
+Exists in C:\Users\Terry\Dropbox\PC\Desktop\1Barn door\Pocket door kits\ but is cloud-only in Dropbox — not synced to local disk. Windows cannot find it. Not usable without syncing.
+
+**Eclisse gallery images — Terry's verdict:**
+Boring. Not suitable for the hero carousel.
+
+**What to do:** Email hester@eclisse.co.uk and ask her to resend the May 2025 WeTransfer pack. That is the legitimate source of Eclisse lifestyle images DoorMate is entitled to use as a key reseller.
+
+### TERRY'S POINT — RECORDED PERMANENTLY
+DoorMate is NOT a barn door hardware company. Barn door hardware was where DoorMate started when the trend was live (2012/13). DoorMate diversified precisely because the trend peaked. The new site must never read as a barn door hardware company — especially not in the hero.
+
+### TOMORROW — FIRST JOB IN THIS ORDER
+1. Fix hero carousel: remove 2 of the 3 barn door images. Keep only gainesville-system.jpg (1 barn door for credibility). Keep dm-150.jpg and external-kit.jpg. The carousel should read sliding door systems, not barn door hardware.
+2. Email hester@eclisse.co.uk — ask to resend the May 2025 WeTransfer lifestyle image pack.
+3. LinkedIn/YouTube/Pinterest social links — Terry to provide URLs.
+4. Delete from /public/img/: pocket-door-lifestyle.jpg and eclisse-lifestyle.jpg.
+5. Commit title for tomorrow's hero fix: "Fix hero carousel - remove barn door dominance"
