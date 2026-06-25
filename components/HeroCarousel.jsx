@@ -3,11 +3,11 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const IMAGES = [
-  { src: '/img/mirror-pocket-single.jpg', alt: 'Pocket door system installed in UK home — DoorMate Sliding Door Systems' },
-  { src: '/img/augusta-system.jpg',       alt: 'Augusta double track bi-passing sliding door system by DoorMate Cardiff' },
-  { src: '/img/dm-150.jpg',              alt: 'Internal sliding door kit installed — DoorMate Sliding Door Systems' },
-  { src: '/img/external-kit.jpg',        alt: 'External sliding door kit installed — DoorMate heavy duty systems' },
-  { src: '/img/gainesville-system.jpg',  alt: 'Gainesville single barn door hardware system made in Cardiff' },
+  { src: '/img/pocket-door-lifestyle.jpg', alt: 'Pocket door system installed in UK home — DoorMate Sliding Door Systems' },
+  { src: '/img/augusta-system.jpg',        alt: 'Augusta double track bi-passing sliding door system by DoorMate Cardiff' },
+  { src: '/img/dm-150.jpg',               alt: 'Internal sliding door kit installed — DoorMate Sliding Door Systems' },
+  { src: '/img/external-kit.jpg',         alt: 'External sliding door kit installed — DoorMate heavy duty systems' },
+  { src: '/img/gainesville-system.jpg',   alt: 'Gainesville single barn door hardware system made in Cardiff' },
 ]
 
 export default function HeroCarousel() {
