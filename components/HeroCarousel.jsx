@@ -13,16 +13,6 @@ const SLIDES = [
     href: '/pocket-door-kits',
   },
   {
-    img: '/img/dm-150.jpg',
-    alt: 'Internal sliding door kit installed — DoorMate Cardiff',
-    category: 'Internal Sliding Door Kits',
-    headline: 'For Modern Living',
-    subline: 'Timber, glass, steel and minimalist systems. Complete kits ready to hang.',
-    price: null,
-    cta: 'View Systems',
-    href: '/internal-sliding-kits',
-  },
-  {
     img: '/img/External-150kg.jpg',
     alt: 'Heavy duty external sliding door system installed — DoorMate',
     category: 'External Sliding Door Kits',
