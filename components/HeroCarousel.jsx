@@ -39,7 +39,7 @@ export default function HeroCarousel() {
             src={img.src}
             alt={img.alt}
             fill
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            style={{ objectFit: 'cover', objectPosition: 'left center' }}
             priority={i === 0}
           />
         </div>
