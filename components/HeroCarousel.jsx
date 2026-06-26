@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const IMAGES = [
-  { src: '/img/mirror-pocket-single.jpg', alt: 'Mirror pocket door installed — DoorMate sliding door systems Cardiff' },
+  { src: '/img/mirror-pocket-single.jpg', alt: 'DoorMate handmade mirror pocket door — manufactured in Cardiff' },
   { src: '/img/dm-150.jpg',               alt: 'Internal sliding door system installed in a home — DoorMate Sliding Door Systems' },
   { src: '/img/augusta-system.jpg',       alt: 'Augusta double track bi-passing barn door system, manufactured in Cardiff by DoorMate' },
   { src: '/img/external-kit.jpg',         alt: 'Heavy duty external sliding door kit installed — DoorMate Sliding Door Systems' },
