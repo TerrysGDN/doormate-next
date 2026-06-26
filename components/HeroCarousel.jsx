@@ -4,9 +4,12 @@ import Image from 'next/image'
 
 const IMAGES = [
   { src: '/img/slide-1.jpg', alt: 'Heavy duty sliding barn door kits — single, double, bi-passing and round-the-corner options — DoorMate' },
+  { src: '/img/eclisse-pocket.jpg', alt: 'Eclisse pocket door system installed in a luxury home — DoorMate Cardiff' },
   { src: '/img/slide-2.jpg', alt: 'Brand new internal sliding door kits for timber, steel and glass doors — DoorMate Cardiff' },
+  { src: '/img/stainless.jpg', alt: 'Stainless steel barn door hardware installed in a modern bedroom — DoorMate Cardiff' },
   { src: '/img/slide-3.jpg', alt: "DoorMate products featured on George Clarke's Old House New Home, Channel 4, Series 8 Episode 3" },
   { src: '/img/slide-4.jpg', alt: 'Pocket door kits — the ultimate space saver — DoorMate Cardiff' },
+  { src: '/img/External-150kg.jpg', alt: 'Heavy duty external sliding door system installed on an industrial building — DoorMate' },
   { src: '/img/slide-5.jpg', alt: 'Made-to-measure bespoke handmade barn doors — DoorMate Cardiff workshop' },
 ]
 
