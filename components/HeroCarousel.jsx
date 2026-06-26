@@ -3,10 +3,11 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const IMAGES = [
-  { src: '/img/brooklyn-system.jpg', alt: 'Brooklyn bi-parting barn door system installed in a home — DoorMate Cardiff', pos: 'center' },
-  { src: '/img/eclisse-pocket.jpg',  alt: 'Eclisse pocket door system installed in a modern open plan living room',       pos: 'center' },
-  { src: '/img/stainless.jpg',       alt: 'Stainless steel internal sliding door system installed — DoorMate Cardiff',    pos: 'center' },
-  { src: '/img/External-150kg.jpg',  alt: 'Heavy duty external sliding door kit installed — DoorMate Cardiff',            pos: 'center' },
+  { src: '/img/slide-1.jpg', alt: 'Heavy duty sliding barn door kits — single, double, bi-passing and round-the-corner options — DoorMate' },
+  { src: '/img/slide-2.jpg', alt: 'Brand new internal sliding door kits for timber, steel and glass doors — DoorMate Cardiff' },
+  { src: '/img/slide-3.jpg', alt: "DoorMate products featured on George Clarke's Old House New Home, Channel 4, Series 8 Episode 3" },
+  { src: '/img/slide-4.jpg', alt: 'Pocket door kits — the ultimate space saver — DoorMate Cardiff' },
+  { src: '/img/slide-5.jpg', alt: 'Made-to-measure bespoke handmade barn doors — DoorMate Cardiff workshop' },
 ]
 
 export default function HeroCarousel() {
@@ -35,25 +36,11 @@ export default function HeroCarousel() {
             src={img.src}
             alt={img.alt}
             fill
-            style={{ objectFit: 'cover', objectPosition: img.pos }}
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
             priority={i === 0}
           />
         </div>
       ))}
-      <div style={{
-        position: 'absolute',
-        inset: 0,
-        background: 'linear-gradient(to right, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 45%, rgba(0,0,0,0) 70%)',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        padding: '0 60px',
-        zIndex: 10,
-      }}>
-        <h1 style={{ color: '#ffffff', fontSize: 'clamp(28px, 4vw, 52px)', fontWeight: '900', lineHeight: '1.1', margin: '0 0 14px 0', maxWidth: '600px', textShadow: '1px 2px 6px rgba(0,0,0,0.4)' }}>
-          The UK's Leading<br />Sliding Door Systems Specialists
-        </h1>
-      </div>
     </section>
   )
 }
