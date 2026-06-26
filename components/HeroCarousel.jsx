@@ -3,10 +3,10 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 const IMAGES = [
-  { src: '/img/brooklyn-system.jpg', alt: 'Brooklyn bi-parting barn door system installed in a home — DoorMate Cardiff' },
-  { src: '/img/eclisse-pocket.jpg',  alt: 'Eclisse pocket door system installed in a modern open plan living room' },
-  { src: '/img/stainless.jpg',       alt: 'Stainless steel internal sliding door system installed — DoorMate Cardiff' },
-  { src: '/img/External-150kg.jpg',  alt: 'Heavy duty external sliding door kit installed — DoorMate Cardiff' },
+  { src: '/img/brooklyn-system.jpg', alt: 'Brooklyn bi-parting barn door system installed in a home — DoorMate Cardiff', pos: 'center center' },
+  { src: '/img/eclisse-pocket.jpg',  alt: 'Eclisse pocket door system installed in a modern open plan living room',       pos: 'center top' },
+  { src: '/img/stainless.jpg',       alt: 'Stainless steel internal sliding door system installed — DoorMate Cardiff',    pos: 'center center' },
+  { src: '/img/External-150kg.jpg',  alt: 'Heavy duty external sliding door kit installed — DoorMate Cardiff',            pos: 'center top' },
 ]
 
 export default function HeroCarousel() {
@@ -35,7 +35,7 @@ export default function HeroCarousel() {
             src={img.src}
             alt={img.alt}
             fill
-            style={{ objectFit: 'cover', objectPosition: 'center' }}
+            style={{ objectFit: 'cover', objectPosition: img.pos }}
             priority={i === 0}
           />
         </div>
