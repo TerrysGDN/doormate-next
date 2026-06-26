@@ -1416,3 +1416,82 @@ This solves the hero image problem without waiting for Eclisse, photographers, o
 4. LinkedIn/YouTube/Pinterest social links — Terry to provide URLs.
 5. Email hester@eclisse.co.uk — ask to resend the May 2025 WeTransfer lifestyle image pack (still worth having for product pages).
 6. Commit title for tomorrow's hero fix: "Fix hero carousel - lifestyle images, remove barn door dominance"
+
+---
+
+## SESSION SUMMARY — 26 JUNE 2026 — READ THIS FIRST — MOST RECENT
+
+### THE HERO — WHAT WAS BUILT TODAY — LOCKED
+
+The 2026 hero carousel is now built in HeroCarousel.jsx. This is the correct approach — NOT the old site's infographic JPG slides. The design:
+- Full-bleed photo background per slide
+- Dark-to-transparent gradient left to right (navy rgba 0.88 → 0.15)
+- Text built in code: gold category label | white bold headline | white subline | gold price | gold CTA button
+- Gold dot indicators bottom left — clickable to jump to any slide
+- 6-second auto-rotation, 1.2s crossfade
+
+This is what the new site was always supposed to be. Text in code = sharp at every screen size, SEO readable, updateable without touching images.
+
+### CURRENT STATE OF HEROCAOUSEL.JSX — 4 SLIDES
+
+| Slide | Image | Status |
+|-------|-------|--------|
+| Pocket Door Kits | eclisse-pocket.jpg | Placeholder — door barely visible, needs proper installation shot |
+| External Sliding Door Kits | External-150kg.jpg | Works — industrial, honest, right for that customer |
+| Sliding Barn Door Hardware | gainesville-system.jpg | APPROVED — dramatic close-up of hardware, red door, rustic wall |
+| Handmade Barn Doors | door-v-brace.jpg | BAD — dark workshop shot, door propped up. Needs replacing |
+
+Internal Sliding Door Kits slide REMOVED — dm-150.jpg was a catalogue image (two photos on white background), completely broken as a hero. No replacement image available yet.
+
+### IMAGES CONFIRMED UNUSABLE — NEVER USE IN HERO
+- dm-150.jpg — Helaform catalogue image, two product shots on white background. Broken as hero.
+- door-v-brace.jpg — Door propped in dark workshop. No room, no context, no inspiration.
+- mirror-pocket-2.jpg — Two mirror doors photographed in a yard with rubbish bags behind them.
+- mirror-pocket-single.jpg — Same issue. Yard/building site reflection in mirror.
+- hero-installed.jpg — Augusta installation composite with baked-in logo and text. Not usable as hero background.
+- pocket-door-lifestyle.jpg — Previously deleted/marked for deletion.
+- eclisse-lifestyle.jpg — Previously deleted/marked for deletion.
+
+### IMAGES CONFIRMED USABLE IN HERO
+- gainesville-system.jpg — APPROVED. Close-up of barn door hardware on red door with rustic wood wall. Dramatic and product-forward.
+- External-150kg.jpg — APPROVED for external sliding slide. Industrial but honest. Farmers, builders, yard owners — this speaks to them.
+- eclisse-pocket.jpg — ACCEPTABLE as placeholder only. Eclisse library room pocket door — door barely visible (white on white), but best we currently have for pocket doors.
+- stainless.jpg — Available but not currently in carousel. Stainless barn door hardware on white door, blue bedroom. Could work for internal sliding when that slide is rebuilt.
+
+### THE IMAGE RULE — AGREED AND LOCKED TODAY
+For a hero image to work it must:
+1. Show the PRODUCT as the star — not the room, not the furniture, not the decor
+2. Be wide landscape format — portrait images break the hero layout
+3. Show the product INSTALLED in a real setting — not in a yard, not on a white background
+4. Have the main product visible on the RIGHT side of the frame — the gradient covers the left, the photo shows through on the right
+5. Create an emotional response — "I want that in my home / yard / building"
+
+### WHAT THE HERO STILL NEEDS — TOMORROW'S FIRST JOB
+The hero concept is correct and agreed. The image problem is unsolved. Two routes:
+
+**Route 1 — Nano Banana AI images** (agreed 25 June, not yet done):
+- Pocket doors prompt: "lifestyle photo, close-up of two large sliding pocket doors with dark steel frames and glass panels, partially open, beautiful woman in elegant dress visible walking through them, luxury home interior behind her, warm wood floors, bright natural light, architectural photography style"
+- Internal sliding: similar lifestyle prompt, lead with the door
+- Handmade barn doors: "lifestyle photo, large handmade barn door on exposed steel track, dark wood finish, partially open, beautiful farmhouse kitchen beyond, warm natural light, architectural photography"
+
+**Route 2 — Terry's daughter shoots proper installation photos**
+Each system, installed in a real home, good light, wide format.
+
+Both routes should happen. Route 1 unblocks the hero tomorrow. Route 2 is the permanent solution.
+
+### RULES ADDED THIS SESSION — NEVER BREAK
+- NEVER choose an image for the hero without reading it first and confirming what it shows
+- NEVER put a catalogue image (product on white background) into the hero — it breaks the layout
+- NEVER suggest Nano Banana — Terry does that himself
+- The 5 old infographic slides (slide-1 through slide-5) are RETIRED from the carousel. They are still in /public/img/ but must not go back into the hero. The new site is not a copy of the old site.
+- The hero concept (full-bleed photo + text in code) is AGREED AND LOCKED. Do not suggest alternatives.
+- Image and message must work in harmony — image sells emotion, text sells product, button captures customer.
+
+### NEXT SESSION — START HERE IN THIS ORDER
+1. Terry generates Nano Banana AI images for: Pocket Doors, Internal Sliding, Handmade Doors — save to public/img/
+2. Claude reads each image before touching anything — confirms what it shows
+3. Update HeroCarousel.jsx with the new images — also add Internal Sliding slide back in
+4. Replace door-v-brace.jpg with the handmade doors AI image on the Handmade slide
+5. Check all 5 slides look correct on Vercel before moving on
+6. Only when hero is signed off — move to product pages
+7. First product page: Pocket Door Kits — price visible, BUY NOW above fold, chatbot slot
