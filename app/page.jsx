@@ -229,26 +229,6 @@ export default function HomePage() {
       </section>
 
 
-      {/* SOCIAL MEDIA */}
-      <section style={{width:'100%', background:'#ffffff', padding:'24px 40px', boxSizing:'border-box', borderBottom:'1px solid #e8e8e8'}}>
-        <div style={{display:'flex', justifyContent:'center', alignItems:'center', gap:'8px', flexWrap:'wrap', maxWidth:'1400px', margin:'0 auto'}}>
-          {[
-            {label:'Facebook', href:'https://www.facebook.com/Door-Mate-1173024366050268/'},
-            {label:'X / Twitter', href:'https://x.com/mate_door'},
-            {label:'Instagram', href:'https://www.instagram.com/doormate_cardiff/'},
-            {label:'YouTube', href:'https://www.youtube.com/channel/UCiVCUZ4T_FR4SLo81Ecuzpw'},
-            {label:'LinkedIn', href:'https://www.linkedin.com/in/terry-burnett-a74474116/'},
-            {label:'Pinterest', href:'https://www.pinterest.co.uk/burnett7776/boards/'},
-          ].map((s, i, arr) => (
-            <span key={s.label} style={{display:'inline-flex', alignItems:'center', gap:'8px'}}>
-              <a href={s.href} target="_blank" rel="noopener noreferrer" style={{color:'#363557', fontWeight:'700', fontSize:'12px', textDecoration:'none'}}>
-                {s.label}
-              </a>
-              {i < arr.length - 1 && <span style={{color:'#efb627'}}>|</span>}
-            </span>
-          ))}
-        </div>
-      </section>
 
     </main>
   )
