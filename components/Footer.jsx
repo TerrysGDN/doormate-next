@@ -3,10 +3,9 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#0f0d24', color: '#ffffff', fontFamily: "'Libre Franklin', sans-serif" }}>
+    <footer style={{ background: '#363557', color: '#ffffff', fontFamily: "'Libre Franklin', sans-serif" }}>
 
-      {/* Main footer */}
-      <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '32px 40px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '40px', boxSizing: 'border-box' }}>
+      <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '32px 40px', display: 'grid', gridTemplateColumns: '1.2fr 1fr 1fr 1fr', gap: '40px', boxSizing: 'border-box' }}>
 
         {/* Column 1 — Brand */}
         <div>
@@ -22,7 +21,12 @@ export default function Footer() {
           <p style={{ color: '#ffffff', fontSize: '12px', lineHeight: '1.7', marginBottom: '12px' }}>
             The UK&apos;s Leading Sliding Door Specialists. Pocket doors, barn door hardware, handmade doors and external sliding kits — supplied from Cardiff since 2009.
           </p>
-          <p style={{ color: '#efb627', fontSize: '11px', fontWeight: '700' }}>As Seen On Channel 4</p>
+          <p style={{ color: '#efb627', fontSize: '11px', fontWeight: '700', marginBottom: '24px' }}>As Seen On Channel 4</p>
+          <p style={{ color: '#ffffff', fontSize: '11px', margin: 0 }}>
+            © {new Date().getFullYear()} DoorMate Sliding Door Systems. Cardiff, South Wales.
+            {' '}<Link href="/privacy" style={{ color: '#efb627', textDecoration: 'none' }}>Privacy Policy</Link>
+            {' | '}<Link href="/terms" style={{ color: '#efb627', textDecoration: 'none' }}>Terms</Link>
+          </p>
         </div>
 
         {/* Column 2 — Products */}
@@ -72,17 +76,6 @@ export default function Footer() {
           </div>
         </div>
 
-      </div>
-
-      {/* Bottom bar */}
-      <div style={{ borderTop: '1px solid rgba(255,255,255,0.15)' }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '14px 40px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', boxSizing: 'border-box' }}>
-          <p style={{ color: '#ffffff', fontSize: '11px', margin: 0 }}>© {new Date().getFullYear()} DoorMate Sliding Door Systems. Trading since 2009. Cardiff, South Wales.</p>
-          <div style={{ display: 'flex', gap: '20px' }}>
-            <Link href="/privacy" style={{ color: '#ffffff', fontSize: '11px', textDecoration: 'none' }}>Privacy Policy</Link>
-            <Link href="/terms" style={{ color: '#ffffff', fontSize: '11px', textDecoration: 'none' }}>Terms</Link>
-          </div>
-        </div>
       </div>
 
     </footer>
