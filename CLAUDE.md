@@ -1,5 +1,5 @@
 # DOORMATE — MASTER BIBLE — LIVE DOCUMENT
-## Last updated: 23 June 2026
+## Last updated: 29 June 2026
 ## This file IS the project bible. Cowork reads CLAUDE.md automatically from this folder.
 ## Most recent decision always overwrites older ones.
 ## Session summaries at the bottom are in the order they were written — the LAST one is always most recent.
@@ -14,6 +14,16 @@
 4. Vercel deploys automatically. Wait 2 minutes then Ctrl+Shift+R to see changes.
 
 That is the ONLY workflow. Never deviate from it. Never use bash git commands. Never have Claude push to GitHub. Terry commits. Terry pushes. Always.
+
+---
+
+## ⚠️ HERO — LOCKED — NEVER TOUCH WITHOUT TERRY'S EXPLICIT INSTRUCTION ⚠️
+
+**Headline (fixed, same on every slide):** The UK's Leading Sliding Systems Specialists
+**Structure per slide:** gold category label | fixed white headline | gold CTA button | gold price
+**No sublines. No individual slide headlines. No copy Claude invented.**
+**Images:** cycling behind the fixed text. Adding images was the ONLY outstanding task.
+**Height:** 45vh, minHeight 320px
 
 ---
 

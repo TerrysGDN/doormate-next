@@ -15,16 +15,15 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <main style={{width:'100%', maxWidth:'100vw', overflowX:'hidden', margin:0, padding:0, fontFamily:"'Libre Franklin', sans-serif", background:'#ffffff'}}>
+    <main style={{width:'100%', overflowX:'hidden', margin:0, padding:0, fontFamily:"'Libre Franklin', sans-serif", background:'#ffffff'}}>
 
-      {/* HERO — silent auto-scrolling carousel */}
+      {/* HERO */}
       <HeroCarousel />
 
-      {/* TRUST STRIP — white, navy border, 4 review items */}
+      {/* TRUST STRIP */}
       <div style={{width:'100%', background:'#efb627', padding:'8px 40px', boxSizing:'border-box'}}>
-        <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', maxWidth:'1400px', margin:'0 auto', gap:'24px'}}>
+        <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', gap:'24px'}}>
 
-          {/* Trading Since 2009 */}
           <div style={{background:'#ffffff', borderRadius:'999px', padding:'5px 16px', display:'flex', alignItems:'center'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', whiteSpace:'nowrap'}}>
               <img src="/img/doormate-logo-cropped.png" alt="DoorMate" style={{height:'36px', width:'auto'}} />
@@ -32,7 +31,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Google */}
           <div style={{background:'#ffffff', borderRadius:'999px', padding:'5px 16px', display:'flex', alignItems:'center'}}>
             <div style={{display:'flex', alignItems:'center', gap:'8px', whiteSpace:'nowrap'}}>
               <svg width="18" height="18" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +45,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Trustpilot */}
           <div style={{background:'#ffffff', borderRadius:'999px', padding:'5px 16px', display:'flex', alignItems:'center'}}>
             <div style={{display:'flex', alignItems:'center', gap:'8px', whiteSpace:'nowrap'}}>
               <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -58,11 +55,7 @@ export default function HomePage() {
               <span style={{display:'inline-flex', alignItems:'center', gap:0, lineHeight:1}}>
                 <span style={{color:'#efb627', fontSize:'16px', lineHeight:1, letterSpacing:0}}>★★★★</span>
                 <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style={{display:'block', flexShrink:0}}>
-                  <defs>
-                    <clipPath id="topHalf">
-                      <rect x="0" y="0" width="24" height="12"/>
-                    </clipPath>
-                  </defs>
+                  <defs><clipPath id="topHalf"><rect x="0" y="0" width="24" height="12"/></clipPath></defs>
                   <polygon points="12,2 14.65,8.36 21.51,8.91 16.28,13.39 17.88,20.09 12,16.5 6.12,20.09 7.72,13.39 2.49,8.91 9.35,8.36" fill="none" stroke="#efb627" strokeWidth="1.5"/>
                   <polygon points="12,2 14.65,8.36 21.51,8.91 16.28,13.39 17.88,20.09 12,16.5 6.12,20.09 7.72,13.39 2.49,8.91 9.35,8.36" fill="#efb627" clipPath="url(#topHalf)"/>
                 </svg>
@@ -70,7 +63,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Houzz */}
           <div style={{background:'#ffffff', borderRadius:'999px', padding:'5px 16px', display:'flex', alignItems:'center'}}>
             <div style={{display:'flex', alignItems:'center', gap:'8px', whiteSpace:'nowrap'}}>
               <svg width="18" height="18" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -85,34 +77,30 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* CATEGORY CARDS — 6-card single row */}
+      {/* CATEGORY CARDS — 6-card single row, full width */}
       <section style={{width:'100%', background:'#ffffff', padding:'20px 40px', boxSizing:'border-box'}}>
-        <div style={{display:'grid', gridTemplateColumns:'repeat(6, 1fr)', gap:'12px', maxWidth:'1400px', margin:'0 auto'}}>
-
-          {/* Cards 1–6 — product categories */}
+        <div style={{display:'grid', gridTemplateColumns:'repeat(6, 1fr)', gap:'12px'}}>
           {[
-            {name:'Doors',                      img:'/img/door-v-brace.jpg',          href:'/doors',                alt:'Handmade barn doors'},
-            {name:'Pocket Door Kits',           img:'/img/mirror-pocket-single.jpg',  href:'/pocket-door-kits',     alt:'Pocket door kits'},
-            {name:'Barn Door Kits',             img:'/img/gainesville-system.jpg',    href:'/barn-door-hardware',   alt:'Barn door hardware'},
-            {name:'Internal Kits',              img:'/img/dm-150.jpg',               href:'/internal-sliding-kits',alt:'Internal sliding door kits'},
-            {name:'External Kits',              img:'/img/external-kit.jpg',          href:'/external-sliding-kits',alt:'External sliding door kits'},
-            {name:'Shop',                       img:'/img/covington-system.jpg',      href:'/shop',                 alt:'Door accessories and hardware'},
+            {name:'Doors',             img:'/img/door-v-brace.jpg',         href:'/doors',                alt:'Handmade barn doors'},
+            {name:'Pocket Door Kits',  img:'/img/mirror-pocket-single.jpg', href:'/pocket-door-kits',     alt:'Pocket door kits'},
+            {name:'Barn Door Kits',    img:'/img/gainesville-system.jpg',   href:'/barn-door-hardware',   alt:'Barn door hardware'},
+            {name:'Internal Kits',     img:'/img/dm-150.jpg',              href:'/internal-sliding-kits',alt:'Internal sliding door kits'},
+            {name:'External Kits',     img:'/img/external-kit.jpg',         href:'/external-sliding-kits',alt:'External sliding door kits'},
+            {name:'Shop',              img:'/img/covington-system.jpg',     href:'/shop',                 alt:'Door accessories and hardware'},
           ].map((cat) => (
             <div key={cat.name}>
               <p style={{color:'#272446', fontSize:'18px', fontWeight:'900', textAlign:'center', margin:'0 0 6px 0', padding:0}}>{cat.name}</p>
               <Link href={cat.href} style={{textDecoration:'none', display:'block', height:'clamp(180px, 20vw, 340px)', background:'#ffffff', border:'2px solid #272446', overflow:'hidden', position:'relative'}}>
-                <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="15vw" />
+                <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="16vw" />
               </Link>
             </div>
           ))}
-
         </div>
       </section>
 
-      {/* WHO WE ARE */}
+      {/* WHO WE ARE — full width */}
       <section style={{width:'100%', background:'#ffffff', padding:'40px', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <div style={{display:'grid', gridTemplateColumns:'300px 1fr', gap:'56px', maxWidth:'1400px', margin:'0 auto', alignItems:'start'}}>
-
+        <div style={{display:'grid', gridTemplateColumns:'300px 1fr', gap:'56px', alignItems:'start'}}>
           <div style={{flexShrink:0}}>
             <iframe
               scrolling="no"
@@ -124,7 +112,6 @@ export default function HomePage() {
               title="DoorMate reviews on Houzz"
             />
           </div>
-
           <div style={{display:'flex', flexDirection:'column', justifyContent:'center', minHeight:'435px', fontFamily:"'Libre Franklin', sans-serif", textAlign:'center'}}>
             <h2 style={{color:'#272446', fontSize:'clamp(16px, 2vw, 26px)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0', whiteSpace:'nowrap'}}>
               Real UK Manufacturers. Real Systems Delivered Direct To You.
@@ -150,11 +137,10 @@ export default function HomePage() {
               <Link href="/external-sliding-kits" style={{color:'#272446', textDecoration:'none'}}>External Kits</Link>
             </p>
           </div>
-
         </div>
       </section>
 
-      {/* BRANDS WE WORK WITH — scrolling logo banner */}
+      {/* BRANDS — full width scrolling banner */}
       <section style={{width:'100%', background:'#ffffff', padding:'32px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'4px solid #efb627', overflow:'hidden'}}>
         <p style={{color:'#272446', fontSize:'11px', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0'}}>Brands We Work With</p>
         <style>{`
@@ -172,63 +158,46 @@ export default function HomePage() {
         `}</style>
         <div style={{overflow:'hidden', width:'100%'}}>
           <div className="logo-track">
-            <img src="/img/brands/barrier.png" alt="Barrier Components" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/coburn.png" alt="Coburn Systems" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/eclisse.jpg" alt="Eclisse" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/rocket.png" alt="Rocket Door Frames" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/jbkind.png" alt="JB Kind" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/fhbrundle.png" alt="FH Brundle" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/charlesday.png" alt="Charles Day Steels" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/titus.png" alt="Titus UK" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/rtbearings.jpg" alt="RT Bearings" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            {/* Duplicate set for seamless loop */}
-            <img src="/img/brands/barrier.png" alt="Barrier Components" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/coburn.png" alt="Coburn Systems" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/eclisse.jpg" alt="Eclisse" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/rocket.png" alt="Rocket Door Frames" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/jbkind.png" alt="JB Kind" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/fhbrundle.png" alt="FH Brundle" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/charlesday.png" alt="Charles Day Steels" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/titus.png" alt="Titus UK" style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            <img src="/img/brands/rtbearings.jpg" alt="RT Bearings" style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            {['barrier','coburn','eclisse','rocket','jbkind','fhbrundle','charlesday','titus','rtbearings'].map(b => (
+              <img key={b} src={`/img/brands/${b}.${b==='eclisse'||b==='rtbearings'?'jpg':'png'}`} alt={b} style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            ))}
+            {['barrier','coburn','eclisse','rocket','jbkind','fhbrundle','charlesday','titus','rtbearings'].map(b => (
+              <img key={b+'-2'} src={`/img/brands/${b}.${b==='eclisse'||b==='rtbearings'?'jpg':'png'}`} alt={b} style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* SYSTEMS SECTION */}
+      {/* SYSTEMS SECTION — full width */}
       <section style={{width:'100%', background:'#ffffff', padding:'48px 40px', boxSizing:'border-box'}}>
-        <div style={{maxWidth:'1400px', margin:'0 auto'}}>
-          <div style={{display:'grid', gridTemplateColumns:'55% 45%', gap:'40px', alignItems:'stretch'}}>
-            <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', textAlign:'center', padding:'0 16px'}}>
-              <h2 style={{color:'#272446', fontSize:'clamp(22px, 2.8vw, 38px)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>We Offer Complete Sliding Door Solutions</h2>
-              <p style={{color:'#efb627', fontSize:'clamp(18px, 2.2vw, 30px)', fontWeight:'900', margin:'0 0 0 0', lineHeight:'1.2'}}>For Real Homes, Real Doors And Real Walls.</p>
-              <p style={{color:'#272446', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0', lineHeight:'1.6'}}>Choosing a sliding door system shouldn&apos;t be difficult.</p>
-              <p style={{color:'#272446', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>That&apos;s why we&apos;ve made it easy to find the right solution for your project.</p>
-              <p style={{color:'#272446', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>By organising our systems around real-world applications &mdash;</p>
-              <p style={{color:'#efb627', fontSize:'clamp(22px, 2.2vw, 32px)', fontWeight:'900', margin:'0', lineHeight:'1.3'}}>We&apos;ve already done the thinking for you.</p>
-              <p style={{color:'#272446', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0', lineHeight:'1.6'}}>Simply choose your system. Let&apos;s get this project done!</p>
-            </div>
-            <div style={{display:'flex', flexDirection:'column', gap:'6px'}}>
-              {[
-                {top:'Pocket Door Systems', bottom:'For the ultimate space saver', href:'/pocket-door-kits', img:'/img/mirror-pocket-single.jpg', alt:'Pocket door kits'},
-                {top:'Sliding Barn Door Systems', bottom:'For traditional style and charm', href:'/barn-door-hardware', img:'/img/gainesville-system.jpg', alt:'Barn door hardware'},
-                {top:'Internal Sliding Systems', bottom:'For modern living', href:'/internal-sliding-kits', img:'/img/dm-150.jpg', alt:'Internal sliding door kits'},
-                {top:'External Sliding Systems', bottom:'Built to last. Whatever the weather.', href:'/external-sliding-kits', img:'/img/external-kit.jpg', alt:'External sliding door kits'},
-              ].map(item => (
-                <Link key={item.top} href={item.href} style={{textDecoration:'none', display:'block', position:'relative', flex:'1', minHeight:'clamp(100px, 12vw, 180px)', overflow:'hidden'}}>
-                  <Image src={item.img} alt={item.alt} fill style={{objectFit:'cover'}} sizes="45vw" />
-                  <div style={{position:'absolute', inset:0, background:'rgba(39,36,70,0.5)', display:'flex', flexDirection:'column', justifyContent:'flex-end', padding:'14px'}}>
-                    <span style={{color:'#efb627', fontSize:'clamp(14px, 1.4vw, 17px)', fontWeight:'900', margin:'0 0 3px 0', display:'block'}}>{item.top}</span>
-                    <span style={{color:'#ffffff', fontSize:'clamp(12px, 1.1vw, 14px)', fontWeight:'700', lineHeight:'1.2', display:'block'}}>{item.bottom}</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
+        <div style={{display:'grid', gridTemplateColumns:'55% 45%', gap:'40px', alignItems:'stretch'}}>
+          <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', textAlign:'center', padding:'0 16px'}}>
+            <h2 style={{color:'#272446', fontSize:'clamp(22px, 2.8vw, 38px)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>We Offer Complete Sliding Door Solutions</h2>
+            <p style={{color:'#efb627', fontSize:'clamp(18px, 2.2vw, 30px)', fontWeight:'900', margin:'0', lineHeight:'1.2'}}>For Real Homes, Real Doors And Real Walls.</p>
+            <p style={{color:'#272446', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0', lineHeight:'1.6'}}>Choosing a sliding door system shouldn&apos;t be difficult.</p>
+            <p style={{color:'#272446', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>That&apos;s why we&apos;ve made it easy to find the right solution for your project.</p>
+            <p style={{color:'#272446', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>By organising our systems around real-world applications &mdash;</p>
+            <p style={{color:'#efb627', fontSize:'clamp(22px, 2.2vw, 32px)', fontWeight:'900', margin:'0', lineHeight:'1.3'}}>We&apos;ve already done the thinking for you.</p>
+            <p style={{color:'#272446', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0', lineHeight:'1.6'}}>Simply choose your system. Let&apos;s get this project done!</p>
+          </div>
+          <div style={{display:'flex', flexDirection:'column', gap:'6px'}}>
+            {[
+              {top:'Pocket Door Systems', bottom:'For the ultimate space saver', href:'/pocket-door-kits', img:'/img/mirror-pocket-single.jpg', alt:'Pocket door kits'},
+              {top:'Sliding Barn Door Systems', bottom:'For traditional style and charm', href:'/barn-door-hardware', img:'/img/gainesville-system.jpg', alt:'Barn door hardware'},
+              {top:'Internal Sliding Systems', bottom:'For modern living', href:'/internal-sliding-kits', img:'/img/dm-150.jpg', alt:'Internal sliding door kits'},
+              {top:'External Sliding Systems', bottom:'Built to last. Whatever the weather.', href:'/external-sliding-kits', img:'/img/external-kit.jpg', alt:'External sliding door kits'},
+            ].map(item => (
+              <Link key={item.top} href={item.href} style={{textDecoration:'none', display:'block', position:'relative', flex:'1', minHeight:'clamp(100px, 12vw, 180px)', overflow:'hidden'}}>
+                <Image src={item.img} alt={item.alt} fill style={{objectFit:'cover'}} sizes="45vw" />
+                <div style={{position:'absolute', inset:0, background:'rgba(39,36,70,0.5)', display:'flex', flexDirection:'column', justifyContent:'flex-end', padding:'14px'}}>
+                  <span style={{color:'#efb627', fontSize:'clamp(14px, 1.4vw, 17px)', fontWeight:'900', margin:'0 0 3px 0', display:'block'}}>{item.top}</span>
+                  <span style={{color:'#ffffff', fontSize:'clamp(12px, 1.1vw, 14px)', fontWeight:'700', lineHeight:'1.2', display:'block'}}>{item.bottom}</span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
-
-
 
     </main>
   )
