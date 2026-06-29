@@ -21,10 +21,7 @@ export default function Footer() {
           <div style={{ marginBottom: '14px' }}>
             <Image src="/img/doormate-logo.jpg" alt="DoorMate Sliding Door Systems" width={140} height={50} style={{ objectFit: 'contain' }} />
           </div>
-          <p style={{ color: '#ffffff', fontSize: '12px', lineHeight: '1.7', marginBottom: '16px' }}>
-            The UK&apos;s Leading Sliding Door Specialists. Pocket doors, barn door hardware, handmade doors and external sliding kits — supplied from Cardiff since 2009.
-          </p>
-          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+<div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             {SOCIALS.map(s => (
               <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill={s.color} xmlns="http://www.w3.org/2000/svg">{s.icon}</svg>

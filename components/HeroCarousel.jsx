@@ -4,10 +4,8 @@ import { useState, useEffect } from 'react'
 const SLIDES = [
   {
     img: '/img/eclisse-pocket.jpg',
-    alt: 'Eclisse pocket door installed in a luxury home library — DoorMate Cardiff',
+    alt: 'Eclisse pocket door installed in a luxury home — DoorMate Cardiff',
     category: 'Pocket Door Kits',
-    headline: 'The Ultimate Space Saver',
-    subline: 'Disappear your door into the wall. Single, double and fire-rated systems in stock.',
     price: 'From £117',
     cta: 'Shop Pocket Door Kits',
     href: '/pocket-door-kits',
@@ -16,18 +14,14 @@ const SLIDES = [
     img: '/img/External-150kg.jpg',
     alt: 'Heavy duty external sliding door system installed — DoorMate',
     category: 'External Sliding Door Kits',
-    headline: 'Built To Last. Whatever The Weather.',
-    subline: 'Heavy-duty systems for barns, garages, outbuildings and commercial applications.',
     price: 'From £104',
     cta: 'Shop External Kits',
     href: '/external-sliding-kits',
   },
   {
     img: '/img/augusta-hero.jpg',
-    alt: 'Augusta double track bi-passing barn door system — closed, half open and fully open — DoorMate Cardiff',
+    alt: 'Augusta double track bi-passing barn door system — DoorMate Cardiff',
     category: 'Sliding Barn Door Hardware',
-    headline: 'Manufactured In Cardiff Since 2009',
-    subline: 'The only genuine barn door hardware manufacturer in the UK. Six systems available.',
     price: 'From £150',
     cta: 'Shop Barn Door Hardware',
     href: '/barn-door-hardware',
@@ -36,8 +30,6 @@ const SLIDES = [
     img: '/img/door-v-brace.jpg',
     alt: 'Handmade V-brace barn door — DoorMate Cardiff workshop',
     category: 'Handmade Barn Doors',
-    headline: 'Made To Measure In Our Cardiff Workshop',
-    subline: 'Pine and oak barn doors handmade to your exact size. V-brace, Z-brace, glazed and ledge & brace.',
     price: 'From £527',
     cta: 'View Handmade Doors',
     href: '/doors',
@@ -55,7 +47,7 @@ export default function HeroCarousel() {
   }, [])
 
   return (
-    <section aria-label="Featured products" style={{ position: 'relative', width: '100%', height: '45vh', minHeight: '260px', overflow: 'hidden' }}>
+    <section aria-label="Featured products" style={{ position: 'relative', width: '100%', height: '45vh', minHeight: '320px', overflow: 'hidden' }}>
       {SLIDES.map((slide, i) => (
         <div
           key={slide.img}
@@ -70,39 +62,36 @@ export default function HeroCarousel() {
           <img
             src={slide.img}
             alt={slide.alt}
-            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: slide.objectPosition || 'center' }}
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
           />
-          {/* Gradient overlay — not shown on textBox slides */}
-          {!slide.textBox && <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(39,36,70,0.88) 0%, rgba(39,36,70,0.65) 45%, rgba(39,36,70,0.15) 100%)' }} />}
-          {/* Text content */}
-          <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', padding: '0 5% 0 6%' }}>
-            <div style={{ width: '45%', ...(slide.textBox && { background: 'rgba(39,36,70,0.82)', borderRadius: '8px', padding: '3vh 3%' }) }}>
-              <p style={{ color: '#efb627', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(11px, 1.4vh, 16px)', fontWeight: 700, margin: '0 0 1vh 0', letterSpacing: '0.04em' }}>
-                {slide.category}
-              </p>
-              <h2 style={{ color: '#ffffff', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(18px, 4.5vh, 56px)', fontWeight: 800, margin: '0 0 1.5vh 0', lineHeight: 1.1 }}>
-                {slide.headline}
-              </h2>
-              <p style={{ color: 'rgba(255,255,255,0.88)', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(12px, 1.8vh, 20px)', fontWeight: 400, margin: '0 0 2.5vh 0', lineHeight: 1.5 }}>
-                {slide.subline}
-              </p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '4%', flexWrap: 'wrap' }}>
-                <a
-                  href={slide.href}
-                  style={{ background: '#efb627', color: '#0f0d24', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(12px, 1.5vh, 17px)', fontWeight: 800, padding: '1.5vh 3%', borderRadius: '4px', textDecoration: 'none', display: 'inline-block' }}
-                >
-                  {slide.cta} →
-                </a>
-                {slide.price && (
-                  <span style={{ color: '#efb627', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(14px, 2vh, 24px)', fontWeight: 800 }}>
-                    {slide.price}
-                  </span>
-                )}
-              </div>
-            </div>
-          </div>
+          {/* Gradient overlay */}
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(39,36,70,0.88) 0%, rgba(39,36,70,0.65) 45%, rgba(39,36,70,0.15) 100%)' }} />
         </div>
       ))}
+
+      {/* Fixed text — same on every slide */}
+      <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', padding: '0 5% 0 6%' }}>
+        <div style={{ width: '45%' }}>
+          <p style={{ color: '#efb627', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(11px, 1.4vh, 16px)', fontWeight: 700, margin: '0 0 1vh 0', letterSpacing: '0.04em' }}>
+            {SLIDES[current].category}
+          </p>
+          <h2 style={{ color: '#ffffff', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(18px, 4.5vh, 56px)', fontWeight: 800, margin: '0 0 2vh 0', lineHeight: 1.1 }}>
+            The UK&apos;s Leading Sliding Door Systems Specialists
+          </h2>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '4%', flexWrap: 'wrap' }}>
+            <a
+              href={SLIDES[current].href}
+              style={{ background: '#efb627', color: '#0f0d24', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(12px, 1.5vh, 17px)', fontWeight: 800, padding: '1.5vh 3%', borderRadius: '4px', textDecoration: 'none', display: 'inline-block' }}
+            >
+              {SLIDES[current].cta} →
+            </a>
+            <span style={{ color: '#efb627', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(14px, 2vh, 24px)', fontWeight: 800 }}>
+              {SLIDES[current].price}
+            </span>
+          </div>
+        </div>
+      </div>
+
       {/* Slide indicators */}
       <div style={{ position: 'absolute', bottom: '16px', left: '6%', display: 'flex', gap: '8px' }}>
         {SLIDES.map((_, i) => (
