@@ -23,8 +23,8 @@ const SLIDES = [
     href: '/external-sliding-kits',
   },
   {
-    img: '/img/augusta-hero.jpg',
-    alt: 'Augusta double track bi-passing barn door system installed in a real home — DoorMate Cardiff',
+    img: '/img/Stuart Large Augusta2.jpg',
+    alt: 'Augusta double track bi-passing barn door system half open revealing kitchen — DoorMate Cardiff',
     category: 'Sliding Barn Door Hardware',
     headline: 'Manufactured In Cardiff Since 2009',
     subline: 'The only genuine barn door hardware manufacturer in the UK. Six systems available.',
