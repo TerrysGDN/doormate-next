@@ -31,6 +31,7 @@ const SLIDES = [
     price: 'From £150',
     cta: 'Shop Barn Door Hardware',
     href: '/barn-door-hardware',
+    objectPosition: 'right center',
   },
   {
     img: '/img/door-v-brace.jpg',
@@ -70,7 +71,7 @@ export default function HeroCarousel() {
           <img
             src={slide.img}
             alt={slide.alt}
-            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: slide.objectPosition || 'center' }}
           />
           {/* Gradient overlay — dark left, fades right so photo shows through */}
           <div style={{ position: 'absolute', inset: 0, background: slide.img.includes('augusta-hero') ? 'linear-gradient(to right, rgba(39,36,70,0.88) 0%, rgba(39,36,70,0.70) 25%, rgba(39,36,70,0.0) 50%, rgba(39,36,70,0.0) 100%)' : 'linear-gradient(to right, rgba(39,36,70,0.88) 0%, rgba(39,36,70,0.65) 45%, rgba(39,36,70,0.15) 100%)' }} />
