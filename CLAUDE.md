@@ -1505,3 +1505,91 @@ Both routes should happen. Route 1 unblocks the hero tomorrow. Route 2 is the pe
 5. Check all 5 slides look correct on Vercel before moving on
 6. Only when hero is signed off — move to product pages
 7. First product page: Pocket Door Kits — price visible, BUY NOW above fold, chatbot slot
+
+---
+
+## SESSION SUMMARY — 29 JUNE 2026 — READ THIS FIRST — MOST RECENT
+
+### THE MOST IMPORTANT LESSON FROM TODAY — NEVER FORGET
+Terry's analogy: Claude came to fit the door without the door on the van. Two fundamentals were missing from day one:
+1. **The global CSS foundation** — brand colours, typography, spacing — defined once, inherited everywhere. Without it every section was hand-coded individually, causing constant inconsistency.
+2. **The content** — images, copy, brand assets — should have been identified and requested on day one. Terry has been a reseller for Eclisse, Rocket, Coburn, Barrier for years. Their marketing departments have millions of images. These were never asked for.
+Both are now being addressed. Never let this happen again on any future build.
+
+### GLOBAL CSS FOUNDATION — SET TODAY — LOCKED
+globals.css now contains:
+- CSS variables: --navy #272446, --navy-bg #363557, --navy-dark #0f0d24, --gold #efb627, --gold-btn #f1b52a, --white #ffffff
+- CSS variables: --section-pad-v 40px, --section-pad-h 40px
+- Typography scale: --font-heading-xl through --font-small
+- Base reset: box-sizing border-box, no margin/padding, overflow-x hidden
+- Section/header/footer/nav all width:100% by default
+- .dm-btn class for gold BUY NOW buttons
+- Animation keyframes for logo scroll
+This is the foundation. Every future page inherits from it. Never remove or override these variables.
+
+### PAGE.JSX — FIXED TODAY
+All maxWidth:1400px inner div wrappers removed from:
+- Category cards section
+- Who We Are section
+- Systems section
+All sections now full width edge to edge matching the hero and trust strip. This was the width inconsistency Terry had been pointing out.
+
+### HERO CAROUSEL — COMPLETELY REBUILT TODAY — LOCKED
+**THE OLD HERO APPROACH IS DEAD.** The previous approach (full-bleed photo + fixed text in code + gradient overlay) is superseded. Do not restore it.
+
+**NEW APPROACH — LOCKED:**
+- Tegan (Terry's daughter) produced 4 professional text banner slides
+- These alternate with lifestyle photos in the carousel
+- NO text overlay in code — Tegan's slides carry their own text and design
+- NO gradient overlay — images display clean
+- Each slide is a clickable link to the relevant product page
+- 8 slides total, 6-second rotation, 1.2s crossfade, gold dot indicators
+
+**Current 8 slides in order:**
+1. Slide 1 (Pocket Door Kits).png — Tegan's banner, navy bg, circular photos
+2. pocket-door-hero.jpg — lifestyle, portrait pocket door installation
+3. Slide 2 (Internal Sliding Door Kits).png — Tegan's banner, navy bg
+4. External-150kg.jpg — lifestyle, external sliding kit installed
+5. Slide 3 (Heavy Duty External Sliding Kits).png — Tegan's banner, gold bg
+6. augusta-hero.jpg — lifestyle, barn door hardware close-up
+7. Slide 4 (Sliding Barn Door Hardware).png — Tegan's banner, navy bg
+8. door-v-brace.jpg — lifestyle, handmade door (replace when better image arrives)
+
+**Replace lifestyle slides as better images come in — Tegan's banners stay.**
+
+### IMAGE SOURCES — AGREED TODAY
+- Tegan produces banner slides (text + circular photos) — these are permanent fixtures
+- Lifestyle photos: request from brand marketing departments — Eclisse, Rocket, Coburn, Barrier
+- Email drafted and sent to Hester at Eclisse (hester@eclisse.co.uk) — marketing coordinator — asking for image library
+- Rocket and Coburn — Terry to contact his reps directly
+- Do NOT use Pinterest images without tracing the original source — copyright risk
+
+### HOMEPAGE — STATE AS OF 29 JUNE 2026
+Files changed today (NOT YET COMMITTED — Terry to commit):
+- globals.css — foundation set
+- app/page.jsx — maxWidth removed, full width throughout
+- components/HeroCarousel.jsx — 8 slides, Tegan + lifestyle mix, no overlay
+
+Sections complete:
+✅ Nav bar
+✅ Hero carousel — Tegan's slides + lifestyle mix
+✅ Trust strip — gold, 4 review pills
+✅ 6 category cards — full width
+✅ Who We Are — Houzz widget + manufacturer copy
+✅ Brands scrolling banner
+✅ Systems section — left copy, right 4 image cards
+✅ Footer — navy, 4 columns, social icons
+
+Outstanding on homepage:
+- Lifestyle images need replacing as better ones arrive
+- Verify everything looks correct on Vercel after today's commit
+- Schema.org JSON-LD structured data — still missing, AISIO critical
+- llms.txt at root — still missing
+
+### NEXT SESSION — START HERE IN THIS ORDER
+1. Terry commits today's 3 files (globals.css, page.jsx, HeroCarousel.jsx) via GitHub Desktop
+2. Verify homepage on Vercel — hard refresh Ctrl+Shift+R
+3. If homepage looks correct — sign it off and move to product pages. Do NOT keep tweaking.
+4. First product page: Pocket Door Kits — price visible, BUY NOW above fold, trust signals
+5. Schema.org JSON-LD in layout.jsx — AISIO critical, add alongside first product page
+6. Continue product pages: External Kits, Barn Door Hardware, Internal Kits, Handmade Doors
