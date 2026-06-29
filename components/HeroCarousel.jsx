@@ -23,15 +23,15 @@ const SLIDES = [
     href: '/external-sliding-kits',
   },
   {
-    img: '/img/Stuart Large Augusta2.jpg',
-    alt: 'Augusta double track bi-passing barn door system half open revealing kitchen — DoorMate Cardiff',
+    img: '/img/augusta-hero.jpg',
+    alt: 'Augusta double track bi-passing barn door system — closed, half open and fully open — DoorMate Cardiff',
     category: 'Sliding Barn Door Hardware',
     headline: 'Manufactured In Cardiff Since 2009',
     subline: 'The only genuine barn door hardware manufacturer in the UK. Six systems available.',
     price: 'From £150',
     cta: 'Shop Barn Door Hardware',
     href: '/barn-door-hardware',
-    objectPosition: 'right center',
+    textBox: true,
   },
   {
     img: '/img/door-v-brace.jpg',
@@ -73,11 +73,11 @@ export default function HeroCarousel() {
             alt={slide.alt}
             style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: slide.objectPosition || 'center' }}
           />
-          {/* Gradient overlay — dark left, fades right so photo shows through */}
-          <div style={{ position: 'absolute', inset: 0, background: slide.img.includes('augusta-hero') ? 'linear-gradient(to right, rgba(39,36,70,0.88) 0%, rgba(39,36,70,0.70) 25%, rgba(39,36,70,0.0) 50%, rgba(39,36,70,0.0) 100%)' : 'linear-gradient(to right, rgba(39,36,70,0.88) 0%, rgba(39,36,70,0.65) 45%, rgba(39,36,70,0.15) 100%)' }} />
+          {/* Gradient overlay — not shown on textBox slides */}
+          {!slide.textBox && <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(39,36,70,0.88) 0%, rgba(39,36,70,0.65) 45%, rgba(39,36,70,0.15) 100%)' }} />}
           {/* Text content */}
           <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', padding: '0 5% 0 6%' }}>
-            <div style={{ maxWidth: '580px' }}>
+            <div style={{ maxWidth: '580px', ...(slide.textBox && { background: 'rgba(39,36,70,0.82)', borderRadius: '8px', padding: '28px 32px' }) }}>
               <p style={{ color: '#efb627', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(13px, 1.4vw, 17px)', fontWeight: 700, margin: '0 0 10px 0', letterSpacing: '0.04em' }}>
                 {slide.category}
               </p>
