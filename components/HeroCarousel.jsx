@@ -31,7 +31,6 @@ const SLIDES = [
     price: 'From £150',
     cta: 'Shop Barn Door Hardware',
     href: '/barn-door-hardware',
-    textBox: true,
   },
   {
     img: '/img/door-v-brace.jpg',

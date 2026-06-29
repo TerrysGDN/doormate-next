@@ -3,83 +3,84 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-navy text-white">
+    <footer style={{ background: '#0f0d24', color: '#ffffff', fontFamily: "'Libre Franklin', sans-serif" }}>
 
       {/* Main footer */}
-      <div className="max-w-site mx-auto px-5 xl:px-16 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '32px 40px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '40px', boxSizing: 'border-box' }}>
 
         {/* Column 1 — Brand */}
         <div>
-          <div className="mb-5">
+          <div style={{ marginBottom: '16px' }}>
             <Image
               src="/img/doormate-logo.jpg"
               alt="DoorMate Sliding Door Systems"
               width={140}
               height={50}
-              className="object-contain"
+              style={{ objectFit: 'contain' }}
             />
           </div>
-          <p className="text-white/60 text-xs leading-relaxed mb-4">
+          <p style={{ color: '#ffffff', fontSize: '12px', lineHeight: '1.7', marginBottom: '12px' }}>
             The UK&apos;s Leading Sliding Door Specialists. Pocket doors, barn door hardware, handmade doors and external sliding kits — supplied from Cardiff since 2009.
           </p>
-          <p className="text-brand-gold text-[11px] font-bold">As Seen On Channel 4</p>
+          <p style={{ color: '#efb627', fontSize: '11px', fontWeight: '700' }}>As Seen On Channel 4</p>
         </div>
 
         {/* Column 2 — Products */}
         <div>
-          <h3 className="text-brand-gold text-[13px] font-bold mb-5">Products</h3>
-          <ul className="space-y-3 text-xs text-white/70">
-            <li><Link href="/pocket-door-kits" className="hover:text-brand-gold transition-colors">Pocket Door Kits</Link></li>
-            <li><Link href="/barn-door-hardware" className="hover:text-brand-gold transition-colors">Barn Door Hardware</Link></li>
-            <li><Link href="/doors" className="hover:text-brand-gold transition-colors">Handmade Barn Doors</Link></li>
-            <li><Link href="/external-sliding-kits" className="hover:text-brand-gold transition-colors">External Sliding Door Kits</Link></li>
-            <li><Link href="/internal-sliding-kits" className="hover:text-brand-gold transition-colors">Internal Sliding Door Kits</Link></li>
+          <h3 style={{ color: '#efb627', fontSize: '13px', fontWeight: '700', marginBottom: '16px' }}>Products</h3>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <li><Link href="/pocket-door-kits" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Pocket Door Kits</Link></li>
+            <li><Link href="/barn-door-hardware" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Barn Door Hardware</Link></li>
+            <li><Link href="/doors" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Handmade Barn Doors</Link></li>
+            <li><Link href="/external-sliding-kits" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>External Sliding Door Kits</Link></li>
+            <li><Link href="/internal-sliding-kits" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Internal Sliding Door Kits</Link></li>
           </ul>
         </div>
 
         {/* Column 3 — Company */}
         <div>
-          <h3 className="text-brand-gold text-[13px] font-bold mb-5">Company</h3>
-          <ul className="space-y-3 text-xs text-white/70">
-            <li><Link href="/about" className="hover:text-brand-gold transition-colors">About Us</Link></li>
-            <li><Link href="/gallery" className="hover:text-brand-gold transition-colors">Gallery</Link></li>
-            <li><Link href="/contact" className="hover:text-brand-gold transition-colors">Contact Us</Link></li>
-            <li><Link href="/trade" className="hover:text-brand-gold transition-colors">Trade Accounts</Link></li>
-            <li><Link href="/fitters-wanted" className="hover:text-brand-gold transition-colors">Fitters Wanted</Link></li>
+          <h3 style={{ color: '#efb627', fontSize: '13px', fontWeight: '700', marginBottom: '16px' }}>Company</h3>
+          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+            <li><Link href="/about" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>About Us</Link></li>
+            <li><Link href="/gallery" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Gallery</Link></li>
+            <li><Link href="/contact" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Contact Us</Link></li>
+            <li><Link href="/trade" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Trade Accounts</Link></li>
+            <li><Link href="/fitters-wanted" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Fitters Wanted</Link></li>
           </ul>
         </div>
 
         {/* Column 4 — Contact */}
         <div>
-          <h3 className="text-brand-gold text-[13px] font-bold mb-5">Contact</h3>
-          <ul className="space-y-4 text-xs text-white/70">
-            <li>
-              <span className="block text-white/40 text-[11px] font-bold mb-1">Phone</span>
-              <a href="tel:02921660393" className="text-white hover:text-brand-gold transition-colors font-bold text-sm">029 2166 0393</a>
-            </li>
-            <li>
-              <span className="block text-white/40 text-[11px] font-bold mb-1">Email</span>
-              <a href="mailto:info@doormate.co.uk" className="hover:text-brand-gold transition-colors">info@doormate.co.uk</a>
-            </li>
-            <li>
-              <span className="block text-white/40 text-[11px] font-bold mb-1">Registered Address</span>
-              <span>DoorMate Hardware Limited<br />15 Neptune Court<br />Vanguard Way<br />Cardiff CF24 5PJ</span>
-            </li>
-            <li>
-              <span className="block text-white/40 text-[11px] font-bold mb-1">Hours</span>
-              <span>Mon–Sat 09:00–17:00</span>
-            </li>
-          </ul>
+          <h3 style={{ color: '#efb627', fontSize: '13px', fontWeight: '700', marginBottom: '16px' }}>Contact</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+            <div>
+              <span style={{ display: 'block', color: '#efb627', fontSize: '11px', fontWeight: '700', marginBottom: '2px' }}>Phone</span>
+              <a href="tel:02921660393" style={{ color: '#ffffff', fontWeight: '700', fontSize: '14px', textDecoration: 'none' }}>029 2166 0393</a>
+            </div>
+            <div>
+              <span style={{ display: 'block', color: '#efb627', fontSize: '11px', fontWeight: '700', marginBottom: '2px' }}>Email</span>
+              <a href="mailto:info@doormate.co.uk" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>info@doormate.co.uk</a>
+            </div>
+            <div>
+              <span style={{ display: 'block', color: '#efb627', fontSize: '11px', fontWeight: '700', marginBottom: '2px' }}>Address</span>
+              <span style={{ color: '#ffffff', fontSize: '12px', lineHeight: '1.6' }}>DoorMate Hardware Limited<br />15 Neptune Court<br />Vanguard Way<br />Cardiff CF24 5PJ</span>
+            </div>
+            <div>
+              <span style={{ display: 'block', color: '#efb627', fontSize: '11px', fontWeight: '700', marginBottom: '2px' }}>Hours</span>
+              <span style={{ color: '#ffffff', fontSize: '12px' }}>Mon–Sat 09:00–17:00</span>
+            </div>
+          </div>
         </div>
+
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10">
-        <div className="max-w-site mx-auto px-5 xl:px-16 py-5 flex flex-row items-center justify-between gap-3 text-[11px] text-white/40">
-          <p>© {new Date().getFullYear()} DoorMate Sliding Door Systems. Trading since 2009. Cardiff, South Wales.</p>
-          <div className="flex gap-5">
-            <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-white transition-colors">Terms</Link>
+      <div style={{ borderTop: '1px solid rgba(255,255,255,0.15)' }}>
+        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '14px 40px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', boxSizing: 'border-box' }}>
+          <p style={{ color: '#ffffff', fontSize: '11px', margin: 0 }}>© {new Date().getFullYear()} DoorMate Sliding Door Systems. Trading since 2009. Cardiff, South Wales.</p>
+          <div style={{ display: 'flex', gap: '20px' }}>
+            <Link href="/privacy" style={{ color: '#ffffff', fontSize: '11px', textDecoration: 'none' }}>Privacy Policy</Link>
+            <Link href="/terms" style={{ color: '#ffffff', fontSize: '11px', textDecoration: 'none' }}>Terms</Link>
           </div>
         </div>
       </div>
