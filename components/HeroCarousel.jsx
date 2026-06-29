@@ -2,38 +2,14 @@
 import { useState, useEffect } from 'react'
 
 const SLIDES = [
-  {
-    img: '/img/eclisse-pocket.jpg',
-    alt: 'Eclisse pocket door installed in a luxury home — DoorMate Cardiff',
-    category: 'Pocket Door Kits',
-    price: 'From £117',
-    cta: 'Shop Pocket Door Kits',
-    href: '/pocket-door-kits',
-  },
-  {
-    img: '/img/External-150kg.jpg',
-    alt: 'Heavy duty external sliding door system installed — DoorMate',
-    category: 'External Sliding Door Kits',
-    price: 'From £104',
-    cta: 'Shop External Kits',
-    href: '/external-sliding-kits',
-  },
-  {
-    img: '/img/augusta-hero.jpg',
-    alt: 'Augusta double track bi-passing barn door system — DoorMate Cardiff',
-    category: 'Sliding Barn Door Hardware',
-    price: 'From £150',
-    cta: 'Shop Barn Door Hardware',
-    href: '/barn-door-hardware',
-  },
-  {
-    img: '/img/door-v-brace.jpg',
-    alt: 'Handmade V-brace barn door — DoorMate Cardiff workshop',
-    category: 'Handmade Barn Doors',
-    price: 'From £527',
-    cta: 'View Handmade Doors',
-    href: '/doors',
-  },
+  { img: '/img/Slide 1 (Pocket Door Kits).png',                 alt: 'Pocket Door Kits — The Ultimate Space Saver',          href: '/pocket-door-kits' },
+  { img: '/img/pocket-door-hero.jpg',                           alt: 'Pocket door installed in a luxury home',               href: '/pocket-door-kits' },
+  { img: '/img/Slide 2 (Internal Sliding Door Kits).png',       alt: 'Internal Sliding Door Kits — Timber, Steel and Glass', href: '/internal-sliding-kits' },
+  { img: '/img/External-150kg.jpg',                             alt: 'Heavy duty external sliding door installed',           href: '/external-sliding-kits' },
+  { img: '/img/Slide 3 (Heavy Duty External Sliding Kits).png', alt: 'Heavy Duty External Sliding Kits — Built To Last',    href: '/external-sliding-kits' },
+  { img: '/img/augusta-hero.jpg',                               alt: 'Augusta barn door hardware installed',                 href: '/barn-door-hardware' },
+  { img: '/img/Slide 4 (Sliding Barn Door Hardware).png',       alt: 'Sliding Barn Door Hardware — Handmade In The UK',     href: '/barn-door-hardware' },
+  { img: '/img/door-v-brace.jpg',                               alt: 'Handmade V-brace barn door — DoorMate Cardiff',       href: '/doors' },
 ]
 
 export default function HeroCarousel() {
@@ -47,59 +23,36 @@ export default function HeroCarousel() {
   }, [])
 
   return (
-    <section aria-label="Featured products" style={{ position: 'relative', width: '100%', height: '45vh', minHeight: '320px', overflow: 'hidden' }}>
+    <section aria-label="Featured products" style={{ position: 'relative', width: '100%', overflow: 'hidden' }}>
       {SLIDES.map((slide, i) => (
-        <div
+        <a
           key={slide.img}
+          href={slide.href}
           style={{
-            position: 'absolute',
+            position: i === 0 ? 'relative' : 'absolute',
             inset: 0,
+            display: 'block',
             opacity: i === current ? 1 : 0,
             transition: 'opacity 1.2s ease-in-out',
+            pointerEvents: i === current ? 'auto' : 'none',
           }}
         >
-          {/* Background photo */}
           <img
             src={slide.img}
             alt={slide.alt}
-            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
+            style={{ display: 'block', width: '100%', height: 'auto' }}
           />
-          {/* Gradient overlay */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(39,36,70,0.88) 0%, rgba(39,36,70,0.65) 45%, rgba(39,36,70,0.15) 100%)' }} />
-        </div>
+        </a>
       ))}
 
-      {/* Fixed text — same on every slide */}
-      <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', padding: '0 5% 0 6%' }}>
-        <div style={{ width: '45%' }}>
-          <p style={{ color: '#efb627', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(11px, 1.4vh, 16px)', fontWeight: 700, margin: '0 0 1vh 0', letterSpacing: '0.04em' }}>
-            {SLIDES[current].category}
-          </p>
-          <h2 style={{ color: '#ffffff', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(18px, 4.5vh, 56px)', fontWeight: 800, margin: '0 0 2vh 0', lineHeight: 1.1 }}>
-            The UK&apos;s Leading Sliding Systems Specialists
-          </h2>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '4%', flexWrap: 'wrap' }}>
-            <a
-              href={SLIDES[current].href}
-              style={{ background: '#efb627', color: '#0f0d24', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(12px, 1.5vh, 17px)', fontWeight: 800, padding: '1.5vh 3%', borderRadius: '4px', textDecoration: 'none', display: 'inline-block' }}
-            >
-              {SLIDES[current].cta} →
-            </a>
-            <span style={{ color: '#efb627', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(14px, 2vh, 24px)', fontWeight: 800 }}>
-              {SLIDES[current].price}
-            </span>
-          </div>
-        </div>
-      </div>
-
       {/* Slide indicators */}
-      <div style={{ position: 'absolute', bottom: '16px', left: '6%', display: 'flex', gap: '8px' }}>
+      <div style={{ position: 'absolute', bottom: '12px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '8px' }}>
         {SLIDES.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
             aria-label={`Go to slide ${i + 1}`}
-            style={{ width: i === current ? '24px' : '8px', height: '8px', borderRadius: '4px', background: i === current ? '#efb627' : 'rgba(255,255,255,0.5)', border: 'none', cursor: 'pointer', padding: 0, transition: 'all 0.3s ease' }}
+            style={{ width: i === current ? '24px' : '8px', height: '8px', borderRadius: '4px', background: i === current ? '#efb627' : 'rgba(255,255,255,0.6)', border: 'none', cursor: 'pointer', padding: 0, transition: 'all 0.3s ease' }}
           />
         ))}
       </div>
