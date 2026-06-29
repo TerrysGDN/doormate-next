@@ -56,7 +56,7 @@ export default function HeroCarousel() {
   }, [])
 
   return (
-    <section aria-label="Featured products" style={{ position: 'relative', width: '100%', height: '60vh', minHeight: '320px', overflow: 'hidden' }}>
+    <section aria-label="Featured products" style={{ position: 'relative', width: '100%', height: '45vh', minHeight: '260px', overflow: 'hidden' }}>
       {SLIDES.map((slide, i) => (
         <div
           key={slide.img}
