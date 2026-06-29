@@ -73,7 +73,7 @@ export default function HeroCarousel() {
             style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center' }}
           />
           {/* Gradient overlay — dark left, fades right so photo shows through */}
-          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, rgba(39,36,70,0.88) 0%, rgba(39,36,70,0.65) 45%, rgba(39,36,70,0.15) 100%)' }} />
+          <div style={{ position: 'absolute', inset: 0, background: slide.img.includes('augusta-hero') ? 'linear-gradient(to right, rgba(39,36,70,0.88) 0%, rgba(39,36,70,0.70) 25%, rgba(39,36,70,0.0) 50%, rgba(39,36,70,0.0) 100%)' : 'linear-gradient(to right, rgba(39,36,70,0.88) 0%, rgba(39,36,70,0.65) 45%, rgba(39,36,70,0.15) 100%)' }} />
           {/* Text content */}
           <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', padding: '0 5% 0 6%' }}>
             <div style={{ maxWidth: '580px' }}>
