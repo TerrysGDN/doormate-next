@@ -76,7 +76,7 @@ export default function HeroCarousel() {
             {SLIDES[current].category}
           </p>
           <h2 style={{ color: '#ffffff', fontFamily: "'Libre Franklin', sans-serif", fontSize: 'clamp(18px, 4.5vh, 56px)', fontWeight: 800, margin: '0 0 2vh 0', lineHeight: 1.1 }}>
-            The UK&apos;s Leading Sliding Door Systems Specialists
+            The UK&apos;s Leading Sliding Systems Specialists
           </h2>
           <div style={{ display: 'flex', alignItems: 'center', gap: '4%', flexWrap: 'wrap' }}>
             <a
