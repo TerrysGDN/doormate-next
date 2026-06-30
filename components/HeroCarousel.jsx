@@ -10,6 +10,9 @@ const SLIDES = [
   { img: '/img/Slide 3 (Heavy Duty External Sliding Kits).png', alt: 'Heavy Duty External Sliding Kits — Built To Last',    href: '/external-sliding-kits',  tegan: true  },
   { img: '/img/augusta-hero.jpg',                               alt: 'Augusta barn door hardware installed',                 href: '/barn-door-hardware',     tegan: false, label: 'Sliding Barn Door Hardware',  tagline: 'The Only Barn Door Hardware Made In Britain', price: 'From £150.00' },
   { img: '/img/Slide 4 (Sliding Barn Door Hardware).png',       alt: 'Sliding Barn Door Hardware — Handmade In The UK',     href: '/barn-door-hardware',     tegan: true  },
+  { img: '/img/Slide 5 (Made-To-Measure Barn Doors).png',      alt: 'Made-To-Measure Barn Doors — Handmade In Cardiff',    href: '/doors',                  tegan: true  },
+  { img: '/img/Slide 6 (Door Accessories & Hardware).png',      alt: 'Door Accessories and Hardware — DoorMate Shop',       href: '/shop',                   tegan: true  },
+  { img: '/img/Slide 7 (Reviews).png',                          alt: 'DoorMate Customer Reviews',                           href: '/reviews',                tegan: true  },
 ]
 
 const HEADLINE_LINE1 = "The UK's Leading Sliding"
