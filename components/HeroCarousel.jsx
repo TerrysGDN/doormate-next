@@ -3,15 +3,16 @@ import { useState, useEffect } from 'react'
 
 const SLIDES = [
   { img: '/img/Slide 1 (Pocket Door Kits).png',                 alt: 'Pocket Door Kits — The Ultimate Space Saver',          href: '/pocket-door-kits',       tegan: true  },
-  { img: '/img/pocket-door-lifestyle.jpg',                      alt: 'Pocket door installed in a luxury home',               href: '/pocket-door-kits',       tegan: false, label: 'Pocket Door Kits' },
+  { img: '/img/pocket-door-lifestyle.jpg',                      alt: 'Pocket door installed in a luxury home',               href: '/pocket-door-kits',       tegan: false, label: 'Pocket Door Kits',            tagline: "The Architect's Favourite Space Saving Hack" },
   { img: '/img/Slide 2 (Internal Sliding Door Kits).png',       alt: 'Internal Sliding Door Kits — Timber, Steel and Glass', href: '/internal-sliding-kits',  tegan: true  },
-  { img: '/img/External-150kg.jpg',                             alt: 'Heavy duty external sliding door installed',           href: '/external-sliding-kits',  tegan: false, label: 'External Sliding Door Kits' },
+  { img: '/img/External-150kg.jpg',                             alt: 'Heavy duty external sliding door installed',           href: '/external-sliding-kits',  tegan: false, label: 'External Sliding Door Kits',  tagline: 'Heavy Duty Sliding Systems — Built To Withstand The British Weather' },
   { img: '/img/Slide 3 (Heavy Duty External Sliding Kits).png', alt: 'Heavy Duty External Sliding Kits — Built To Last',    href: '/external-sliding-kits',  tegan: true  },
-  { img: '/img/augusta-hero.jpg',                               alt: 'Augusta barn door hardware installed',                 href: '/barn-door-hardware',     tegan: false, label: 'Sliding Barn Door Hardware' },
+  { img: '/img/augusta-hero.jpg',                               alt: 'Augusta barn door hardware installed',                 href: '/barn-door-hardware',     tegan: false, label: 'Sliding Barn Door Hardware',  tagline: 'The Only Barn Door Hardware Made In Britain' },
   { img: '/img/Slide 4 (Sliding Barn Door Hardware).png',       alt: 'Sliding Barn Door Hardware — Handmade In The UK',     href: '/barn-door-hardware',     tegan: true  },
 ]
 
-const HEADLINE = "The UK's Leading Sliding Systems Specialists"
+const HEADLINE_LINE1 = "The UK's Leading Sliding"
+const HEADLINE_LINE2 = "Systems Specialists"
 
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0)
@@ -56,9 +57,14 @@ export default function HeroCarousel() {
                 <p style={{ color:'#efb627', fontFamily:"'Libre Franklin',sans-serif", fontSize:'clamp(13px,1.4vw,17px)', fontWeight:700, margin:'0 0 10px 0', letterSpacing:'0.06em', textTransform:'uppercase' }}>
                   {slide.label}
                 </p>
-                <p style={{ color:'#ffffff', fontFamily:"'Libre Franklin',sans-serif", fontSize:'clamp(20px,2.8vw,42px)', fontWeight:800, margin:'0 0 22px 0', lineHeight:1.15 }}>
-                  {HEADLINE}
+                <p style={{ color:'#ffffff', fontFamily:"'Libre Franklin',sans-serif", fontSize:'clamp(20px,2.8vw,42px)', fontWeight:800, margin:'0 0 10px 0', lineHeight:1.15 }}>
+                  {HEADLINE_LINE1}<br/>{HEADLINE_LINE2}
                 </p>
+                {slide.tagline && (
+                  <p style={{ color:'#ffffff', fontFamily:"'Libre Franklin',sans-serif", fontSize:'clamp(13px,1.3vw,18px)', fontWeight:500, margin:'0 0 22px 0', fontStyle:'italic' }}>
+                    {slide.tagline}
+                  </p>
+                )}
                 <span style={{
                   display:'inline-block', background:'#efb627', color:'#0f0d24',
                   padding:'10px 28px', fontFamily:"'Libre Franklin',sans-serif",
