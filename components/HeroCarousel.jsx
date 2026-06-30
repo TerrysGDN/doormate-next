@@ -31,16 +31,14 @@ export default function HeroCarousel() {
   return (
     <section aria-label="Featured products" style={{ position:'relative', width:'100%', height:'45vh', minHeight:'320px', overflow:'hidden', borderTop:'3px solid #272446', borderBottom:'3px solid #272446' }}>
       {SLIDES.map((slide, i) => (
-        <a
+        <div
           key={slide.img}
-          href={slide.href}
           style={{
             position: 'absolute',
             inset: 0,
             display: 'block',
             opacity: i === current ? 1 : 0,
             transition: 'opacity 1.2s ease-in-out',
-            pointerEvents: i === current ? 'auto' : 'none',
           }}
         >
           <img
@@ -80,7 +78,7 @@ export default function HeroCarousel() {
               </div>
             </>
           )}
-        </a>
+        </div>
       ))}
       <div style={{ position:'absolute', bottom:'12px', left:'50%', transform:'translateX(-50%)', display:'flex', gap:'8px', zIndex:10 }}>
         {SLIDES.map((_, i) => (
