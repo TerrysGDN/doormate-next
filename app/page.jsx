@@ -81,16 +81,16 @@ export default function HomePage() {
       <section style={{width:'100%', background:'#ffffff', padding:'20px 40px', boxSizing:'border-box'}}>
         <div style={{display:'grid', gridTemplateColumns:'repeat(6, 1fr)', gap:'12px'}}>
           {[
-            {name:'Doors',             img:'/img/door-v-brace.jpg',         href:'/doors',                alt:'Handmade barn doors'},
-            {name:'Pocket Door Kits',  img:'/img/mirror-pocket-single.jpg', href:'/pocket-door-kits',     alt:'Pocket door kits'},
-            {name:'Barn Door Kits',    img:'/img/gainesville-system.jpg',   href:'/barn-door-hardware',   alt:'Barn door hardware'},
-            {name:'Internal Kits',     img:'/img/dm-150.jpg',              href:'/internal-sliding-kits',alt:'Internal sliding door kits'},
-            {name:'External Kits',     img:'/img/external-kit.jpg',         href:'/external-sliding-kits',alt:'External sliding door kits'},
-            {name:'Shop',              img:'/img/covington-system.jpg',     href:'/shop',                 alt:'Door accessories and hardware'},
+            {name:'Doors',             img:'/img/doors-category.jpg',            href:'/doors',                 alt:'Handmade oak and pine barn doors installed in a luxury home'},
+            {name:'Pocket Door Kits',  img:'/img/pocket-door-lifestyle.jpg',     href:'/pocket-door-kits',      alt:'Pocket door installed in a hallway'},
+            {name:'Barn Door Kits',    img:'/img/gainesville-system.jpg',        href:'/barn-door-hardware',    alt:'Gainesville barn door hardware installed on a red door'},
+            {name:'Internal Kits',     img:'/img/internal-sliding-lifestyle.jpg', href:'/internal-sliding-kits', alt:'Internal sliding door kit with stainless steel track installed'},
+            {name:'External Kits',     img:'/img/external-kit.jpg',              href:'/external-sliding-kits', alt:'Heavy duty external sliding door kit installed'},
+            {name:'Shop',              img:'/img/covington-system.jpg',          href:'/shop',                  alt:'Door accessories and hardware'},
           ].map((cat) => (
             <div key={cat.name}>
               <p style={{color:'#272446', fontSize:'18px', fontWeight:'900', textAlign:'center', margin:'0 0 6px 0', padding:0}}>{cat.name}</p>
-              <Link href={cat.href} style={{textDecoration:'none', display:'block', height:'clamp(180px, 20vw, 340px)', background:'#ffffff', border:'2px solid #272446', overflow:'hidden', position:'relative'}}>
+              <Link href={cat.href} style={{textDecoration:'none', display:'block', height:'clamp(180px, 20vw, 340px)', background:'#ffffff', overflow:'hidden', position:'relative'}}>
                 <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="16vw" />
               </Link>
             </div>
