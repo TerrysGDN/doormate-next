@@ -1593,4 +1593,63 @@ Outstanding on homepage:
 3. If homepage looks correct — sign it off and move to product pages. Do NOT keep tweaking.
 4. First product page: Pocket Door Kits — price visible, BUY NOW above fold, trust signals
 5. Schema.org JSON-LD in layout.jsx — AISIO critical, add alongside first product page
+
+---
+
+## SESSION SUMMARY — 30 JUNE 2026 — READ THIS FIRST — MOST RECENT
+
+### HERO — SIGNED OFF ✅
+Hero carousel is done. Tegan's banner slides + lifestyle JPGs alternating. Fixed headline on lifestyle slides with gradient overlay, gold label, tagline, price and Shop Now CTA. No links on slides until product pages are built. Do not touch the hero.
+
+### HEADER — REBUILT AND LOCKED ✅
+Nav.jsx updated to Option A layout — agreed by Terry after mockup comparison:
+- **Top bar:** Social icons LEFT in 38px light grey circles with hover scale | Logo CENTRED (doormate-logo-cropped.png, 100px height) | Phone RIGHT — 22px gold bold, email 13px navy below it | Search icon + Basket icon (26px, gold badge)
+- **Hamburger:** Hidden on desktop via `dm-mobile-btn` CSS class + `@media (min-width:1024px)` style tag. Still works on mobile.
+- **Gold nav bar:** Unchanged — HOME dropdown + 7 flat links with white dividers
+- www.doormate.co.uk on the logo is INTENTIONAL — 101 marketing. Never question it again.
+- Phone number is in the header (right side). It is NOT footer-only any more — this rule is superseded.
+
+### CATEGORY CARDS — UPDATED ✅
+- All borders removed (`border:'2px solid #272446'` was cheapening the look — gone)
+- Terry's category images swapped in: doors-category.jpg, pocket-door-kits-category.jpg, internal-sliding-kits-category.jpg, external-sliding-kits-category.jpg, shop-category.jpg
+- Barn Door Kits keeps gainesville-system.jpg — Terry confirmed it's the best existing image
+- Alt text updated on all cards for SEO
+- Terry can drop replacement images into /public/img/ at any time using the agreed naming convention (category-name-category.jpg)
+
+### REVIEWS SECTION — DIRECTION AGREED — NOT YET BUILT
+The Houzz widget is a 2016 solution. The new approach:
+- **Google Places API** — fetches DoorMate's real Google reviews server-side in Next.js
+- Displays as a proper reviews carousel: name, stars, review text, auto-updates as new reviews come in
+- "Leave us a Google Review" button styled in DoorMate gold — opens directly to Google review form
+- No third-party apps (Elfsight, Reviews.io, Trustpilot carousel all either paid or limited)
+- No monthly fee — Google gives $200 free API credit/month, DoorMate traffic will cost nothing
+
+**TO BUILD THIS — Terry needs to provide:**
+1. Google Place ID — go to https://developers.google.com/maps/documentation/places/web-service/place-id, search DoorMate Cardiff, copy the Place ID
+2. Google Maps API key — free from Google Cloud Console (5 minutes to set up)
+Once Terry provides both strings, Claude builds the full section.
+
+### RULES ADDED THIS SESSION — NEVER BREAK
+- STOP RUSHING. Finish one section completely before moving to next. Terry has said this repeatedly.
+- Never suggest third-party paid apps (Elfsight etc.) when the feature can be built natively in Next.js
+- Terry said: "You're Claude AI, not ChatGPT rubbish. Build things properly." Hold to this standard every session.
+- The homepage is being worked through section by section — do not jump ahead
+- Category images: Terry names them descriptively (e.g. doors-category.jpg) and drops them in /public/img/ — Claude swaps them in. Simple workflow, no confusion.
+
+### HOMEPAGE — STATE AS OF 30 JUNE 2026
+✅ Hero carousel — SIGNED OFF
+✅ Header — rebuilt Option A
+✅ Trust strip — gold, 4 review pills
+✅ Category cards — Terry's images, no borders
+⬜ Who We Are / Reviews section — Google Places API agreed, not yet built (needs Place ID + API key)
+⬜ Brands scrolling banner — carry over from previous sessions
+⬜ Systems section — carry over from previous sessions
+⬜ Footer — carry over from previous sessions
+
+### NEXT SESSION — FIRST JOB
+1. Terry provides Google Place ID and Google Maps API key
+2. Claude builds the Google Reviews carousel section natively in Next.js
+3. Continue homepage sections downward
+4. Schema.org JSON-LD — still missing, AISIO critical — must go in layout.jsx
+5. llms.txt at root — still missing
 6. Continue product pages: External Kits, Barn Door Hardware, Internal Kits, Handmade Doors
