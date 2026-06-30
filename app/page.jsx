@@ -81,12 +81,12 @@ export default function HomePage() {
       <section style={{width:'100%', background:'#ffffff', padding:'20px 40px', boxSizing:'border-box'}}>
         <div style={{display:'grid', gridTemplateColumns:'repeat(6, 1fr)', gap:'12px'}}>
           {[
-            {name:'Doors',             img:'/img/doors-category.jpg',            href:'/doors',                 alt:'Handmade oak and pine barn doors installed in a luxury home'},
-            {name:'Pocket Door Kits',  img:'/img/pocket-door-lifestyle.jpg',     href:'/pocket-door-kits',      alt:'Pocket door installed in a hallway'},
-            {name:'Barn Door Kits',    img:'/img/gainesville-system.jpg',        href:'/barn-door-hardware',    alt:'Gainesville barn door hardware installed on a red door'},
-            {name:'Internal Kits',     img:'/img/internal-sliding-lifestyle.jpg', href:'/internal-sliding-kits', alt:'Internal sliding door kit with stainless steel track installed'},
-            {name:'External Kits',     img:'/img/external-kit.jpg',              href:'/external-sliding-kits', alt:'Heavy duty external sliding door kit installed'},
-            {name:'Shop',              img:'/img/covington-system.jpg',          href:'/shop',                  alt:'Door accessories and hardware'},
+            {name:'Doors',             img:'/img/doors-category.jpg',                   href:'/doors',                 alt:'Handmade oak and pine barn doors installed in a luxury home'},
+            {name:'Pocket Door Kits',  img:'/img/pocket-door-kits-category.jpg',        href:'/pocket-door-kits',      alt:'Pocket door kits installed in a home'},
+            {name:'Barn Door Kits',    img:'/img/gainesville-system.jpg',               href:'/barn-door-hardware',    alt:'Gainesville barn door hardware installed on a red door'},
+            {name:'Internal Kits',     img:'/img/internal-sliding-kits-category.jpg',   href:'/internal-sliding-kits', alt:'Internal sliding door kit installed'},
+            {name:'External Kits',     img:'/img/external-sliding-kits-category.jpg',   href:'/external-sliding-kits', alt:'Heavy duty external sliding door kit installed'},
+            {name:'Shop',              img:'/img/shop-category.jpg',                    href:'/shop',                  alt:'Door accessories and hardware'},
           ].map((cat) => (
             <div key={cat.name}>
               <p style={{color:'#272446', fontSize:'18px', fontWeight:'900', textAlign:'center', margin:'0 0 6px 0', padding:0}}>{cat.name}</p>
