@@ -29,7 +29,7 @@ export default function HeroCarousel() {
   }, [])
 
   return (
-    <section aria-label="Featured products" style={{ position:'relative', width:'100%', height:'45vh', minHeight:'320px', overflow:'hidden' }}>
+    <section aria-label="Featured products" style={{ position:'relative', width:'100%', height:'45vh', minHeight:'320px', overflow:'hidden', borderTop:'3px solid #272446', borderBottom:'3px solid #272446' }}>
       {SLIDES.map((slide, i) => (
         <a
           key={slide.img}
