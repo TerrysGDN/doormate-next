@@ -3,11 +3,12 @@ import { useState, useEffect } from 'react'
 
 const SLIDES = [
   { img: '/img/Slide 1 (Pocket Door Kits).png',                 alt: 'Pocket Door Kits — The Ultimate Space Saver',          href: '/pocket-door-kits',       tegan: true  },
-  { img: '/img/pocket-door-lifestyle.jpg',                      alt: 'Pocket door installed in a luxury home',               href: '/pocket-door-kits',       tegan: false, label: 'Pocket Door Kits',            tagline: "The Architect's Favourite Space Saving Hack" },
+  { img: '/img/pocket-door-lifestyle.jpg',                      alt: 'Pocket door installed in a luxury home',               href: '/pocket-door-kits',       tegan: false, label: 'Pocket Door Kits',           tagline: "The Architect's Favourite Space Saving Hack", price: 'From £117.60' },
   { img: '/img/Slide 2 (Internal Sliding Door Kits).png',       alt: 'Internal Sliding Door Kits — Timber, Steel and Glass', href: '/internal-sliding-kits',  tegan: true  },
-  { img: '/img/External-150kg.jpg',                             alt: 'Heavy duty external sliding door installed',           href: '/external-sliding-kits',  tegan: false, label: 'External Sliding Door Kits',  tagline: 'Heavy Duty Sliding Systems — Built To Withstand The British Weather' },
+  { img: '/img/internal-sliding-lifestyle.jpg',                 alt: 'Internal sliding door kit installed in a luxury home', href: '/internal-sliding-kits',  tegan: false, label: 'Internal Sliding Door Kits', tagline: "The Interior Designer's Secret Weapon",       price: 'From £67.00',   objectPosition: 'top center' },
+  { img: '/img/External-150kg.jpg',                             alt: 'Heavy duty external sliding door installed',           href: '/external-sliding-kits',  tegan: false, label: 'External Sliding Door Kits', tagline: 'Heavy Duty Sliding Systems — Built To Withstand The British Weather', price: 'From £104.00' },
   { img: '/img/Slide 3 (Heavy Duty External Sliding Kits).png', alt: 'Heavy Duty External Sliding Kits — Built To Last',    href: '/external-sliding-kits',  tegan: true  },
-  { img: '/img/augusta-hero.jpg',                               alt: 'Augusta barn door hardware installed',                 href: '/barn-door-hardware',     tegan: false, label: 'Sliding Barn Door Hardware',  tagline: 'The Only Barn Door Hardware Made In Britain' },
+  { img: '/img/augusta-hero.jpg',                               alt: 'Augusta barn door hardware installed',                 href: '/barn-door-hardware',     tegan: false, label: 'Sliding Barn Door Hardware',  tagline: 'The Only Barn Door Hardware Made In Britain', price: 'From £150.00' },
   { img: '/img/Slide 4 (Sliding Barn Door Hardware).png',       alt: 'Sliding Barn Door Hardware — Handmade In The UK',     href: '/barn-door-hardware',     tegan: true  },
 ]
 
@@ -42,7 +43,7 @@ export default function HeroCarousel() {
           <img
             src={slide.img}
             alt={slide.alt}
-            style={{ display:'block', width:'100%', height:'100%', objectFit:'cover' }}
+            style={{ display:'block', width:'100%', height:'100%', objectFit:'cover', objectPosition: slide.objectPosition || 'center' }}
           />
           {!slide.tegan && (
             <>
@@ -57,20 +58,21 @@ export default function HeroCarousel() {
                 <p style={{ color:'#efb627', fontFamily:"'Libre Franklin',sans-serif", fontSize:'clamp(13px,1.4vw,17px)', fontWeight:700, margin:'0 0 10px 0', letterSpacing:'0.06em', textTransform:'uppercase' }}>
                   {slide.label}
                 </p>
-                <p style={{ color:'#ffffff', fontFamily:"'Libre Franklin',sans-serif", fontSize:'clamp(20px,2.8vw,42px)', fontWeight:800, margin:'0 0 10px 0', lineHeight:1.15 }}>
+                <p style={{ color:'#ffffff', fontFamily:"'Libre Franklin',sans-serif", fontSize:'clamp(20px,2.8vw,42px)', fontWeight:800, margin:'0 0 8px 0', lineHeight:1.15 }}>
                   {HEADLINE_LINE1}<br/>{HEADLINE_LINE2}
                 </p>
-                {slide.tagline && (
-                  <p style={{ color:'#ffffff', fontFamily:"'Libre Franklin',sans-serif", fontSize:'clamp(13px,1.3vw,18px)', fontWeight:500, margin:'0 0 22px 0', fontStyle:'italic' }}>
-                    {slide.tagline}
-                  </p>
-                )}
+                <p style={{ color:'#ffffff', fontFamily:"'Libre Franklin',sans-serif", fontSize:'clamp(13px,1.3vw,18px)', fontWeight:500, margin:'0 0 8px 0', fontStyle:'italic' }}>
+                  {slide.tagline}
+                </p>
+                <p style={{ color:'#efb627', fontFamily:"'Libre Franklin',sans-serif", fontSize:'clamp(16px,1.6vw,22px)', fontWeight:800, margin:'0 0 18px 0' }}>
+                  {slide.price}
+                </p>
                 <span style={{
                   display:'inline-block', background:'#efb627', color:'#0f0d24',
                   padding:'10px 28px', fontFamily:"'Libre Franklin',sans-serif",
                   fontSize:'clamp(14px,1.4vw,17px)', fontWeight:700, borderRadius:'4px', alignSelf:'flex-start',
                 }}>
-                  Find Out More
+                  Shop Now
                 </span>
               </div>
             </>

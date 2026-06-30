@@ -254,6 +254,7 @@ Bi-Parting: DM-75 £156 | DM-100 £230 | DM-150 £386 | DM-200 £444
 
 ### Internal Sliding Kits — PRODUCT NAMES CONFIRMED 26 MAY 2026
 Timber Door Systems | Stainless Door Systems | Glass Door Systems | Minimalist Door Systems
+Starting kit: DM-50i — For doors up to 50kg — £67.00
 Weights still to be confirmed before building product pages. Landing page tiles can be built.
 Correct recommendation when customer says modern — NOT barn door hardware.
 
