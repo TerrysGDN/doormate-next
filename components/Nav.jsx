@@ -110,12 +110,13 @@ export default function Nav() {
 
   return (
     <header style={{ position: 'sticky', top: 0, zIndex: 40, boxShadow: '0 2px 8px rgba(0,0,0,0.12)' }}>
+      <style>{`@media (min-width: 1024px) { .dm-mobile-btn { display: none !important; } }`}</style>
 
       {/* ── BAR 1 — WHITE: social icons | logo (centred) | contact + icons ── */}
-      <div style={{ background: '#ffffff', minHeight: '140px', display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', width: '100%', padding: '0 20px' }}>
+      <div style={{ background: '#ffffff', minHeight: '110px', display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', width: '100%', padding: '0 28px' }}>
 
-          {/* Social icons — left */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+          {/* Social icons — left, in brand-colour circles */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             {SOCIAL_LINKS.map((s) => (
               <a
                 key={s.label}
@@ -123,9 +124,9 @@ export default function Nav() {
                 aria-label={`DoorMate on ${s.label}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ display: 'flex', alignItems: 'center', transition: 'opacity 0.2s' }}
-                onMouseEnter={e => e.currentTarget.style.opacity = '0.7'}
-                onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+                style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '38px', height: '38px', borderRadius: '50%', background: '#f5f5f5', transition: 'transform 0.2s, opacity 0.2s' }}
+                onMouseEnter={e => { e.currentTarget.style.opacity = '0.8'; e.currentTarget.style.transform = 'scale(1.1)' }}
+                onMouseLeave={e => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.transform = 'scale(1)' }}
               >
                 {s.icon}
               </a>
@@ -139,44 +140,47 @@ export default function Nav() {
               alt="DoorMate Sliding Door Systems — Cardiff"
               width={600}
               height={130}
-              style={{ height: '130px', width: 'auto', objectFit: 'contain' }}
+              style={{ height: '100px', width: 'auto', objectFit: 'contain' }}
               priority
             />
           </Link>
 
           {/* Contact + utility icons — right */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '20px', justifyContent: 'flex-end' }}>
-            <a
-              href="tel:02921660393"
-              style={{ color: '#efb627', fontWeight: 'bold', fontSize: '15px', fontFamily: "'Libre Franklin', sans-serif", textDecoration: 'none', whiteSpace: 'nowrap' }}
-            >
-              T. 029 2166 0393
-            </a>
-            <a
-              href="mailto:info@doormate.co.uk"
-              style={{ color: '#272446', fontWeight: 'bold', fontSize: '15px', fontFamily: "'Libre Franklin', sans-serif", textDecoration: 'none', whiteSpace: 'nowrap' }}
-            >
-              E. info@doormate.co.uk
-            </a>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px', justifyContent: 'flex-end' }}>
+            {/* Phone — dominant */}
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '2px' }}>
+              <a
+                href="tel:02921660393"
+                style={{ color: '#efb627', fontWeight: '800', fontSize: '22px', fontFamily: "'Libre Franklin', sans-serif", textDecoration: 'none', whiteSpace: 'nowrap', lineHeight: 1 }}
+              >
+                029 2166 0393
+              </a>
+              <a
+                href="mailto:info@doormate.co.uk"
+                style={{ color: '#272446', fontWeight: '600', fontSize: '13px', fontFamily: "'Libre Franklin', sans-serif", textDecoration: 'none', whiteSpace: 'nowrap' }}
+              >
+                info@doormate.co.uk
+              </a>
+            </div>
             {/* Search icon */}
-            <button aria-label="Search" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#efb627', padding: 0, display: 'flex', alignItems: 'center' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <button aria-label="Search" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#272446', padding: 0, display: 'flex', alignItems: 'center' }}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
               </svg>
             </button>
             {/* Basket icon */}
-            <button aria-label="Basket (0 items)" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#efb627', padding: 0, display: 'flex', alignItems: 'center', position: 'relative' }}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <button aria-label="Basket (0 items)" style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#272446', padding: 0, display: 'flex', alignItems: 'center', position: 'relative' }}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
               </svg>
-              <span style={{ position: 'absolute', top: '-6px', right: '-8px', background: '#272446', color: '#ffffff', borderRadius: '999px', fontSize: '10px', fontWeight: 'bold', width: '16px', height: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1 }}>0</span>
+              <span style={{ position: 'absolute', top: '-6px', right: '-8px', background: '#efb627', color: '#272446', borderRadius: '999px', fontSize: '10px', fontWeight: 'bold', width: '18px', height: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1 }}>0</span>
             </button>
-            {/* Mobile hamburger */}
+            {/* Mobile hamburger — hidden on desktop via media query */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
               aria-expanded={mobileOpen}
-              className="lg:hidden"
+              className="dm-mobile-btn"
               style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#272446', padding: 0, display: 'flex', alignItems: 'center' }}
             >
               {mobileOpen ? (
