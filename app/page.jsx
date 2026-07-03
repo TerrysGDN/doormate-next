@@ -131,11 +131,12 @@ export default async function HomePage() {
         <div style={{display:'grid', gridTemplateColumns:'minmax(280px, 320px) 1fr minmax(280px, 320px)', gap:'32px', alignItems:'start'}}>
 
           <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
-            <div style={{display:'flex', alignItems:'center', gap:'8px', margin:'0 0 12px 0'}}>
+            <div style={{display:'inline-flex', alignItems:'center', gap:'10px', background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'999px', padding:'12px 22px', margin:'0 0 16px 0'}}>
               <svg width="22" height="22" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#7DC242" d="M50,5 L95,42 L80,42 L80,95 L55,95 L55,65 L45,65 L45,95 L20,95 L20,42 L5,42 Z"/>
               </svg>
-              <span style={{color:'#273a2e', fontSize:'16px', fontWeight:'700', fontFamily:'Arial, sans-serif'}}>Houzz Reviews</span>
+              <span style={{color:'#273a2e', fontSize:'17px', fontWeight:'700', fontFamily:'Arial, sans-serif'}}>5.0</span>
+              <span style={{color:'#efb627', fontSize:'20px', lineHeight:'1', letterSpacing:'2px'}}>★★★★★</span>
             </div>
             <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px'}}>
               <iframe
