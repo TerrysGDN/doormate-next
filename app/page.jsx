@@ -49,7 +49,7 @@ export default async function HomePage() {
 
       {/* TRUST STRIP */}
       <div style={{width:'100%', background:'#efb627', padding:'8px 40px', boxSizing:'border-box'}}>
-        <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', gap:'24px'}}>
+        <div style={{display:'flex', justifyContent:'center', alignItems:'center', gap:'20px', flexWrap:'wrap'}}>
 
           <div style={{background:'#ffffff', borderRadius:'999px', padding:'5px 16px', display:'flex', alignItems:'center'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', whiteSpace:'nowrap'}}>
@@ -115,8 +115,11 @@ export default async function HomePage() {
             {name:'External Kits',     img:'/img/external-sliding-kits-category.jpg',   href:'/external-sliding-kits', alt:'Heavy duty external sliding door kit installed'},
             {name:'Shop',              img:'/img/shop-category.jpg',                    href:'/shop',                  alt:'Door accessories and hardware'},
           ].map((cat) => (
-            <div key={cat.name}>
-              <p style={{color:'#272446', fontSize:'18px', fontWeight:'900', textAlign:'center', margin:'0 0 6px 0', padding:0}}>{cat.name}</p>
+            <div key={cat.name} style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'8px', overflow:'hidden', display:'flex', flexDirection:'column'}}>
+              <p style={{color:'#272446', fontSize:'18px', fontWeight:'900', textAlign:'center', margin:'0', padding:'16px 8px 12px 8px'}}>{cat.name}</p>
+              <div style={{padding:'0 16px 16px 16px'}}>
+                <Link href={cat.href} className="dm-btn" style={{display:'block', width:'100%', textAlign:'center', padding:'10px 0', fontSize:'14px', boxSizing:'border-box'}}>Shop Now</Link>
+              </div>
               <Link href={cat.href} style={{textDecoration:'none', display:'block', height:'clamp(180px, 20vw, 340px)', background:'#ffffff', overflow:'hidden', position:'relative'}}>
                 <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="16vw" />
               </Link>
