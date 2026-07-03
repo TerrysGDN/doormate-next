@@ -125,49 +125,43 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* REVIEWS SECTION — full width, 3 columns: Houzz | copy | Google */}
-      <section style={{width:'100%', background:'#ffffff', padding:'40px', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <p style={{color:'#272446', fontSize:'clamp(20px, 2.6vw, 28px)', fontWeight:'900', textAlign:'center', margin:'0 0 32px 0'}}>Real Reviews From Real Customers</p>
-        <div style={{display:'grid', gridTemplateColumns:'300px 1fr 300px', gap:'40px', alignItems:'center'}}>
+      {/* REVIEWS SECTION — full width, 3 matched-height columns: Houzz | copy | Google */}
+      <section style={{width:'100%', background:'#ffffff', padding:'72px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
+        <p style={{color:'#272446', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', textAlign:'center', margin:'0 0 48px 0'}}>Real Reviews From Real Customers</p>
+        <div style={{display:'grid', gridTemplateColumns:'minmax(280px, 320px) 1fr minmax(280px, 320px)', gap:'32px', alignItems:'stretch'}}>
 
-          <div style={{display:'flex', justifyContent:'center'}}>
-            <iframe
-              scrolling="no"
-              frameBorder="0"
-              width="300"
-              height="400"
-              src="https://www.houzz.com/reviewWidget/terryburnett98/"
-              style={{border:'none', display:'block'}}
-              title="DoorMate reviews on Houzz"
-            />
+          <div style={{height:'420px', display:'flex', alignItems:'center', justifyContent:'center'}}>
+            <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px', display:'flex', alignItems:'center'}}>
+              <iframe
+                scrolling="no"
+                frameBorder="0"
+                width="300"
+                height="380"
+                src="https://www.houzz.com/reviewWidget/terryburnett98/"
+                style={{border:'none', display:'block'}}
+                title="DoorMate reviews on Houzz"
+              />
+            </div>
           </div>
 
-          <div style={{textAlign:'center'}}>
-            <p style={{color:'#272446', fontSize:'16px', fontWeight:'600', lineHeight:'1.8', margin:0}}>
+          <div style={{height:'420px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', textAlign:'center', padding:'0 16px'}}>
+            <span style={{color:'#efb627', fontSize:'56px', fontWeight:'900', lineHeight:'1', margin:'0 0 8px 0', fontFamily:'Georgia, serif'}}>&ldquo;</span>
+            <p style={{color:'#272446', fontSize:'19px', fontWeight:'600', lineHeight:'1.8', margin:0}}>
               Every project starts with research &mdash; reviews are the best source there is. They tell you if you&apos;re dealing with a good company and a good product. They matter just as much on our side too: a good review tells us we&apos;re getting it right, a bad one tells us just as fast where we&apos;re not. So whatever you buy &mdash; from us or anyone else &mdash; always consider leaving a review.
             </p>
           </div>
 
-          <GoogleReviewsCarousel reviews={reviews} rating={rating} totalReviews={total} reviewUrl={reviewUrl} />
+          <div style={{height:'420px', display:'flex', alignItems:'center', justifyContent:'center'}}>
+            <GoogleReviewsCarousel reviews={reviews} rating={rating} totalReviews={total} reviewUrl={reviewUrl} />
+          </div>
 
         </div>
       </section>
 
-      {/* WHO WE ARE — full width */}
+      {/* WHO WE ARE — full width, single column text (Houzz widget moved to Reviews section above; photo goes here once supplied) */}
       <section style={{width:'100%', background:'#ffffff', padding:'40px', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <div style={{display:'grid', gridTemplateColumns:'300px 1fr', gap:'56px', alignItems:'start'}}>
-          <div style={{flexShrink:0}}>
-            <iframe
-              scrolling="no"
-              frameBorder="0"
-              width="300"
-              height="435"
-              src="https://www.houzz.com/reviewWidget/terryburnett98/"
-              style={{border:'none', display:'block'}}
-              title="DoorMate reviews on Houzz"
-            />
-          </div>
-          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', minHeight:'435px', fontFamily:"'Libre Franklin', sans-serif", textAlign:'center'}}>
+        <div style={{maxWidth:'860px', margin:'0 auto'}}>
+          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', fontFamily:"'Libre Franklin', sans-serif", textAlign:'center'}}>
             <h2 style={{color:'#272446', fontSize:'clamp(16px, 2vw, 26px)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0', whiteSpace:'nowrap'}}>
               Real UK Manufacturers. Real Systems Delivered Direct To You.
             </h2>
@@ -223,17 +217,17 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* SYSTEMS SECTION — full width */}
-      <section style={{width:'100%', background:'#ffffff', padding:'48px 40px', boxSizing:'border-box'}}>
+      {/* SYSTEMS SECTION — full width — navy block to break up the run of white sections */}
+      <section style={{width:'100%', background:'#363557', padding:'64px 40px', boxSizing:'border-box'}}>
         <div style={{display:'grid', gridTemplateColumns:'55% 45%', gap:'40px', alignItems:'stretch'}}>
           <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', textAlign:'center', padding:'0 16px'}}>
-            <h2 style={{color:'#272446', fontSize:'clamp(22px, 2.8vw, 38px)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>We Offer Complete Sliding Door Solutions</h2>
+            <h2 style={{color:'#ffffff', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>We Offer Complete Sliding Door Solutions</h2>
             <p style={{color:'#efb627', fontSize:'clamp(18px, 2.2vw, 30px)', fontWeight:'900', margin:'0', lineHeight:'1.2'}}>For Real Homes, Real Doors And Real Walls.</p>
-            <p style={{color:'#272446', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0', lineHeight:'1.6'}}>Choosing a sliding door system shouldn&apos;t be difficult.</p>
-            <p style={{color:'#272446', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>That&apos;s why we&apos;ve made it easy to find the right solution for your project.</p>
-            <p style={{color:'#272446', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>By organising our systems around real-world applications &mdash;</p>
+            <p style={{color:'#ffffff', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0', lineHeight:'1.6'}}>Choosing a sliding door system shouldn&apos;t be difficult.</p>
+            <p style={{color:'#ffffff', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>That&apos;s why we&apos;ve made it easy to find the right solution for your project.</p>
+            <p style={{color:'#ffffff', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>By organising our systems around real-world applications &mdash;</p>
             <p style={{color:'#efb627', fontSize:'clamp(22px, 2.2vw, 32px)', fontWeight:'900', margin:'0', lineHeight:'1.3'}}>We&apos;ve already done the thinking for you.</p>
-            <p style={{color:'#272446', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0', lineHeight:'1.6'}}>Simply choose your system. Let&apos;s get this project done!</p>
+            <p style={{color:'#ffffff', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0', lineHeight:'1.6'}}>Simply choose your system. Let&apos;s get this project done!</p>
           </div>
           <div style={{display:'flex', flexDirection:'column', gap:'6px'}}>
             {[
