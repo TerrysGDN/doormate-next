@@ -1,6 +1,29 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import HeroCarousel from '@/components/HeroCarousel'
+import GoogleReviewsCarousel from '@/components/GoogleReviewsCarousel'
+
+async function getGoogleReviews() {
+  const apiKey = process.env.GOOGLE_PLACES_API_KEY
+  const placeId = process.env.GOOGLE_PLACE_ID
+  if (!apiKey || !placeId) return { reviews: [], rating: null, total: null }
+  try {
+    const res = await fetch(
+      `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,user_ratings_total,reviews&reviews_sort=newest&key=${apiKey}`,
+      { next: { revalidate: 3600 } }
+    )
+    const data = await res.json()
+    if (data.status !== 'OK' || !data.result) return { reviews: [], rating: null, total: null }
+    const reviews = (data.result.reviews || []).map((r) => ({
+      author: r.author_name,
+      rating: r.rating,
+      text: r.text,
+    }))
+    return { reviews, rating: data.result.rating, total: data.result.user_ratings_total }
+  } catch (e) {
+    return { reviews: [], rating: null, total: null }
+  }
+}
 
 export const metadata = {
   title: "DoorMate Sliding Door Systems | Pocket Doors, Sliding Kits & Barn Door Hardware Cardiff",
@@ -13,7 +36,11 @@ export const metadata = {
   }
 }
 
-export default function HomePage() {
+export default async function HomePage() {
+  const { reviews, rating, total } = await getGoogleReviews()
+  const placeId = process.env.GOOGLE_PLACE_ID
+  const reviewUrl = placeId ? `https://search.google.com/local/writereview?placeid=${placeId}` : null
+
   return (
     <main style={{width:'100%', overflowX:'hidden', margin:0, padding:0, fontFamily:"'Libre Franklin', sans-serif", background:'#ffffff'}}>
 
@@ -95,6 +122,34 @@ export default function HomePage() {
               </Link>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* REVIEWS SECTION — full width, 3 columns: Houzz | copy | Google */}
+      <section style={{width:'100%', background:'#ffffff', padding:'40px', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
+        <p style={{color:'#272446', fontSize:'clamp(20px, 2.6vw, 28px)', fontWeight:'900', textAlign:'center', margin:'0 0 32px 0'}}>Real Reviews From Real Customers</p>
+        <div style={{display:'grid', gridTemplateColumns:'300px 1fr 300px', gap:'40px', alignItems:'center'}}>
+
+          <div style={{display:'flex', justifyContent:'center'}}>
+            <iframe
+              scrolling="no"
+              frameBorder="0"
+              width="300"
+              height="400"
+              src="https://www.houzz.com/reviewWidget/terryburnett98/"
+              style={{border:'none', display:'block'}}
+              title="DoorMate reviews on Houzz"
+            />
+          </div>
+
+          <div style={{textAlign:'center'}}>
+            <p style={{color:'#272446', fontSize:'16px', fontWeight:'600', lineHeight:'1.8', margin:0}}>
+              Every project starts with research &mdash; reviews are the best source there is. They tell you if you&apos;re dealing with a good company and a good product. They matter just as much on our side too: a good review tells us we&apos;re getting it right, a bad one tells us just as fast where we&apos;re not. So whatever you buy &mdash; from us or anyone else &mdash; always consider leaving a review.
+            </p>
+          </div>
+
+          <GoogleReviewsCarousel reviews={reviews} rating={rating} totalReviews={total} reviewUrl={reviewUrl} />
+
         </div>
       </section>
 
