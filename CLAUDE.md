@@ -1,5 +1,5 @@
 # DOORMATE — MASTER BIBLE — LIVE DOCUMENT
-## Last updated: 29 June 2026
+## Last updated: 3 July 2026
 ## This file IS the project bible. Cowork reads CLAUDE.md automatically from this folder.
 ## Most recent decision always overwrites older ones.
 ## Session summaries at the bottom are in the order they were written — the LAST one is always most recent.
@@ -99,6 +99,13 @@ This rule overrides everything else.
 ## RULE 4 — ALWAYS LEAD — TERRY APPROVES, CLAUDE LEADS
 
 ## RULE 5 — NEVER LEAD HOMEPAGE OR META WITH BARN DOOR HARDWARE STORY — Added 19 May 2026
+
+## RULE 9 — ONE FULL AUDIT PASS BEFORE ANY EDIT — NEVER BREAK — Added 3 July 2026
+Never make a visual change reactively, one piece at a time, and find out it was wrong only after it's live. On 3 July, category cards were built once, shown live, then had to be rebuilt from scratch minutes later because the first version was never checked against a real reference before it was coded. That is the same 5-week thrash pattern (word cloud, hero, trust strip, every "rushed compromise" logged in this file) — it just moved from "Terry keeps getting asked to decide" to "Claude keeps guessing and correcting." Same root cause either way: deciding as you go instead of thinking it through first.
+
+The fix: before touching any code, do ONE full pass — look at the whole section (or sections) live, compare against a real reference (barn-doors.co.uk per Rule 8, or a calibration site like pchenderson.com for feel only, never to copy), decide everything that needs to change, THEN make ONE batched edit. Never edit, look, redo, look, redo. If a genuine judgment call turns out wrong after Terry sees it, that's normal — but the first version must be the product of a real audit, not a first guess.
+
+This rule exists because promises to stop rushing have been made and broken repeatedly in this project (see Rule 8, and the 23 June word cloud history). Writing it down has not been enough on its own. Every session must actually follow it, not just read it.
 
 ## RULE 8 — THE MEASURING STICK — NEVER IGNORE IT — Added 24 June 2026
 barn-doors.co.uk is the measuring stick. It was built by Terry — a door fitter, not a developer — and it sold £250k in 2017 with Google seeing only 5% of it. Every single decision on the new site must be checked against it.
@@ -1653,3 +1660,54 @@ Once Terry provides both strings, Claude builds the full section.
 4. Schema.org JSON-LD — still missing, AISIO critical — must go in layout.jsx
 5. llms.txt at root — still missing
 6. Continue product pages: External Kits, Barn Door Hardware, Internal Kits, Handmade Doors
+
+---
+
+## SESSION SUMMARY — 3 JULY 2026 — READ THIS FIRST — MOST RECENT
+
+### GOOGLE REVIEWS — BUILT, LIVE, WORKING
+Full native build, no third-party app:
+- Google Place ID + Maps API key obtained (Google Cloud Console project "Garage Door Network" — reused, not a new project) and added to Vercel Environment Variables (Production + Preview, marked Sensitive)
+- `getGoogleReviews()` in `app/page.jsx` fetches live from the Places API Details endpoint server-side, `revalidate: 3600`
+- Google Business Profile is merged with pocketdoorframes.co.uk under the name "DoorMate Pocket Door Frames" (not "DoorMate") — Terry has renamed it back to DoorMate in GBP, pending Google's approval. Real listing: 4.8 stars, 14 reviews. Do not rebuild this API setup again — it works.
+
+### REVIEWS SECTION — DESIGN — LOCKED
+Went through several wrong turns before landing here. What's live now and correct:
+- Both Houzz and Google shown as matching pill badges — real logo, real score, real gold stars, nothing else. No fabricated review-count numbers, no hand-built "review cards" dressed up to look like a platform's native UI when it isn't (the original Google carousel used DoorMate fonts/colours in a box that only vaguely resembled a real Google review — Terry caught this immediately: "GOOGLE REVIES DONT LOOK LIKE THAT"). **Rule going forward: if we can't show the platform's real, authentic widget or UI, show a simple honest badge — never a fabricated approximation.**
+- Houzz badge sits above the real Houzz iframe (which is genuinely authentic — pulled live from Houzz's own servers). Google badge sits inside a matching-footprint box (300×430, same border/radius as the Houzz box) so both columns carry equal visual weight even though only one has a real embeddable widget.
+- Section headline: **"Why Real Reviews Matter"** — went through three versions in one sitting (see Rule 9) before landing here. Ties directly into the body copy beneath it, which is about why reviews matter to both customer and business. Do not reopen.
+- "14 reviews" — deliberately not shown next to the score. A small real number sitting next to a much larger-feeling Houzz widget undercuts credibility more than it builds it. Score alone (4.8) does the work.
+
+### CATEGORY CARDS — REBUILT — LOCKED
+Redone from scratch mid-session (see Rule 9 — this is the case study for why that rule exists). Final version: single Image with name + gold "Shop Now" button overlaid directly on the photo (dark gradient bottom-up for legibility), matching the overlay treatment already used in the Systems section image cards elsewhere on the page — so the pattern is now consistent site-wide, not invented fresh for this section. Referenced pchenderson.com structure for calibration (photo-dominant, button-on-image) — not copied, DoorMate's own navy/gold overlay style used throughout.
+External Kits image swapped from `external-sliding-kits-category.jpg` (showed a person riding a horse through a stable door — no product visible, off-message) to `External-150kg.jpg` (already in `/public/img`, previously approved for hero use, actually shows the product).
+
+### TRUST STRIP — FIXED
+Pills were laid out with `justify-content: space-around` across the full bar width, which threw all spare width into gaps between them — four disconnected islands. Changed to `justify-content: center` with a fixed gap so they read as one grouped strip.
+
+### RULE 9 ADDED THIS SESSION — SEE RULES SECTION ABOVE
+One full audit pass before any edit — never build reactively one piece at a time. The category card redo today is the named example.
+
+### THE HARDER CONVERSATION THIS SESSION
+Terry said directly: over 5 weeks he has repeatedly been forced into the "lead designer" role, correcting Claude's output piece by piece, when he came into this project explicitly not equipped to make design calls himself. He referenced pchenderson.com as an example of the *feeling* he's after — relaxed, breathable, balanced — explicitly NOT to be copied (ASSA ABLOY-owned, legal risk). He does not want another "new promise" that gets ignored like the last one. He asked for two things at session close: this file updated honestly (done above, including Rule 9), and a first prompt for the next chat that starts in line with where things actually are — not a reset.
+
+### HOMEPAGE — STATE AS OF 3 JULY 2026
+✅ Hero carousel — signed off (unchanged this session)
+✅ Header — unchanged this session
+✅ Trust strip — spacing fixed
+✅ Category cards — rebuilt, overlay style, locked
+✅ Reviews section — built, live, badges locked, headline locked
+⬜ Who We Are — still has an empty left-column photo slot (no maxWidth violation any more, but no image). Needs a real photo from Terry — NOT a custom illustration (see feedback_no_custom_illustrations memory). Not resolved this session — Terry didn't answer what "craftsman's drawing board" meant, conversation moved on. Ask fresh, don't assume.
+⬜ Brands scrolling banner — not reviewed this session, logos still inconsistent sizing per 1 June note
+⬜ Systems section — not reviewed this session
+⬜ Footer — not reviewed this session
+⬜ Schema.org JSON-LD — still missing, AISIO critical
+⬜ llms.txt — still missing
+
+### NEXT SESSION — START HERE — FOLLOW RULE 9 EXACTLY
+Do not start editing code immediately. First:
+1. Look at the live site (Chrome extension) end to end, scroll through every remaining unreviewed section (Who We Are, Brands, Systems, Footer) in one pass.
+2. Compare each against barn-doors.co.uk (Rule 8) and, for feel only, a calibration reference like pchenderson.com (Rule 9) — not to copy, to check restraint/balance/breathing room.
+3. Decide everything that needs to change across all of them.
+4. Present or execute as ONE batch — not section-by-section drip edits, not build-then-redo.
+5. Only after that: Who We Are photo (ask Terry fresh for a real photo — do not assume what "craftsman's drawing board" means), Schema.org JSON-LD, llms.txt, then product pages.
