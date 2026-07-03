@@ -128,15 +128,21 @@ export default async function HomePage() {
       {/* REVIEWS SECTION — full width, 3 matched-height columns: Houzz | copy | Google */}
       <section style={{width:'100%', background:'#ffffff', padding:'72px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
         <p style={{color:'#272446', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', textAlign:'center', margin:'0 0 48px 0'}}>Real Reviews From Real Customers</p>
-        <div style={{display:'grid', gridTemplateColumns:'minmax(280px, 320px) 1fr minmax(280px, 320px)', gap:'32px', alignItems:'stretch'}}>
+        <div style={{display:'grid', gridTemplateColumns:'minmax(280px, 320px) 1fr minmax(280px, 320px)', gap:'32px', alignItems:'start'}}>
 
-          <div style={{height:'420px', display:'flex', alignItems:'center', justifyContent:'center'}}>
-            <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px', display:'flex', alignItems:'center'}}>
+          <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+            <div style={{display:'flex', alignItems:'center', gap:'8px', margin:'0 0 12px 0'}}>
+              <svg width="22" height="22" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#7DC242" d="M50,5 L95,42 L80,42 L80,95 L55,95 L55,65 L45,65 L45,95 L20,95 L20,42 L5,42 Z"/>
+              </svg>
+              <span style={{color:'#273a2e', fontSize:'16px', fontWeight:'700', fontFamily:'Arial, sans-serif'}}>Houzz Reviews</span>
+            </div>
+            <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px'}}>
               <iframe
                 scrolling="no"
                 frameBorder="0"
                 width="300"
-                height="380"
+                height="430"
                 src="https://www.houzz.com/reviewWidget/terryburnett98/"
                 style={{border:'none', display:'block'}}
                 title="DoorMate reviews on Houzz"
@@ -144,14 +150,14 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div style={{height:'420px', display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', textAlign:'center', padding:'0 16px'}}>
+          <div style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center', padding:'0 16px', paddingTop:'46px'}}>
             <span style={{color:'#efb627', fontSize:'56px', fontWeight:'900', lineHeight:'1', margin:'0 0 8px 0', fontFamily:'Georgia, serif'}}>&ldquo;</span>
             <p style={{color:'#272446', fontSize:'19px', fontWeight:'600', lineHeight:'1.8', margin:0}}>
               Every project starts with research &mdash; reviews are the best source there is. They tell you if you&apos;re dealing with a good company and a good product. They matter just as much on our side too: a good review tells us we&apos;re getting it right, a bad one tells us just as fast where we&apos;re not. So whatever you buy &mdash; from us or anyone else &mdash; always consider leaving a review.
             </p>
           </div>
 
-          <div style={{height:'420px', display:'flex', alignItems:'center', justifyContent:'center'}}>
+          <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
             <GoogleReviewsCarousel reviews={reviews} rating={rating} totalReviews={total} reviewUrl={reviewUrl} />
           </div>
 
@@ -160,7 +166,7 @@ export default async function HomePage() {
 
       {/* WHO WE ARE — full width, single column text (Houzz widget moved to Reviews section above; photo goes here once supplied) */}
       <section style={{width:'100%', background:'#ffffff', padding:'40px', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <div style={{maxWidth:'860px', margin:'0 auto'}}>
+        <div>
           <div style={{display:'flex', flexDirection:'column', justifyContent:'center', fontFamily:"'Libre Franklin', sans-serif", textAlign:'center'}}>
             <h2 style={{color:'#272446', fontSize:'clamp(16px, 2vw, 26px)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0', whiteSpace:'nowrap'}}>
               Real UK Manufacturers. Real Systems Delivered Direct To You.
