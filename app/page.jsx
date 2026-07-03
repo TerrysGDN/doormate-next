@@ -112,25 +112,23 @@ export default async function HomePage() {
             {name:'Pocket Door Kits',  img:'/img/pocket-door-kits-category.jpg',        href:'/pocket-door-kits',      alt:'Pocket door kits installed in a home'},
             {name:'Barn Door Kits',    img:'/img/gainesville-system.jpg',               href:'/barn-door-hardware',    alt:'Gainesville barn door hardware installed on a red door'},
             {name:'Internal Kits',     img:'/img/internal-sliding-kits-category.jpg',   href:'/internal-sliding-kits', alt:'Internal sliding door kit installed'},
-            {name:'External Kits',     img:'/img/external-sliding-kits-category.jpg',   href:'/external-sliding-kits', alt:'Heavy duty external sliding door kit installed'},
+            {name:'External Kits',     img:'/img/External-150kg.jpg',                   href:'/external-sliding-kits', alt:'Heavy duty external sliding door kit installed'},
             {name:'Shop',              img:'/img/shop-category.jpg',                    href:'/shop',                  alt:'Door accessories and hardware'},
           ].map((cat) => (
-            <div key={cat.name} style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'8px', overflow:'hidden', display:'flex', flexDirection:'column'}}>
-              <p style={{color:'#272446', fontSize:'18px', fontWeight:'900', textAlign:'center', margin:'0', padding:'16px 8px 12px 8px'}}>{cat.name}</p>
-              <div style={{padding:'0 16px 16px 16px'}}>
-                <Link href={cat.href} className="dm-btn" style={{display:'block', width:'100%', textAlign:'center', padding:'10px 0', fontSize:'14px', boxSizing:'border-box'}}>Shop Now</Link>
+            <Link key={cat.name} href={cat.href} style={{textDecoration:'none', display:'block', height:'clamp(220px, 24vw, 380px)', overflow:'hidden', position:'relative', borderRadius:'8px'}}>
+              <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="16vw" />
+              <div style={{position:'absolute', inset:0, background:'linear-gradient(to top, rgba(15,13,36,0.85) 0%, rgba(15,13,36,0.15) 45%, rgba(15,13,36,0) 65%)', display:'flex', flexDirection:'column', justifyContent:'flex-end', padding:'18px'}}>
+                <span style={{color:'#ffffff', fontSize:'18px', fontWeight:'900', margin:'0 0 12px 0', display:'block'}}>{cat.name}</span>
+                <span className="dm-btn" style={{display:'block', width:'100%', textAlign:'center', padding:'9px 0', fontSize:'13px', boxSizing:'border-box'}}>Shop Now</span>
               </div>
-              <Link href={cat.href} style={{textDecoration:'none', display:'block', height:'clamp(180px, 20vw, 340px)', background:'#ffffff', overflow:'hidden', position:'relative'}}>
-                <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="16vw" />
-              </Link>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
 
       {/* REVIEWS SECTION — full width, 3 matched-height columns: Houzz | copy | Google */}
       <section style={{width:'100%', background:'#ffffff', padding:'72px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <p style={{color:'#272446', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', textAlign:'center', margin:'0 0 48px 0'}}>Real Reviews From Real Customers</p>
+        <p style={{color:'#272446', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', textAlign:'center', margin:'0 0 48px 0'}}>Why Real Reviews Matter</p>
         <div style={{display:'grid', gridTemplateColumns:'minmax(280px, 320px) 1fr minmax(280px, 320px)', gap:'32px', alignItems:'start'}}>
 
           <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
@@ -162,7 +160,9 @@ export default async function HomePage() {
           </div>
 
           <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
-            <GoogleReviewsCarousel reviews={reviews} rating={rating} totalReviews={total} reviewUrl={reviewUrl} />
+            <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px', width:'300px', height:'430px', boxSizing:'border-box', display:'flex', alignItems:'center', justifyContent:'center'}}>
+              <GoogleReviewsCarousel reviews={reviews} rating={rating} totalReviews={total} reviewUrl={reviewUrl} />
+            </div>
           </div>
 
         </div>
