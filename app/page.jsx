@@ -146,35 +146,34 @@ export default async function HomePage() {
           </p>
         </div>
 
-        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'32px', alignItems:'start', maxWidth:'700px', margin:'0 auto'}}>
-
-          <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
-            <div style={{display:'inline-flex', alignItems:'center', gap:'10px', background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'999px', padding:'12px 22px', margin:'0 0 16px 0'}}>
-              <svg width="22" height="22" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#7DC242" d="M50,5 L95,42 L80,42 L80,95 L55,95 L55,65 L45,65 L45,95 L20,95 L20,42 L5,42 Z"/>
-              </svg>
-              <span style={{color:'#273a2e', fontSize:'17px', fontWeight:'700', fontFamily:'Arial, sans-serif'}}>5.0</span>
-              <span style={{color:'#efb627', fontSize:'20px', lineHeight:'1', letterSpacing:'2px'}}>★★★★★</span>
-            </div>
-            <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px'}}>
-              <iframe
-                scrolling="no"
-                frameBorder="0"
-                width="300"
-                height="430"
-                src="https://www.houzz.com/reviewWidget/terryburnett98/"
-                style={{border:'none', display:'block'}}
-                title="DoorMate reviews on Houzz"
-              />
-            </div>
-          </div>
-
-          <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
-            <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px', width:'100%', maxWidth:'300px', boxSizing:'border-box'}}>
-              <GoogleReviewsCarousel reviews={reviews} rating={rating} totalReviews={total} reviewUrl={reviewUrl} />
-            </div>
-          </div>
-
+        <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'32px', maxWidth:'300px', margin:'0 auto'}}>
+          {[
+            <div key="houzz" style={{display:'flex', flexDirection:'column', alignItems:'center', width:'100%'}}>
+              <div style={{display:'inline-flex', alignItems:'center', gap:'10px', background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'999px', padding:'12px 22px', margin:'0 0 16px 0'}}>
+                <svg width="22" height="22" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#7DC242" d="M50,5 L95,42 L80,42 L80,95 L55,95 L55,65 L45,65 L45,95 L20,95 L20,42 L5,42 Z"/>
+                </svg>
+                <span style={{color:'#273a2e', fontSize:'17px', fontWeight:'700', fontFamily:'Arial, sans-serif'}}>5.0</span>
+                <span style={{color:'#efb627', fontSize:'20px', lineHeight:'1', letterSpacing:'2px'}}>★★★★★</span>
+              </div>
+              <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px', width:'100%', boxSizing:'border-box'}}>
+                <iframe
+                  scrolling="no"
+                  frameBorder="0"
+                  width="300"
+                  height="430"
+                  src="https://www.houzz.com/reviewWidget/terryburnett98/"
+                  style={{border:'none', display:'block', maxWidth:'100%'}}
+                  title="DoorMate reviews on Houzz"
+                />
+              </div>
+            </div>,
+            <div key="google" style={{display:'flex', flexDirection:'column', alignItems:'center', width:'100%'}}>
+              <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px', width:'100%', boxSizing:'border-box'}}>
+                <GoogleReviewsCarousel reviews={reviews} rating={rating} totalReviews={total} reviewUrl={reviewUrl} />
+              </div>
+            </div>,
+          ]}
         </div>
       </section>
 
