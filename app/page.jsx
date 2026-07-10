@@ -130,11 +130,12 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* REVIEWS SECTION — headline, full-width quote, then Houzz | Google equal-width row */}
+      {/* REVIEWS SECTION — left: headline + text, right: Houzz + Google stacked */}
       <section style={{width:'100%', background:'#ffffff', padding:'72px var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <h2 style={{color:'#272446', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', textAlign:'center', margin:'0 0 32px 0'}}>Why Real Reviews Matter</h2>
+        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'48px', alignItems:'center'}}>
 
-        <div style={{textAlign:'center', margin:'0 0 56px 0'}}>
+        <div style={{textAlign:'left'}}>
+          <h2 style={{color:'#272446', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', textAlign:'left', margin:'0 0 24px 0'}}>Why Real Reviews Matter</h2>
           <p style={{color:'#272446', fontSize:'19px', fontWeight:'600', lineHeight:'1.8', margin:'0 0 16px 0'}}>
             Every project starts with research &mdash; reviews are the best source there is. They tell you if you&apos;re dealing with a good company and a good product.
           </p>
@@ -146,7 +147,7 @@ export default async function HomePage() {
           </p>
         </div>
 
-        <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'32px', maxWidth:'300px', margin:'0 auto'}}>
+        <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'20px', maxWidth:'300px', margin:'0 auto'}}>
           {[
             <div key="houzz" style={{display:'flex', flexDirection:'column', alignItems:'center', width:'100%'}}>
               <div style={{display:'inline-flex', alignItems:'center', gap:'10px', background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'999px', padding:'12px 22px', margin:'0 0 16px 0'}}>
@@ -174,6 +175,8 @@ export default async function HomePage() {
               </div>
             </div>,
           ]}
+        </div>
+
         </div>
       </section>
 
