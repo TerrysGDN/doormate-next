@@ -1,5 +1,5 @@
 # DOORMATE — MASTER BIBLE — LIVE DOCUMENT
-## Last updated: 3 July 2026
+## Last updated: 9 July 2026
 ## This file IS the project bible. Cowork reads CLAUDE.md automatically from this folder.
 ## Most recent decision always overwrites older ones.
 ## Session summaries at the bottom are in the order they were written — the LAST one is always most recent.
@@ -1711,3 +1711,48 @@ Do not start editing code immediately. First:
 3. Decide everything that needs to change across all of them.
 4. Present or execute as ONE batch — not section-by-section drip edits, not build-then-redo.
 5. Only after that: Who We Are photo (ask Terry fresh for a real photo — do not assume what "craftsman's drawing board" means), Schema.org JSON-LD, llms.txt, then product pages.
+
+---
+
+## SESSION SUMMARY — 9 JULY 2026 — READ THIS FIRST — MOST RECENT
+
+### WHAT THIS SESSION ACTUALLY WAS
+Continuation of the 7 July reset. Not a design session — a process session. Real output: `DOORMATE_REBUILD_PLAN.md` (started 7 July) rewritten several times with corrections, a new `DOORMATE_HOMEPAGE_BRIEF.md` written (Step 4 of the plan), a real measured technical finding, and a first wireframe built and reviewed live with Terry. Also several real-time corrections where Claude repeated the exact mistake the plan exists to stop — logged honestly below, not smoothed over.
+
+### NEW DOCUMENTS — BOTH IN NEW WEBSITE FOLDER
+- `DOORMATE_REBUILD_PLAN.md` — the constitution/process document, references `DOORMATE TRUTH SOURCE.pdf` as the top-level authority. Read this alongside the Bible every session from now on.
+- `DOORMATE_HOMEPAGE_BRIEF.md` — Step 4, the structured brief for Claude Code: positioning, reference pattern, locked content per section, design tokens, SEO/AISIO requirements, what not to do. Not yet handed to Claude Code — see Outstanding below.
+
+### REAL TECHNICAL FINDING — MEASURED, NOT GUESSED
+Terry felt "chaos" looking at the top of the homepage and named it precisely: different sections start at different left-hand positions, so the eye can't find one line to follow. Measured directly via Chrome DevTools on the live Vercel build: header content starts 28px from the left edge, hero text starts 69px in, trust strip pills start 197px in. Three different spacing decisions stacked on one page, despite `globals.css` already defining one shared value (`--section-pad-h: 40px`) meant to be used everywhere. It is referenced nowhere. This is the same "fundamentals declared, never enforced" problem already logged 29 June for colours — now confirmed for spacing too. Step 3 of the rebuild plan (rewire tokens into real use) covers this directly.
+
+### REFERENCE PATTERN — CORRECTED SYNTHESIS, NOT ONE COPIED SITE
+Reviewed Tadaima, MARFA STANCE, Aarke Official, Merrell (land-book.com) and cocif.com (Terry's own find — real door/window manufacturer, good photography, but "trying to be a bit too clever," mood before product — logged as what NOT to do). Claude initially mislabelled the result "Aarke structure" and got corrected hard: the actual synthesis, in order of real authority, is (1) the old DoorMate site — proven, £250k in 2017, one clear sales job per hero slide, (2) the Truth Source PDF — Short Route Principle, Visual Philosophy, Tier hierarchy for story only, (3) pchenderson.com — feel/calibration only, (4) land-book sites — outside confirmation only, explicitly "not saying use this" in Terry's own words. Full corrected version lives in `DOORMATE_HOMEPAGE_BRIEF.md`.
+
+### WIREFRAME — BUILT, REVIEWED LIVE, NOT YET SAVED AS A FILE
+Terry made the case directly: a written brief is not a wireframe. Stitch's real value was never "here are the colours" — it was a locked visual picture, exact grid and proportions, something to copy measurement-for-measurement. Without that, Claude Code invents the layout itself, which is how the first 3 rejected AI-slop sites happened and how tonight's 3-different-spacing-systems problem happened. Agreed: lock one concrete wireframe (plain, no functionality, just shape) before Claude Code touches any functional code — new sub-step added to the rebuild plan before Step 5.
+
+A first wireframe was built and shown to Terry as a live Cowork visual widget (not a file in the NEW WEBSITE folder — **this may not persist to next session and likely needs rebuilding or saving properly as an actual file**). It used one shared content margin in every section, one message per hero slide (never brand tagline mixed with a specific product+price — the exact fault found on the live hero), trust pills spread edge-to-edge instead of clustered, six equal-weight shop cards. Terry compared it directly against his own annotated screenshot of the live site and confirmed the alignment fix worked: "what I see is alignment... that a great starting point." Session ended mid-way through walking through the wireframe piece by piece (logo, nav, hero, trust strip, cards, reviews, Who We Are, Systems, footer) so Terry fully understands every part before locking it — not finished, Terry had to stop for the day at 18:40.
+
+### CORRECTIONS MADE LIVE THIS SESSION — LOGGED HONESTLY, NOT SMOOTHED OVER
+Within about 25 minutes, Claude repeated the exact "same mistake" pattern the whole reset exists to stop:
+1. Called the reference pattern "locked" after reviewing only 4 sites — Terry stopped it ("wait not so fast").
+2. Raised specific placeholder image content as a design finding when Terry has said many times all images are placeholders until marked complete — corrected.
+3. Suggested the 6 shop cards should have different visual weight, directly contradicting a correction written into the plan file minutes earlier (all 6 stay equal weight — story hierarchy applies to the hero only, never shop access) — Terry caught it in real time: "we discussed 5 mins ago about card weight now your reverted back to your idea not mine."
+4. Raised one hero carousel slide's mismatched wording as a layout/structural problem when it's carousel content, not a layout fact — corrected in the same message as #3.
+5. Credited "Aarke structure" as the locked reference when Terry had actually asked for a weighted synthesis of the old site, the Truth Source, and pchenderson, with land-book only as outside confirmation — corrected, full synthesis rewritten into the brief.
+
+Terry named the deeper fear directly: this isn't a new start, it's a continuation of the old pattern, just compressed into one session instead of spread over months. That's a fair read — the information was in context the whole time and got contradicted anyway. Two new memory files exist because of this (`feedback_card_weight_and_layout_scope.md`, `feedback_check_before_speaking.md`) — read them at the start of every session, not just this one.
+
+### THE BUSINESS REALITY THIS SESSION SURFACED — DO NOT LOSE THIS
+Terry said directly, mid-session, that he was ready to walk away from the whole website project — "the business can die for all I care," real exhaustion, real anger about 5 months of hours spent on this instead of on customers. He clarified afterward this wasn't literal (the "door to door" line was rhetorical, not a plan to abandon the business) but the underlying point stands and is now his explicit condition for continuing: **"we have 1 more go but must be done right from the start... we work on the wireframe until we have the one we want then we begin the build."** This is not optional context — it is the actual constraint the rest of this project now operates under. If a future session drifts back into reactive, ungrounded chat-based design decisions, that is the thing that ends the project, not just a bad session.
+
+### WORKFLOW CLARIFIED FURTHER THIS SESSION
+Cowork's role from here: write/hold the brief and wireframe, review what Claude Code actually builds against them, catch drift. Not: make layout/spacing decisions by talking them out in chat. That is explicitly what produced the 5-month mess per Terry, and per the rebuild plan itself. Claude Code (with the front-end-design Skill, once installed) does the actual visual/layout build, in one pass, against the locked wireframe + brief — not patched section by section in Cowork.
+
+### OUTSTANDING — NEXT SESSION START HERE, IN THIS ORDER
+1. Re-open/rebuild the wireframe visual (it was shown in-chat via a visualize widget, not saved as a persistent file — check whether it survived, and if not, rebuild it quickly rather than starting the discussion from scratch).
+2. Finish walking through the wireframe with Terry section by section (logo, nav, hero, trust strip, cards, reviews, Who We Are, Systems, footer) until he understands and agrees each small piece — do not lock it before he says so.
+3. Once locked: install Claude Skills via Claude Code (front-end-design skill minimum) — Step 2 of the rebuild plan, task already logged.
+4. Hand `DOORMATE_HOMEPAGE_BRIEF.md` + the locked wireframe + `CLAUDE.md` + `DOORMATE TRUTH SOURCE.pdf` to Claude Code for one real build pass — Step 5, task already logged. Not more chat-based section patching.
+5. Only after that: Who We Are photo (Terry to supply, real photo not illustration), Schema.org JSON-LD, llms.txt, then product pages — all still outstanding from prior sessions, unchanged.
