@@ -90,3 +90,31 @@ The handoff between the two is the checkpoint. It does not collapse again.
 
 Next: this wireframe file + `DOORMATE_HOMEPAGE_BRIEF.md` + `CLAUDE.md` + Truth Source PDF all go to Claude Code together for the actual build (Step 5) — after Claude Skills are installed (Step 2).
 **Step 5:** Build, against the brief AND the locked wireframe, in Claude Code — not patched section by section in Cowork.
+
+---
+
+## SEO/AI-SEO AUDIT — 10 JULY 2026 — CORRECTS STALE BIBLE NOTES
+
+Terry asked, before sending any more one-line fixes to Claude Code, to confirm the whole site is genuinely SEO and AI-search ready — this is the entire reason the new site is being built (WebFactory held the old sitemap/SEO hostage with no fix possible). Checked the actual code directly rather than trusting file summaries or old notes. Findings:
+
+**Already working, confirmed by reading the code, no action needed:**
+- Organization + LocalBusiness Schema.org tags — present and complete in `app/layout.jsx` (name, phone, address, opening hours, founder).
+- Homepage meta title/description/Open Graph — present, correctly leads with "DoorMate Sliding Door Systems."
+- `app/sitemap.js` and `app/robots.js` — both present and wired up correctly.
+
+**Genuinely missing — real gaps, not yet done:**
+- `llms.txt` file — confirmed not present anywhere in `/public`.
+- Product schema (price/availability/star rating markup) on product pages — not present.
+- Breadcrumb structured data on category/product pages — there's a visible breadcrumb trail but no actual structured markup behind it, so Google/AI can't read it as one.
+- FAQ content and FAQ structured data — not present anywhere yet.
+
+**Correction, 10 July 2026, same session:** the line below overclaimed. Terry corrected it directly: "we have no real product pages built whatever exists has never been looked at or worked on." Checked `components/Nav.jsx` directly — confirmed zero links anywhere in navigation to `/barn-door-hardware`, `/doors`, `/pocket-door-kits`, `/external-sliding-kits`, or `/internal-sliding-kits`. So these are orphaned files, not real working pages: unreachable from the live site, never reviewed, never wired up. The one accurate thing in the finding below: the product DATA inside `lib/products.js` (prices, headroom specs, buy links) does match the real Bible facts (Gainesville £150/175mm/track=2×, Detroit £150 low headroom, correct barn-doors.co.uk buy link IDs) — so if these pages get built for real later, the underlying data doesn't need re-entering. But the pages themselves are not "built" in any real sense yet.
+
+~~Surprise finding — corrects stale Bible notes: CLAUDE.md Parts 15–17 say category and product pages are "NOT YET BUILT." That's out of date. Real pages already exist (dated 13 May 2026)... This is a genuinely good foundation nobody had been tracking.~~ — struck through, see correction above. Existing code found but not verified as working, linked to what should be reachable from the site.
+
+**But — real rule violations found in that same code, confirmed by direct search, not assumed:**
+- ALL CAPS text in 12 files, 29 places (e.g. "UK MANUFACTURED IN CARDIFF", "Which system do I need?" as a caps heading) — direct violation of the Bible's "No ALL CAPS anywhere on the site — ever."
+- Banned grey text/background classes in the same 12 files, 71 places — direct violation of "Grey text of any shade — not DoorMate's brand."
+- `tailwind.config.js` maps `brand-navy` to `#363557` (the BACKGROUND navy) and these pages use that same class for heading/body TEXT — should be `#272446` (the TEXT navy) per the Bible's own colour split. Confirmed by reading the config file directly.
+
+**Recommendation, not yet actioned:** one batched Claude Code brief covering all of the above — llms.txt, product/breadcrumb/FAQ schema, and the caps/grey/navy-shade fixes across all 12 category and product page files — rather than sending fixes one at a time. Awaiting Terry's go-ahead.
