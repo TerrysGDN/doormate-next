@@ -80,8 +80,20 @@ Applied identically in every section below: `padding: var(--section-pad-v) var(-
 
 ---
 
+## SECTIONS BELOW THE CARDS — LOCKED NUMBERS, 10 JULY 2026
+
+Extending the same precision used above to the rest of the page, after finding the Reviews section had drifted to a hardcoded 72px padding instead of the shared value, plus other sections found using their own one-off numbers instead of the token:
+
+- **Reviews:** padding must be `var(--section-pad-v) var(--section-pad-h)` — not a custom value. Quote block spacing tightened (36px quote mark, 24px margin below).
+- **Who We Are:** padding `var(--section-pad-v) var(--section-pad-h)` — already correct, leave as is. **Adding real character here** (see below) — this is the natural home for the "real deal" story since the section's existing approved copy is already about DoorMate manufacturing vs. competitors importing.
+- **Brands:** currently hardcoded `32px` vertical padding — standardise to the shared token.
+- **Systems:** currently hardcoded `64px` vertical padding — standardise to the shared token. (If Terry wants this section to keep extra breathing room as the one navy "break" section, that's a deliberate exception to flag explicitly, not a silent one-off number.)
+
+## CORRECTION 10 JULY 2026 — TWO SEPARATE STORIES, NOT ONE
+Claude wrongly merged two different things here: the "real deal" manufacturer-vs-importer sales angle, and Terry's personal origin story (punk band, US tour, product naming — see `project_origin_story_placement` memory). The workshop photo Terry supplied is for the ORIGIN story, not the "real deal" one. Placement of the origin story on the homepage (if any — it may belong on /our-story only) is NOT YET DECIDED. Do not place the workshop photo in Who We Are or anywhere else until Terry confirms where he wants it.
+
 ## STATUS
 
-Fundamentals locked by Terry 10 July 2026: shared margin, header balance. Individual section content (images, exact copy placement) to be confirmed live as each section is actually built by Claude Code — not re-litigated here first.
+Fundamentals locked by Terry 10 July 2026: shared margin, header balance. Reviews, Who We Are, Brands, Systems sections locked with real numbers above — no more vague "headline, two boxes" descriptions. Individual section content (images) confirmed live as built by Claude Code.
 
 Next: install Claude Skills (front-end-design) via Claude Code, then hand this file + DOORMATE_HOMEPAGE_BRIEF.md + CLAUDE.md + DOORMATE TRUTH SOURCE.pdf to Claude Code for the Step 5 build.
