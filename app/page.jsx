@@ -130,10 +130,18 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* REVIEWS SECTION — full width, 3 matched-height columns: Houzz | copy | Google */}
+      {/* REVIEWS SECTION — headline, full-width quote, then Houzz | Google equal-width row */}
       <section style={{width:'100%', background:'#ffffff', padding:'72px var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <h2 style={{color:'#272446', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', textAlign:'center', margin:'0 0 48px 0'}}>Why Real Reviews Matter</h2>
-        <div style={{display:'grid', gridTemplateColumns:'minmax(280px, 320px) 1fr minmax(280px, 320px)', gap:'32px', alignItems:'start'}}>
+        <h2 style={{color:'#272446', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', textAlign:'center', margin:'0 0 32px 0'}}>Why Real Reviews Matter</h2>
+
+        <div style={{textAlign:'center', margin:'0 0 56px 0'}}>
+          <span style={{color:'#efb627', fontSize:'56px', fontWeight:'900', lineHeight:'1', margin:'0 0 8px 0', fontFamily:'Georgia, serif', display:'block'}}>&ldquo;</span>
+          <p style={{color:'#272446', fontSize:'19px', fontWeight:'600', lineHeight:'1.8', margin:0}}>
+            Every project starts with research &mdash; reviews are the best source there is. They tell you if you&apos;re dealing with a good company and a good product. They matter just as much on our side too: a good review tells us we&apos;re getting it right, a bad one tells us just as fast where we&apos;re not. So whatever you buy &mdash; from us or anyone else &mdash; always consider leaving a review.
+          </p>
+        </div>
+
+        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'32px', alignItems:'start'}}>
 
           <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
             <div style={{display:'inline-flex', alignItems:'center', gap:'10px', background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'999px', padding:'12px 22px', margin:'0 0 16px 0'}}>
@@ -156,15 +164,8 @@ export default async function HomePage() {
             </div>
           </div>
 
-          <div style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center', padding:'0 16px', paddingTop:'46px'}}>
-            <span style={{color:'#efb627', fontSize:'56px', fontWeight:'900', lineHeight:'1', margin:'0 0 8px 0', fontFamily:'Georgia, serif'}}>&ldquo;</span>
-            <p style={{color:'#272446', fontSize:'19px', fontWeight:'600', lineHeight:'1.8', margin:0}}>
-              Every project starts with research &mdash; reviews are the best source there is. They tell you if you&apos;re dealing with a good company and a good product. They matter just as much on our side too: a good review tells us we&apos;re getting it right, a bad one tells us just as fast where we&apos;re not. So whatever you buy &mdash; from us or anyone else &mdash; always consider leaving a review.
-            </p>
-          </div>
-
           <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
-            <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px', width:'300px', height:'430px', boxSizing:'border-box', display:'flex', alignItems:'center', justifyContent:'center'}}>
+            <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px', width:'100%', maxWidth:'300px', boxSizing:'border-box'}}>
               <GoogleReviewsCarousel reviews={reviews} rating={rating} totalReviews={total} reviewUrl={reviewUrl} />
             </div>
           </div>

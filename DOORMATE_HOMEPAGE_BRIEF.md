@@ -59,6 +59,8 @@ Gold background, 4 white pills: DoorMate/Trading Since 2009 | Google 4.8★ | Tr
 ### 5. Reviews section
 Headline: "Why Real Reviews Matter". Houzz widget (real, authentic iframe) + Google reviews (native Places API build, already working — `getGoogleReviews()` in page.jsx, do not rebuild). Both shown as matching-footprint badges — real logo, real score, real stars only. Never a fabricated review-card UI dressed up to look like a platform that isn't actually embedded.
 
+**Intro quote — Terry's own copy, approved, do not remove or rewrite:** "Every project starts with research — reviews are the best source there is. They tell you if you're dealing with a good company and a good product. They matter just as much on our side too: a good review tells us we're getting it right, a bad one tells us just as fast where we're not. So whatever you buy — from us or anyone else — always consider leaving a review." Corrected 10 July 2026 — Claude wrongly flagged this as unapproved/untraceable copy; Terry confirmed he wrote it himself to introduce why reviews matter to both customer and company. Not documented in the Bible/brief before now, hence the false alarm — it's in the code, just wasn't written down here.
+
 ### 6. Who We Are
 Headline: "Real UK Manufacturers. Real Systems Delivered Direct To You."
 Approved body copy (word for word, never paraphrase):
@@ -80,6 +82,11 @@ Navy, 4 columns (Products, Company, Contact, Phone/Email/Location/Hours — Titl
 
 ## SEO / AISIO — REQUIRED ON EVERY SECTION TOUCHED (Bible Rule 7)
 Semantic HTML (`<nav>`, `<main>`, `<header>`, `<footer>`, `<section>`), correct H1→H2→H3 hierarchy, descriptive alt text on every image, `tel:`/`mailto:` links, Schema.org JSON-LD (Organization + LocalBusiness in layout.jsx — still missing, add now), meta title/description leading with "DoorMate Sliding Door Systems", Open Graph tags, llms.txt at /public/llms.txt (still missing, add now).
+
+## LOCKED CREATIVE ASSET — "THE REAL DEAL" — ADDED 10 JULY 2026 — DO NOT LOSE AGAIN
+Every UK barn door hardware seller (Coburn, Henderson, Buller, From The Anvil) imports Chinese kits and rebadges them — no machinery, just storage shelves. DoorMate manufactures in Cardiff. "Can they show you the factory? We can." This is real, verifiable, and no competitor can claim it.
+
+This idea got genuine excitement from an earlier session months ago, was never written down with any weight, and quietly disappeared until Terry had to resurface it himself. It is now a locked, standing creative asset — not background trivia confined to one blog post title. It is the strongest candidate for a real, human, scroll-stopping story moment mid-homepage (see Section 8, Systems section, or a new section between Reviews and Who We Are) — not just a supporting line buried in paragraph copy. Any future homepage work must actively consider surfacing this prominently.
 
 ## KNOWN CONTENT GAP — FLAGGED, NOT BLOCKING
 Several images across the hero, category cards, and Systems section are placeholders and not yet finalised — that is expected and not a build blocker. Terry to supply final installation photography when available; Claude Code should build the structure so swapping images later is a one-line change, not a rebuild.
