@@ -135,13 +135,18 @@ export default async function HomePage() {
         <h2 style={{color:'#272446', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', textAlign:'center', margin:'0 0 32px 0'}}>Why Real Reviews Matter</h2>
 
         <div style={{textAlign:'center', margin:'0 0 56px 0'}}>
-          <span style={{color:'#efb627', fontSize:'56px', fontWeight:'900', lineHeight:'1', margin:'0 0 8px 0', fontFamily:'Georgia, serif', display:'block'}}>&ldquo;</span>
+          <p style={{color:'#272446', fontSize:'19px', fontWeight:'600', lineHeight:'1.8', margin:'0 0 16px 0'}}>
+            Every project starts with research &mdash; reviews are the best source there is. They tell you if you&apos;re dealing with a good company and a good product.
+          </p>
+          <p style={{color:'#272446', fontSize:'19px', fontWeight:'600', lineHeight:'1.8', margin:'0 0 16px 0'}}>
+            They matter just as much on our side too: a good review tells us we&apos;re getting it right, a bad one tells us just as fast where we&apos;re not.
+          </p>
           <p style={{color:'#272446', fontSize:'19px', fontWeight:'600', lineHeight:'1.8', margin:0}}>
-            Every project starts with research &mdash; reviews are the best source there is. They tell you if you&apos;re dealing with a good company and a good product. They matter just as much on our side too: a good review tells us we&apos;re getting it right, a bad one tells us just as fast where we&apos;re not. So whatever you buy &mdash; from us or anyone else &mdash; always consider leaving a review.
+            So whatever you buy &mdash; from us or anyone else &mdash; always consider leaving a review.
           </p>
         </div>
 
-        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'32px', alignItems:'start'}}>
+        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'32px', alignItems:'start', maxWidth:'700px', margin:'0 auto'}}>
 
           <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
             <div style={{display:'inline-flex', alignItems:'center', gap:'10px', background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'999px', padding:'12px 22px', margin:'0 0 16px 0'}}>
