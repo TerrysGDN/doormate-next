@@ -1756,3 +1756,55 @@ Cowork's role from here: write/hold the brief and wireframe, review what Claude 
 3. Once locked: install Claude Skills via Claude Code (front-end-design skill minimum) — Step 2 of the rebuild plan, task already logged.
 4. Hand `DOORMATE_HOMEPAGE_BRIEF.md` + the locked wireframe + `CLAUDE.md` + `DOORMATE TRUTH SOURCE.pdf` to Claude Code for one real build pass — Step 5, task already logged. Not more chat-based section patching.
 5. Only after that: Who We Are photo (Terry to supply, real photo not illustration), Schema.org JSON-LD, llms.txt, then product pages — all still outstanding from prior sessions, unchanged.
+
+---
+
+## SESSION SUMMARY — 10 JULY 2026 — READ THIS FIRST — MOST RECENT
+
+### THE HONEST HEADLINE
+This session was "the one more go" from 9 July. The wireframe got rebuilt, reviewed live with Terry, and saved properly this time to `DOORMATE_WIREFRAME_V1.md` (previous version only existed as a non-persistent chat widget). Fundamentals for the TOP of the homepage — header, hero, trust strip, 6 cards — are genuinely locked and verified. Below the cards, this session spent five to six hours and roughly 50 small fixes on the Reviews section alone, and still ended the day with its core problem — the section is too tall — unsolved. Terry named the real cause directly: the wireframe was only ever given real numeric precision above the cards; below the cards it stayed vague, so nothing caught the drift.
+
+### WHAT'S ACTUALLY SOLID — VERIFIED, NOT ASSUMED
+- Header, hero, trust strip, 6 category cards: confirmed via direct code read and live Chrome check. One shared spacing value used correctly. Hero shows one message per slide. Trust strip pills spread edge to edge with real Google/Trustpilot/Houzz scores. All 6 cards equal weight, correct names, working links.
+- Schema.org JSON-LD (Organization + LocalBusiness): confirmed present and correct in `app/layout.jsx`.
+- Category and product pages (Barn Door Hardware, Doors, Pocket Door Kits, External/Internal Sliding Kits) exist and ARE linked in the nav — this corrects a wrong claim made earlier in this same session, caused by a grep search that couldn't match the actual code syntax. Whether Terry has ever actually reviewed these pages properly is still unconfirmed — treat as unreviewed until he says otherwise.
+- `llms.txt`: confirmed genuinely missing, still to be added.
+
+### THE REVIEWS SECTION — WHERE MOST OF THE DAY WENT
+Real problems actually fixed:
+- The Google reviews box was silently throwing away real review text it had already fetched from Google, showing only a score. Fixed — it now shows real review snippets, styled in Google's own colours/font, not DoorMate's, because it needs to look authentically like Google, not like the rest of the site.
+- A decorative quote mark was removed — the intro line is Terry's own voice, not a customer quote, and shouldn't have looked like one.
+- One dense paragraph was split into three separate lines.
+- Found hardcoded one-off paddings (72px on Reviews, 32px on Brands, 64px on Systems) instead of the one shared spacing value everywhere else uses — fix sent, not yet re-checked live.
+
+Real problems still NOT fixed:
+- The section is still too tall. The layout was changed to put the text beside the Houzz/Google boxes instead of above them, but the two boxes are still stacked on top of EACH OTHER within their own column — and that stack was always the real height problem, not the text. Moving the text aside only shaved off a small amount. Terry asked directly why this fix wouldn't work, and the honest answer is that the version actually needed — Houzz and Google side by side with each other, not just text moved next to a still-stacked pair — was never worked through.
+- Making the text vertically centred next to a much taller box column created a big empty gap above the headline. Real bug, not fixed.
+- The Reviews section (now left-aligned, two columns) and the Who We Are section directly below it (still centred, one column) now visibly clash — proof the wireframe isn't holding consistently once you go past the cards.
+- The Trustpilot box is still blocked — Terry hasn't yet supplied the real DoorMate Trustpilot page link, so it can't be built for real.
+
+### NEAR-MISS THIS SESSION — DO NOT REPEAT
+Terry shared a screenshot of a real, good-looking reviews carousel (real names, real review text, "4.7/5 based on 3,163 reviews") purely as a layout style reference. It was misread as DoorMate's own content, and a Claude Code brief was nearly sent that would have hardcoded a competitor's real customer names as if they were DoorMate's own reviews. Terry caught it before it went anywhere. Always confirm what a shared image actually is — real content, a style reference, or a mockup — before it goes anywhere near a Claude Code brief. Full detail: memory `feedback_discuss_before_code`.
+
+### TWO SEPARATE STORIES — DO NOT MERGE AGAIN
+Two different ideas got wrongly mixed together today: the "real deal" pitch (DoorMate manufactures in Cardiff, competitors just import and rebadge — "Can they show you the factory? We can.") and Terry's own personal origin story (30 years drumming in a punk band, a five-week US tour that every barn door hardware product is named after — Gainesville, Brooklyn, Detroit, Baltimore, Covington, Augusta). They do different jobs. The "real deal" pitch is a strong, previously-lost idea that's now written properly into `DOORMATE_HOMEPAGE_BRIEF.md` and should actually get used somewhere, not filed away again. The origin story, and the real workshop photo Terry sent (currently sitting on his PC, not copied anywhere in the project yet), stay parked as backup content for a future /our-story page — his call, not the homepage. Full detail: memory files `project_real_deal_positioning` and `project_origin_story_placement`.
+
+### PROCESS FACTS RECONFIRMED TODAY
+- Claude Code keeping full access to Terry's whole PC is deliberate, not a bug — that's how it reaches images and files scattered outside the NEW WEBSITE folder. Cowork only ever sees the NEW WEBSITE folder. Don't suggest narrowing this again.
+- Cowork's screenshot tools in this setup can only be viewed in chat, not saved to disk. If a locked reference picture is needed for later comparison, Terry has to take and save that screenshot himself.
+- "Discuss before coding" and "check a locked decision before repeating it" are not new rules — both already existed and both were broken again today (memories `feedback_discuss_before_code`, `feedback_check_before_speaking`).
+
+### WHERE THE DAY ENDED
+Terry was direct that roughly five to six hours today produced one still-unfinished section, and that every specific problem he raised along the way — the empty Google box, mismatched padding, the pointless quote mark, the wall of text, the boxes stacked instead of side by side, the clash with Who We Are below it — was correct every time. This was a pace and process failure, not a misunderstanding on his part.
+
+### TERRY'S CONDITION FOR TOMORROW — DO THIS FIRST, BEFORE ANY NEW WORK
+Audit every section of the homepage — not just the top — against `DOORMATE_WIREFRAME_V1.md` directly. Check the real spacing and alignment in Reviews, Who We Are, Brands, Systems and Footer, section by section, and say plainly what actually matches and what doesn't. Do not assume the wireframe is holding just because it's written down — check it. Only once that audit is done and reported does any new work start. Note: not everything that went wrong today was a wireframe problem — some was a real code bug (the Google box dropping real data), some was mixed-up content (the two stories, the near-miss on fake reviews), some was process/tooling friction (permission prompts, a collapsed sidebar). Fixing the wireframe alone won't fix those — they need their own attention too.
+
+### IMMEDIATE NEXT STEPS, IN ORDER
+1. Audit every section below the cards against the wireframe file — real numbers, reported plainly, before touching anything.
+2. Fix the Reviews section properly: Houzz and Google side by side with EACH OTHER, not stacked — that's the version that actually reduces the height.
+3. Fix the vertical-centering gap above the headline.
+4. Make Reviews and Who We Are use one consistent alignment convention, not two clashing ones.
+5. Trustpilot box — only once Terry supplies the real page link.
+6. `llms.txt` — still outstanding.
+7. Everything else already logged from prior sessions (product pages properly reviewed, alt text, price checks) — unchanged, still waiting.
