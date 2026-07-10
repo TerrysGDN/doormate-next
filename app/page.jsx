@@ -42,14 +42,18 @@ export default async function HomePage() {
   const reviewUrl = placeId ? `https://search.google.com/local/writereview?placeid=${placeId}` : null
 
   return (
-    <main style={{width:'100%', overflowX:'hidden', margin:0, padding:0, fontFamily:"'Libre Franklin', sans-serif", background:'#ffffff'}}>
+    <div style={{width:'100%', overflowX:'hidden', margin:0, padding:0, fontFamily:"'Libre Franklin', sans-serif", background:'#ffffff'}}>
+
+      <h1 style={{position:'absolute', width:'1px', height:'1px', padding:0, margin:'-1px', overflow:'hidden', clip:'rect(0,0,0,0)', whiteSpace:'nowrap', border:0}}>
+        DoorMate Sliding Door Systems
+      </h1>
 
       {/* HERO */}
       <HeroCarousel />
 
       {/* TRUST STRIP */}
-      <div style={{width:'100%', background:'#efb627', padding:'8px 40px', boxSizing:'border-box'}}>
-        <div style={{display:'flex', justifyContent:'center', alignItems:'center', gap:'20px', flexWrap:'wrap'}}>
+      <div style={{width:'100%', background:'#efb627', padding:'8px var(--section-pad-h)', boxSizing:'border-box'}}>
+        <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', gap:'20px', flexWrap:'wrap'}}>
 
           <div style={{background:'#ffffff', borderRadius:'999px', padding:'5px 16px', display:'flex', alignItems:'center'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', whiteSpace:'nowrap'}}>
@@ -105,15 +109,15 @@ export default async function HomePage() {
       </div>
 
       {/* CATEGORY CARDS — 6-card single row, full width */}
-      <section style={{width:'100%', background:'#ffffff', padding:'20px 40px', boxSizing:'border-box'}}>
+      <section style={{width:'100%', background:'#ffffff', padding:'20px var(--section-pad-h)', boxSizing:'border-box'}}>
         <div style={{display:'grid', gridTemplateColumns:'repeat(6, 1fr)', gap:'12px'}}>
           {[
-            {name:'Doors',             img:'/img/doors-category.jpg',                   href:'/doors',                 alt:'Handmade oak and pine barn doors installed in a luxury home'},
-            {name:'Pocket Door Kits',  img:'/img/pocket-door-kits-category.jpg',        href:'/pocket-door-kits',      alt:'Pocket door kits installed in a home'},
-            {name:'Barn Door Kits',    img:'/img/gainesville-system.jpg',               href:'/barn-door-hardware',    alt:'Gainesville barn door hardware installed on a red door'},
-            {name:'Internal Kits',     img:'/img/internal-sliding-kits-category.jpg',   href:'/internal-sliding-kits', alt:'Internal sliding door kit installed'},
-            {name:'External Kits',     img:'/img/External-150kg.jpg',                   href:'/external-sliding-kits', alt:'Heavy duty external sliding door kit installed'},
-            {name:'Shop',              img:'/img/shop-category.jpg',                    href:'/shop',                  alt:'Door accessories and hardware'},
+            {name:'Doors',                        img:'/img/doors-category.jpg',                   href:'/doors',                 alt:'Handmade oak and pine barn doors installed in a luxury home'},
+            {name:'Pocket Door Kits',              img:'/img/pocket-door-kits-category.jpg',        href:'/pocket-door-kits',      alt:'Pocket door kits installed in a home'},
+            {name:'Barn Door Hardware',            img:'/img/gainesville-system.jpg',               href:'/barn-door-hardware',    alt:'Gainesville barn door hardware installed on a red door'},
+            {name:'Internal Sliding Door Kits',    img:'/img/internal-sliding-kits-category.jpg',   href:'/internal-sliding-kits', alt:'Internal sliding door kit installed'},
+            {name:'External Sliding Door Kits',    img:'/img/External-150kg.jpg',                   href:'/external-sliding-kits', alt:'Heavy duty external sliding door kit installed'},
+            {name:'Shop',                          img:'/img/shop-category.jpg',                    href:'/shop',                  alt:'Door accessories and hardware'},
           ].map((cat) => (
             <Link key={cat.name} href={cat.href} style={{textDecoration:'none', display:'block', height:'clamp(220px, 24vw, 380px)', overflow:'hidden', position:'relative', borderRadius:'8px'}}>
               <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="16vw" />
@@ -127,8 +131,8 @@ export default async function HomePage() {
       </section>
 
       {/* REVIEWS SECTION — full width, 3 matched-height columns: Houzz | copy | Google */}
-      <section style={{width:'100%', background:'#ffffff', padding:'72px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <p style={{color:'#272446', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', textAlign:'center', margin:'0 0 48px 0'}}>Why Real Reviews Matter</p>
+      <section style={{width:'100%', background:'#ffffff', padding:'72px var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
+        <h2 style={{color:'#272446', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', textAlign:'center', margin:'0 0 48px 0'}}>Why Real Reviews Matter</h2>
         <div style={{display:'grid', gridTemplateColumns:'minmax(280px, 320px) 1fr minmax(280px, 320px)', gap:'32px', alignItems:'start'}}>
 
           <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
@@ -169,7 +173,7 @@ export default async function HomePage() {
       </section>
 
       {/* WHO WE ARE — full width, single column text (Houzz widget moved to Reviews section above; photo goes here once supplied) */}
-      <section style={{width:'100%', background:'#ffffff', padding:'40px', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
+      <section style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
         <div>
           <div style={{display:'flex', flexDirection:'column', justifyContent:'center', fontFamily:"'Libre Franklin', sans-serif", textAlign:'center'}}>
             <h2 style={{color:'#272446', fontSize:'clamp(16px, 2vw, 26px)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0', whiteSpace:'nowrap'}}>
@@ -200,7 +204,7 @@ export default async function HomePage() {
       </section>
 
       {/* BRANDS — full width scrolling banner */}
-      <section style={{width:'100%', background:'#ffffff', padding:'32px 40px', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'4px solid #efb627', overflow:'hidden'}}>
+      <section style={{width:'100%', background:'#ffffff', padding:'32px var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'4px solid #efb627', overflow:'hidden'}}>
         <p style={{color:'#272446', fontSize:'11px', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0'}}>Brands We Work With</p>
         <style>{`
           @keyframes scroll {
@@ -228,10 +232,10 @@ export default async function HomePage() {
       </section>
 
       {/* SYSTEMS SECTION — full width — navy block to break up the run of white sections */}
-      <section style={{width:'100%', background:'#363557', padding:'64px 40px', boxSizing:'border-box'}}>
+      <section style={{width:'100%', background:'#363557', padding:'64px var(--section-pad-h)', boxSizing:'border-box'}}>
         <div style={{display:'grid', gridTemplateColumns:'55% 45%', gap:'40px', alignItems:'stretch'}}>
           <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', textAlign:'center', padding:'0 16px'}}>
-            <h2 style={{color:'#ffffff', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>We Offer Complete Sliding Door Solutions</h2>
+            <h2 style={{color:'#ffffff', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>We Offer Complete Sliding Door Solutions,</h2>
             <p style={{color:'#efb627', fontSize:'clamp(18px, 2.2vw, 30px)', fontWeight:'900', margin:'0', lineHeight:'1.2'}}>For Real Homes, Real Doors And Real Walls.</p>
             <p style={{color:'#ffffff', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0', lineHeight:'1.6'}}>Choosing a sliding door system shouldn&apos;t be difficult.</p>
             <p style={{color:'#ffffff', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>That&apos;s why we&apos;ve made it easy to find the right solution for your project.</p>
@@ -258,6 +262,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-    </main>
+    </div>
   )
 }

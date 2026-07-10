@@ -113,7 +113,7 @@ export default function Nav() {
       <style>{`@media (min-width: 1024px) { .dm-mobile-btn { display: none !important; } }`}</style>
 
       {/* ── BAR 1 — WHITE: social icons | logo (centred) | contact + icons ── */}
-      <div style={{ background: '#ffffff', minHeight: '110px', display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', width: '100%', padding: '0 28px' }}>
+      <div style={{ background: '#ffffff', minHeight: '110px', display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', width: '100%', padding: '0 var(--section-pad-h)' }}>
 
           {/* Social icons — left, in brand-colour circles */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -198,7 +198,7 @@ export default function Nav() {
 
       {/* ── BAR 2 — GOLD: main nav links ── */}
       <nav aria-label="Main navigation" className="hidden lg:block" style={{ background: '#efb627' }}>
-        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 40px', display: 'flex', alignItems: 'stretch', justifyContent: 'center' }}>
+        <div style={{ padding: '0 var(--section-pad-h)', display: 'flex', alignItems: 'stretch', justifyContent: 'center' }}>
 
           {/* HOME with dropdown */}
           <div className="relative" ref={dropdownRef} onMouseEnter={() => setHomeOpen(true)} onMouseLeave={() => setHomeOpen(false)}

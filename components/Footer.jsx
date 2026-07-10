@@ -14,7 +14,7 @@ export default function Footer() {
   return (
     <footer style={{ background: '#363557', color: '#ffffff', fontFamily: "'Libre Franklin', sans-serif" }}>
 
-      <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '32px 40px 20px 40px', display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: '40px', boxSizing: 'border-box' }}>
+      <div style={{ padding: 'var(--section-pad-v) var(--section-pad-h) 20px var(--section-pad-h)', display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: '40px', boxSizing: 'border-box' }}>
 
         {/* Column 1 — Brand + Socials */}
         <div>
@@ -68,7 +68,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom strip */}
-      <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '12px 40px', borderTop: '1px solid rgba(255,255,255,0.15)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxSizing: 'border-box' }}>
+      <div style={{ padding: '12px var(--section-pad-h)', borderTop: '1px solid rgba(255,255,255,0.15)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxSizing: 'border-box' }}>
         <p style={{ color: '#ffffff', fontSize: '11px', margin: 0 }}>© {new Date().getFullYear()} DoorMate Sliding Door Systems. Trading since 2009. Cardiff, South Wales.</p>
         <div style={{ display: 'flex', gap: '16px' }}>
           <Link href="/privacy" style={{ color: '#efb627', fontSize: '11px', textDecoration: 'none' }}>Privacy Policy</Link>

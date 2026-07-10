@@ -15,9 +15,6 @@ const SLIDES = [
   { img: '/img/Slide 7 (Reviews).png',                          alt: 'DoorMate Customer Reviews',                           href: '/reviews',                tegan: true  },
 ]
 
-const HEADLINE_LINE1 = "The UK's Leading Sliding"
-const HEADLINE_LINE2 = "Systems Specialists"
-
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0)
 
@@ -54,15 +51,12 @@ export default function HeroCarousel() {
               }} />
               <div style={{
                 position:'absolute', inset:0, display:'flex', flexDirection:'column',
-                justifyContent:'center', padding:'0 5%', maxWidth:'52%',
+                justifyContent:'center', padding:'0 var(--section-pad-h)', maxWidth:'52%',
               }}>
                 <p style={{ color:'#efb627', fontFamily:"'Libre Franklin',sans-serif", fontSize:'clamp(13px,1.4vw,17px)', fontWeight:700, margin:'0 0 10px 0', letterSpacing:'0.06em', textTransform:'uppercase' }}>
                   {slide.label}
                 </p>
                 <p style={{ color:'#ffffff', fontFamily:"'Libre Franklin',sans-serif", fontSize:'clamp(20px,2.8vw,42px)', fontWeight:800, margin:'0 0 8px 0', lineHeight:1.15 }}>
-                  {HEADLINE_LINE1}<br/>{HEADLINE_LINE2}
-                </p>
-                <p style={{ color:'#ffffff', fontFamily:"'Libre Franklin',sans-serif", fontSize:'clamp(13px,1.3vw,18px)', fontWeight:500, margin:'0 0 8px 0', fontStyle:'italic' }}>
                   {slide.tagline}
                 </p>
                 <p style={{ color:'#efb627', fontFamily:"'Libre Franklin',sans-serif", fontSize:'clamp(16px,1.6vw,22px)', fontWeight:800, margin:'0 0 18px 0' }}>
@@ -80,7 +74,7 @@ export default function HeroCarousel() {
           )}
         </div>
       ))}
-      <div style={{ position:'absolute', bottom:'12px', left:'50%', transform:'translateX(-50%)', display:'flex', gap:'8px', zIndex:10 }}>
+      <div style={{ position:'absolute', bottom:'12px', left:'var(--section-pad-h)', display:'flex', gap:'8px', zIndex:10 }}>
         {SLIDES.map((_, i) => (
           <button key={i} onClick={() => setCurrent(i)} aria-label={`Go to slide ${i+1}`}
             style={{ width:i===current?'24px':'8px', height:'8px', borderRadius:'4px', background:i===current?'#efb627':'rgba(255,255,255,0.6)', border:'none', cursor:'pointer', padding:0, transition:'all 0.3s ease' }}
