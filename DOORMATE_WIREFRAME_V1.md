@@ -89,12 +89,14 @@ Extending the same precision used above to the rest of the page, after finding t
 - **Brands:** currently hardcoded `32px` vertical padding — standardise to the shared token.
 - **Systems:** currently hardcoded `64px` vertical padding — standardise to the shared token. (If Terry wants this section to keep extra breathing room as the one navy "break" section, that's a deliberate exception to flag explicitly, not a silent one-off number.)
 
-## HEADLINE FONT-SIZE — LOCKED NUMBER, 11 JULY 2026
-Found live 11 July: Reviews, Who We Are and Systems section headlines were rendering at three different sizes (36px / 22px / 30px) despite the Bible saying headlines should be "large" and consistent. That word was never converted into an actual number, so nothing could check it — this is now fixed:
+## HEADLINE FONT-SIZE — LOCKED TOKEN, 11 JULY 2026 (corrected same day)
+Found live 11 July: Reviews, Who We Are and Systems section headlines were rendering at three different sizes (36px / 22px / 30px) despite the Bible saying headlines should be "large" and consistent. That word was never converted into an actual number, so nothing could check it.
 
-**Every homepage section H2 headline must use exactly:** `fontSize:'clamp(22px, 2.6vw, 34px)'`. No section gets its own one-off value, no matter how long or short its text is. If a headline's text is too long to fit on one line at this size, let it wrap to two lines — do not shrink the font to force a single line. (Who We Are's headline was previously shrunk to 22px fixed + forced nowrap for exactly this reason — that was the bug, not a valid exception.)
+First fix attempt hardcoded a new matching literal value (`clamp(22px, 2.6vw, 34px)`) across all three — which repeated the exact mistake it was meant to solve: inventing a number on the fly instead of using a token. `globals.css` already defines `--font-heading-lg: clamp(22px, 3vw, 38px)` for exactly this purpose, unused until now.
 
-This is a real, numbered rule specifically so `scripts/brand_check.js` can check it mechanically — see the new check added there 11 July.
+**Every homepage section H2 headline must use exactly:** `fontSize:'var(--font-heading-lg)'` — the existing token, never a hardcoded literal. No section gets its own one-off value, no matter how long or short its text is. If a headline's text is too long to fit on one line, let it wrap to two lines — do not shrink the font to force a single line. (Who We Are's headline was previously shrunk to 22px fixed + forced nowrap for exactly this reason — that was the bug, not a valid exception.)
+
+This is a real rule specifically so `scripts/brand_check.js` can check it mechanically — see the check added there 11 July, updated same day to require the token rather than a literal.
 
 ## CORRECTION 10 JULY 2026 — TWO SEPARATE STORIES, NOT ONE
 Claude wrongly merged two different things here: the "real deal" manufacturer-vs-importer sales angle, and Terry's personal origin story (punk band, US tour, product naming — see `project_origin_story_placement` memory). The workshop photo Terry supplied is for the ORIGIN story, not the "real deal" one. Placement of the origin story on the homepage (if any — it may belong on /our-story only) is NOT YET DECIDED. Do not place the workshop photo in Who We Are or anywhere else until Terry confirms where he wants it.
