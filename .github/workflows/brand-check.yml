@@ -1,0 +1,28 @@
+name: Brand & Wireframe Check
+
+# Runs automatically on every push — no Claude session, and no reminder from
+# Terry, has to trigger this. It just runs. If it fails, GitHub shows a red X
+# on the commit itself, visible on github.com without anyone asking a
+# question or trusting anyone's word for it.
+#
+# This is the answer to "I need consistency, not day-1 every day": this
+# check does not depend on any future Claude session remembering Rule 10,
+# reading the Bible, or choosing to comply. It is infrastructure, not a
+# promise.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  brand-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run brand + wireframe static check
+        run: node scripts/brand_check.js
