@@ -47,6 +47,20 @@ Grey #999 is NOT a DoorMate colour. It is AI template fluff. Remove it wherever 
 - Body text: navy #272446, fontWeight 600, centred, full width — no maxWidth constraints
 - All bars (nav, trust strip): 16px bold Libre Franklin
 
+### TYPOGRAPHY TOKEN MAP — LOCKED 11 JULY 2026 — THE MISSING PIECE
+`globals.css` has always had a typography scale (`--font-heading-xl/lg/md/sm`, `--font-body`, `--font-label`, `--font-small`, `--font-nav`). What never existed until tonight was a written rule saying which token belongs to which element — so every section guessed its own number instead of using the same one. This is that rule. No exceptions without writing the exception down here.
+
+| Element / use | Token | Notes |
+|---|---|---|
+| Every section H2 headline | `var(--font-heading-lg)` | Locked 11 July after Reviews/Who We Are/Systems were found at 3 different sizes. Checked by `scripts/brand_check.js`. |
+| Page H1 (usually screen-reader-only, visual weight carried by hero) | `var(--font-heading-xl)` | |
+| Sub-headings / small section labels (e.g. "Brands We Work With") | `var(--font-label)` or `var(--font-small)` | Not yet applied — Brands label is still hardcoded 11px, flagged, not yet fixed. |
+| Main body paragraph copy | `var(--font-body)` | Fixed 11 July — Reviews was hardcoded 19px, Who We Are used the token at 17px; both now use the token. |
+| Nav links / bars (nav, trust strip) | `var(--font-nav)` (16px) | |
+| Small print (footer copyright, fallback messages) | `var(--font-small)` | These are legitimate exceptions to body size, not bugs — flagged by the checker so they stay a visible, deliberate choice, not a silent one. |
+
+If a new section needs a headline, a sub-label, or body copy, it uses one of these tokens — it does not invent a new clamp() or pixel value, even one that happens to match visually. Matching-by-coincidence is exactly what broke tonight.
+
 ### What is NEVER allowed
 - ALL CAPS anywhere on the site — ever. British grammar. DoorMate is a British company.
 - Gold eyebrow labels (e.g. "WHY DOORMATE?", "OUR SYSTEMS") — these were killed. They do not appear anywhere on the site.
@@ -112,6 +126,13 @@ This rule exists because "it's fixed" has been said and proven false, repeatedly
 If a future Claude session believes there's "a better way" to verify something than what's written in these two files — that instinct itself is the failure mode this rule exists to stop. Improving the checks is welcome (add new ones, fix a bad one — see the false-negative caught in `wireframe_live_check.md` Check 3). Replacing "run the check and paste it" with "trust my report" is not.
 
 **Added 11 July 2026 — `.github/workflows/brand-check.yml` runs `scripts/brand_check.js` automatically on every push to GitHub.** This does not depend on any Claude session remembering to run it or Terry remembering to ask — it is a real CI gate. A red X on the commit in GitHub means the check failed; a green tick means it passed. This only covers what `brand_check.js` checks (colours, hardcoded padding, ALL CAPS, headline size mismatch) — it does NOT cover the live layout checks in `wireframe_live_check.md` (that needs a browser, which plain CI doesn't have set up here). Terry: glancing at the commit status on github.com/TerrysGDN/doormate-next after a push is lower-effort than asking a question every time, and it doesn't rely on trusting anyone's word.
+
+## RULE 11 — ROOT CAUSE FIRST, NEVER PATCH THE INSTANCE — NEVER BREAK — Added 11 July 2026
+Terry's own example, verbatim, because it says this better than a rule ever could: on a real dev team, Terry asks day 2 "why is that text bigger than that text in that section?" Dev says "pick one," fixes it. Line 2 has the same fault. A real dev's reaction is "wow, that should never have happened — let me check my globals.css... sorry, my mistake, now fixed." Job done — the CATEGORY of bug is closed, not just the one instance.
+
+Tonight, when the exact headline-size bug was found, the first fix hardcoded a new matching number across three sections instead of checking whether a shared token already existed (it did — `--font-heading-lg`, sitting unused). Minutes later the same failure repeated on body-copy text sizes, and it was patched again as an isolated instance before the checker was extended to cover it. Both times, the instinct was "fix what's in front of me," not "check the shared file first, ask if this is systemic, fix the root."
+
+**The rule: the moment any visual inconsistency is found — size, colour, spacing, radius, anything — the FIRST action is to check `globals.css`/the design tokens for an existing shared value, not to patch the specific element.** If a token already exists, use it. If it doesn't, create one and use it everywhere that category of thing appears, in the same pass — not just the one spot that got noticed. Only after that is the fix "done." Patching the instance you happen to be looking at, and leaving the same category to reappear elsewhere, is not a fix — it's the exact failure this rule exists to stop.
 
 ## RULE 9 — ONE FULL AUDIT PASS BEFORE ANY EDIT — NEVER BREAK — Added 3 July 2026
 Never make a visual change reactively, one piece at a time, and find out it was wrong only after it's live. On 3 July, category cards were built once, shown live, then had to be rebuilt from scratch minutes later because the first version was never checked against a real reference before it was coded. That is the same 5-week thrash pattern (word cloud, hero, trust strip, every "rushed compromise" logged in this file) — it just moved from "Terry keeps getting asked to decide" to "Claude keeps guessing and correcting." Same root cause either way: deciding as you go instead of thinking it through first.

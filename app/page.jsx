@@ -52,7 +52,7 @@ export default async function HomePage() {
       <HeroCarousel />
 
       {/* TRUST STRIP — pills spread edge to edge across the shared margin, not clustered */}
-      <section aria-label="Customer trust indicators" style={{width:'100%', background:'#efb627', padding:'8px var(--section-pad-h)', boxSizing:'border-box'}}>
+      <section aria-label="Customer trust indicators" style={{width:'100%', background:'#efb627', padding:'var(--space-1) var(--section-pad-h)', boxSizing:'border-box'}}>
         <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', gap:'20px', flexWrap:'wrap'}}>
 
           <div style={{background:'#ffffff', borderRadius:'999px', padding:'5px 16px', display:'flex', alignItems:'center'}}>
@@ -133,14 +133,14 @@ export default async function HomePage() {
 
       {/* REVIEWS — left: headline + Terry's copy, right: Houzz + Google stacked */}
       <section aria-label="Customer reviews" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <div style={{display:'grid', gridTemplateColumns:'0.9fr 1.3fr', gap:'40px', alignItems:'start'}}>
+        <div style={{display:'grid', gridTemplateColumns:'0.9fr 1.3fr', gap:'var(--section-pad-h)', alignItems:'start'}}>
 
         <div style={{textAlign:'center'}}>
-          <h2 style={{color:'#272446', fontSize:'var(--font-heading-lg)', fontWeight:'900', textAlign:'center', margin:'0 0 24px 0'}}>Why Real Reviews Matter</h2>
-          <p style={{color:'#272446', fontSize:'var(--font-body)', fontWeight:'600', lineHeight:'1.8', margin:'0 0 16px 0'}}>
+          <h2 style={{color:'#272446', fontSize:'var(--font-heading-lg)', fontWeight:'900', textAlign:'center', margin:'0 0 var(--space-3) 0'}}>Why Real Reviews Matter</h2>
+          <p style={{color:'#272446', fontSize:'var(--font-body)', fontWeight:'600', lineHeight:'1.8', margin:'0 0 var(--space-2) 0'}}>
             Every project starts with research &mdash; reviews are the best source there is. They tell you if you&apos;re dealing with a good company and a good product.
           </p>
-          <p style={{color:'#272446', fontSize:'var(--font-body)', fontWeight:'600', lineHeight:'1.8', margin:'0 0 16px 0'}}>
+          <p style={{color:'#272446', fontSize:'var(--font-body)', fontWeight:'600', lineHeight:'1.8', margin:'0 0 var(--space-2) 0'}}>
             They matter just as much on our side too: a good review tells us we&apos;re getting it right, a bad one tells us just as fast where we&apos;re not.
           </p>
           <p style={{color:'#272446', fontSize:'var(--font-body)', fontWeight:'600', lineHeight:'1.8', margin:0}}>
@@ -181,7 +181,7 @@ export default async function HomePage() {
 
       {/* WHO WE ARE — real photo left (placeholder until Terry supplies one), copy right */}
       <section aria-label="Who we are" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <div style={{display:'grid', gridTemplateColumns:'45% 55%', gap:'48px', alignItems:'center'}}>
+        <div style={{display:'grid', gridTemplateColumns:'45% 55%', gap:'var(--space-5)', alignItems:'center'}}>
 
           {/* Photo placeholder — swap the div below for a real <Image> once Terry supplies the workshop photo */}
           <div style={{position:'relative', width:'100%', aspectRatio:'4 / 5', borderRadius:'8px', overflow:'hidden', background:'#363557', border:'2px solid #efb627', display:'flex', alignItems:'center', justifyContent:'center'}}>
@@ -191,7 +191,7 @@ export default async function HomePage() {
           </div>
 
           <div style={{display:'flex', flexDirection:'column', justifyContent:'center', fontFamily:"'Libre Franklin', sans-serif", textAlign:'center'}}>
-            <h2 style={{color:'#272446', fontSize:'var(--font-heading-lg)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0'}}>
+            <h2 style={{color:'#272446', fontSize:'var(--font-heading-lg)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 var(--space-3) 0'}}>
               Real UK Manufacturers. Real Systems Delivered Direct To You.
             </h2>
             <p style={{color:'#272446', fontSize:'var(--font-body)', lineHeight:'1.85', margin:'0 0 20px 0', fontWeight:'600'}}>
@@ -235,7 +235,7 @@ export default async function HomePage() {
 
       {/* SYSTEMS SECTION — navy block breaks up the run of white sections */}
       <section aria-label="Our sliding door systems" style={{width:'100%', background:'#363557', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box'}}>
-        <div style={{display:'grid', gridTemplateColumns:'55% 45%', gap:'40px', alignItems:'stretch'}}>
+        <div style={{display:'grid', gridTemplateColumns:'55% 45%', gap:'var(--section-pad-h)', alignItems:'stretch'}}>
           <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', textAlign:'center', padding:'0 16px'}}>
             <h2 style={{color:'#ffffff', fontSize:'var(--font-heading-lg)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>We Offer Complete Sliding Door Solutions,</h2>
             <p style={{color:'#efb627', fontSize:'clamp(18px, 2.2vw, 30px)', fontWeight:'900', margin:'0', lineHeight:'1.2'}}>For Real Homes, Real Doors And Real Walls.</p>

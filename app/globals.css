@@ -16,9 +16,19 @@
   --gold-btn:   #f1b52a;
   --white:      #ffffff;
 
-  /* Spacing */
+  /* Spacing — outer section padding */
   --section-pad-v: 40px;
   --section-pad-h: 40px;
+
+  /* Spacing scale — added 11 July 2026 (Rule 11). Every gap/margin between
+     elements inside a section must use one of these, not its own invented
+     number. If a new gap doesn't fit one of these, that's a conversation,
+     not a silent one-off pixel value. */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
 
   /* Typography scale */
   --font-heading-xl: clamp(28px, 4vw, 52px);
