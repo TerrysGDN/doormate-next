@@ -135,8 +135,8 @@ export default async function HomePage() {
       <section aria-label="Customer reviews" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
         <div style={{display:'grid', gridTemplateColumns:'0.9fr 1.3fr', gap:'40px', alignItems:'start'}}>
 
-        <div style={{textAlign:'left'}}>
-          <h2 style={{color:'#272446', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', textAlign:'left', margin:'0 0 24px 0'}}>Why Real Reviews Matter</h2>
+        <div style={{textAlign:'center'}}>
+          <h2 style={{color:'#272446', fontSize:'clamp(22px, 2.7vw, 36px)', fontWeight:'900', textAlign:'center', margin:'0 0 24px 0'}}>Why Real Reviews Matter</h2>
           <p style={{color:'#272446', fontSize:'19px', fontWeight:'600', lineHeight:'1.8', margin:'0 0 16px 0'}}>
             Every project starts with research &mdash; reviews are the best source there is. They tell you if you&apos;re dealing with a good company and a good product.
           </p>
@@ -190,8 +190,8 @@ export default async function HomePage() {
             </span>
           </div>
 
-          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', fontFamily:"'Libre Franklin', sans-serif", textAlign:'left'}}>
-            <h2 style={{color:'#272446', fontSize:'var(--font-heading-lg)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0'}}>
+          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', fontFamily:"'Libre Franklin', sans-serif", textAlign:'center'}}>
+            <h2 style={{color:'#272446', fontSize:'clamp(18px, 1.5vw, 22px)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0', whiteSpace:'nowrap'}}>
               Real UK Manufacturers. Real Systems Delivered Direct To You.
             </h2>
             <p style={{color:'#272446', fontSize:'var(--font-body)', lineHeight:'1.85', margin:'0 0 20px 0', fontWeight:'600'}}>
@@ -237,7 +237,7 @@ export default async function HomePage() {
       <section aria-label="Our sliding door systems" style={{width:'100%', background:'#363557', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box'}}>
         <div style={{display:'grid', gridTemplateColumns:'55% 45%', gap:'40px', alignItems:'stretch'}}>
           <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', textAlign:'center', padding:'0 16px'}}>
-            <h2 style={{color:'#ffffff', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>We Offer Complete Sliding Door Solutions,</h2>
+            <h2 style={{color:'#ffffff', fontSize:'clamp(20px, 2.15vw, 30px)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2', whiteSpace:'nowrap'}}>We Offer Complete Sliding Door Solutions,</h2>
             <p style={{color:'#efb627', fontSize:'clamp(18px, 2.2vw, 30px)', fontWeight:'900', margin:'0', lineHeight:'1.2'}}>For Real Homes, Real Doors And Real Walls.</p>
             <p style={{color:'#ffffff', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0', lineHeight:'1.6'}}>Choosing a sliding door system shouldn&apos;t be difficult.</p>
             <p style={{color:'#ffffff', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>That&apos;s why we&apos;ve made it easy to find the right solution for your project.</p>
