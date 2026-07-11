@@ -137,13 +137,13 @@ export default async function HomePage() {
 
         <div style={{textAlign:'center'}}>
           <h2 style={{color:'#272446', fontSize:'clamp(22px, 2.6vw, 34px)', fontWeight:'900', textAlign:'center', margin:'0 0 24px 0'}}>Why Real Reviews Matter</h2>
-          <p style={{color:'#272446', fontSize:'19px', fontWeight:'600', lineHeight:'1.8', margin:'0 0 16px 0'}}>
+          <p style={{color:'#272446', fontSize:'var(--font-body)', fontWeight:'600', lineHeight:'1.8', margin:'0 0 16px 0'}}>
             Every project starts with research &mdash; reviews are the best source there is. They tell you if you&apos;re dealing with a good company and a good product.
           </p>
-          <p style={{color:'#272446', fontSize:'19px', fontWeight:'600', lineHeight:'1.8', margin:'0 0 16px 0'}}>
+          <p style={{color:'#272446', fontSize:'var(--font-body)', fontWeight:'600', lineHeight:'1.8', margin:'0 0 16px 0'}}>
             They matter just as much on our side too: a good review tells us we&apos;re getting it right, a bad one tells us just as fast where we&apos;re not.
           </p>
-          <p style={{color:'#272446', fontSize:'19px', fontWeight:'600', lineHeight:'1.8', margin:0}}>
+          <p style={{color:'#272446', fontSize:'var(--font-body)', fontWeight:'600', lineHeight:'1.8', margin:0}}>
             So whatever you buy &mdash; from us or anyone else &mdash; always consider leaving a review.
           </p>
         </div>

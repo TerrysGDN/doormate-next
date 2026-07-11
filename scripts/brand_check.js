@@ -48,6 +48,16 @@ let findings = [];
 
 const LOCKED_HEADLINE_SIZE = "clamp(22px, 2.6vw, 34px)";
 const H2_FONTSIZE_RE = /<h2[^>]*fontSize:\s*'([^']+)'/;
+// Any <p> with a hardcoded pixel fontSize instead of var(--font-body) or a
+// clamp(). Added 11 July 2026 after a body-copy version of the exact same
+// bug (Reviews at 19px, Who We Are at 17px via the token) was found and
+// hand-patched WITHOUT extending this checker in the same breath — this is
+// the fix for that gap. This WILL also flag legitimate cases (Systems'
+// deliberately tiered "beats" copy, review-quote snippets at a smaller
+// size) — it is not meant to silently pass everything, it is meant to make
+// every hardcoded body size visible so a human decides, instead of nobody
+// noticing until Terry does.
+const P_PX_FONTSIZE_RE = /<p[^>]*fontSize:\s*'(\d+(?:\.\d+)?px)'/;
 
 for (const file of files) {
   const content = fs.readFileSync(file, 'utf8');
@@ -77,6 +87,11 @@ for (const file of files) {
   }
 
   lines.forEach((line, i) => {
+    const pm = P_PX_FONTSIZE_RE.exec(line);
+    if (pm) {
+      findings.push({ file, line: i + 1, type: 'HARDCODED BODY TEXT SIZE', detail: `<p> fontSize '${pm[1]}' hardcoded — should this use var(--font-body), or is it a deliberate exception (tiered beat copy, quote snippet, etc.)? Needs a human decision, not a silent pass.`, text: line.trim().slice(0, 110) });
+    }
+
     let m;
     HEX_RE.lastIndex = 0;
     while ((m = HEX_RE.exec(line)) !== null) {
