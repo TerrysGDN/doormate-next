@@ -36,6 +36,8 @@ export const metadata = {
   }
 }
 
+const srOnly = {position:'absolute', width:'1px', height:'1px', padding:0, margin:'-1px', overflow:'hidden', clip:'rect(0,0,0,0)', whiteSpace:'nowrap', border:0}
+
 export default async function HomePage() {
   const { reviews, rating, total } = await getGoogleReviews()
   const placeId = process.env.GOOGLE_PLACE_ID
@@ -44,15 +46,13 @@ export default async function HomePage() {
   return (
     <div style={{width:'100%', overflowX:'hidden', margin:0, padding:0, fontFamily:"'Libre Franklin', sans-serif", background:'#ffffff'}}>
 
-      <h1 style={{position:'absolute', width:'1px', height:'1px', padding:0, margin:'-1px', overflow:'hidden', clip:'rect(0,0,0,0)', whiteSpace:'nowrap', border:0}}>
-        DoorMate Sliding Door Systems
-      </h1>
+      <h1 style={srOnly}>DoorMate Sliding Door Systems</h1>
 
-      {/* HERO */}
+      {/* HERO — locked component, never edit here */}
       <HeroCarousel />
 
-      {/* TRUST STRIP */}
-      <div style={{width:'100%', background:'#efb627', padding:'8px var(--section-pad-h)', boxSizing:'border-box'}}>
+      {/* TRUST STRIP — pills spread edge to edge across the shared margin, not clustered */}
+      <section aria-label="Customer trust indicators" style={{width:'100%', background:'#efb627', padding:'8px var(--section-pad-h)', boxSizing:'border-box'}}>
         <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', gap:'20px', flexWrap:'wrap'}}>
 
           <div style={{background:'#ffffff', borderRadius:'999px', padding:'5px 16px', display:'flex', alignItems:'center'}}>
@@ -106,10 +106,11 @@ export default async function HomePage() {
           </div>
 
         </div>
-      </div>
+      </section>
 
-      {/* CATEGORY CARDS — 6-card single row, full width */}
-      <section style={{width:'100%', background:'#ffffff', padding:'20px var(--section-pad-h)', boxSizing:'border-box'}}>
+      {/* SHOP CATEGORY GRID — 6 cards, equal weight, no hierarchy among them */}
+      <section aria-label="Shop by category" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box'}}>
+        <h2 style={srOnly}>Shop Sliding Door Systems By Category</h2>
         <div style={{display:'grid', gridTemplateColumns:'repeat(6, 1fr)', gap:'12px'}}>
           {[
             {name:'Doors',                        img:'/img/doors-category.jpg',                   href:'/doors',                 alt:'Handmade oak and pine barn doors installed in a luxury home'},
@@ -130,9 +131,9 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* REVIEWS SECTION — left: headline + text, right: Houzz + Google stacked */}
-      <section style={{width:'100%', background:'#ffffff', padding:'72px var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'48px', alignItems:'center'}}>
+      {/* REVIEWS — left: headline + Terry's copy, right: Houzz + Google stacked */}
+      <section aria-label="Customer reviews" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
+        <div style={{display:'grid', gridTemplateColumns:'0.9fr 1.3fr', gap:'40px', alignItems:'start'}}>
 
         <div style={{textAlign:'left'}}>
           <h2 style={{color:'#272446', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', textAlign:'left', margin:'0 0 24px 0'}}>Why Real Reviews Matter</h2>
@@ -147,56 +148,62 @@ export default async function HomePage() {
           </p>
         </div>
 
-        <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'20px', maxWidth:'300px', margin:'0 auto'}}>
-          {[
-            <div key="houzz" style={{display:'flex', flexDirection:'column', alignItems:'center', width:'100%'}}>
-              <div style={{display:'inline-flex', alignItems:'center', gap:'10px', background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'999px', padding:'12px 22px', margin:'0 0 16px 0'}}>
-                <svg width="22" height="22" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  <path fill="#7DC242" d="M50,5 L95,42 L80,42 L80,95 L55,95 L55,65 L45,65 L45,95 L20,95 L20,42 L5,42 Z"/>
-                </svg>
-                <span style={{color:'#273a2e', fontSize:'17px', fontWeight:'700', fontFamily:'Arial, sans-serif'}}>5.0</span>
-                <span style={{color:'#efb627', fontSize:'20px', lineHeight:'1', letterSpacing:'2px'}}>★★★★★</span>
-              </div>
-              <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px', width:'100%', boxSizing:'border-box'}}>
-                <iframe
-                  scrolling="no"
-                  frameBorder="0"
-                  width="300"
-                  height="430"
-                  src="https://www.houzz.com/reviewWidget/terryburnett98/"
-                  style={{border:'none', display:'block', maxWidth:'100%'}}
-                  title="DoorMate reviews on Houzz"
-                />
-              </div>
-            </div>,
-            <div key="google" style={{display:'flex', flexDirection:'column', alignItems:'center', width:'100%'}}>
-              <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px', width:'100%', boxSizing:'border-box'}}>
-                <GoogleReviewsCarousel reviews={reviews} rating={rating} totalReviews={total} reviewUrl={reviewUrl} />
-              </div>
-            </div>,
-          ]}
+        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'20px', alignItems:'start'}}>
+          <div key="houzz" style={{display:'flex', flexDirection:'column', alignItems:'center', width:'100%'}}>
+            <div style={{display:'inline-flex', alignItems:'center', gap:'10px', background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'999px', padding:'12px 22px', margin:'0 0 16px 0'}}>
+              <svg width="22" height="22" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#7DC242" d="M50,5 L95,42 L80,42 L80,95 L55,95 L55,65 L45,65 L45,95 L20,95 L20,42 L5,42 Z"/>
+              </svg>
+              <span style={{color:'#273a2e', fontSize:'17px', fontWeight:'700', fontFamily:'Arial, sans-serif'}}>5.0</span>
+              <span style={{color:'#efb627', fontSize:'20px', lineHeight:'1', letterSpacing:'2px'}}>★★★★★</span>
+            </div>
+            <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px', width:'100%', boxSizing:'border-box'}}>
+              <iframe
+                scrolling="no"
+                frameBorder="0"
+                width="300"
+                height="430"
+                src="https://www.houzz.com/reviewWidget/terryburnett98/"
+                style={{border:'none', display:'block', maxWidth:'100%', width:'100%'}}
+                title="DoorMate reviews on Houzz"
+              />
+            </div>
+          </div>
+          <div key="google" style={{display:'flex', flexDirection:'column', alignItems:'center', width:'100%'}}>
+            <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px', width:'100%', boxSizing:'border-box'}}>
+              <GoogleReviewsCarousel reviews={reviews} rating={rating} totalReviews={total} reviewUrl={reviewUrl} />
+            </div>
+          </div>
         </div>
 
         </div>
       </section>
 
-      {/* WHO WE ARE — full width, single column text (Houzz widget moved to Reviews section above; photo goes here once supplied) */}
-      <section style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <div>
-          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', fontFamily:"'Libre Franklin', sans-serif", textAlign:'center'}}>
-            <h2 style={{color:'#272446', fontSize:'clamp(16px, 2vw, 26px)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0', whiteSpace:'nowrap'}}>
+      {/* WHO WE ARE — real photo left (placeholder until Terry supplies one), copy right */}
+      <section aria-label="Who we are" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
+        <div style={{display:'grid', gridTemplateColumns:'45% 55%', gap:'48px', alignItems:'center'}}>
+
+          {/* Photo placeholder — swap the div below for a real <Image> once Terry supplies the workshop photo */}
+          <div style={{position:'relative', width:'100%', aspectRatio:'4 / 5', borderRadius:'8px', overflow:'hidden', background:'#363557', border:'2px solid #efb627', display:'flex', alignItems:'center', justifyContent:'center'}}>
+            <span style={{color:'#efb627', fontSize:'var(--font-label)', fontWeight:'700', textAlign:'center', padding:'0 24px', letterSpacing:'0.03em', textTransform:'none'}}>
+              Real Cardiff Workshop Photo — Coming Soon
+            </span>
+          </div>
+
+          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', fontFamily:"'Libre Franklin', sans-serif", textAlign:'left'}}>
+            <h2 style={{color:'#272446', fontSize:'var(--font-heading-lg)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 24px 0'}}>
               Real UK Manufacturers. Real Systems Delivered Direct To You.
             </h2>
-            <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.85', margin:'0 0 20px 0', fontWeight:'600'}}>
+            <p style={{color:'#272446', fontSize:'var(--font-body)', lineHeight:'1.85', margin:'0 0 20px 0', fontWeight:'600'}}>
               DoorMate are based in Cardiff, South Wales — manufacturing and supplying sliding door systems since 2009. While our competitors are simply importing boxes of hardware, sat in warehouses with sales staff and warehouse workers loading the vans, we manufacture our own systems alongside handmade barn doors, mirror pocket doors and the widest range of pocket door kits, internal and external sliding systems.
             </p>
-            <p style={{color:'#272446', fontSize:'17px', lineHeight:'1.85', margin:'0 0 28px 0', fontWeight:'600'}}>
+            <p style={{color:'#272446', fontSize:'var(--font-body)', lineHeight:'1.85', margin:'0 0 28px 0', fontWeight:'600'}}>
               Every system we sell is backed by real industry knowledge, clear fitting guidance and direct support from the people who actually make them.
             </p>
-            <p style={{color:'#efb627', fontSize:'18px', fontWeight:'900', margin:'0 0 12px 0'}}>
+            <p style={{color:'#efb627', fontSize:'var(--font-heading-sm)', fontWeight:'900', margin:'0 0 12px 0'}}>
               We Are Manufacturers, Suppliers &amp; Installers of Quality Door Products
             </p>
-            <p style={{fontSize:'17px', fontWeight:'900', margin:0}}>
+            <p style={{fontSize:'var(--font-nav)', fontWeight:'900', margin:0}}>
               <Link href="/doors" style={{color:'#272446', textDecoration:'none'}}>Doors</Link>
               <span style={{color:'#efb627', margin:'0 10px'}}>|</span>
               <Link href="/pocket-door-kits" style={{color:'#272446', textDecoration:'none'}}>Pocket Door Kits</Link>
@@ -212,21 +219,8 @@ export default async function HomePage() {
       </section>
 
       {/* BRANDS — full width scrolling banner */}
-      <section style={{width:'100%', background:'#ffffff', padding:'32px var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'4px solid #efb627', overflow:'hidden'}}>
-        <p style={{color:'#272446', fontSize:'11px', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0'}}>Brands We Work With</p>
-        <style>{`
-          @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-          }
-          .logo-track {
-            display: flex;
-            align-items: center;
-            gap: 48px;
-            animation: scroll 24s linear infinite;
-            width: max-content;
-          }
-        `}</style>
+      <section aria-label="Brands we work with" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'4px solid #efb627', overflow:'hidden'}}>
+        <h3 style={{color:'#272446', fontSize:'11px', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0'}}>Brands We Work With</h3>
         <div style={{overflow:'hidden', width:'100%'}}>
           <div className="logo-track">
             {['barrier','coburn','eclisse','rocket','jbkind','fhbrundle','charlesday','titus','rtbearings'].map(b => (
@@ -239,8 +233,8 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* SYSTEMS SECTION — full width — navy block to break up the run of white sections */}
-      <section style={{width:'100%', background:'#363557', padding:'64px var(--section-pad-h)', boxSizing:'border-box'}}>
+      {/* SYSTEMS SECTION — navy block breaks up the run of white sections */}
+      <section aria-label="Our sliding door systems" style={{width:'100%', background:'#363557', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box'}}>
         <div style={{display:'grid', gridTemplateColumns:'55% 45%', gap:'40px', alignItems:'stretch'}}>
           <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', textAlign:'center', padding:'0 16px'}}>
             <h2 style={{color:'#ffffff', fontSize:'clamp(24px, 3vw, 40px)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>We Offer Complete Sliding Door Solutions,</h2>
