@@ -1842,3 +1842,51 @@ Audit every section of the homepage — not just the top — against `DOORMATE_W
 5. Trustpilot box — only once Terry supplies the real page link.
 6. `llms.txt` — still outstanding.
 7. Everything else already logged from prior sessions (product pages properly reviewed, alt text, price checks) — unchanged, still waiting.
+
+---
+
+## SESSION SUMMARY — 11 JULY 2026 — READ THIS FIRST — MOST RECENT
+
+### NOTHING IS PUSHED YET
+Everything below is sitting as local file edits, not yet committed or pushed. Terry still needs to do that via GitHub Desktop (commit title suggestions are in the file changes below) before any of it is live or CI-checked.
+
+### REAL VERIFICATION DONE THIS SESSION — MEASURED, NOT CLAIMED
+Ran live DOM checks (via Claude-in-Chrome `javascript_tool`, not screenshots — the screenshot tool is broken in this environment) against the actual deployed Vercel homepage. Confirmed genuinely passing against `DOORMATE_WIREFRAME_V1.md`: shared margin token, trust strip edge-to-edge spacing, Reviews Houzz/Google side-by-side layout (first check gave a false negative from a bad selector — corrected by reading the real grid structure), hero one-message-per-slide, 6 shop cards equal size, footer single-row. NOT freshly verified: header balance, Brands logo-tile sizing, Who We Are column order — those still rest on Terry's 10 July eyeball confirmation only.
+
+### REAL BUG FOUND AND FIXED — HEADLINE SIZE MISMATCH
+Reviews (36px), Who We Are (22px, forced `whiteSpace:nowrap`), and Systems (30px) section headlines were three different sizes live, despite the Bible saying headlines should be "large" — a word, never a number, so nothing could check it. First fix attempt hardcoded a new matching literal (`clamp(22px, 2.6vw, 34px)`) across all three — which repeated the exact mistake (inventing a number instead of using a token). Terry pasted a Google/Gemini tip about design-token systems that caught this: `globals.css` already had `--font-heading-lg: clamp(22px, 3vw, 38px)` sitting unused. Corrected — all three headlines now use `var(--font-heading-lg)`, verified with zero mismatch findings.
+
+### REAL BUG FOUND AND FIXED — BODY COPY SIZE MISMATCH
+Same category, found immediately after, and initially hand-patched WITHOUT extending the checker in the same breath (Terry called this out directly — "you lied yet again," fairly, since we'd just built a checker specifically to stop this pattern). Reviews body copy was hardcoded 19px, Who We Are used `var(--font-body)` at 17px. Fixed — Reviews now uses the same token.
+
+### NEW FILES — REAL, COMMITTED TO REPO STRUCTURE (once pushed)
+- `scripts/brand_check.js` — static check for unapproved colours, hardcoded section padding, ALL CAPS text, headline-size mismatch/wrong-token, and hardcoded body text sizes. Run with `node scripts/brand_check.js`. Currently reports 23 real findings across the site (10 ALL CAPS labels on old scaffold pages, 11 unapproved greys, 2 flagged-for-review body sizes).
+- `scripts/wireframe_live_check.md` — documented JS snippets to run against the LIVE site via Claude-in-Chrome, with pass criteria, for the layout checks the static script can't do (needs a real browser).
+- `.github/workflows/brand-check.yml` — runs `brand_check.js` automatically on every push to GitHub. Red X / green tick on the commit itself. Does not depend on any Claude session remembering to run it.
+
+### HONEST LIMITS OF THE NEW CHECKS — "2 SCREWS NOT 4"
+Terry pushed back hard and correctly on calling any of this "solid." Real gaps in `brand_check.js`: it only catches colours written as literal hex codes in inline `style={{}}` props — a Tailwind class like `text-gray-400` on any of the Tailwind-styled pages (About, Contact, etc.) would show zero findings and pass clean. The headline check only catches `fontSize` as a single-line string literal directly on a `<h2>` — a Tailwind class, a multi-line style object, or an `<h1>`/`<h3>` with the same fault would also pass invisibly. These checks reliably catch the exact shape of bug already found tonight, in the exact coding style `page.jsx` uses — they are not a general guarantee against the category yet.
+
+### NEW RULES ADDED TO THIS BIBLE
+- **Rule 10 — no completion claim without pasted check output.** Written because "it's fixed" has been said and proven false for months. No section may be called done/fixed without the real output of the two checks above pasted into the chat.
+- **Rule 11 — root cause first, never patch the instance.** Written using Terry's own example verbatim (a real dev, told "why is this text bigger," checks the shared config first, not just the one line). The moment any inconsistency is found, check `globals.css` for an existing token before touching the specific element.
+- **Typography Token Map** added under Foundations — an explicit table of which CSS variable belongs to which element (H2, body, nav, small print, etc.). This never existed before; sections were each guessing their own number.
+
+### SPACING SCALE — STARTED, DELIBERATELY NOT FINISHED
+Added `--space-1` (8px) through `--space-5` (48px) to `globals.css`. Converted every gap/margin/padding in the 3 sections below the cards that was an EXACT match to a scale value (Reviews and Systems outer grid gaps, Who We Are grid gap, three headline/paragraph margins, trust strip padding) — zero visual change, pure hygiene. Deliberately left the near-match values (Reviews inner gap 20px, shop grid gap 12px, Systems image-stack gap 6px, several paragraph margins) untouched, because fixing those means an actual small visual nudge and there's no working screenshot tool this session to confirm it still looks right blind. Named explicitly, not hidden.
+
+### OLD SCAFFOLD PAGES DISCOVERED — NEVER REVIEWED BY TERRY
+`brand_check.js` surfaced ALL CAPS violations on About, Contact, Doors, Gallery, Barn Door Hardware, Internal Sliding Kits, Pocket Door Kits, External Sliding Kits — all traced via `git log` to the very first commit ever made to this repo, 13 May 2026, before almost any Bible rule existed. Terry had never seen these pages. Also found live: `/about`'s H1 is literally "The UK's Only Bespoke Barn Door Hardware Manufacturer" — the exact banned headline phrase, sitting on a page nobody has looked at in two months. Also found: `/barn-door-hardware/gainesville` and `/external-sliding-kits/dm-75` both link correctly from their category pages but 404 live — real broken product pages, not yet investigated further. None of this is homepage work — it's a separate, later task.
+
+### THE DOCUMENTATION-DUPLICATION PROBLEM — NAMED, NOT SOLVED
+Terry pointed out that this file's own dated "session summary" habit and separate living docs (`DOORMATE_HOMEPAGE_BRIEF.md`, `DOORMATE_WIREFRAME_V1.md`) both sometimes hold the same content (e.g. the Reviews intro copy existed word-for-word in both, and only one got updated when Terry rewrote it) — the exact same drift problem as the code, just at the documentation layer. Real dev practice: git history + commit messages are the memory; living docs get edited in place; nothing gets re-narrated in two places. This project's growing session-summary log is a workaround for AI sessions having no persistent memory, and it has itself become a source of the drift it was meant to prevent. Not fixed this session — flagged honestly as a real structural problem with this Bible file itself.
+
+### CONTENT CHANGE — TERRY'S OWN EDIT, DONE DIRECTLY
+Reviews section intro copy rewritten by Terry for better layout balance. Applied directly to `page.jsx` and to the "approved copy" reference in `DOORMATE_HOMEPAGE_BRIEF.md` so they don't disagree. New wording is now the approved version — do not revert to the 10 July wording.
+
+### NEXT SESSION — START HERE, IN ORDER
+1. Terry commits and pushes everything above via GitHub Desktop. Confirm the GitHub Actions check shows red (expected — the 23 pre-existing findings aren't fixed yet, only newly visible).
+2. Close the "2 screws not 4" gaps in `brand_check.js` if the project moves toward the old scaffold pages (Tailwind-class colour detection, multi-line style detection, h1/h3 coverage) — do not claim the checker is comprehensive until it covers how those pages are actually written.
+3. Finish the spacing-scale retrofit on the near-match values, live, with Terry watching, not blind.
+4. Decide what to do with the 8 old scaffold pages (ALL CAPS fixes, the banned `/about` H1, the two broken product-page links) — separate task, not blocking homepage work.
+5. Everything already outstanding from 10 July (Trustpilot box, `llms.txt`, product pages, alt text, price checks) — unchanged, still waiting.
