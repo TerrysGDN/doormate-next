@@ -15,6 +15,8 @@
 
 That is the ONLY workflow. Never deviate from it. Never use bash git commands. Never have Claude push to GitHub. Terry commits. Terry pushes. Always.
 
+**Before calling anything "done" or "fixed" — see RULE 10 below. Run the checks in `scripts/brand_check.js` and `scripts/wireframe_live_check.md` and paste the real output. No exceptions, no "better way."**
+
 ---
 
 ## ⚠️ HERO — LOCKED — NEVER TOUCH WITHOUT TERRY'S EXPLICIT INSTRUCTION ⚠️
@@ -99,6 +101,15 @@ This rule overrides everything else.
 ## RULE 4 — ALWAYS LEAD — TERRY APPROVES, CLAUDE LEADS
 
 ## RULE 5 — NEVER LEAD HOMEPAGE OR META WITH BARN DOOR HARDWARE STORY — Added 19 May 2026
+
+## RULE 10 — NO COMPLETION CLAIM WITHOUT PASTED CHECK OUTPUT — NEVER BREAK — Added 11 July 2026
+This rule exists because "it's fixed" has been said and proven false, repeatedly, across months — including within single sessions, more than once. Two real checks now exist in the repo:
+- `scripts/brand_check.js` — run with `node scripts/brand_check.js` — checks source code for unapproved colours, hardcoded section padding, ALL CAPS text. Exits 1 if anything fails.
+- `scripts/wireframe_live_check.md` — a documented set of JS snippets to run against the LIVE Vercel site via the Claude-in-Chrome tools, measuring real rendered layout (shared margin, trust strip spacing, Reviews side-by-side layout, shop grid equality, footer wrapping) against the exact locked numbers in `DOORMATE_WIREFRAME_V1.md`.
+
+**No section, page, or fix may be called "done", "fixed", "matches the wireframe" or "signed off" without the real output of these checks pasted into the chat in the same message as the claim.** A completion claim with no pasted output is not evidence — it is the same unverified assertion that has failed this project for months. Terry does not need to argue about this — he can just ask "show me the check output" and treat silence or a dodge as the answer.
+
+If a future Claude session believes there's "a better way" to verify something than what's written in these two files — that instinct itself is the failure mode this rule exists to stop. Improving the checks is welcome (add new ones, fix a bad one — see the false-negative caught in `wireframe_live_check.md` Check 3). Replacing "run the check and paste it" with "trust my report" is not.
 
 ## RULE 9 — ONE FULL AUDIT PASS BEFORE ANY EDIT — NEVER BREAK — Added 3 July 2026
 Never make a visual change reactively, one piece at a time, and find out it was wrong only after it's live. On 3 July, category cards were built once, shown live, then had to be rebuilt from scratch minutes later because the first version was never checked against a real reference before it was coded. That is the same 5-week thrash pattern (word cloud, hero, trust strip, every "rushed compromise" logged in this file) — it just moved from "Terry keeps getting asked to decide" to "Claude keeps guessing and correcting." Same root cause either way: deciding as you go instead of thinking it through first.
