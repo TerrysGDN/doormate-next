@@ -3,7 +3,12 @@
 //
 // This does NOT replace checking the live site (see scripts/wireframe_live_check.md).
 // It catches source-code violations of locked Bible/wireframe rules:
-// unapproved colours, hardcoded section padding, ALL CAPS text.
+// unapproved colours, hardcoded section padding, ALL CAPS text, and
+// mismatched section headline font sizes (see DOORMATE_WIREFRAME_V1.md,
+// "HEADLINE FONT-SIZE — LOCKED NUMBER, 11 JULY 2026" — added after Reviews/
+// Who We Are/Systems headlines were found live at three different sizes,
+// a bug that existed because the rule was only ever written as the word
+// "large", never as an actual number a script could check).
 //
 // Exit code 0 = clean. Exit code 1 = findings exist — DO NOT declare the
 // section "done" or "fixed" if this exits 1. Paste the full output to Terry.
@@ -41,9 +46,35 @@ walk(path.join(ROOT, 'components'));
 
 let findings = [];
 
+const LOCKED_HEADLINE_SIZE = "clamp(22px, 2.6vw, 34px)";
+const H2_FONTSIZE_RE = /<h2[^>]*fontSize:\s*'([^']+)'/;
+
 for (const file of files) {
   const content = fs.readFileSync(file, 'utf8');
   const lines = content.split('\n');
+
+  // HEADLINE FONT-SIZE CONSISTENCY — per file, every <h2> must use the one
+  // locked size. Catches exactly the bug found live 11 July 2026 (Reviews/
+  // Who We Are/Systems headlines silently drifting to three different sizes).
+  const h2Sizes = [];
+  lines.forEach((line, i) => {
+    const m = H2_FONTSIZE_RE.exec(line);
+    if (m) h2Sizes.push({ line: i + 1, size: m[1], text: line.trim().slice(0, 90) });
+  });
+  if (h2Sizes.length > 0) {
+    const distinctSizes = new Set(h2Sizes.map(h => h.size));
+    if (distinctSizes.size > 1) {
+      h2Sizes.forEach(h => {
+        findings.push({ file, line: h.line, type: 'HEADLINE SIZE MISMATCH', detail: `fontSize '${h.size}' does not match other <h2> headlines in this file (found: ${[...distinctSizes].join(', ')})`, text: h.text });
+      });
+    } else if (h2Sizes.some(h => h.size !== LOCKED_HEADLINE_SIZE)) {
+      h2Sizes.forEach(h => {
+        if (h.size !== LOCKED_HEADLINE_SIZE) {
+          findings.push({ file, line: h.line, type: 'HEADLINE SIZE NOT LOCKED VALUE', detail: `fontSize '${h.size}' — locked value per DOORMATE_WIREFRAME_V1.md is '${LOCKED_HEADLINE_SIZE}'`, text: h.text });
+        }
+      });
+    }
+  }
 
   lines.forEach((line, i) => {
     let m;
