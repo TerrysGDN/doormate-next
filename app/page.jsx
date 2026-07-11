@@ -138,13 +138,13 @@ export default async function HomePage() {
         <div style={{textAlign:'center'}}>
           <h2 style={{color:'#272446', fontSize:'var(--font-heading-lg)', fontWeight:'900', textAlign:'center', margin:'0 0 var(--space-3) 0'}}>Why Real Reviews Matter</h2>
           <p style={{color:'#272446', fontSize:'var(--font-body)', fontWeight:'600', lineHeight:'1.8', margin:'0 0 var(--space-2) 0'}}>
-            Every project starts with research &mdash; reviews are the best source there is. They tell you if you&apos;re dealing with a good company and a good product.
+            Every project starts with a little research, and genuine customer reviews are one of the best ways to understand the company you&apos;re buying from. They give you an honest picture of the people behind the business and the quality of the products they supply.
           </p>
           <p style={{color:'#272446', fontSize:'var(--font-body)', fontWeight:'600', lineHeight:'1.8', margin:'0 0 var(--space-2) 0'}}>
-            They matter just as much on our side too: a good review tells us we&apos;re getting it right, a bad one tells us just as fast where we&apos;re not.
+            Reviews matter just as much to us. A great review tells us we&apos;re doing things right. A less positive one tells us where we can do better. Both help us improve.
           </p>
           <p style={{color:'#272446', fontSize:'var(--font-body)', fontWeight:'600', lineHeight:'1.8', margin:0}}>
-            So whatever you buy &mdash; from us or anyone else &mdash; always consider leaving a review.
+            So whether you buy from DoorMate or somewhere else, if you&apos;ve had a good experience, take a minute to leave a review. It helps good businesses grow and gives the next customer the confidence to make the right choice.
           </p>
         </div>
 
