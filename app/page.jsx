@@ -208,7 +208,7 @@ export default async function HomePage() {
             />
           </div>
 
-          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', fontFamily:"'Libre Franklin', sans-serif", textAlign:'center'}}>
+          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', fontFamily:"'Libre Franklin', sans-serif", textAlign:'left', maxWidth:'640px'}}>
             <h2 style={{color:'#272446', fontSize:'var(--font-heading-lg)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 var(--space-3) 0'}}>
               Real UK Manufacturers. Real Systems<br />Delivered Direct To You.
             </h2>
