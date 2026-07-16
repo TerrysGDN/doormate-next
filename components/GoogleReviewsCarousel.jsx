@@ -17,7 +17,7 @@ export default function GoogleReviewsCarousel({ rating, reviews, reviewUrl }) {
   return (
     <div style={{fontFamily:"'Libre Franklin', sans-serif", textAlign:'center', width:'100%'}}>
       {snippets.length > 0 && (
-        <div style={{display:'flex', flexDirection:'column', gap:'10px', marginTop:'16px', textAlign:'left'}}>
+        <div style={{display:'flex', flexDirection:'column', gap:'10px', textAlign:'left'}}>
           {snippets.map((r, i) => {
             const stars = Math.round(r.rating || 0)
             return (
