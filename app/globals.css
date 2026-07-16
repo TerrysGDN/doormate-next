@@ -30,6 +30,12 @@
   --space-4: 32px;
   --space-5: 48px;
 
+  /* Readable content width — added 16 July 2026. Any left-aligned block of running
+     prose (multi-sentence paragraphs, not short centred headlines/CTAs) uses this
+     for its max width. Do not invent a different pixel number per section — that's
+     the exact "instance not category" mistake this variable exists to stop. */
+  --content-max-width: 640px;
+
   /* Typography scale */
   --font-heading-xl: clamp(28px, 4vw, 52px);
   --font-heading-lg: clamp(22px, 3vw, 38px);

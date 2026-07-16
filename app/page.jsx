@@ -193,7 +193,7 @@ export default async function HomePage() {
 
       {/* WHO WE ARE — real photo left (placeholder until Terry supplies one), copy right */}
       <section aria-label="Who we are" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <div style={{display:'grid', gridTemplateColumns:'45fr 55fr', gap:'var(--space-5)', alignItems:'center'}}>
+        <div style={{display:'grid', gridTemplateColumns:'1fr var(--content-max-width)', gap:'var(--space-5)', alignItems:'center'}}>
 
           {/* Manufacturing image — represents real hands-on manufacturing, contrasted against competitors who import boxed hardware. Not a photo of DoorMate's own workshop.
               Height capped with clamp() to match the same convention used by the shop cards and Systems cards below —
@@ -208,7 +208,7 @@ export default async function HomePage() {
             />
           </div>
 
-          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', fontFamily:"'Libre Franklin', sans-serif", textAlign:'left', maxWidth:'640px'}}>
+          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', fontFamily:"'Libre Franklin', sans-serif", textAlign:'left'}}>
             <h2 style={{color:'#272446', fontSize:'var(--font-heading-lg)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 var(--space-3) 0'}}>
               Real UK Manufacturers. Real Systems<br />Delivered Direct To You.
             </h2>
@@ -219,7 +219,7 @@ export default async function HomePage() {
               Every system we sell is backed by real industry knowledge, clear fitting guidance and direct support from the people who actually make them.
             </p>
             <p style={{color:'#efb627', fontSize:'var(--font-heading-sm)', fontWeight:'900', margin:'0 0 12px 0'}}>
-              We Are Manufacturers, Suppliers &amp; Installers of Quality Door Products
+              We Are Manufacturers, Suppliers &amp; Installers<br />of Quality Door Products
             </p>
             <p style={{fontSize:'var(--font-nav)', fontWeight:'900', margin:0}}>
               <Link href="/doors" style={{color:'#272446', textDecoration:'none'}}>Doors</Link>
