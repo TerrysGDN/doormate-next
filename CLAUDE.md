@@ -15,7 +15,7 @@
 
 That is the ONLY workflow. Never deviate from it. Never use bash git commands. Never have Claude push to GitHub. Terry commits. Terry pushes. Always.
 
-**Before calling anything "done" or "fixed" — see RULE 10 below. Run the checks in `scripts/brand_check.js` and `scripts/wireframe_live_check.md` and paste the real output. No exceptions, no "better way."**
+**Before calling anything "done" or "fixed" — see RULE 10 and RULE 12 below. Run `scripts/brand_check.js` AND actually look at the live site with the Chrome extension tools, and report both honestly in the same message. No exceptions, no "better way." Rule 12 exists because the Chrome extension has been available since 2 June 2026 and was still not used consistently for six weeks — a promise to use it is not enough, this is why it's a written rule.**
 
 ---
 
@@ -133,6 +133,15 @@ Terry's own example, verbatim, because it says this better than a rule ever coul
 Tonight, when the exact headline-size bug was found, the first fix hardcoded a new matching number across three sections instead of checking whether a shared token already existed (it did — `--font-heading-lg`, sitting unused). Minutes later the same failure repeated on body-copy text sizes, and it was patched again as an isolated instance before the checker was extended to cover it. Both times, the instinct was "fix what's in front of me," not "check the shared file first, ask if this is systemic, fix the root."
 
 **The rule: the moment any visual inconsistency is found — size, colour, spacing, radius, anything — the FIRST action is to check `globals.css`/the design tokens for an existing shared value, not to patch the specific element.** If a token already exists, use it. If it doesn't, create one and use it everywhere that category of thing appears, in the same pass — not just the one spot that got noticed. Only after that is the fix "done." Patching the instance you happen to be looking at, and leaving the same category to reappear elsewhere, is not a fix — it's the exact failure this rule exists to stop.
+
+## RULE 12 — NO COMPLETION CLAIM WITHOUT LIVE BROWSER VERIFICATION — NEVER BREAK — Added 16 July 2026
+This rule exists because "I'll check the live site myself from now on" has already been said in this project and did not hold. The Chrome extension was installed 2 June 2026 specifically so Claude could see the live site directly instead of relying on screenshots — see the 2 June session summary: "This should have happened on day one. It changes everything going forward." For six weeks after that, the capability existed and was not used consistently. Saying the same commitment again in a chat message, on 16 July, is not evidence anything is different — only a written, checkable rule has actually held in this project (see Rule 10, and the fact that every fix since 11 July has shipped with real `brand_check.js` output pasted alongside it).
+
+**The rule: after Terry pushes any change live via GitHub Desktop, before Claude makes any claim that something is fixed, done, or matches the wireframe, Claude must navigate to the live site with the Chrome extension tools and actually look at the rendered result.** A completion claim with no live browser check in the same message is the same unverified assertion Rule 10 already exists to stop — this just extends it to layout, spacing, overflow and alignment, which `brand_check.js` cannot see because it only reads source code, not rendered output.
+
+This does not replace Rule 10 — both are required together, every time. `brand_check.js` output covers colours/caps/sizes. A live screenshot covers what actually renders. Neither alone is enough.
+
+If a future Claude session is tempted to declare something fixed based on reasoning about the CSS alone, without having actually looked at it rendered on the live site — that is the exact failure this rule exists to stop.
 
 ## RULE 9 — ONE FULL AUDIT PASS BEFORE ANY EDIT — NEVER BREAK — Added 3 July 2026
 Never make a visual change reactively, one piece at a time, and find out it was wrong only after it's live. On 3 July, category cards were built once, shown live, then had to be rebuilt from scratch minutes later because the first version was never checked against a real reference before it was coded. That is the same 5-week thrash pattern (word cloud, hero, trust strip, every "rushed compromise" logged in this file) — it just moved from "Terry keeps getting asked to decide" to "Claude keeps guessing and correcting." Same root cause either way: deciding as you go instead of thinking it through first.

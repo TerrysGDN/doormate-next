@@ -120,7 +120,7 @@ export default async function HomePage() {
             {name:'External Sliding Door Kits',    img:'/img/External-150kg.jpg',                   href:'/external-sliding-kits', alt:'Heavy duty external sliding door kit installed'},
             {name:'Shop',                          img:'/img/shop-category.jpg',                    href:'/shop',                  alt:'Door accessories and hardware'},
           ].map((cat) => (
-            <Link key={cat.name} href={cat.href} style={{textDecoration:'none', display:'block', height:'clamp(220px, 24vw, 380px)', overflow:'hidden', position:'relative', borderRadius:'8px'}}>
+            <Link key={cat.name} href={cat.href} style={{textDecoration:'none', display:'block', width:'100%', maxWidth:'380px', margin:'0 auto', height:'clamp(220px, 24vw, 380px)', overflow:'hidden', position:'relative', borderRadius:'8px'}}>
               <Image src={cat.img} alt={cat.alt} fill style={{objectFit:'cover'}} sizes="16vw" />
               <div style={{position:'absolute', inset:0, background:'linear-gradient(to top, rgba(15,13,36,0.85) 0%, rgba(15,13,36,0.15) 45%, rgba(15,13,36,0) 65%)', display:'flex', flexDirection:'column', justifyContent:'flex-end', padding:'18px'}}>
                 <span style={{color:'#ffffff', fontSize:'18px', fontWeight:'900', margin:'0 0 12px 0', display:'block'}}>{cat.name}</span>
@@ -193,7 +193,7 @@ export default async function HomePage() {
 
       {/* WHO WE ARE — real photo left (placeholder until Terry supplies one), copy right */}
       <section aria-label="Who we are" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <div style={{display:'grid', gridTemplateColumns:'1fr var(--content-max-width)', gap:'var(--space-5)', alignItems:'center'}}>
+        <div style={{display:'grid', gridTemplateColumns:'clamp(320px, 42vw, 820px) var(--content-max-width)', gap:'var(--space-5)', alignItems:'center', justifyContent:'center'}}>
 
           {/* Manufacturing image — represents real hands-on manufacturing, contrasted against competitors who import boxed hardware. Not a photo of DoorMate's own workshop.
               Height capped with clamp() to match the same convention used by the shop cards and Systems cards below —
@@ -253,7 +253,7 @@ export default async function HomePage() {
 
       {/* SYSTEMS SECTION — navy block breaks up the run of white sections */}
       <section aria-label="Our sliding door systems" style={{width:'100%', background:'#363557', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box'}}>
-        <div style={{display:'grid', gridTemplateColumns:'55fr 45fr', gap:'var(--section-pad-h)', alignItems:'stretch'}}>
+        <div style={{display:'grid', gridTemplateColumns:'1fr clamp(320px, 40vw, 640px)', gap:'var(--section-pad-h)', alignItems:'stretch', justifyContent:'center'}}>
           <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', textAlign:'center', padding:'0 16px'}}>
             <h2 style={{color:'#ffffff', fontSize:'var(--font-heading-lg)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>We Offer Complete Sliding Door Solutions,</h2>
             <p style={{color:'#efb627', fontSize:'clamp(18px, 2.2vw, 30px)', fontWeight:'900', margin:'0', lineHeight:'1.2'}}>For Real Homes, Real Doors And Real Walls.</p>
