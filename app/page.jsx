@@ -183,8 +183,10 @@ export default async function HomePage() {
       <section aria-label="Who we are" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
         <div style={{display:'grid', gridTemplateColumns:'45% 55%', gap:'var(--space-5)', alignItems:'center'}}>
 
-          {/* Manufacturing image — represents real hands-on manufacturing, contrasted against competitors who import boxed hardware. Not a photo of DoorMate's own workshop. */}
-          <div style={{position:'relative', width:'100%', aspectRatio:'4 / 5', borderRadius:'8px', overflow:'hidden', border:'2px solid #efb627'}}>
+          {/* Manufacturing image — represents real hands-on manufacturing, contrasted against competitors who import boxed hardware. Not a photo of DoorMate's own workshop.
+              Height capped with clamp() to match the same convention used by the shop cards and Systems cards below —
+              never let this scale unbounded with aspectRatio against a wide viewport again. */}
+          <div style={{position:'relative', width:'100%', height:'clamp(320px, 30vw, 520px)', borderRadius:'8px', overflow:'hidden', border:'2px solid #efb627'}}>
             <Image
               src="/img/real-manufacturers-image.jpg"
               alt="Precision manufacturing of sliding door hardware components"
