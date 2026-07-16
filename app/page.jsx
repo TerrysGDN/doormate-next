@@ -210,7 +210,7 @@ export default async function HomePage() {
 
           <div style={{display:'flex', flexDirection:'column', justifyContent:'center', fontFamily:"'Libre Franklin', sans-serif", textAlign:'left'}}>
             <h2 style={{color:'#272446', fontSize:'var(--font-heading-lg)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 var(--space-3) 0'}}>
-              Real UK Manufacturers. Real Systems<br />Delivered Direct To You.
+              Real UK Manufacturers.<br />Real Systems<br />Delivered Direct To You.
             </h2>
             <p style={{color:'#272446', fontSize:'var(--font-body)', lineHeight:'1.85', margin:'0 0 20px 0', fontWeight:'600'}}>
               DoorMate are based in Cardiff, South Wales — manufacturing and supplying sliding door systems since 2009. While our competitors are simply importing boxes of hardware, sat in warehouses with sales staff and warehouse workers loading the vans, we manufacture our own systems alongside handmade barn doors, mirror pocket doors and the widest range of pocket door kits, internal and external sliding systems.
