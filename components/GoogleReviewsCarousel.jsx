@@ -45,7 +45,7 @@ export default function GoogleReviewsCarousel({ rating, reviews, reviewUrl }) {
 
       {reviewUrl && (
         <p style={{margin:'12px 0 0 0'}}>
-          <a href={reviewUrl} target="_blank" rel="noopener noreferrer" style={{color:'#272446', fontSize:'13px', fontWeight:'700', textDecoration:'underline'}}>Read our Google reviews</a>
+          <a href={reviewUrl} target="_blank" rel="noopener noreferrer" style={{color:'#272446', fontSize:'13px', fontWeight:'700', textDecoration:'underline'}}>Leave Us A Google Review</a>
         </p>
       )}
     </div>

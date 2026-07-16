@@ -157,7 +157,7 @@ export default async function HomePage() {
               <span style={{color:'#273a2e', fontSize:'17px', fontWeight:'700', fontFamily:'Arial, sans-serif'}}>5.0</span>
               <span style={{color:'#efb627', fontSize:'20px', lineHeight:'1', letterSpacing:'2px'}}>★★★★★</span>
             </div>
-            <div style={{background:'#ffffff', border:'2px solid #efb627', borderRadius:'12px', padding:'16px', width:'100%', boxSizing:'border-box'}}>
+            <div style={{width:'100%'}}>
               <iframe
                 scrolling="no"
                 frameBorder="0"
@@ -182,7 +182,7 @@ export default async function HomePage() {
                 <span style={{color:'#efb627', fontSize:'20px', lineHeight:'1', letterSpacing:'2px'}}>★★★★★</span>
               </div>
             )}
-            <div style={{background:'#ffffff', border:'2px solid #efb627', borderRadius:'12px', padding:'16px', width:'100%', height:'466px', boxSizing:'border-box', overflowY:'auto'}}>
+            <div style={{width:'100%'}}>
               <GoogleReviewsCarousel reviews={reviews} rating={rating} totalReviews={total} reviewUrl={reviewUrl} />
             </div>
           </div>
