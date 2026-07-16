@@ -193,7 +193,7 @@ export default async function HomePage() {
 
       {/* WHO WE ARE — real photo left (placeholder until Terry supplies one), copy right */}
       <section aria-label="Who we are" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <div style={{display:'grid', gridTemplateColumns:'clamp(320px, 42vw, 820px) var(--content-max-width)', gap:'var(--space-5)', alignItems:'center', justifyContent:'center'}}>
+        <div style={{display:'grid', gridTemplateColumns:'clamp(320px, 42vw, 820px) clamp(640px, 46vw, 900px)', gap:'var(--space-5)', alignItems:'center', justifyContent:'center'}}>
 
           {/* Manufacturing image — represents real hands-on manufacturing, contrasted against competitors who import boxed hardware. Not a photo of DoorMate's own workshop.
               Height capped with clamp() to match the same convention used by the shop cards and Systems cards below —
@@ -212,10 +212,10 @@ export default async function HomePage() {
             <h2 style={{color:'#272446', fontSize:'var(--font-heading-lg)', fontWeight:'900', lineHeight:'1.2', margin:'0 0 var(--space-3) 0'}}>
               Real UK Manufacturers.<br />Real Systems<br />Delivered Direct To You.
             </h2>
-            <p style={{color:'#272446', fontSize:'var(--font-body)', lineHeight:'1.85', margin:'0 0 20px 0', fontWeight:'600'}}>
+            <p style={{color:'#272446', fontSize:'var(--font-body)', lineHeight:'1.85', margin:'0 0 20px 0', fontWeight:'600', maxWidth:'var(--content-max-width)'}}>
               DoorMate are based in Cardiff, South Wales — manufacturing and supplying sliding door systems since 2009. While our competitors are simply importing boxes of hardware, sat in warehouses with sales staff and warehouse workers loading the vans, we manufacture our own systems alongside handmade barn doors, mirror pocket doors and the widest range of pocket door kits, internal and external sliding systems.
             </p>
-            <p style={{color:'#272446', fontSize:'var(--font-body)', lineHeight:'1.85', margin:'0 0 28px 0', fontWeight:'600'}}>
+            <p style={{color:'#272446', fontSize:'var(--font-body)', lineHeight:'1.85', margin:'0 0 28px 0', fontWeight:'600', maxWidth:'var(--content-max-width)'}}>
               Every system we sell is backed by real industry knowledge, clear fitting guidance and direct support from the people who actually make them.
             </p>
             <p style={{color:'#efb627', fontSize:'var(--font-heading-sm)', fontWeight:'900', margin:'0 0 12px 0'}}>
