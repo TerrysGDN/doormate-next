@@ -136,7 +136,7 @@ export default async function HomePage() {
         <div style={{display:'grid', gridTemplateColumns:'0.9fr 1.3fr', gap:'var(--section-pad-h)', alignItems:'start'}}>
 
         <div style={{textAlign:'center'}}>
-          <h2 style={{color:'#272446', fontSize:'var(--font-heading-lg)', fontWeight:'900', textAlign:'center', margin:'0 0 var(--space-3) 0'}}>Why Real Reviews Matter</h2>
+          <h2 style={{color:'#272446', fontSize:'var(--font-heading-lg)', fontWeight:'900', textAlign:'center', margin:'0 0 var(--space-3) 0'}}><span style={{textDecoration:'underline', textDecorationColor:'#efb627', textDecorationThickness:'3px', textUnderlineOffset:'4px'}}>Why</span> Real Reviews Matter</h2>
           <p style={{color:'#272446', fontSize:'var(--font-body)', fontWeight:'600', lineHeight:'1.8', margin:'0 0 var(--space-2) 0'}}>
             Every project starts with a little research, and genuine customer reviews are one of the best ways to understand the company you&apos;re buying from. They give you an honest picture of the people behind the business and the quality of the products they supply.
           </p>
@@ -148,16 +148,16 @@ export default async function HomePage() {
           </p>
         </div>
 
-        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'20px', alignItems:'start'}}>
-          <div key="houzz" style={{display:'flex', flexDirection:'column', alignItems:'center', width:'100%'}}>
-            <div style={{display:'inline-flex', alignItems:'center', gap:'10px', background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'999px', padding:'12px 22px', margin:'0 0 16px 0'}}>
+        <div style={{display:'flex', justifyContent:'center', gap:'var(--space-3)', flexWrap:'wrap'}}>
+          <div key="houzz" style={{display:'flex', flexDirection:'column', alignItems:'center', width:'300px'}}>
+            <div style={{display:'inline-flex', alignItems:'center', gap:'10px', background:'#ffffff', boxShadow:'0 1px 6px rgba(39,36,70,0.18)', borderRadius:'999px', padding:'12px 22px', margin:'0 0 16px 0'}}>
               <svg width="22" height="22" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#7DC242" d="M50,5 L95,42 L80,42 L80,95 L55,95 L55,65 L45,65 L45,95 L20,95 L20,42 L5,42 Z"/>
               </svg>
               <span style={{color:'#273a2e', fontSize:'17px', fontWeight:'700', fontFamily:'Arial, sans-serif'}}>5.0</span>
               <span style={{color:'#efb627', fontSize:'20px', lineHeight:'1', letterSpacing:'2px'}}>★★★★★</span>
             </div>
-            <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px', width:'100%', boxSizing:'border-box'}}>
+            <div style={{background:'#ffffff', border:'2px solid #efb627', borderRadius:'12px', padding:'16px', width:'100%', boxSizing:'border-box'}}>
               <iframe
                 scrolling="no"
                 frameBorder="0"
@@ -169,8 +169,20 @@ export default async function HomePage() {
               />
             </div>
           </div>
-          <div key="google" style={{display:'flex', flexDirection:'column', alignItems:'center', width:'100%'}}>
-            <div style={{background:'#ffffff', border:'1px solid #e6e2d6', borderRadius:'12px', padding:'16px', width:'100%', boxSizing:'border-box'}}>
+          <div key="google" style={{display:'flex', flexDirection:'column', alignItems:'center', width:'300px'}}>
+            {rating && (
+              <div style={{display:'inline-flex', alignItems:'center', gap:'10px', background:'#ffffff', boxShadow:'0 1px 6px rgba(39,36,70,0.18)', borderRadius:'999px', padding:'12px 22px', margin:'0 0 16px 0'}}>
+                <svg width="22" height="22" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
+                  <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
+                  <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24c0 3.55.85 6.91 2.34 9.88l7.35-5.7z"/>
+                  <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/>
+                </svg>
+                <span style={{color:'#273a2e', fontSize:'17px', fontWeight:'700', fontFamily:'Arial, sans-serif'}}>{rating.toFixed(1)}</span>
+                <span style={{color:'#efb627', fontSize:'20px', lineHeight:'1', letterSpacing:'2px'}}>★★★★★</span>
+              </div>
+            )}
+            <div style={{background:'#ffffff', border:'2px solid #efb627', borderRadius:'12px', padding:'16px', width:'100%', boxSizing:'border-box'}}>
               <GoogleReviewsCarousel reviews={reviews} rating={rating} totalReviews={total} reviewUrl={reviewUrl} />
             </div>
           </div>
