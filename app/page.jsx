@@ -183,11 +183,15 @@ export default async function HomePage() {
       <section aria-label="Who we are" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
         <div style={{display:'grid', gridTemplateColumns:'45% 55%', gap:'var(--space-5)', alignItems:'center'}}>
 
-          {/* Photo placeholder — swap the div below for a real <Image> once Terry supplies the workshop photo */}
-          <div style={{position:'relative', width:'100%', aspectRatio:'4 / 5', borderRadius:'8px', overflow:'hidden', background:'#363557', border:'2px solid #efb627', display:'flex', alignItems:'center', justifyContent:'center'}}>
-            <span style={{color:'#efb627', fontSize:'var(--font-label)', fontWeight:'700', textAlign:'center', padding:'0 24px', letterSpacing:'0.03em', textTransform:'none'}}>
-              Real Cardiff Workshop Photo — Coming Soon
-            </span>
+          {/* Manufacturing image — represents real hands-on manufacturing, contrasted against competitors who import boxed hardware. Not a photo of DoorMate's own workshop. */}
+          <div style={{position:'relative', width:'100%', aspectRatio:'4 / 5', borderRadius:'8px', overflow:'hidden', border:'2px solid #efb627'}}>
+            <Image
+              src="/img/real-manufacturers-image.jpg"
+              alt="Precision manufacturing of sliding door hardware components"
+              fill
+              sizes="(max-width: 900px) 100vw, 45vw"
+              style={{objectFit:'cover', objectPosition:'35% 40%'}}
+            />
           </div>
 
           <div style={{display:'flex', flexDirection:'column', justifyContent:'center', fontFamily:"'Libre Franklin', sans-serif", textAlign:'center'}}>
