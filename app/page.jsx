@@ -193,7 +193,7 @@ export default async function HomePage() {
 
       {/* WHO WE ARE — real photo left (placeholder until Terry supplies one), copy right */}
       <section aria-label="Who we are" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627'}}>
-        <div style={{display:'grid', gridTemplateColumns:'45% 55%', gap:'var(--space-5)', alignItems:'center'}}>
+        <div style={{display:'grid', gridTemplateColumns:'45fr 55fr', gap:'var(--space-5)', alignItems:'center'}}>
 
           {/* Manufacturing image — represents real hands-on manufacturing, contrasted against competitors who import boxed hardware. Not a photo of DoorMate's own workshop.
               Height capped with clamp() to match the same convention used by the shop cards and Systems cards below —
@@ -253,7 +253,7 @@ export default async function HomePage() {
 
       {/* SYSTEMS SECTION — navy block breaks up the run of white sections */}
       <section aria-label="Our sliding door systems" style={{width:'100%', background:'#363557', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box'}}>
-        <div style={{display:'grid', gridTemplateColumns:'55% 45%', gap:'var(--section-pad-h)', alignItems:'stretch'}}>
+        <div style={{display:'grid', gridTemplateColumns:'55fr 45fr', gap:'var(--section-pad-h)', alignItems:'stretch'}}>
           <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', textAlign:'center', padding:'0 16px'}}>
             <h2 style={{color:'#ffffff', fontSize:'var(--font-heading-lg)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>We Offer Complete Sliding Door Solutions,</h2>
             <p style={{color:'#efb627', fontSize:'clamp(18px, 2.2vw, 30px)', fontWeight:'900', margin:'0', lineHeight:'1.2'}}>For Real Homes, Real Doors And Real Walls.</p>
