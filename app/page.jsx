@@ -238,7 +238,7 @@ export default async function HomePage() {
 
       {/* BRANDS — full width scrolling banner */}
       <section aria-label="Brands we work with" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'4px solid #efb627', overflow:'hidden'}}>
-        <h3 style={{color:'#272446', fontSize:'11px', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0'}}>Brands We Work With</h3>
+        <h3 style={{color:'#272446', fontSize:'var(--font-label)', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0'}}>Brands We Work With</h3>
         <div style={{overflow:'hidden', width:'100%'}}>
           <div className="logo-track">
             {['barrier','coburn','eclisse','rocket','jbkind','fhbrundle','charlesday','titus','rtbearings'].map(b => (
@@ -254,14 +254,16 @@ export default async function HomePage() {
       {/* SYSTEMS SECTION — navy block breaks up the run of white sections */}
       <section aria-label="Our sliding door systems" style={{width:'100%', background:'#363557', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box'}}>
         <div style={{display:'grid', gridTemplateColumns:'1fr clamp(320px, 40vw, 640px)', gap:'var(--section-pad-h)', alignItems:'stretch', justifyContent:'center'}}>
-          <div style={{display:'flex', flexDirection:'column', justifyContent:'space-between', textAlign:'center', padding:'0 16px'}}>
-            <h2 style={{color:'#ffffff', fontSize:'var(--font-heading-lg)', fontWeight:'900', margin:'0 0 6px 0', lineHeight:'1.2'}}>We Offer Complete Sliding Door Solutions,</h2>
-            <p style={{color:'#efb627', fontSize:'clamp(18px, 2.2vw, 30px)', fontWeight:'900', margin:'0', lineHeight:'1.2'}}>For Real Homes, Real Doors And Real Walls.</p>
-            <p style={{color:'#ffffff', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0', lineHeight:'1.6'}}>Choosing a sliding door system shouldn&apos;t be difficult.</p>
-            <p style={{color:'#ffffff', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>That&apos;s why we&apos;ve made it easy to find the right solution for your project.</p>
-            <p style={{color:'#ffffff', fontSize:'clamp(16px, 1.5vw, 20px)', fontWeight:'600', margin:'0', lineHeight:'1.7'}}>By organising our systems around real-world applications &mdash;</p>
-            <p style={{color:'#efb627', fontSize:'clamp(22px, 2.2vw, 32px)', fontWeight:'900', margin:'0', lineHeight:'1.3'}}>We&apos;ve already done the thinking for you.</p>
-            <p style={{color:'#ffffff', fontSize:'clamp(18px, 1.8vw, 24px)', fontWeight:'700', margin:'0', lineHeight:'1.6'}}>Simply choose your system. Let&apos;s get this project done!</p>
+          <div style={{display:'flex', flexDirection:'column', justifyContent:'center', textAlign:'center', padding:'0 16px', gap:'var(--space-3)'}}>
+            <h2 style={{color:'#ffffff', fontSize:'var(--font-heading-lg)', fontWeight:'900', margin:0, lineHeight:'1.25'}}>
+              We Offer Complete Sliding Door Solutions,<br />
+              <span style={{color:'#efb627'}}>For Real Homes, Real Doors And Real Walls.</span>
+            </h2>
+            <p style={{color:'#ffffff', fontSize:'var(--font-body)', fontWeight:'600', margin:0, lineHeight:'1.8'}}>Choosing a sliding door system shouldn&apos;t be difficult.</p>
+            <p style={{color:'#ffffff', fontSize:'var(--font-body)', fontWeight:'600', margin:0, lineHeight:'1.8'}}>That&apos;s why we&apos;ve made it easy to find the right solution for your project.</p>
+            <p style={{color:'#ffffff', fontSize:'var(--font-body)', fontWeight:'600', margin:0, lineHeight:'1.8'}}>By organising our systems around real-world applications &mdash;</p>
+            <p style={{color:'#efb627', fontSize:'var(--font-heading-sm)', fontWeight:'900', margin:0, lineHeight:'1.3'}}>We&apos;ve already done the thinking for you.</p>
+            <p style={{color:'#ffffff', fontSize:'var(--font-body)', fontWeight:'600', margin:0, lineHeight:'1.8'}}>Simply choose your system. Let&apos;s get this project done!</p>
           </div>
           <div style={{display:'flex', flexDirection:'column', gap:'6px'}}>
             {[
