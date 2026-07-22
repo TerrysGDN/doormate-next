@@ -236,21 +236,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* BRANDS — full width scrolling banner */}
-      <section aria-label="Brands we work with" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'4px solid #efb627', overflow:'hidden'}}>
-        <h3 style={{color:'#272446', fontSize:'var(--font-label)', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0'}}>Brands We Work With</h3>
-        <div style={{overflow:'hidden', width:'100%'}}>
-          <div className="logo-track">
-            {['barrier','coburn','eclisse','rocket','jbkind','fhbrundle','charlesday','titus','rtbearings'].map(b => (
-              <img key={b} src={`/img/brands/${b}.${b==='eclisse'||b==='rtbearings'?'jpg':'png'}`} alt={b} style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            ))}
-            {['barrier','coburn','eclisse','rocket','jbkind','fhbrundle','charlesday','titus','rtbearings'].map(b => (
-              <img key={b+'-2'} src={`/img/brands/${b}.${b==='eclisse'||b==='rtbearings'?'jpg':'png'}`} alt={b} style={{width:'200px', height:'80px', objectFit:'contain'}} />
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* SYSTEMS SECTION — navy block breaks up the run of white sections */}
       <section aria-label="Our sliding door systems" style={{width:'100%', background:'#363557', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box'}}>
         <div style={{display:'grid', gridTemplateColumns:'1fr clamp(320px, 40vw, 640px)', gap:'var(--section-pad-h)', alignItems:'stretch', justifyContent:'center'}}>
@@ -279,6 +264,23 @@ export default async function HomePage() {
                   <span style={{color:'#ffffff', fontSize:'clamp(12px, 1.1vw, 14px)', fontWeight:'700', lineHeight:'1.2', display:'block'}}>{item.bottom}</span>
                 </div>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BRANDS — full width scrolling banner. Moved here (21 July) to sit between Systems and Footer,
+          breaking up two identical navy blocks that were touching with no divider. Uses existing content,
+          no new section built. */}
+      <section aria-label="Brands we work with" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'4px solid #efb627', overflow:'hidden'}}>
+        <h3 style={{color:'#272446', fontSize:'var(--font-label)', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0'}}>Brands We Work With</h3>
+        <div style={{overflow:'hidden', width:'100%'}}>
+          <div className="logo-track">
+            {['barrier','coburn','eclisse','rocket','jbkind','fhbrundle','charlesday','titus','rtbearings'].map(b => (
+              <img key={b} src={`/img/brands/${b}.${b==='eclisse'||b==='rtbearings'?'jpg':'png'}`} alt={b} style={{width:'200px', height:'80px', objectFit:'contain'}} />
+            ))}
+            {['barrier','coburn','eclisse','rocket','jbkind','fhbrundle','charlesday','titus','rtbearings'].map(b => (
+              <img key={b+'-2'} src={`/img/brands/${b}.${b==='eclisse'||b==='rtbearings'?'jpg':'png'}`} alt={b} style={{width:'200px', height:'80px', objectFit:'contain'}} />
             ))}
           </div>
         </div>
