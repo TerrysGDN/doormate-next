@@ -271,8 +271,10 @@ export default async function HomePage() {
 
       {/* BRANDS — full width scrolling banner. Moved here (21 July) to sit between Systems and Footer,
           breaking up two identical navy blocks that were touching with no divider. Uses existing content,
-          no new section built. */}
-      <section aria-label="Brands we work with" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', borderTop:'4px solid #efb627', borderBottom:'4px solid #efb627', overflow:'hidden'}}>
+          no new section built. Gold top/bottom borders removed (21 July) — colour change alone (navy/white)
+          already marks the boundary; gold lines are reserved for white-to-white transitions where the colour
+          doesn't do that job on its own (see Shop Grid -> Reviews, Reviews -> Who We Are). */}
+      <section aria-label="Brands we work with" style={{width:'100%', background:'#ffffff', padding:'var(--section-pad-v) var(--section-pad-h)', boxSizing:'border-box', overflow:'hidden'}}>
         <h3 style={{color:'#272446', fontSize:'var(--font-label)', fontWeight:'700', textAlign:'center', margin:'0 0 20px 0'}}>Brands We Work With</h3>
         <div style={{overflow:'hidden', width:'100%'}}>
           <div className="logo-track">

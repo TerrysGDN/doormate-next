@@ -61,6 +61,9 @@ Grey #999 is NOT a DoorMate colour. It is AI template fluff. Remove it wherever 
 
 If a new section needs a headline, a sub-label, or body copy, it uses one of these tokens — it does not invent a new clamp() or pixel value, even one that happens to match visually. Matching-by-coincidence is exactly what broke tonight.
 
+### Gold divider rule — LOCKED 21 July 2026
+Gold section-divider lines (`4px solid var(--gold)`) are only used where two sections of the SAME background colour meet (e.g. white section into white section) — the colour itself carries no signal there, so the line does the job. Where a section boundary already has a colour change (navy into white, or white into navy), no gold line is added — the colour block itself is the boundary, and a line on top of it is decoration, not function. Matches the Truth Source's Visual Philosophy: "Clarity comes before decoration." Do not add a gold border to a section purely because a neighbouring section has one — check whether the colours either side of that specific boundary actually change first.
+
 ### What is NEVER allowed
 - ALL CAPS anywhere on the site — ever. British grammar. DoorMate is a British company.
 - Gold eyebrow labels (e.g. "WHY DOORMATE?", "OUR SYSTEMS") — these were killed. They do not appear anywhere on the site.
