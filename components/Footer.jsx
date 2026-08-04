@@ -12,7 +12,7 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#363557', color: '#ffffff', fontFamily: "'Libre Franklin', sans-serif" }}>
+    <footer className="footer" style={{ background: '#363557', color: '#ffffff', fontFamily: "'Libre Franklin', sans-serif" }}>
 
       <div style={{ padding: 'var(--section-pad-v) var(--section-pad-h) 20px var(--section-pad-h)', display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: '40px', boxSizing: 'border-box' }}>
 
@@ -69,7 +69,7 @@ export default function Footer() {
 
       {/* Bottom strip */}
       <div style={{ padding: '12px var(--section-pad-h)', borderTop: '1px solid rgba(255,255,255,0.15)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxSizing: 'border-box' }}>
-        <p style={{ color: '#ffffff', fontSize: '11px', margin: 0 }}>© {new Date().getFullYear()} DoorMate Sliding Door Systems. Trading since 2009. Cardiff, South Wales.</p>
+        <p className="dm-footer-small" style={{ color: '#ffffff', margin: 0 }}>© {new Date().getFullYear()} DoorMate Sliding Door Systems. Trading since 2009. Cardiff, South Wales.</p>
         <div style={{ display: 'flex', gap: '16px' }}>
           <Link href="/privacy" style={{ color: '#efb627', fontSize: '11px', textDecoration: 'none' }}>Privacy Policy</Link>
           <Link href="/terms" style={{ color: '#efb627', fontSize: '11px', textDecoration: 'none' }}>Terms</Link>

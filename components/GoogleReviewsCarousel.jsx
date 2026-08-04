@@ -3,8 +3,8 @@
 export default function GoogleReviewsCarousel({ rating, reviews, reviewUrl }) {
   if (!rating) {
     return (
-      <div style={{textAlign:'center', fontFamily:"'Libre Franklin', sans-serif"}}>
-        <p style={{color:'#272446', fontSize:'14px', fontWeight:'600'}}>Google reviews are temporarily unavailable.</p>
+      <div className="dm-google-fallback">
+        <p className="dm-google-unavailable">Google reviews are temporarily unavailable.</p>
         {reviewUrl && (
           <a href={reviewUrl} target="_blank" rel="noopener noreferrer" style={{background:'#f1b52a', color:'#0f0d24', padding:'11px 28px', fontSize:'14px', fontWeight:'900', textDecoration:'none', borderRadius:'4px', display:'inline-block', marginTop:'12px'}}>Leave Us A Google Review</a>
         )}

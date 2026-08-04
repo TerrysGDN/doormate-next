@@ -1,7 +1,6 @@
 import { Libre_Franklin } from 'next/font/google'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
-import ChatbotPlaceholder from '@/components/ChatbotPlaceholder'
 import './globals.css'
 
 const libreFranklin = Libre_Franklin({
@@ -109,8 +108,6 @@ export default function RootLayout({ children }) {
         <Nav />
         <main>{children}</main>
         <Footer />
-        {/* REAL CHATBOT WIRED IN SEPARATELY */}
-        <ChatbotPlaceholder />
       </body>
     </html>
   )
