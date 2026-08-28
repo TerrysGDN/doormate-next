@@ -21,10 +21,6 @@ export default function ManufacturerRangePage({
     <div className="dm-manufacturer-page">
       <section className="dm-manufacturer-intro" aria-labelledby="manufacturer-heading">
         <div className="dm-section-frame">
-          <Link className="dm-manufacturer-back" href="/pocket-door-kits">
-            <span aria-hidden="true">&larr;</span> Pocket Door Kits
-          </Link>
-
           <div className="dm-manufacturer-intro-grid">
             <div className="dm-manufacturer-intro-copy">
               <span className="dm-manufacturer-logo">

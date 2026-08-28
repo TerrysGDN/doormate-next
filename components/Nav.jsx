@@ -4,7 +4,16 @@ import Link from 'next/link'
 const NAV_LINKS = [
   { label: 'Doors', href: '/doors' },
   { label: 'Barn Door Hardware', href: '/barn-door-hardware' },
-  { label: 'Pocket Door Kits', href: '/pocket-door-kits' },
+  {
+    label: 'Pocket Door Kits',
+    href: '/pocket-door-kits',
+    children: [
+      { label: 'Rocket', href: '/pocket-door-kits/rocket' },
+      { label: 'Eclisse', href: '/pocket-door-kits/eclisse' },
+      { label: 'Coburn', href: '/pocket-door-kits/coburn' },
+      { label: 'Barrier', href: '/pocket-door-kits/barrier' },
+    ],
+  },
   { label: 'Internal Sliding Door Kits', href: '/internal-sliding-kits' },
   { label: 'External Sliding Door Kits', href: '/external-sliding-kits' },
   { label: 'Gallery', href: '/gallery' },
@@ -35,7 +44,12 @@ export default function Nav() {
           </summary>
           <nav aria-label="Mobile navigation">
             {NAV_LINKS.map((link) => (
-              <Link key={link.href} href={link.href}>{link.label}</Link>
+              <div className="dm-mobile-nav-group" key={link.href}>
+                <Link href={link.href}>{link.label}</Link>
+                {link.children?.map((child) => (
+                  <Link className="dm-mobile-nav-child" href={child.href} key={child.href}>{child.label}</Link>
+                ))}
+              </div>
             ))}
           </nav>
         </details>
@@ -44,7 +58,21 @@ export default function Nav() {
       <nav id="dm-navigation" aria-label="Main navigation">
         <div className="dm-navigation-inner">
           {NAV_LINKS.map((link) => (
-            <Link key={link.href} href={link.href}>{link.label}</Link>
+            link.children ? (
+              <div className="dm-navigation-item dm-navigation-item--dropdown" key={link.href}>
+                <Link href={link.href}>{link.label}</Link>
+                <button type="button" aria-label={`Show ${link.label} manufacturers`} aria-haspopup="true">
+                  <span aria-hidden="true">⌄</span>
+                </button>
+                <div className="dm-navigation-submenu">
+                  {link.children.map((child) => (
+                    <Link href={child.href} key={child.href}>{child.label}</Link>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <Link key={link.href} href={link.href}>{link.label}</Link>
+            )
           ))}
         </div>
       </nav>
