@@ -125,6 +125,28 @@
   line-height: var(--dm-body-line);
 }
 
+.dm-manufacturer-resources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: var(--space-3);
+}
+
+.dm-manufacturer-resources a,
+.dm-manufacturer-resources span {
+  display: inline-flex;
+  padding: 10px 14px;
+  background: var(--dm-gold);
+  color: var(--dm-navy);
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.dm-manufacturer-resources span[aria-disabled="true"] {
+  cursor: default;
+}
+
 .dm-manufacturer-hero {
   position: relative;
   min-height: 300px;

@@ -118,6 +118,10 @@ function RocketRangePage() {
       introduction="Rocket’s range includes galvanised steel pocket door frames for 70mm, 75mm and 90mm studwork, glass and FD30 pocket systems, plus Ultra Flush concealed hinged door kits."
       heroImage="/img/source/rocket/manufacturer/rocket-modern-hero.webp"
       heroAlt="Contemporary living space fitted with a Rocket pocket door system"
+      resourceTabs={[
+        { label: 'F.A.Q.s' },
+        { label: 'Technical Info' },
+      ]}
       proofGraphic="/img/source/rocket/manufacturer/rocket-delivery-warranty-fd30.png"
       proofGraphicAlt="Rocket next day delivery, lifetime warranty and FD30 fire-rated product benefits"
       choicesHeading={null}
@@ -157,16 +161,12 @@ function RocketRangePage() {
         {
           title: 'Rocket Door Frames Accessories',
           description: 'Rocket accessories include jamb and lining kits, soft-close mechanisms, handles and frame components.',
-          fromPrice: '£53.94',
+          fromPrice: '£17.94',
           action: 'Buy Now',
           image: '/img/source/rocket/doormate-live/doormate-rocket-09.jpg',
           alt: 'Rocket pocket door frame components and accessories',
         },
       ]}
-      guidance={{
-        heading: 'Not Sure Which Rocket System You Need?',
-        copy: 'Tell us your door size, wall thickness and whether you need a pocket door, an Ultra Flush hinged door or an FD30 fire-rated system. We’ll help narrow it down before you order.',
-      }}
     />
   )
 }

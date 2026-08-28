@@ -8,6 +8,7 @@ export default function ManufacturerRangePage({
   introduction,
   heroImage,
   heroAlt,
+  resourceTabs,
   proofPoints,
   proofGraphic,
   proofGraphicAlt,
@@ -31,6 +32,17 @@ export default function ManufacturerRangePage({
               </span>
               <h1 id="manufacturer-heading">{heading}</h1>
               <p>{introduction}</p>
+              {resourceTabs && (
+                <nav className="dm-manufacturer-resources" aria-label={`${manufacturer} technical resources`}>
+                  {resourceTabs.map((resource) => (
+                    resource.href ? (
+                      <Link href={resource.href} key={resource.label}>{resource.label}</Link>
+                    ) : (
+                      <span aria-disabled="true" key={resource.label}>{resource.label}</span>
+                    )
+                  ))}
+                </nav>
+              )}
             </div>
 
             <div className="dm-manufacturer-hero">
