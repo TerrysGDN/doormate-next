@@ -26,10 +26,16 @@ const NAV_LINKS = [
 
 export default function Nav() {
   const [openDropdown, setOpenDropdown] = useState(null)
+  const [dropdownLocked, setDropdownLocked] = useState(false)
   const mobileNavigation = useRef(null)
 
   const closeMobileNavigation = () => {
     mobileNavigation.current?.removeAttribute('open')
+  }
+
+  const closeDropdownAfterSelection = () => {
+    setOpenDropdown(null)
+    setDropdownLocked(true)
   }
 
   return (
@@ -69,20 +75,33 @@ export default function Nav() {
         <div className="dm-navigation-inner">
           {NAV_LINKS.map((link) => (
             link.children ? (
-              <div className={`dm-navigation-item dm-navigation-item--dropdown${openDropdown === link.href ? ' is-open' : ''}`} key={link.href}>
-                <Link href={link.href} onClick={() => setOpenDropdown(null)}>{link.label}</Link>
+              <div
+                className={`dm-navigation-item dm-navigation-item--dropdown${openDropdown === link.href ? ' is-open' : ''}`}
+                key={link.href}
+                onMouseEnter={() => {
+                  if (!dropdownLocked) setOpenDropdown(link.href)
+                }}
+                onMouseLeave={() => {
+                  setOpenDropdown(null)
+                  setDropdownLocked(false)
+                }}
+              >
+                <Link href={link.href} onClick={closeDropdownAfterSelection}>{link.label}</Link>
                 <button
                   type="button"
                   aria-expanded={openDropdown === link.href}
                   aria-label={`Show ${link.label} manufacturers`}
                   aria-haspopup="true"
-                  onClick={() => setOpenDropdown(openDropdown === link.href ? null : link.href)}
+                  onClick={() => {
+                    setDropdownLocked(false)
+                    setOpenDropdown(openDropdown === link.href ? null : link.href)
+                  }}
                 >
                   <span aria-hidden="true">⌄</span>
                 </button>
                 <div className="dm-navigation-submenu">
                   {link.children.map((child) => (
-                    <Link href={child.href} key={child.href} onClick={() => setOpenDropdown(null)}>{child.label}</Link>
+                    <Link href={child.href} key={child.href} onClick={closeDropdownAfterSelection}>{child.label}</Link>
                   ))}
                 </div>
               </div>

@@ -1074,7 +1074,6 @@ nav {
 .dm-navigation-item:focus-within > a,
 .dm-navigation-item > button:hover { background: rgba(39,36,70,.11); }
 .dm-navigation-submenu { position: absolute; z-index: 40; top: 100%; left: 0; min-width: 220px; display: none; padding: 7px; border: 1px solid var(--dm-line); background: var(--dm-white); box-shadow: 0 16px 34px rgba(39,36,70,.2); }
-.dm-navigation-item:hover .dm-navigation-submenu,
 .dm-navigation-item.is-open .dm-navigation-submenu { display: block; }
 .dm-navigation-submenu a { justify-content: flex-start; padding: 11px 13px; font-size: 14px; }
 
