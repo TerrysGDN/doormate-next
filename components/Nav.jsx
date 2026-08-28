@@ -1,5 +1,8 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRef, useState } from 'react'
 
 const NAV_LINKS = [
   { label: 'Doors', href: '/doors' },
@@ -22,6 +25,13 @@ const NAV_LINKS = [
 ]
 
 export default function Nav() {
+  const [openDropdown, setOpenDropdown] = useState(null)
+  const mobileNavigation = useRef(null)
+
+  const closeMobileNavigation = () => {
+    mobileNavigation.current?.removeAttribute('open')
+  }
+
   return (
     <header className="dm-header">
       <div className="dm-header-main">
@@ -35,7 +45,7 @@ export default function Nav() {
           <a href="tel:02921660393">029 2166 0393</a>
           <a href="mailto:info@doormate.co.uk">info@doormate.co.uk</a>
         </div>
-        <details className="dm-mobile-navigation">
+        <details className="dm-mobile-navigation" ref={mobileNavigation}>
           <summary className="dm-menu-button">
           <span>Menu</span>
           <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -45,9 +55,9 @@ export default function Nav() {
           <nav aria-label="Mobile navigation">
             {NAV_LINKS.map((link) => (
               <div className="dm-mobile-nav-group" key={link.href}>
-                <Link href={link.href}>{link.label}</Link>
+                <Link href={link.href} onClick={closeMobileNavigation}>{link.label}</Link>
                 {link.children?.map((child) => (
-                  <Link className="dm-mobile-nav-child" href={child.href} key={child.href}>{child.label}</Link>
+                  <Link className="dm-mobile-nav-child" href={child.href} key={child.href} onClick={closeMobileNavigation}>{child.label}</Link>
                 ))}
               </div>
             ))}
@@ -59,14 +69,20 @@ export default function Nav() {
         <div className="dm-navigation-inner">
           {NAV_LINKS.map((link) => (
             link.children ? (
-              <div className="dm-navigation-item dm-navigation-item--dropdown" key={link.href}>
-                <Link href={link.href}>{link.label}</Link>
-                <button type="button" aria-label={`Show ${link.label} manufacturers`} aria-haspopup="true">
+              <div className={`dm-navigation-item dm-navigation-item--dropdown${openDropdown === link.href ? ' is-open' : ''}`} key={link.href}>
+                <Link href={link.href} onClick={() => setOpenDropdown(null)}>{link.label}</Link>
+                <button
+                  type="button"
+                  aria-expanded={openDropdown === link.href}
+                  aria-label={`Show ${link.label} manufacturers`}
+                  aria-haspopup="true"
+                  onClick={() => setOpenDropdown(openDropdown === link.href ? null : link.href)}
+                >
                   <span aria-hidden="true">⌄</span>
                 </button>
                 <div className="dm-navigation-submenu">
                   {link.children.map((child) => (
-                    <Link href={child.href} key={child.href}>{child.label}</Link>
+                    <Link href={child.href} key={child.href} onClick={() => setOpenDropdown(null)}>{child.label}</Link>
                   ))}
                 </div>
               </div>
