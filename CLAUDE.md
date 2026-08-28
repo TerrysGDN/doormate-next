@@ -2010,3 +2010,43 @@ Terry said plainly, near the end of the session: "all love for this project long
 3. Separately, and only if Terry wants to open it: is there an appetite to restore some version of the "relief" emotional arc in the Systems section copy WITHOUT reviving the word cloud technique itself (e.g. naming real jargon terms directly in the prose as a quick contrast beat before the relief line)? Not agreed, not started — raised and left open tonight.
 4. The "about me / origin story" section idea is parked as its own separate decision, for later, possibly its own page — not homepage, not now.
 5. Everything already outstanding from 16 July (Brands logo strip sizing, full footer review, `llms.txt`, the 18 old scaffold page findings, product pages) — unchanged, still waiting.
+
+---
+
+## SESSION SUMMARY — 21 AUGUST 2026 — READ THIS FIRST — MOST RECENT
+
+### CURRENT WORKING STATE
+- Active branch: `codex/homepage-recovery`.
+- All work described here is local and uncommitted. Nothing from this session has been published.
+- Terry will continue in the same chat. Before any further build work, review this state and the design-system evidence with him.
+
+### PRODUCT / CATEGORY PAGE WORK STARTED
+- Work has moved beyond the homepage into the Pocket Door Kits category journey.
+- `/pocket-door-kits` currently contains a four-brand choice page: Rocket, Eclisse, Coburn and Barrier.
+- `/pocket-door-kits/rocket` currently contains a first Rocket choice-page prototype with four routes: Single or Double, Glass, FD30 Fire-Rated and Accessories. These routes are not yet completed buying pages.
+- The Pocket Door Kits introduction now uses the Eclisse marketing image `ECL_Syntesis est_LUCE_19.jpg`, supplied directly by Eclisse and stored under `public/img/Eclisse Images/ECLISSE_SYNTESIS_POCKET/`.
+- Current H1 wording: `Leading Pocket Door System Manufacturers, Chosen By DoorMate.`
+- The small gold `Pocket Door Kits` eyebrow label was removed after Terry correctly identified it as weak and unnecessary.
+- Terry's design adjustments made today: reduce the lifestyle-image height, bottom-align it with the introductory copy, and tighten the space above and below so the first two brand choices enter the standard 100%-zoom desktop viewport. The result is close to the desired type of category/product-page presentation.
+
+### CRITICAL DESIGN-SYSTEM FINDING — DO NOT SMOOTH THIS OVER
+Terry believed, after months of discussion and repeated assurances, that the website had a complete wireframe/design system governing colours, fonts, headings, widths, padding, imagery and responsive behaviour across the whole website. Today's work exposed that this is not yet true.
+
+What actually exists:
+- A real homepage wireframe and written global visual rules.
+- Some shared tokens and established DoorMate colours/typography.
+- No complete, enforced site-wide component system preventing individual pages from introducing one-off measurements.
+- No verified, locked reusable category-page or individual-product-page structure yet.
+
+The Pocket Door Kits changes were made through page-specific CSS adjustments (including image height and spacing). Although Terry's corrections likely brought the page closer to the homepage's established proportions, that has not yet been verified against the actual shared tokens. Calling this a finished reusable template would be false.
+
+Terry is extremely and justifiably angry because this repeats the Claude pattern he moved the project away from: assurances that a wireframe/system existed, followed by reactive page-by-page patching and Terry becoming the designer and quality-control system again. Do not tell Terry to take a break, defer the problem until tomorrow, or offer another unsupported reassurance. He explicitly identified that response as a classic AI palm-off.
+
+### NEXT SESSION — BEFORE ANY BUILD OR EDIT
+1. Do not change code first.
+2. Audit the existing homepage wireframe, written design rules, global CSS tokens and actual reusable components.
+3. Report plainly what is genuinely enforced, what is merely written down, and where the current Pocket Door Kits page uses one-off values.
+4. Check whether Terry's visual corrections already align with the established homepage heading, spacing and above-the-fold rules.
+5. Use the current Pocket Door Kits page only as a prototype/candidate for a reusable category-page structure until Terry agrees otherwise.
+6. Do not ask Terry to repeat the previous months of design discussion from memory.
+7. Only after the evidence review and Terry's agreement should any reusable category/product-page implementation continue.

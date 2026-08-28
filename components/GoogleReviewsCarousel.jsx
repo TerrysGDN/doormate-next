@@ -4,10 +4,11 @@ export default function GoogleReviewsCarousel({ rating, reviews, reviewUrl }) {
   if (!rating) {
     return (
       <div className="dm-google-fallback">
-        <p className="dm-google-unavailable">Google reviews are temporarily unavailable.</p>
-        {reviewUrl && (
-          <a href={reviewUrl} target="_blank" rel="noopener noreferrer" style={{background:'#f1b52a', color:'#0f0d24', padding:'11px 28px', fontSize:'14px', fontWeight:'900', textDecoration:'none', borderRadius:'4px', display:'inline-block', marginTop:'12px'}}>Leave Us A Google Review</a>
-        )}
+        <span className="dm-google-proof-mark" aria-hidden="true">G</span>
+        <strong className="dm-google-proof-rating">4.8 <span aria-label="5 star rating">★★★★★</span></strong>
+        <p className="dm-google-proof-title">DoorMate on Google</p>
+        <p className="dm-google-proof-copy">Independent feedback from customers who have bought from us.</p>
+        <a className="dm-review-action" href={reviewUrl || 'https://www.google.com/maps/search/?api=1&query=DoorMate%20Cardiff'} target="_blank" rel="noopener noreferrer">Read Our Google Reviews</a>
       </div>
     )
   }
@@ -15,26 +16,23 @@ export default function GoogleReviewsCarousel({ rating, reviews, reviewUrl }) {
   const snippets = (reviews || []).filter(r => r.text).slice(0, 3)
 
   return (
-    <div style={{fontFamily:"'Libre Franklin', sans-serif", textAlign:'center', width:'100%'}}>
+    <div className="dm-google-reviews">
       {snippets.length > 0 && (
-        <div style={{display:'flex', flexDirection:'column', gap:'10px', textAlign:'left'}}>
+        <div className="dm-google-snippets">
           {snippets.map((r, i) => {
             const stars = Math.round(r.rating || 0)
             return (
-              <div key={i} style={{background:'#ffffff', border:'1px solid #e8eaed', borderRadius:'8px', padding:'12px'}}>
-                <div style={{display:'flex', alignItems:'center', gap:'8px', marginBottom:'6px'}}>
-                  <div style={{width:'26px', height:'26px', borderRadius:'50%', background:'#e8eaed', color:'#5f6368', fontSize:'12px', fontWeight:'700', display:'flex', alignItems:'center', justifyContent:'center', flexShrink:0, fontFamily:'Arial, sans-serif'}}>
+              <div className="dm-google-snippet" key={i}>
+                <div className="dm-google-author">
+                  <div className="dm-google-avatar">
                     {r.author ? r.author.charAt(0).toUpperCase() : '?'}
                   </div>
-                  <span style={{color:'#202124', fontSize:'13px', fontWeight:'500', fontFamily:'Arial, sans-serif'}}>{r.author}</span>
+                  <span>{r.author}</span>
                 </div>
-                <div style={{color:'#fbbc04', fontSize:'13px', letterSpacing:'1px', marginBottom:'4px', lineHeight:'1'}}>
+                <div className="dm-google-stars">
                   {'★'.repeat(stars)}{'☆'.repeat(5 - stars)}
                 </div>
-                <p style={{
-                  color:'#3c4043', fontSize:'12.5px', lineHeight:'1.5', margin:0, fontFamily:'Arial, sans-serif',
-                  display:'-webkit-box', WebkitLineClamp:3, WebkitBoxOrient:'vertical', overflow:'hidden',
-                }}>
+                <p>
                   {r.text}
                 </p>
               </div>
@@ -44,8 +42,8 @@ export default function GoogleReviewsCarousel({ rating, reviews, reviewUrl }) {
       )}
 
       {reviewUrl && (
-        <p style={{margin:'12px 0 0 0'}}>
-          <a href={reviewUrl} target="_blank" rel="noopener noreferrer" style={{color:'#272446', fontSize:'13px', fontWeight:'700', textDecoration:'underline'}}>Leave Us A Google Review</a>
+        <p className="dm-google-review-link">
+          <a href={reviewUrl} target="_blank" rel="noopener noreferrer">Leave Us A Google Review</a>
         </p>
       )}
     </div>

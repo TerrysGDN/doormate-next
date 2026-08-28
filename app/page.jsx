@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import HeroCarousel from '@/components/HeroCarousel'
 import GoogleReviewsCarousel from '@/components/GoogleReviewsCarousel'
 
@@ -30,17 +31,35 @@ async function getGoogleReviews() {
 
 export const metadata = {
   title: 'DoorMate Sliding Door Systems | Pocket Doors, Sliding Kits & Barn Door Hardware Cardiff',
-  description: 'Pocket doors, internal and external sliding kits, barn door hardware and handmade doors. Cardiff-based sliding door specialists since 2009. As Seen On Channel 4.',
+  description: 'Buy complete pocket door kits, internal and external sliding door systems, British-made barn door hardware and handmade doors from DoorMate, Cardiff. Sliding door specialists since 2009.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'DoorMate Sliding Door Systems | Pocket Doors, Sliding Kits & Barn Door Hardware Cardiff',
-    description: 'Pocket doors, internal and external sliding kits, barn door hardware and handmade doors. Cardiff-based sliding door specialists since 2009. As Seen On Channel 4.',
+    description: 'Buy complete pocket door kits, internal and external sliding door systems, British-made barn door hardware and handmade doors from DoorMate, Cardiff. Sliding door specialists since 2009.',
     type: 'website',
     url: 'https://doormate.co.uk',
   },
 }
 
-const BRANDS = ['barrier', 'coburn', 'eclisse', 'rocket', 'jbkind', 'fhbrundle', 'charlesday', 'titus', 'rtbearings']
+const BRANDS = [
+  { key: 'barrier', name: 'Barrier Components' },
+  { key: 'coburn', name: 'Coburn Sliding Systems' },
+  { key: 'eclisse', name: 'Eclisse' },
+  { key: 'rocket', name: 'Rocket Door Frames' },
+  { key: 'jbkind', name: 'JB Kind Doors', file: 'jbkind.png' },
+  { key: 'fhbrundle', name: 'F H Brundle' },
+  { key: 'charlesday', name: 'Charles Day' },
+  { key: 'titus', name: 'Titus' },
+  { key: 'rtbearings', name: 'RT Bearings' },
+]
+const HOME_CATALOGUE = [
+  { name: 'Pocket Door Systems', url: '/pocket-door-kits', description: 'Complete pocket door kits and mirror pocket door systems for internal walls.' },
+  { name: 'Internal Sliding Door Systems', url: '/internal-sliding-kits', description: 'Internal sliding systems for timber, steel and glass doors.' },
+  { name: 'External Sliding Door Systems', url: '/external-sliding-kits', description: 'Weather-resistant sliding door kits for garages, outbuildings and agricultural buildings.' },
+  { name: 'Handmade Sliding Doors', url: '/doors', description: 'Made-to-measure timber sliding doors handmade in Cardiff.' },
+  { name: 'British-Made Barn Door Hardware', url: '/barn-door-hardware', description: 'DoorMate barn door hardware systems manufactured in Cardiff.' },
+  { name: 'Sliding Door Accessories and Hardware', url: 'https://www.barn-doors.co.uk/shop', description: 'Sliding door accessories, fittings and replacement hardware.' },
+]
 const TERMINOLOGY = [
   'Single Pocket Door Kits', 'Double Pocket Door Kits', 'Fire Rated Pocket Door Kits', 'Glass Pocket Door Systems',
   'Timber Door Kits', 'Wiring-Ready Pocket Door Systems', 'Top Mounted Sliding Systems', 'Face Mounted Track Brackets',
@@ -54,7 +73,7 @@ const TERMINOLOGY = [
   'Jointing Sleeves', 'Guide Packs', 'Fittings Packs',
 ]
 const CLOUD_TERMS = Array.from(
-  { length: TERMINOLOGY.length * 3 },
+  { length: TERMINOLOGY.length * 6 },
   (_, index) => TERMINOLOGY[((index * 17) + (Math.floor(index / TERMINOLOGY.length) * 11)) % TERMINOLOGY.length]
 )
 
@@ -73,9 +92,36 @@ export default async function HomePage() {
   const { reviews, rating, total } = await getGoogleReviews()
   const placeId = process.env.GOOGLE_PLACE_ID
   const reviewUrl = placeId ? `https://search.google.com/local/writereview?placeid=${placeId}` : null
+  const homePageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://doormate.co.uk/#homepage',
+    url: 'https://doormate.co.uk/',
+    name: "DoorMate — The UK's Leading Sliding Door Specialists",
+    description: metadata.description,
+    inLanguage: 'en-GB',
+    isPartOf: { '@id': 'https://doormate.co.uk/#website' },
+    about: { '@id': 'https://doormate.co.uk/#organization' },
+    mainEntity: {
+      '@type': 'ItemList',
+      name: 'DoorMate Sliding Door Systems',
+      numberOfItems: HOME_CATALOGUE.length,
+      itemListElement: HOME_CATALOGUE.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'CollectionPage',
+          name: item.name,
+          description: item.description,
+          url: item.url.startsWith('http') ? item.url : `https://doormate.co.uk${item.url}`,
+        },
+      })),
+    },
+  }
 
   return (
     <div className="recovery-home">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homePageSchema) }} />
       <HeroCarousel />
 
       <section className="dm-trust" aria-label="Customer trust indicators">
@@ -91,7 +137,7 @@ export default async function HomePage() {
         <div className="dm-section-frame">
           <div className="dm-reviews-layout">
             <div className="dm-section-copy dm-reviews-copy">
-              <h2 className="dm-reviews-heading" id="reviews-heading">Why Real Reviews Matter</h2>
+              <h2 className="dm-section-heading dm-reviews-heading" id="reviews-heading">Why Real Reviews Matter</h2>
               <p>Every project starts with a little research, and genuine customer reviews are one of the best ways to understand the company you&apos;re buying from. They give you an honest picture of the people behind the business and the quality of the products they supply.</p>
               <p>Reviews matter just as much to us. A great review tells us we&apos;re doing things right. A less positive one tells us where we can do better. Both help us improve.</p>
               <p>So whether you buy from DoorMate or somewhere else, if you&apos;ve had a good experience, take a minute to leave a review. It helps good businesses grow and gives the next customer the confidence to make the right choice.</p>
@@ -117,7 +163,7 @@ export default async function HomePage() {
             <Image src="/img/real-manufacturers-image.jpg" alt="Precision manufacturing of sliding door hardware components" fill sizes="(max-width: 900px) 100vw, 50vw" />
           </div>
           <div className="dm-section-copy dm-manufacturing-copy">
-            <h2 id="manufacturing-heading">Real UK Manufacturers.<br />Real Systems<br />Delivered Direct To You.</h2>
+            <h2 className="dm-section-heading" id="manufacturing-heading">Real UK Manufacturers.<br />Real Systems<br />Delivered Direct To You.</h2>
             <p>DoorMate are based in Cardiff, South Wales — manufacturing and supplying sliding door systems since 2009. While our competitors are simply importing boxes of hardware, sat in warehouses with sales staff and warehouse workers loading the vans, we manufacture our own systems alongside handmade barn doors, mirror pocket doors and the widest range of pocket door kits, internal and external sliding systems.</p>
             <p>Every system we sell is backed by real industry knowledge, clear fitting guidance and direct support from the people who actually make them.</p>
             <p className="dm-manufacturing-line">We Are Manufacturers, Suppliers &amp; Installers<br />of Quality Door Products</p>
@@ -131,7 +177,7 @@ export default async function HomePage() {
         </div>
         <div className="dm-section-frame dm-relief-content">
           <div className="dm-solutions-copy">
-            <h2 id="solutions-heading">We Offer Complete Sliding Door Solutions</h2>
+            <h2 className="dm-section-heading" id="solutions-heading">Complete Sliding Door Solutions</h2>
             <div className="dm-reality-row" aria-label="Designed for real homes, real doors and real walls">
               <div><span className="dm-reality-icon dm-home-icon" aria-hidden="true" /><strong>Real homes</strong></div>
               <div><span className="dm-reality-icon dm-door-icon" aria-hidden="true" /><strong>Real doors</strong></div>
@@ -140,9 +186,10 @@ export default async function HomePage() {
             <div className="dm-relief-explanation">
               <p>Choosing a sliding door system shouldn&apos;t be difficult.</p>
               <p>That&apos;s why we&apos;ve made it easy to find the right solution for your project.</p>
-              <p>Our systems are organised around real-world applications.</p>
+              <p>We organise our systems around real-world applications.</p>
             </div>
             <div className="dm-relief-answer">
+              <p className="dm-relief-lead">You don&apos;t need to be an expert.</p>
               <p className="dm-solution-answer">We&apos;ve already done the thinking for you.</p>
             </div>
             <p className="dm-relief-close">Simply choose your system. Let&apos;s get this project done!</p>
@@ -152,11 +199,39 @@ export default async function HomePage() {
 
       <section className="dm-brands" aria-labelledby="brands-heading">
         <div className="dm-section-frame">
-          <h2 id="brands-heading">Brands We Work With</h2>
-          <div className="dm-brand-list">
-            {BRANDS.map((brand) => (
-              <img key={brand} src={`/img/brands/${brand}.${brand === 'eclisse' || brand === 'rtbearings' ? 'jpg' : 'png'}`} alt={brand} />
+          <h2 className="dm-brands-heading" id="brands-heading">Brands We Work With</h2>
+        </div>
+        <div className="dm-brand-viewport">
+          <div className="dm-brand-track">
+            {[0, 1].map((group) => (
+              <div className="dm-brand-group" aria-hidden={group === 1 ? 'true' : undefined} key={group}>
+                {BRANDS.map((brand) => (
+                  <span className={`dm-brand-item dm-brand-${brand.key}`} key={`${group}-${brand.key}`}>
+                    <img src={`/img/brands/${brand.file || `${brand.key}-clean.png`}`} alt={group === 0 ? `${brand.name} logo` : ''} />
+                  </span>
+                ))}
+              </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="dm-story" aria-labelledby="story-heading">
+        <div className="dm-section-frame dm-story-layout">
+          <div className="dm-story-introduction">
+            <p className="dm-story-label">Our Story</p>
+            <h2 id="story-heading"><span>Door</span><span>Mate</span></h2>
+            <dl className="dm-story-definition">
+              <div><dt>door <span>/dɔː/</span> <em>noun</em></dt><dd>a movable barrier that opens or closes an entrance</dd></div>
+              <div><dt>mate <span>/meɪt/</span> <em>noun</em></dt><dd>a friend; someone who helps a skilled worker</dd></div>
+            </dl>
+            <p className="dm-story-idea">The name was always the idea.</p>
+          </div>
+          <div className="dm-story-copy">
+            <p>After years in the industrial-door trade, Terry could see its basic problem: it wasn&apos;t customer-centred. Suppliers, competitors and even steel suppliers often behaved as though the customer was an inconvenience. He believed an industrial-door company offering the friendly, old-fashioned service people used to take for granted would be a winner. So, in 2009, he started one: DoorMate.</p>
+            <p>For the next few years, DoorMate sold, fitted and repaired industrial doors, automatic doors, roller shutters and garage doors, handling repairs for major brands up and down Cardiff&apos;s high streets on behalf of national maintenance companies.</p>
+            <p>Around 2013, Terry used workshop space at his former boss&apos;s factory to test an idea for a new sliding barn-door system. The idea worked. At a time when almost all barn-door hardware sold in Britain was imported from China, DoorMate became the UK&apos;s only manufacturer—and orders followed. With no workshop of his own, Terry worked from home and out of his Transit van until growing demand made dedicated premises essential. DoorMate opened its Cardiff workshop in 2015. The original system became the foundation for something much broader: pocket-door kits, internal and external sliding systems, doors and hardware for many different applications. DoorMate had grown from one good idea into today&apos;s complete sliding-door systems company.</p>
+            <Link href="/about">Read the full DoorMate story <span aria-hidden="true">→</span></Link>
           </div>
         </div>
       </section>

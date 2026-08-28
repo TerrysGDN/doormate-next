@@ -12,18 +12,18 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="footer" style={{ background: '#363557', color: '#ffffff', fontFamily: "'Libre Franklin', sans-serif" }}>
+    <footer className="dm-footer">
 
-      <div style={{ padding: 'var(--section-pad-v) var(--section-pad-h) 20px var(--section-pad-h)', display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: '40px', boxSizing: 'border-box' }}>
+      <div className="dm-section-frame dm-footer-grid">
 
         {/* Column 1 — Brand + Socials */}
-        <div>
-          <div style={{ marginBottom: '14px' }}>
-            <Image src="/img/doormate-logo.jpg" alt="DoorMate Sliding Door Systems" width={140} height={50} style={{ objectFit: 'contain' }} />
+        <div className="dm-footer-brand">
+          <div>
+            <Image src="/img/doormate-logo-cropped.png" alt="DoorMate Sliding Door Systems" width={140} height={50} />
           </div>
-<div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+          <div className="dm-footer-socials">
             {SOCIALS.map(s => (
-              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer" aria-label={s.label}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill={s.color} xmlns="http://www.w3.org/2000/svg">{s.icon}</svg>
               </a>
             ))}
@@ -31,49 +31,53 @@ export default function Footer() {
         </div>
 
         {/* Column 2 — Products */}
-        <div>
-          <h3 style={{ color: '#efb627', fontSize: '13px', fontWeight: '700', marginBottom: '16px' }}>Products</h3>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <li><Link href="/pocket-door-kits" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Pocket Door Kits</Link></li>
-            <li><Link href="/barn-door-hardware" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Barn Door Hardware</Link></li>
-            <li><Link href="/doors" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Handmade Barn Doors</Link></li>
-            <li><Link href="/external-sliding-kits" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>External Sliding Door Kits</Link></li>
-            <li><Link href="/internal-sliding-kits" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Internal Sliding Door Kits</Link></li>
+        <div className="dm-footer-column">
+          <h3>Products</h3>
+          <ul>
+            <li><Link href="/pocket-door-kits">Pocket Door Kits</Link></li>
+            <li><Link href="/barn-door-hardware">Barn Door Hardware</Link></li>
+            <li><Link href="/doors">Doors</Link></li>
+            <li><Link href="/external-sliding-kits">External Sliding Door Kits</Link></li>
+            <li><Link href="/internal-sliding-kits">Internal Sliding Door Kits</Link></li>
           </ul>
         </div>
 
         {/* Column 3 — Company */}
-        <div>
-          <h3 style={{ color: '#efb627', fontSize: '13px', fontWeight: '700', marginBottom: '16px' }}>Company</h3>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
-            <li><Link href="/about" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>About Us</Link></li>
-            <li><Link href="/gallery" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Gallery</Link></li>
-            <li><Link href="/contact" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Contact Us</Link></li>
-            <li><Link href="/trade" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Trade Accounts</Link></li>
-            <li><Link href="/fitters-wanted" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>Fitters Wanted</Link></li>
+        <div className="dm-footer-column">
+          <h3>DoorMate</h3>
+          <ul>
+            <li><Link href="/about">Our Story</Link></li>
+            <li><Link href="/gallery">Gallery</Link></li>
+            <li><Link href="/contact">Contact Us</Link></li>
+            <li><Link href="/trade">Trade Accounts</Link></li>
+            <li><Link href="/fitters-wanted">Fitters Wanted</Link></li>
           </ul>
         </div>
 
         {/* Column 4 — Contact */}
-        <div>
-          <h3 style={{ color: '#efb627', fontSize: '13px', fontWeight: '700', marginBottom: '16px' }}>Contact</h3>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            <a href="tel:02921660393" style={{ color: '#ffffff', fontWeight: '700', fontSize: '14px', textDecoration: 'none' }}>029 2166 0393</a>
-            <a href="mailto:info@doormate.co.uk" style={{ color: '#ffffff', fontSize: '12px', textDecoration: 'none' }}>info@doormate.co.uk</a>
-            <span style={{ color: '#ffffff', fontSize: '12px', lineHeight: '1.6' }}>15 Neptune Court, Vanguard Way<br />Cardiff CF24 5PJ</span>
-            <span style={{ color: '#ffffff', fontSize: '12px' }}>Mon–Sat 09:00–17:00</span>
+        <div className="dm-footer-column dm-footer-contact">
+          <h3>Contact</h3>
+          <div>
+            <a className="dm-footer-phone" href="tel:02921660393">029 2166 0393</a>
+            <a href="mailto:info@doormate.co.uk">info@doormate.co.uk</a>
+            <span><strong>Workshop</strong><br />Rear of 216 Newport Rd<br />Roath, Cardiff CF24 1DN</span>
+            <span><strong>Vehicle access / Sat nav</strong><br />Lane beside 81 Richards Terrace<br />Cardiff CF24 1RW</span>
+            <span>Workshop visits by prior arrangement only.<br />Please contact us before travelling.</span>
+            <span>Mon–Fri 09:30–17:00</span>
           </div>
         </div>
 
       </div>
 
       {/* Bottom strip */}
-      <div style={{ padding: '12px var(--section-pad-h)', borderTop: '1px solid rgba(255,255,255,0.15)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', boxSizing: 'border-box' }}>
-        <p className="dm-footer-small" style={{ color: '#ffffff', margin: 0 }}>© {new Date().getFullYear()} DoorMate Sliding Door Systems. Trading since 2009. Cardiff, South Wales.</p>
-        <div style={{ display: 'flex', gap: '16px' }}>
-          <Link href="/privacy" style={{ color: '#efb627', fontSize: '11px', textDecoration: 'none' }}>Privacy Policy</Link>
-          <Link href="/terms" style={{ color: '#efb627', fontSize: '11px', textDecoration: 'none' }}>Terms</Link>
+      <div className="dm-footer-bottom">
+        <div className="dm-section-frame">
+        <p className="dm-footer-small">© {new Date().getFullYear()} DoorMate Hardware Limited · Company No. 14868587 · Registered in England and Wales · Registered office: 15 Neptune Court, Vanguard Way, Cardiff CF24 5PJ.</p>
+        <div>
+          <Link href="/privacy">Privacy Policy</Link>
+          <Link href="/terms">Terms</Link>
         </div>
+      </div>
       </div>
 
     </footer>

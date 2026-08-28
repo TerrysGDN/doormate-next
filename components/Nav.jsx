@@ -8,7 +8,8 @@ const NAV_LINKS = [
   { label: 'Internal Sliding Door Kits', href: '/internal-sliding-kits' },
   { label: 'External Sliding Door Kits', href: '/external-sliding-kits' },
   { label: 'Gallery', href: '/gallery' },
-  { label: 'Shop', href: '/shop' },
+  { label: 'Our Story', href: '/about' },
+  { label: 'Shop', href: 'https://www.barn-doors.co.uk/shop' },
 ]
 
 export default function Nav() {
