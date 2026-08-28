@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
   const { slug } = await params
   if (slug === 'rocket') {
     return {
-      title: 'Rocket Door Systems | Pocket, Glass, FD30 & Ultra Flush',
+      title: 'Rocket Pocket Door Systems & Ultra Flush Hinged Door Kits',
       description: 'Choose Rocket pocket door frames for standard, glass and FD30 applications, plus Ultra Flush concealed hinged door systems. Clear guidance from DoorMate.',
       alternates: { canonical: '/pocket-door-kits/rocket' },
     }
@@ -114,47 +114,58 @@ function RocketRangePage() {
     <ManufacturerRangePage
       manufacturer="Rocket"
       logo="/img/brands/rocket-stacked.jpg"
-      heading="Pocket Door Kits & Ultra Flush Kits"
+      heading="Pocket Door Systems & Ultra Flush Hinged Door Kits"
       introduction="Rocket’s range includes galvanised steel pocket door frames for 70mm, 75mm and 90mm studwork, glass and FD30 pocket systems, plus Ultra Flush concealed hinged door kits."
       heroImage="/img/source/rocket/manufacturer/rocket-modern-hero.webp"
       heroAlt="Contemporary living space fitted with a Rocket pocket door system"
       proofGraphic="/img/source/rocket/manufacturer/rocket-delivery-warranty-fd30.png"
       proofGraphicAlt="Rocket next day delivery, lifetime warranty and FD30 fire-rated product benefits"
+      choicesHeading={null}
       choices={[
         {
           title: 'Single & Double Pocket Door Kits',
           description: 'The standard Rocket frame system for timber internal doors, available for single and double openings.',
+          fromPrice: '£167.94',
+          action: 'Buy Now',
           image: '/img/source/rocket/doormate-live/doormate-rocket-06.jpg',
           alt: 'Rocket standard pocket door frame installed inside a wall',
         },
         {
           title: 'Glass Pocket Door Kits',
-          description: 'A galvanised steel frame supplied with an 8mm tempered satin glass door, soft close and jamb lining kit.',
+          description: 'The complete kit includes a galvanised steel pocket door frame, 8mm tempered satin glass door, soft-close mechanism and jamb lining kit.',
+          fromPrice: '£479.94',
+          action: 'Buy Now',
           image: '/img/source/rocket/manufacturer/rocket-glass-pocket-door.webp',
           alt: 'Rocket satin glass pocket door installed between a kitchen and utility room',
         },
         {
           title: 'FD30 Fire-Rated Pocket Door Systems',
           description: 'A complete fire-rated pocket door system for projects requiring an FD30 doorset.',
+          fromPrice: '£479.94',
+          action: 'Buy Now',
           image: '/img/source/rocket/manufacturer/rocket-fd30-75mm.webp',
           alt: 'Rocket FD30 fire-rated timber pocket door installed in a kitchen',
         },
         {
           title: 'Ultra Flush Hinged Door Kits',
           description: 'A concealed hinged aluminium frame supplied with a solid-core primed door, magnetic latch and concealed hinges.',
+          fromPrice: '£635.94',
+          action: 'Buy Now',
           image: '/img/source/rocket/manufacturer/rocket-ultra-flush-customer-installation.webp',
           alt: 'Rocket Ultra Flush concealed hinged door installed beside a staircase',
         },
         {
-          title: 'Jambs, Linings & Accessories',
-          description: 'Complete the installation with matching jamb kits, soft close, handles and frame accessories.',
+          title: 'Rocket Door Frames Accessories',
+          description: 'Rocket accessories include jamb and lining kits, soft-close mechanisms, handles and frame components.',
+          fromPrice: '£53.94',
+          action: 'Buy Now',
           image: '/img/source/rocket/doormate-live/doormate-rocket-09.jpg',
           alt: 'Rocket pocket door frame components and accessories',
         },
       ]}
       guidance={{
         heading: 'Not Sure Which Rocket System You Need?',
-        copy: 'Tell us your door size, wall thickness and whether the project needs glass, a flush finish or fire certification. We’ll help narrow it down before you order.',
+        copy: 'Tell us your door size, wall thickness and whether you need a pocket door, an Ultra Flush hinged door or an FD30 fire-rated system. We’ll help narrow it down before you order.',
       }}
     />
   )

@@ -209,6 +209,10 @@
   background: #faf9f5;
 }
 
+.dm-manufacturer-choices--compact {
+  padding-top: var(--space-3);
+}
+
 .dm-manufacturer-choices-heading {
   display: grid;
   grid-template-columns: minmax(0,.8fr) minmax(360px,.72fr);
@@ -290,6 +294,14 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 1.55;
+}
+
+.dm-choice-price {
+  display: block;
+  margin-bottom: var(--space-2);
+  color: var(--dm-navy);
+  font-size: 18px;
+  line-height: 1.2;
 }
 
 .dm-choice-copy > span {

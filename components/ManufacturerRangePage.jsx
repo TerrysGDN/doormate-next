@@ -12,6 +12,7 @@ export default function ManufacturerRangePage({
   proofGraphic,
   proofGraphicAlt,
   choices,
+  choicesHeading = 'Choose Your Door System',
   choicesIntroduction,
   guidance,
 }) {
@@ -63,12 +64,18 @@ export default function ManufacturerRangePage({
         </div>
       </section>
 
-      <section className="dm-manufacturer-choices" aria-labelledby="manufacturer-choices-heading">
+      <section
+        className={`dm-manufacturer-choices${choicesHeading ? '' : ' dm-manufacturer-choices--compact'}`}
+        aria-labelledby={choicesHeading ? 'manufacturer-choices-heading' : undefined}
+        aria-label={choicesHeading ? undefined : `${manufacturer} product range`}
+      >
         <div className="dm-section-frame">
-          <div className="dm-manufacturer-choices-heading">
-            <h2 id="manufacturer-choices-heading">Choose Your Door System</h2>
-            {choicesIntroduction && <p>{choicesIntroduction}</p>}
-          </div>
+          {choicesHeading && (
+            <div className="dm-manufacturer-choices-heading">
+              <h2 id="manufacturer-choices-heading">{choicesHeading}</h2>
+              {choicesIntroduction && <p>{choicesIntroduction}</p>}
+            </div>
+          )}
 
           <div className="dm-choice-grid" data-count={choices.length}>
             {choices.map((choice) => (
@@ -84,6 +91,7 @@ export default function ManufacturerRangePage({
                 <div className="dm-choice-copy">
                   <h3>{choice.title}</h3>
                   <p>{choice.description}</p>
+                  {choice.fromPrice && <strong className="dm-choice-price">From {choice.fromPrice}</strong>}
                   <span>{choice.action || 'View Options'} <b aria-hidden="true">&rarr;</b></span>
                 </div>
               </article>
