@@ -2096,3 +2096,57 @@ Terry is extremely and justifiably angry because this repeats the Claude pattern
 - Resume the Vercel review of the Rocket landing page; Terry considers it very close but not finished.
 - Do not start changing the page before Terry gives his next Preview observations.
 - Keep scope to Homepage, Pocket Door Kits landing page and Rocket landing page unless Terry explicitly expands it. Do not judge or modify Claude's older scaffold pages merely because they exist.
+
+---
+
+## LOCKED RANGE AND CATEGORY LANDING-PAGE RULE — 1 SEPTEMBER 2026
+
+The approved Rocket layout establishes the reusable presentation rule for manufacturer range pages and other product/category landing pages as they enter scope:
+
+- Keep the introduction compact without shortening or weakening its factual content. The first customer view must prioritise useful product choices rather than oversized introductory space.
+- On manufacturer pages, preserve each manufacturer's genuine logo, colours, typography, icons and supplied benefit graphics. DoorMate branding applies only to the surrounding page; never recolour or recreate manufacturer artwork in DoorMate styling.
+- Put each product title above its unobstructed product image so the next row announces additional choices as soon as it enters the customer view.
+- Put the factual explanation below the image.
+- Keep `From £X` and `Buy Now` together on one aligned bottom row. Landing-page prices are DoorMate's customer-facing retail figures; review every buying-page option separately later.
+- Use compact, consistent internal card spacing. Do not add decorative empty space above titles, between explanations and actions, or beneath the action row.
+- Desktop ranges use a balanced grid appropriate to the real product count. Five products remain three cards followed by two centred cards; do not invent filler products to complete a row.
+- Aim to show the complete first product row and a clearly readable start of the next row in the normal desktop customer view when the genuine content allows it.
+- Resource links and genuine manufacturer assurances may share one compact row when they are of comparable decision-making importance. Do not create oversized standalone bands for them.
+
+This rule is enforced for manufacturer landings through `ManufacturerRangePage`. Apply the same hierarchy through reusable components when other category/range landing pages are brought into scope. It does not pre-decide the layout of individual buying/configuration pages; those must be reviewed separately when Terry brings them into scope.
+
+---
+
+## SESSION HANDOFF — 1 SEPTEMBER 2026 — READ THIS FIRST
+
+### WORKFLOW
+- Continue in the `doormate-next` project on `codex/homepage-recovery`.
+- Do not run a local development server, use localhost or start repeated browser-testing loops.
+- Codex makes one agreed batch of changes and automatically gives Terry a GitHub Desktop summary title. Terry commits and pushes, then reviews the Vercel Preview.
+- Ignore the GitHub Preview pull request during review. Do not merge into `main` until Terry explicitly approves the completed rebuild.
+- Do not inspect, judge or modify Claude's older scaffold pages unless Terry explicitly brings one into scope. Automated reports from those pages are not relevant to the active review.
+
+### ROCKET LANDING PAGE — END-OF-DAY APPROVED DIRECTION
+- Terry confirmed the Rocket page now has the right look and feel and is very close to finished.
+- Manufacturer links open with the gold navigation at the top so the large white identity header does not consume the customer view.
+- Compact introduction remains factually unchanged: genuine Rocket logo, accurate range heading/copy, main Rocket image, FAQ and Technical Info placeholders, and genuine Rocket Next Day Delivery / Lifetime Warranty / FD30 artwork.
+- FAQ, Technical Info and the genuine Rocket assurances sit together in one natural-width row. There is no oversized full-width benefit band or accidental half-gold line.
+- Product cards use: title above unobstructed image; factual explanation below; `From £X` and `Buy Now` together on the bottom row.
+- Card order and five-product grid remain locked: first row Single & Double, Glass, FD30; second row Ultra Flush Hinged, Rocket Door Frames Accessories, centred as two cards.
+- The introduction and card spacing were tightened so the second row announces itself in the normal desktop customer view. Terry reviewed the resulting Preview and said it was perfect.
+- Do not redesign this structure tomorrow. Start by asking for Terry's next Vercel observation or which scoped page he wants to review next.
+
+### REUSABLE RULE NOW LOCKED
+- The `LOCKED RANGE AND CATEGORY LANDING-PAGE RULE — 1 SEPTEMBER 2026` immediately above governs manufacturer, range and category/choice landing pages.
+- It does not apply to individual buying/configuration pages. Terry explicitly confirmed those will require a different structure and will be reviewed later.
+- `ManufacturerRangePage` currently enforces the shared manufacturer-card hierarchy. Extend the same principle through reusable components only as new range/category pages enter scope.
+
+### CURRENT SCOPE AND NEXT WORK
+- Active rebuild scope remains: Homepage, Pocket Door Kits landing page and Rocket range landing page.
+- Rocket is close to complete but has not been declared finally finished or approved for merge.
+- FAQ and Technical Info remain placeholders for future internal pages; never link them back to the old site that will be retired.
+- Individual Rocket buying/configuration pages have not entered scope.
+- At the start of the next chat, read this file before proposing or changing anything. Do not make Terry repeat decisions already recorded here.
+
+### END-OF-DAY DOCUMENTATION CHANGE
+- This handoff and the locked landing-page rule were added after the final visual review. If GitHub Desktop still shows `CLAUDE.md` as an uncommitted change, use summary title: `Record approved product landing page system`.
