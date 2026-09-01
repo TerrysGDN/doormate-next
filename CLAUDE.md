@@ -2050,3 +2050,49 @@ Terry is extremely and justifiably angry because this repeats the Claude pattern
 5. Use the current Pocket Door Kits page only as a prototype/candidate for a reusable category-page structure until Terry agrees otherwise.
 6. Do not ask Terry to repeat the previous months of design discussion from memory.
 7. Only after the evidence review and Terry's agreement should any reusable category/product-page implementation continue.
+
+---
+
+## SESSION SUMMARY — 28 AUGUST 2026 — ROCKET LANDING PAGE
+
+### CURRENT PUBLISHED STATE
+- Active branch: `codex/homepage-recovery`.
+- Branch is clean and matches `origin/codex/homepage-recovery`.
+- Latest published commit: `f11e6e9 — Fix desktop manufacturer dropdown persistence`.
+- Do not merge the Preview pull request into `main` until Terry explicitly approves the completed rebuild.
+- Do not run a local development server or use localhost/browser-testing loops. Terry reviews Vercel Preview deployments after pushing through GitHub Desktop.
+
+### WORKFLOW — PRESERVE THIS
+- Codex makes and checks changes, then leaves them uncommitted at each review point.
+- Codex automatically supplies a clear GitHub Desktop summary title; Terry should not have to ask for one.
+- Terry commits and pushes through GitHub Desktop. This is the familiar, credit-conscious workflow.
+- Ignore the GitHub Preview pull request during review cycles; merge only after explicit final approval.
+
+### ROCKET PAGE — CURRENT AGREED STATE
+- Main heading distinguishes the ranges: `Pocket Door Systems & Ultra Flush Hinged Door Kits`.
+- The redundant `Choose Your Door System` heading was removed so products enter the viewport sooner.
+- Product order remains: Single & Double; Glass; FD30; Ultra Flush Hinged; Rocket Door Frames Accessories. Desktop layout is three cards followed by two centred cards.
+- Exact established category wording is `Rocket Door Frames Accessories` for continuity and SEO.
+- Card treatment is `From £X` followed by `Buy Now` because the destination buying pages allow customers to choose configurations.
+- Current VAT-inclusive landing prices: Single & Double £167.94; Glass £479.94; FD30 £479.94; Ultra Flush £635.94; Accessories £17.94 (cheapest current DoorMate accessory is Flush Pull Handles).
+- DoorMate is not VAT registered. When a manufacturer shows ex-VAT and inc-VAT amounts, DoorMate's customer-facing retail price is the VAT-inclusive amount. Review every buying-page variant separately later.
+- Glass £479.94 is the complete kit: galvanised steel pocket frame, 8mm tempered satin glass door, soft-close mechanism and jamb lining kit.
+- Genuine Rocket Next Day Delivery / Lifetime Warranty / FD30 graphic remains in use.
+- FAQ and Technical Info are visible placeholder tabs in the reusable template. They must eventually link to new internal pages, never back to the old site that will be retired.
+- The phone-led `Not Sure Which Rocket System You Need?` block was removed. Terry wants technical information to prevent repetitive support calls.
+- Manufacturer landing-page back link was removed. Whether breadcrumbs are useful on deeper buying pages will be discussed later; do not assume they are required.
+
+### NAVIGATION
+- Pocket Door Kits keeps its category overview link and now has a manufacturer dropdown for Rocket, Eclisse, Coburn and Barrier on desktop and mobile.
+- Desktop dropdown now closes after selection and remains closed until the pointer leaves the menu area; this was confirmed working by Terry.
+- Nearly all established DoorMate main-menu categories use dropdowns. Preserve that proven structure as other product areas enter scope: category title opens the overview, dropdown gives direct product/range/manufacturer access.
+
+### SOURCE DISCIPLINE
+- The existing DoorMate landing pages are the baseline for page hierarchy, established category wording, technical-resource routes and proven navigation behaviour.
+- Rocket's UK manufacturer material verifies genuine products, specifications, imagery and supplier prices.
+- Terry is the authoritative source for DoorMate's current commercial information. Do not extrapolate a category price from one unrelated product or invent sections, icons, claims, CTAs or navigation.
+
+### NEXT SESSION
+- Resume the Vercel review of the Rocket landing page; Terry considers it very close but not finished.
+- Do not start changing the page before Terry gives his next Preview observations.
+- Keep scope to Homepage, Pocket Door Kits landing page and Rocket landing page unless Terry explicitly expands it. Do not judge or modify Claude's older scaffold pages merely because they exist.

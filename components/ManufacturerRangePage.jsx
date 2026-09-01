@@ -28,17 +28,6 @@ export default function ManufacturerRangePage({
               </span>
               <h1 id="manufacturer-heading">{heading}</h1>
               <p>{introduction}</p>
-              {resourceTabs && (
-                <nav className="dm-manufacturer-resources" aria-label={`${manufacturer} technical resources`}>
-                  {resourceTabs.map((resource) => (
-                    resource.href ? (
-                      <Link href={resource.href} key={resource.label}>{resource.label}</Link>
-                    ) : (
-                      <span aria-disabled="true" key={resource.label}>{resource.label}</span>
-                    )
-                  ))}
-                </nav>
-              )}
             </div>
 
             <div className="dm-manufacturer-hero">
@@ -52,21 +41,37 @@ export default function ManufacturerRangePage({
             </div>
           </div>
 
-          {proofGraphic ? (
-            <div className="dm-manufacturer-proof-graphic">
-              <Image src={proofGraphic} alt={proofGraphicAlt} fill sizes="620px" />
-            </div>
-          ) : (
-            <div className="dm-manufacturer-proof" aria-label={`${manufacturer} product benefits`}>
-              {proofPoints.map((point) => (
-                <div className="dm-manufacturer-proof-item" key={point.title}>
-                  <span aria-hidden="true">{point.icon}</span>
-                  <div>
-                    <strong>{point.title}</strong>
-                    {point.detail && <small>{point.detail}</small>}
-                  </div>
+          {(resourceTabs?.length || proofGraphic || proofPoints?.length) && (
+            <div className={`dm-manufacturer-support${resourceTabs?.length && (proofGraphic || proofPoints?.length) ? ' dm-manufacturer-support--combined' : ''}`}>
+              {resourceTabs?.length > 0 && (
+                <nav className="dm-manufacturer-resources" aria-label={`${manufacturer} technical resources`}>
+                  {resourceTabs.map((resource) => (
+                    resource.href ? (
+                      <Link href={resource.href} key={resource.label}>{resource.label}</Link>
+                    ) : (
+                      <span aria-disabled="true" key={resource.label}>{resource.label}</span>
+                    )
+                  ))}
+                </nav>
+              )}
+
+              {proofGraphic ? (
+                <div className="dm-manufacturer-proof-graphic">
+                  <Image src={proofGraphic} alt={proofGraphicAlt} fill sizes="(max-width: 900px) 100vw, 60vw" />
                 </div>
-              ))}
+              ) : proofPoints?.length > 0 ? (
+                <div className="dm-manufacturer-proof" aria-label={`${manufacturer} product benefits`}>
+                  {proofPoints.map((point) => (
+                    <div className="dm-manufacturer-proof-item" key={point.title}>
+                      <span aria-hidden="true">{point.icon}</span>
+                      <div>
+                        <strong>{point.title}</strong>
+                        {point.detail && <small>{point.detail}</small>}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : null}
             </div>
           )}
         </div>
@@ -99,8 +104,10 @@ export default function ManufacturerRangePage({
                 <div className="dm-choice-copy">
                   <h3>{choice.title}</h3>
                   <p>{choice.description}</p>
-                  {choice.fromPrice && <strong className="dm-choice-price">From {choice.fromPrice}</strong>}
-                  <span>{choice.action || 'View Options'} <b aria-hidden="true">&rarr;</b></span>
+                  <div className="dm-choice-action-row">
+                    {choice.fromPrice && <strong className="dm-choice-price">From {choice.fromPrice}</strong>}
+                    <span>{choice.action || 'View Options'} <b aria-hidden="true">&rarr;</b></span>
+                  </div>
                 </div>
               </article>
             ))}
