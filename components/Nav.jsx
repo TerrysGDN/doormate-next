@@ -11,10 +11,10 @@ const NAV_LINKS = [
     label: 'Pocket Door Kits',
     href: '/pocket-door-kits',
     children: [
-      { label: 'Rocket', href: '/pocket-door-kits/rocket' },
-      { label: 'Eclisse', href: '/pocket-door-kits/eclisse' },
-      { label: 'Coburn', href: '/pocket-door-kits/coburn' },
-      { label: 'Barrier', href: '/pocket-door-kits/barrier' },
+      { label: 'Rocket', href: '/pocket-door-kits/rocket#manufacturer-range-start' },
+      { label: 'Eclisse', href: '/pocket-door-kits/eclisse#manufacturer-range-start' },
+      { label: 'Coburn', href: '/pocket-door-kits/coburn#manufacturer-range-start' },
+      { label: 'Barrier', href: '/pocket-door-kits/barrier#manufacturer-range-start' },
     ],
   },
   { label: 'Internal Sliding Door Kits', href: '/internal-sliding-kits' },
@@ -39,37 +39,39 @@ export default function Nav() {
   }
 
   return (
-    <header className="dm-header">
-      <div className="dm-header-main">
-        <div className="dm-header-identity">
-          <Link className="dm-header-logo" href="/" aria-label="DoorMate home">
-            <Image src="/img/doormate-logo-cropped.png" alt="DoorMate Sliding Door Systems — Cardiff" width={360} height={110} priority />
-          </Link>
-          <p className="dm-header-tagline">Trading Since 2009</p>
+    <>
+      <header className="dm-header">
+        <div className="dm-header-main">
+          <div className="dm-header-identity">
+            <Link className="dm-header-logo" href="/" aria-label="DoorMate home">
+              <Image src="/img/doormate-logo-cropped.png" alt="DoorMate Sliding Door Systems — Cardiff" width={360} height={110} priority />
+            </Link>
+            <p className="dm-header-tagline">Trading Since 2009</p>
+          </div>
+          <div className="dm-header-contact">
+            <a href="tel:02921660393">029 2166 0393</a>
+            <a href="mailto:info@doormate.co.uk">info@doormate.co.uk</a>
+          </div>
+          <details className="dm-mobile-navigation" ref={mobileNavigation}>
+            <summary className="dm-menu-button">
+              <span>Menu</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 6h18M3 12h18M3 18h18" />
+              </svg>
+            </summary>
+            <nav aria-label="Mobile navigation">
+              {NAV_LINKS.map((link) => (
+                <div className="dm-mobile-nav-group" key={link.href}>
+                  <Link href={link.href} onClick={closeMobileNavigation}>{link.label}</Link>
+                  {link.children?.map((child) => (
+                    <Link className="dm-mobile-nav-child" href={child.href} key={child.href} onClick={closeMobileNavigation}>{child.label}</Link>
+                  ))}
+                </div>
+              ))}
+            </nav>
+          </details>
         </div>
-        <div className="dm-header-contact">
-          <a href="tel:02921660393">029 2166 0393</a>
-          <a href="mailto:info@doormate.co.uk">info@doormate.co.uk</a>
-        </div>
-        <details className="dm-mobile-navigation" ref={mobileNavigation}>
-          <summary className="dm-menu-button">
-          <span>Menu</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M3 6h18M3 12h18M3 18h18" />
-          </svg>
-          </summary>
-          <nav aria-label="Mobile navigation">
-            {NAV_LINKS.map((link) => (
-              <div className="dm-mobile-nav-group" key={link.href}>
-                <Link href={link.href} onClick={closeMobileNavigation}>{link.label}</Link>
-                {link.children?.map((child) => (
-                  <Link className="dm-mobile-nav-child" href={child.href} key={child.href} onClick={closeMobileNavigation}>{child.label}</Link>
-                ))}
-              </div>
-            ))}
-          </nav>
-        </details>
-      </div>
+      </header>
 
       <nav id="dm-navigation" aria-label="Main navigation">
         <div className="dm-navigation-inner">
@@ -111,6 +113,6 @@ export default function Nav() {
           ))}
         </div>
       </nav>
-    </header>
+    </>
   )
 }

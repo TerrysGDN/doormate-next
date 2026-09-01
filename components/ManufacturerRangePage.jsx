@@ -19,7 +19,7 @@ export default function ManufacturerRangePage({
 }) {
   return (
     <div className="dm-manufacturer-page">
-      <section className="dm-manufacturer-intro" aria-labelledby="manufacturer-heading">
+      <section id="manufacturer-range-start" className="dm-manufacturer-intro" aria-labelledby="manufacturer-heading">
         <div className="dm-section-frame">
           <div className="dm-manufacturer-intro-grid">
             <div className="dm-manufacturer-intro-copy">
