@@ -93,6 +93,9 @@ export default function ManufacturerRangePage({
           <div className="dm-choice-grid" data-count={choices.length}>
             {choices.map((choice) => (
               <article className="dm-choice-card" key={choice.title}>
+                <div className="dm-choice-title">
+                  <h3>{choice.title}</h3>
+                </div>
                 <div className="dm-choice-image">
                   <Image
                     src={choice.image}
@@ -102,7 +105,6 @@ export default function ManufacturerRangePage({
                   />
                 </div>
                 <div className="dm-choice-copy">
-                  <h3>{choice.title}</h3>
                   <p>{choice.description}</p>
                   <div className="dm-choice-action-row">
                     {choice.fromPrice && <strong className="dm-choice-price">From {choice.fromPrice}</strong>}

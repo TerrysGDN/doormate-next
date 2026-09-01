@@ -83,7 +83,7 @@
   width: 210px;
   height: 56px;
   display: block;
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
 }
 
 .dm-manufacturer-logo img {
@@ -104,7 +104,7 @@
 
 .dm-manufacturer-intro-copy > p {
   max-width: var(--content-max-width);
-  margin: var(--space-2) 0 0;
+  margin: var(--space-1) 0 0;
   color: var(--dm-text-soft);
   font-size: var(--dm-body-size);
   font-weight: 600;
@@ -116,7 +116,7 @@
   flex-wrap: nowrap;
   align-items: center;
   gap: var(--space-1);
-  margin-top: var(--space-2);
+  margin-top: var(--space-1);
 }
 
 .dm-manufacturer-resources {
@@ -298,7 +298,14 @@
   padding: var(--space-2);
 }
 
-.dm-choice-copy h3 {
+.dm-choice-title {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-2);
+}
+
+.dm-choice-title h3 {
   margin: 0;
   color: var(--dm-navy);
   font-size: 20px;
@@ -306,7 +313,7 @@
 }
 
 .dm-choice-copy p {
-  margin: var(--space-1) 0 var(--space-2);
+  margin: 0 0 var(--space-2);
   color: var(--dm-text-soft);
   font-size: 14px;
   font-weight: 600;
