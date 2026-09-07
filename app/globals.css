@@ -680,8 +680,8 @@ summary:focus-visible {
 .dm-range-hero-image { position: relative; min-height: 560px; overflow: hidden; }
 .dm-range-hero-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg,rgba(39,36,70,.35),transparent 36%); }
 .dm-range-hero-image img { object-fit: cover; object-position: center; }
-.dm-range-intro { padding: clamp(26px,2.6vw,36px) 0 var(--dm-section-space); }
-.dm-range-intro-layout { display: grid; grid-template-columns: minmax(0,.9fr) minmax(440px,1.1fr); gap: clamp(36px,5vw,72px); align-items: stretch; margin-bottom: clamp(20px,2vw,28px); }
+.dm-range-intro { --range-intro-gap: clamp(20px,2vw,28px); padding: var(--range-intro-gap) 0 var(--dm-section-space); }
+.dm-range-intro-layout { display: grid; grid-template-columns: minmax(0,.9fr) minmax(440px,1.1fr); gap: clamp(36px,5vw,72px); align-items: stretch; margin-bottom: var(--range-intro-gap); }
 .dm-range-intro-heading { display: flex; flex-direction: column; justify-content: flex-end; max-width: 650px; }
 .dm-range-intro-heading h1 { font-size: var(--dm-heading-size); line-height: var(--dm-heading-line); letter-spacing: var(--dm-heading-spacing); }
 .dm-keep-together { white-space: nowrap; }
