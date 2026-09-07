@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { label: 'Barn Door Hardware', href: '/barn-door-hardware' },
   {
     label: 'Pocket Door Kits',
-    href: '/pocket-door-kits',
+    href: '/pocket-door-kits#choose-range',
     children: [
       { label: 'Rocket', href: '/pocket-door-kits/rocket#manufacturer-range-start' },
       { label: 'Eclisse', href: '/pocket-door-kits/eclisse#manufacturer-range-start' },

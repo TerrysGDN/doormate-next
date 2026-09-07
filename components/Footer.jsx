@@ -34,7 +34,7 @@ export default function Footer() {
         <div className="dm-footer-column">
           <h3>Products</h3>
           <ul>
-            <li><Link href="/pocket-door-kits">Pocket Door Kits</Link></li>
+            <li><Link href="/pocket-door-kits#choose-range">Pocket Door Kits</Link></li>
             <li><Link href="/barn-door-hardware">Barn Door Hardware</Link></li>
             <li><Link href="/doors">Doors</Link></li>
             <li><Link href="/external-sliding-kits">External Sliding Door Kits</Link></li>

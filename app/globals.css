@@ -58,9 +58,13 @@
   color: var(--dm-navy);
 }
 
+.dm-manufacturer-intro,
+.dm-range-intro {
+  scroll-margin-top: 58px;
+}
+
 .dm-manufacturer-intro {
   padding: var(--space-2) 0;
-  scroll-margin-top: 58px;
 }
 
 .dm-manufacturer-intro-grid {

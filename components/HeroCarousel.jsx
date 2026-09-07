@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const PRODUCTS = [
   { name: 'Doors', image: '/img/doors-category.jpg', href: '/doors', alt: 'Handmade oak and pine barn doors installed in a luxury home' },
-  { name: 'Pocket Door Kits', image: '/img/Eclisse Images/ECLISSE_CLASSIC/classic-pocket-door-styles-finished-with-architrave.jpg', href: '/pocket-door-kits', alt: 'Double and single Eclisse pocket doors installed in a finished home' },
+  { name: 'Pocket Door Kits', image: '/img/Eclisse Images/ECLISSE_CLASSIC/classic-pocket-door-styles-finished-with-architrave.jpg', href: '/pocket-door-kits#choose-range', alt: 'Double and single Eclisse pocket doors installed in a finished home' },
   { name: 'Barn Door Hardware', image: '/img/gainesville-system.jpg', href: '/barn-door-hardware', alt: 'Gainesville barn door hardware installed on a red door' },
   { name: 'Internal Sliding Door Kits', image: '/img/internal-sliding-kits-category.jpg', href: '/internal-sliding-kits', alt: 'Timber internal sliding door installed in a modern living room' },
   { name: 'External Sliding Door Kits', image: '/img/external-sliding-kits-category.jpg', href: '/external-sliding-kits', alt: 'Heavy-duty external sliding doors installed on a stable' },
