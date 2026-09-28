@@ -10,6 +10,17 @@
 // a bug that existed because the rule was only ever written as the word
 // "large", never as an actual number a script could check).
 //
+// 28 September 2026 — extended per DOORMATE_CATEGORY_WIREFRAME_V1.md: this
+// script previously only scanned app/ and components/ *.jsx/*.tsx files.
+// It never scanned app/globals.css itself — the exact file the colour
+// tokens live in — so an off-palette hex value hardcoded there (rather
+// than in a component) went completely undetected. Two such values were
+// found (.dm-manufacturer-choices background #faf9f5, .dm-manufacturer-
+// guidance p colour #eeedf4) while writing that document. They are
+// deliberately still flagged as findings below (not silently allow-listed)
+// until Terry confirms whether they're intentional; see that document's
+// "FLAGGED — NOT YET CONFIRMED AS INTENTIONAL" section.
+//
 // Exit code 0 = clean. Exit code 1 = findings exist — DO NOT declare the
 // section "done" or "fixed" if this exits 1. Paste the full output to Terry.
 
@@ -33,12 +44,14 @@ const ALLOWED = new Set([
 const HEX_RE = /#([0-9a-fA-F]{6}|[0-9a-fA-F]{3})(?![0-9a-fA-F])/g;
 
 let files = [];
+let cssFiles = [];
 function walk(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     if (['node_modules', '.next', '.git', 'scripts'].includes(entry.name)) continue;
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) walk(full);
     else if (/\.(jsx?|tsx?)$/.test(entry.name)) files.push(full);
+    else if (/\.css$/.test(entry.name)) cssFiles.push(full);
   }
 }
 walk(path.join(ROOT, 'app'));
@@ -115,7 +128,26 @@ for (const file of files) {
   });
 }
 
-console.log('Scanned ' + files.length + ' files (app/ + components/).\n');
+// CSS FILES — 28 September 2026 addition. Same unapproved-colour check,
+// applied to app/globals.css and any other stylesheet. This is where the
+// actual design tokens are defined, so a rogue hex here is arguably more
+// important to catch than one in a component, not less.
+for (const file of cssFiles) {
+  const content = fs.readFileSync(file, 'utf8');
+  const lines = content.split('\n');
+  lines.forEach((line, i) => {
+    let m;
+    HEX_RE.lastIndex = 0;
+    while ((m = HEX_RE.exec(line)) !== null) {
+      const hex = m[1].toLowerCase();
+      if (!ALLOWED.has(hex)) {
+        findings.push({ file, line: i + 1, type: 'UNAPPROVED COLOUR (CSS)', detail: '#' + hex + ' not navy/gold/white/allowlisted platform colour — see DOORMATE_CATEGORY_WIREFRAME_V1.md "FLAGGED" section if this is one of the two already-known values awaiting Terry’s decision', text: line.trim().slice(0, 110) });
+      }
+    }
+  });
+}
+
+console.log('Scanned ' + files.length + ' component/page files + ' + cssFiles.length + ' CSS file(s).\n');
 console.log('Total findings: ' + findings.length + '\n');
 
 const byType = {};
@@ -132,7 +164,8 @@ if (findings.length > 0) {
 } else {
   console.log('RESULT: PASS — no violations found by this check.');
   console.log('Reminder: this only checks colours/padding/caps/headline size. Layout,');
-  console.log('alignment and spacing against DOORMATE_WIREFRAME_V1.md still need');
-  console.log('scripts/wireframe_live_check.md run against the live site.');
+  console.log('alignment and spacing against DOORMATE_WIREFRAME_V1.md and');
+  console.log('DOORMATE_CATEGORY_WIREFRAME_V1.md still need scripts/wireframe_live_check.md');
+  console.log('run against the live site.');
   process.exit(0);
 }

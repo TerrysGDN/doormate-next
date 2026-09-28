@@ -2150,3 +2150,44 @@ This rule is enforced for manufacturer landings through `ManufacturerRangePage`.
 
 ### END-OF-DAY DOCUMENTATION CHANGE
 - This handoff and the locked landing-page rule were added after the final visual review. If GitHub Desktop still shows `CLAUDE.md` as an uncommitted change, use summary title: `Record approved product landing page system`.
+
+
+## SESSION SUMMARY — 7 SEPTEMBER 2026 (RECONSTRUCTED 28 SEPTEMBER — CLOSING A GAP)
+
+This entry did not exist until 28 September. Work happened on 7 September (two commits) after the last Bible save on 1 September, and was never written up before the OpenAI/Codex usage dispute stopped work that same day. Reconstructed directly from the two commits themselves, not from memory.
+
+- `da95fbe` — "Match manufacturer choice page opening view to Rocket": fixed the `.dm-manufacturer-intro` scroll-margin rule (moved onto a shared selector with `.dm-range-intro` so both use it consistently), and changed the Pocket Door Kits links in the footer, hero carousel and nav dropdown to jump straight to `#choose-range` on that page instead of the page top.
+- `6079d2a` — "Tighten manufacturer page top spacing": introduced a new `--range-intro-gap` value on `.dm-range-intro` / `.dm-range-intro-layout` so the top spacing above the manufacturer choice grid is tighter and shared consistently, rather than two separate hardcoded clamp() values.
+- **Status:** both commits are small, low-risk spacing/navigation refinements — not a new section, not a design change. Nothing in them contradicts anything already locked in this file.
+
+## SESSION SUMMARY — 28 SEPTEMBER 2026 — READ THIS FIRST — MOST RECENT
+
+### WHAT HAPPENED TO THE PROJECT SINCE 1 SEPTEMBER
+No website work happened between 7 September and today. On 7 September, Terry hit a Work/Codex usage-metering dispute with OpenAI (unrelated to this file's own subject matter) and, on a human support agent's specific advice, deliberately stopped using Codex on this project while it was investigated. That review was never resolved with a determination either way; the case was eventually closed without one. Terry decided today to stop pursuing that dispute for now and resume the website build here instead, since the branch and all work were completely unaffected and untouched throughout (confirmed: `codex/homepage-recovery` sat exactly where it was left, `main`/production also untouched, barn-doors.co.uk — the only live, revenue-generating site — was never part of any of this).
+
+### AUDIT CARRIED OUT TODAY
+1. Confirmed via git history that all real rebuild progress (homepage, Pocket Door Kits, Rocket) lives on `codex/homepage-recovery`, not yet merged to `main`. `main` is still the original scaffold from project start.
+2. Ran `scripts/brand_check.js`: the only violations in current in-scope pages (Homepage, Pocket Door Kits, Rocket) were zero — the 9 ALL CAPS findings are all in already-known out-of-scope old scaffold pages.
+3. Found the checker had never scanned `app/globals.css` itself — only `.jsx`/`.tsx` files. Extended it to also scan `.css` files (see script comment dated 28 September for detail). Real finding once extended: 42 distinct off-token hex values in `globals.css`, none of them manufacturer or platform brand colours (checked directly — no Eclisse/Rocket/Coburn/Barrier/Google/Trustpilot/Houzz values among them). They cluster into recognisable groups, not random drift:
+   - ~13 near-duplicate dark navy-greys, all doing the same job as the existing `--dm-text-soft` token (`#4d4960`) — muted body text on light backgrounds.
+   - ~13 near-duplicate soft creams, all doing the same job as the existing `--dm-paper` token (`#f4f1e9`) — soft section backgrounds.
+   - 5 light navy-tint values used as text-on-navy, for which no token currently exists.
+   - 4 hairline border greys, for which no token currently exists.
+   - 4 muted-gold values (star ratings, small trust labels), for which no token currently exists.
+   - Houzz green appears as two very slightly different hex values (`#7ac143` vs the allowlisted `#7dc242`) — needs checking against Houzz's real brand hex.
+   - All of this traced via `git blame` to two commits: `0988055` (4 August — day one of the Codex-era rebuild) and `bb541cdc` (28 August — the Rocket build). None of it is inherited Claude-era scaffold; it happened under Codex.
+   - **NOT YET FIXED.** Terry has seen the categorised findings and agreed the approach (collapse the two duplicate groups onto the existing tokens, add three new named tokens for the groups with no home yet, double-check the Houzz colour) but the actual consolidation has not been done yet — do this next session, verify on the live Vercel preview afterward, and report back plainly.
+4. Wrote `DOORMATE_CATEGORY_WIREFRAME_V1.md` — the category/manufacturer-page counterpart to `DOORMATE_WIREFRAME_V1.md` (which only ever covered the homepage). Documents the real, already-built structure of `ManufacturerRangePage.jsx` and its CSS with exact numbers, the same way the homepage wireframe does. This is now the locked reference for Rocket, and for Eclisse/Coburn/Barrier and any other manufacturer page as they're built.
+
+### DECISIONS MADE TODAY
+- Category/manufacturer/range pages are explicitly agreed to have their **own** wireframe/layout, separate from the homepage's — different page type, different job — but must use the same underlying tokens/fundamentals (colours, spacing, heading sizes). Product buying/configuration pages will need their own wireframe too, written the same way, when they enter scope.
+- Terry does not want and should not be given technical explanations of the mechanics (tokens, hex codes, CSS) — plain-language results and decisions only, unless he asks for the detail.
+- Confirmed for Terry directly, because it had never been said plainly before: Claude and ChatGPT/Codex never communicate with each other under any circumstances. The only thing that carries a decision from one to the other is what actually gets written into this file or committed as code. Anything decided only inside a ChatGPT/Codex conversation and never saved here or in the code does not exist as far as any future session (Claude or otherwise) opening this project is concerned.
+- Confirmed the existing Claude Project tied to this folder (`C:\Users\Terry\Dropbox\PC\Desktop\NEW WEBSITE`) is the correct one to keep using — it reads this folder's actual current files fresh every time it's opened, it is not "behind," and there is no need to create a new project. A separate, unrelated Claude project ("DoorMate Website & Sales") exists and has nothing to do with this build — do not confuse the two.
+- The OpenAI/Codex support-failure story (journalist pitch, briefing document) is parked, not abandoned, and is unrelated to this file — see `/areas/openai-complaint.md`-equivalent tracking elsewhere, not here.
+
+### OUTSTANDING — NEXT SESSION, IN THIS ORDER
+1. Carry out the colour-token consolidation described above (Groups 1–5), verify visually on the Vercel preview, report plainly.
+2. Confirm the real Houzz brand green and fix whichever of `#7ac143`/`#7dc242` is wrong.
+3. Continue toward individual product buying/configuration pages — these have not been started and will need their own locked wireframe first, written the same way as the category-page one.
+4. Everything still outstanding from the 1 September handoff above this entry (Systems section gold border, Brands logo strip sizing, full footer review, `llms.txt`, the 18 old scaffold page findings) remains unchanged and still waiting.
